@@ -1,0 +1,128 @@
+{
+  "Metadata": {
+    "title": "Istanbul's Transfer Choice | Vstars",
+    "description": "Experience luxurious rides in Istanbul. VIP Airport transfers (IST & SAW), hourly chauffeur hire, and private tours with Mercedes-Benz vehicles.",
+    "keywords": "Istanbul airport transfer, VIP transfer Istanbul, Sabiha Gokcen transfer, IST airport shuttle, Mercedes Vito VIP, Private chauffeur Istanbul, Luxury car service Istanbul, Istanbul hotel transfer, Galataport transfer, Safe travel Istanbul, 24/7 airport transfer, Executive car service, Istanbul city tours"
+  },
+  "Navigation": {
+    "menu": "MENU",
+    "signIn": "Sign in",
+    "ourServices": "Our Services",
+    "contact": "Contact Us",
+    "our affiliates": "Partners",
+    "MenuLanguages": "Languages",
+    "languages": {
+      "en": "English",
+      "ru": "Русский",
+      "tr": "Türkçe",
+      "de": "Deutsch",
+      "es": "Espanyol"
+    }
+  },
+  "Services": {
+    "title": "Our Services",
+    "items": {
+      "airportTransfers": {
+        "title": "Airport Transfers",
+        "desc": "Reliable VIP transfer service with flight tracking, meet & greet, and professional chauffeurs."
+      },
+      "hourlyHire": {
+        "title": "Hourly Chauffeur Hire",
+        "desc": "Full-day or hourly rental. Enjoy on-demand luxury transportation tailored to your personal schedule."
+      },
+      "medicalTourism": {
+        "title": "Medical Tourism",
+        "desc": "Private, hygienic, and comfortable transport for medical guests. Direct transfers to hospitals and hotels."
+      },
+      "cityTour": {
+        "title": "City Tours",
+        "desc": "Explore Istanbul with a private driver. Visit historical landmarks and top attractions at your own pace."
+      }
+    },
+    "seeMore": "See More"
+  },
+  "Booking": {
+    "Tabs": {
+      "oneWay": "One Way",
+      "hourly": "Hourly Hire"
+    },
+    "Steps": {
+      "details": "Ride Details",
+      "summary": "Summary",
+      "payment": "Payment"
+    },
+    "Form": {
+      "from": "Pick-up Location",
+      "to": "Drop-off Location",
+      "duration": "Duration",
+      "hours": "{count, plural, =1 {# Hour} other {# Hours}}",
+      "addressPlaceholder": "Enter Airport, Hotel, or Address...",
+      "SelectDateHours": "Select Date & Time",
+      "selectHours": "Select Duration",
+      "passengersAndLuggage": "Passengers & Luggage",
+      "guestInfo": "Guest Information",
+      "driverNeeds": "Driver Notes",
+      "fullName": "Full Name",
+      "phoneNumber": "Phone Number",
+      "email": "Email Address",
+      "flightNumber": "Flight Number (Optional)",
+      "signboardName": "Signboard Name (Optional)",
+      "signboardPlaceholder": "Name on the welcome sign",
+      "specialRequests": "Special Requests",
+      "notesPlaceholder": "Child seat, extra luggage, etc...",
+      "passport": {
+        "title": "Passport Photo (Optional)",
+        "formats": "Upload JPG, PNG, WebP (Max {size}MB)",
+        "chooseFile": "Choose File",
+        "processing": "Processing...",
+        "uploaded": "✓ Uploaded"
+      }
+    },
+    "Calendar": {
+      "label": "Date",
+      "placeholder": "Select Date & Time",
+      "modalTitle": "Select Date & Time",
+      "dateFormatInfo": "Date format: DD/MM/YYYY • 24-hour clock",
+      "selectTime": "Select Time",
+      "appointmentFor": "Your booking is for",
+      "selectPrompt": "Please select a date and time for your transfer."
+    },
+    "Passengers": {
+      "modalTitle": "Select Passengers & Luggage",
+      "passengerLabel": "Passenger",
+      "luggageLabel": "Luggage",
+      "selected": "Selected:"
+    },
+    "Summary": {
+      "title": "Review Your Booking",
+      "dateTime": "Date & Time",
+      "passengers": "Passengers",
+      "paxCount": "{count} Pax",
+      "bagCount": "{count} Bags",
+      "guest": "Guest",
+      "phone": "Phone",
+      "waitingTime": "30 Minutes Free Waiting Time",
+      "totalEstimated": "Total Estimated Price:",
+      "taxesIncluded": "* Includes all taxes & fees"
+    },
+    "Payment": {
+      "integrationTitle": "Secure Payment",
+      "info": "Complete your reservation securely via Stripe/Iyzico.",
+      "payAndConfirm": "Pay & Confirm",
+      "proceedToPayment": "Proceed to Payment",
+      "sending": "Processing..."
+    },
+    "Success": {
+      "title": "Booking Confirmed!",
+      "subtitle": "We will contact you shortly with your driver details.",
+      "bookAnother": "Book Another Ride"
+    }
+  },
+  "Shared": {
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "continue": "Continue",
+    "back": "Back",
+    "submit": "Submit"
+  }
+}

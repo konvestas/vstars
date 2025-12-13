@@ -1,0 +1,128 @@
+{
+  "Metadata": {
+    "title": "Traslados VIP Estambul | Vstars",
+    "description": "Viajes de lujo en Estambul. Traslados VIP al aeropuerto, chófer privado por horas y tours exclusivos en Mercedes-Benz.",
+    "keywords": "traslado aeropuerto estambul, taxi vip estambul, chofer privado estambul, alquiler mercedes vito estambul, traslado sabiha gokcen, tour estambul privado, transporte lujo estambul, servicio transfer estambul"
+  },
+  "Navigation": {
+    "menu": "MENÚ",
+    "signIn": "Iniciar sesión",
+    "ourServices": "Servicios",
+    "contact": "Contacto",
+    "our affiliates": "Socios",
+    "MenuLanguages": "Idiomas",
+    "languages": {
+      "en": "English",
+      "ru": "Русский",
+      "tr": "Türkçe",
+      "de": "Deutsch",
+      "es": "Español"
+    }
+  },
+  "Services": {
+    "title": "Nuestros Servicios",
+    "items": {
+      "airportTransfers": {
+        "title": "Traslados al Aeropuerto",
+        "desc": "Servicio VIP confiable con seguimiento de vuelo, bienvenida en la terminal y chófer profesional."
+      },
+      "hourlyHire": {
+        "title": "Alquiler por Horas",
+        "desc": "Alquiler por horas o día completo. Disfrute de transporte de lujo adaptado a su agenda personal."
+      },
+      "medicalTourism": {
+        "title": "Turismo Médico",
+        "desc": "Transporte privado, higiénico y cómodo para pacientes. Traslados directos entre hospital y hotel."
+      },
+      "cityTour": {
+        "title": "Tours por la Ciudad",
+        "desc": "Explore Estambul con un conductor privado. Visite lugares históricos y atracciones a su propio ritmo."
+      }
+    },
+    "seeMore": "Ver Más"
+  },
+  "Booking": {
+    "Tabs": {
+      "oneWay": "Solo Ida",
+      "hourly": "Por Horas"
+    },
+    "Steps": {
+      "details": "Detalles",
+      "summary": "Resumen",
+      "payment": "Pago"
+    },
+    "Form": {
+      "from": "Origen",
+      "to": "Destino",
+      "duration": "Duración",
+      "hours": "{count, plural, =1 {# Hora} other {# Horas}}",
+      "addressPlaceholder": "Aeropuerto, Hotel o Dirección...",
+      "SelectDateHours": "Seleccionar Fecha y Hora",
+      "selectHours": "Seleccionar Duración",
+      "passengersAndLuggage": "Pasajeros y Equipaje",
+      "guestInfo": "Datos del Huésped",
+      "driverNeeds": "Notas para el Conductor",
+      "fullName": "Nombre Completo",
+      "phoneNumber": "Número de Teléfono",
+      "email": "Correo Electrónico",
+      "flightNumber": "Número de Vuelo (Opcional)",
+      "signboardName": "Nombre en Cartel (Opcional)",
+      "signboardPlaceholder": "Nombre para el cartel de bienvenida",
+      "specialRequests": "Peticiones Especiales",
+      "notesPlaceholder": "Silla de bebé, equipaje extra, etc...",
+      "passport": {
+        "title": "Foto del Pasaporte (Opcional)",
+        "formats": "Subir JPG, PNG, WebP (Máx. {size}MB)",
+        "chooseFile": "Elegir Archivo",
+        "processing": "Procesando...",
+        "uploaded": "✓ Subido"
+      }
+    },
+    "Calendar": {
+      "label": "Fecha y Hora",
+      "placeholder": "Selecciona",
+      "modalTitle": "Seleccionar Fecha y Hora",
+      "dateFormatInfo": "Formato: DD/MM/AAAA • Formato 24 horas",
+      "selectTime": "Seleccionar Hora",
+      "appointmentFor": "Su reserva es para",
+      "selectPrompt": "Por favor seleccione fecha y hora para su traslado."
+    },
+    "Passengers": {
+      "modalTitle": "Pasajeros y Equipaje",
+      "passengerLabel": "Pasajeros",
+      "luggageLabel": "Equipaje",
+      "selected": "Seleccionado:"
+    },
+    "Summary": {
+      "title": "Revisar Reserva",
+      "dateTime": "Fecha y Hora",
+      "passengers": "Pasajeros",
+      "paxCount": "{count} Pers.",
+      "bagCount": "{count} Maletas",
+      "guest": "Huésped",
+      "phone": "Teléfono",
+      "waitingTime": "30 Minutos de Espera Gratuita",
+      "totalEstimated": "Precio Total Estimado:",
+      "taxesIncluded": "* Incluye impuestos y tasas"
+    },
+    "Payment": {
+      "integrationTitle": "Pago Seguro",
+      "info": "Complete su reserva de forma segura vía Stripe/Iyzico.",
+      "payAndConfirm": "Pagar y Confirmar",
+      "proceedToPayment": "Proceder al Pago",
+      "sending": "Procesando..."
+    },
+    "Success": {
+      "title": "¡Reserva Confirmada!",
+      "subtitle": "Le contactaremos en breve con los datos del conductor.",
+      "bookAnother": "Reservar Otro Viaje"
+    }
+  },
+  "Shared": {
+    "cancel": "Cancelar",
+    "confirm": "Confirmar",
+    "continue": "Continuar",
+    "back": "Atrás",
+    "submit": "Enviar"
+  }
+}

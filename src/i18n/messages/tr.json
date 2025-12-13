@@ -1,0 +1,128 @@
+{
+  "Metadata": {
+    "title": "İstanbul Lüks VIP Transfer | Vstars",
+    "description": "İstanbul'da konforlu seyahat deneyimi. Havalimanı transferi, şoförlü araç kiralama ve VIP turlar.",
+    "keywords": "İstanbul havalimanı transfer, VIP transfer İstanbul, Sabiha Gökçen transfer, İstanbul şoförlü araç kiralama, Havalimanı karşılama, Otel transferi, Mercedes Vito kiralama, Lüks transfer İstanbul, İstanbul şehir turu, 7/24 transfer, SAW transfer, İstanbul Yeni Havalimanı transfer"
+  },
+  "Navigation": {
+    "menu": "MENÜ",
+    "signIn": "Giriş Yap",
+    "ourServices": "Hizmetlerimiz",
+    "contact": "İletişim",
+    "our affiliates": "İş Ortakları",
+    "MenuLanguages": "Diller",
+    "languages": {
+      "en": "English",
+      "ru": "Русский",
+      "tr": "Türkçe",
+      "de": "Deutsch",
+      "es": "Español"
+    }
+  },
+  "Services": {
+    "title": "Hizmetlerimiz",
+    "items": {
+      "airportTransfers": {
+        "title": "Havalimanı Transferi",
+        "desc": "Uçuş takibi, karşılama hizmeti ve profesyonel şoförler ile güvenilir VIP transfer."
+      },
+      "hourlyHire": {
+        "title": "Şoförlü Araç Kiralama",
+        "desc": "Saatlik veya günlük kiralama. Kişisel programınıza uygun, konforlu ulaşımın keyfini çıkarın."
+      },
+      "medicalTourism": {
+        "title": "Sağlık Turizmi Transferi",
+        "desc": "Medikal misafirler için hijyenik ve konforlu ulaşım. Hastane ve otel arası özel transferler."
+      },
+      "cityTour": {
+        "title": "Şehir Turları",
+        "desc": "Özel şoförünüzle İstanbul'u keşfedin. Tarihi yarımada ve popüler mekanları kendi hızınızda gezin."
+      }
+    },
+    "seeMore": "Daha Fazla"
+  },
+  "Booking": {
+    "Tabs": {
+      "oneWay": "Tek Yön",
+      "hourly": "Saatlik Tahsis"
+    },
+    "Steps": {
+      "details": "Detaylar",
+      "summary": "Özet",
+      "payment": "Ödeme"
+    },
+    "Form": {
+      "from": "Alış Noktası",
+      "to": "Varış Noktası",
+      "duration": "Süre",
+      "hours": "{count, plural, =1 {# Saat} other {# Saat}}",
+      "addressPlaceholder": "Havalimanı, Otel veya Adres...",
+      "SelectDateHours": "Tarih ve Saat Seçin",
+      "selectHours": "Süre Seçin",
+      "passengersAndLuggage": "Yolcu & Bagaj",
+      "guestInfo": "Misafir Bilgileri",
+      "driverNeeds": "Şoför Notları",
+      "fullName": "Ad Soyad",
+      "phoneNumber": "Telefon Numarası",
+      "email": "E-posta Adresi",
+      "flightNumber": "Uçuş Numarası (Opsiyonel)",
+      "signboardName": "Tabela İsmi (Opsiyonel)",
+      "signboardPlaceholder": "Karşılama tabelasında yazacak isim",
+      "specialRequests": "Özel İstekler",
+      "notesPlaceholder": "Çocuk koltuğu, fazla bagaj vb...",
+      "passport": {
+        "title": "Pasaport Fotoğrafı (Opsiyonel)",
+        "formats": "JPG, PNG, WebP (Maks. {size}MB)",
+        "chooseFile": "Dosya Seç",
+        "processing": "İşleniyor...",
+        "uploaded": "✓ Yüklendi"
+      }
+    },
+    "Calendar": {
+      "label": "Tarih",
+      "placeholder": "Tarih ve Saat Seçin",
+      "modalTitle": "Tarih ve Saat Seçin",
+      "dateFormatInfo": "Format: GG/AA/YYYY • 24 Saatlik Dilim",
+      "selectTime": "Saat Seçin",
+      "appointmentFor": "Rezervasyon Tarihi:",
+      "selectPrompt": "Lütfen transferiniz için bir tarih ve saat seçin."
+    },
+    "Passengers": {
+      "modalTitle": "Yolcu ve Bagaj Seçimi",
+      "passengerLabel": "Yolcu",
+      "luggageLabel": "Bagaj",
+      "selected": "Seçilen:"
+    },
+    "Summary": {
+      "title": "Rezervasyon Özeti",
+      "dateTime": "Tarih & Saat",
+      "passengers": "Yolcular",
+      "paxCount": "{count} Kişi",
+      "bagCount": "{count} Bagaj",
+      "guest": "Misafir",
+      "phone": "Telefon",
+      "waitingTime": "30 Dakika Ücretsiz Bekleme",
+      "totalEstimated": "Tahmini Toplam Tutar:",
+      "taxesIncluded": "* Tüm vergi ve ücretler dahildir"
+    },
+    "Payment": {
+      "integrationTitle": "Güvenli Ödeme",
+      "info": "Rezervasyonunuzu Stripe/Iyzico ile güvenle tamamlayın.",
+      "payAndConfirm": "Öde ve Onayla",
+      "proceedToPayment": "Ödemeye Geç",
+      "sending": "İşleniyor..."
+    },
+    "Success": {
+      "title": "Rezervasyon Onaylandı!",
+      "subtitle": "Şoför bilgileriyle birlikte en kısa sürede size ulaşacağız.",
+      "bookAnother": "Yeni Rezervasyon Yap"
+    }
+  },
+  "Shared": {
+    "cancel": "İptal",
+    "confirm": "Onayla",
+    "continue": "Devam Et",
+    "back": "Geri",
+    "submit": "Gönder"
+  }
+}

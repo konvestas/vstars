@@ -1,0 +1,128 @@
+{
+  "Metadata": {
+    "title": "VIP Flughafentransfer Istanbul | Vstars",
+    "description": "Luxus-Transfer in Istanbul. VIP-Flughafentransfer, Chauffeurservice und private Touren mit Mercedes-Benz Fahrzeugen.",
+    "keywords": "Flughafentransfer Istanbul, VIP Transfer Istanbul, Mercedes Vito mieten Istanbul, Chauffeurservice Istanbul, Sabiha Gokcen Transfer, Luxus Auto mieten Istanbul, Istanbul Stadtrundfahrt, Privater Fahrer Istanbul, Hotel Transfer Istanbul"
+  },
+  "Navigation": {
+    "menu": "MENÜ",
+    "signIn": "Anmelden",
+    "ourServices": "Leistungen",
+    "contact": "Kontakt",
+    "our affiliates": "Partner",
+    "MenuLanguages": "Sprache",
+    "languages": {
+      "en": "English",
+      "ru": "Русский",
+      "tr": "Türkçe",
+      "de": "Deutsch",
+      "es": "Español"
+    }
+  },
+  "Services": {
+    "title": "Unsere Leistungen",
+    "items": {
+      "airportTransfers": {
+        "title": "Flughafentransfers",
+        "desc": "Zuverlässiger VIP-Transfer mit Flugverfolgung, Abholung am Gate und professionellem Chauffeur."
+      },
+      "hourlyHire": {
+        "title": "Chauffeurservice (Stundenweise)",
+        "desc": "Mieten Sie ein Fahrzeug stunden- oder tageweise. Genießen Sie flexiblen Luxus nach Ihrem Zeitplan."
+      },
+      "medicalTourism": {
+        "title": "Medizintourismus",
+        "desc": "Diskreter und hygienischer Transport für Patienten. Direkte Transfers zwischen Flughafen, Klinik und Hotel."
+      },
+      "cityTour": {
+        "title": "Stadtrundfahrten",
+        "desc": "Entdecken Sie Istanbul mit einem privaten Fahrer. Besuchen Sie historische Sehenswürdigkeiten in Ihrem eigenen Tempo."
+      }
+    },
+    "seeMore": "Mehr sehen"
+  },
+  "Booking": {
+    "Tabs": {
+      "oneWay": "Transfer",
+      "hourly": "Stundenmiete"
+    },
+    "Steps": {
+      "details": "Details",
+      "summary": "Übersicht",
+      "payment": "Zahlung"
+    },
+    "Form": {
+      "from": "Abholort",
+      "to": "Zielort",
+      "duration": "Dauer",
+      "hours": "{count, plural, =1 {# Stunde} other {# Stunden}}",
+      "addressPlaceholder": "Flughafen, Hotel oder Adresse...",
+      "SelectDateHours": "Datum & Zeit wählen",
+      "selectHours": "Dauer wählen",
+      "passengersAndLuggage": "Passagiere & Gepäck",
+      "guestInfo": "Gastinformationen",
+      "driverNeeds": "Hinweise für den Fahrer",
+      "fullName": "Vollständiger Name",
+      "phoneNumber": "Telefonnummer",
+      "email": "E-Mail-Adresse",
+      "flightNumber": "Flugnummer (Optional)",
+      "signboardName": "Abholname (Optional)",
+      "signboardPlaceholder": "Name auf dem Abholschild",
+      "specialRequests": "Sonderwünsche",
+      "notesPlaceholder": "Kindersitz, Übergepäck, etc...",
+      "passport": {
+        "title": "Passfoto (Optional)",
+        "formats": "JPG, PNG, WebP hochladen (Max. {size}MB)",
+        "chooseFile": "Datei auswählen",
+        "processing": "Verarbeitung...",
+        "uploaded": "✓ Hochgeladen"
+      }
+    },
+    "Calendar": {
+      "label": "Datum",
+      "placeholder": "Datum & Zeit wählen",
+      "modalTitle": "Zeitpunkt wählen",
+      "dateFormatInfo": "Format: TT/MM/JJJJ • 24-Stunden-Format",
+      "selectTime": "Uhrzeit",
+      "appointmentFor": "Buchung für",
+      "selectPrompt": "Bitte wählen Sie Datum und Uhrzeit."
+    },
+    "Passengers": {
+      "modalTitle": "Passagiere & Gepäck",
+      "passengerLabel": "Personen",
+      "luggageLabel": "Gepäck",
+      "selected": "Ausgewählt:"
+    },
+    "Summary": {
+      "title": "Buchungsübersicht",
+      "dateTime": "Datum & Zeit",
+      "passengers": "Passagiere",
+      "paxCount": "{count} Pers.",
+      "bagCount": "{count} Koffer",
+      "guest": "Gast",
+      "phone": "Telefon",
+      "waitingTime": "30 Min. kostenlose Wartezeit",
+      "totalEstimated": "Gesamtpreis:",
+      "taxesIncluded": "* Inklusive aller Steuern & Gebühren"
+    },
+    "Payment": {
+      "integrationTitle": "Sichere Zahlung",
+      "info": "Bezahlen Sie Ihre Reservierung sicher über Stripe/Iyzico.",
+      "payAndConfirm": "Bezahlen & Bestätigen",
+      "proceedToPayment": "Zur Kasse",
+      "sending": "Verarbeitung..."
+    },
+    "Success": {
+      "title": "Buchung Bestätigt!",
+      "subtitle": "Wir senden Ihnen in Kürze die Fahrerdetails.",
+      "bookAnother": "Neue Buchung"
+    }
+  },
+  "Shared": {
+    "cancel": "Abbrechen",
+    "confirm": "Bestätigen",
+    "continue": "Weiter",
+    "back": "Zurück",
+    "submit": "Absenden"
+  }
+}
