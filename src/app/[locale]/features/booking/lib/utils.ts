@@ -1,5 +1,5 @@
 import { PRICING_ZONES, AIRPORT_KEYWORDS, GREETING_FEE, HOURLY_RATE } from "./pricing-data";
-
+import { SERVICE_TYPES } from "../schemas";
 // --- PRICING LOGIC ---
 
 export const calculateTripPrice = (
@@ -8,15 +8,15 @@ export const calculateTripPrice = (
     to: string | undefined,
     duration: string | undefined
 ): number => {
+
     // 1. Hourly Calculation
-    if (bookingType === "By the hour" && duration) {
+    if (bookingType === SERVICE_TYPES.HOURLY && duration) {
         const hours = parseInt(duration, 10);
-        // Base calculation: Hours * Hourly Rate + Greeting Fee
         return (hours * HOURLY_RATE) + GREETING_FEE;
     }
 
-    // 2. One Way Calculation
-    if (bookingType === "One Way") {
+    // 2. Transfer (One Way) Calculation
+    if (bookingType === SERVICE_TYPES.TRANSFER) {
         const locationString = (from + " " + (to || "")).toUpperCase();
 
         // Find matching zone
@@ -24,18 +24,16 @@ export const calculateTripPrice = (
             zone.regions.some(region => locationString.includes(region))
         );
 
-        // If match found, return Price + Greeting Fee
         if (matchedZone) {
             return matchedZone.price + GREETING_FEE;
         }
 
-        // Default Fallback if no specific zone matched (Safe estimate based on average)
+        // Default Fallback
         return 2500 + GREETING_FEE;
     }
 
     return 0;
 };
-
 
 // --- IMAGE UTILS ---
 

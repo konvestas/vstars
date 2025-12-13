@@ -3,8 +3,7 @@
 import { useState, useMemo } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-// Make sure these paths match where you created schemas.ts and utils.ts
-import { bookingSchema, type BookingFormValues } from "../schemas";
+import { bookingSchema, type BookingFormValues, SERVICE_TYPES } from "../schemas";
 import { calculateTripPrice } from "../lib/utils";
 
 export function useBookingForm() {
@@ -15,12 +14,11 @@ export function useBookingForm() {
         resolver: zodResolver(bookingSchema),
         mode: "onChange",
         defaultValues: {
-            serviceType: "transfer",
+            serviceType: SERVICE_TYPES.TRANSFER,
             passengers: 1,
             luggage: 0,
             hours: "4",
             date: new Date(),
-            // Initialize strings as empty to avoid uncontrolled input warnings
             pickupAddress: "",
             dropoffAddress: "",
             time: "",
@@ -31,9 +29,8 @@ export function useBookingForm() {
         },
     });
 
-    const { watch, trigger, setValue, setError, getValues } = form;
+    const { watch, trigger, setValue, formState: { errors } } = form;
 
-    // Watch fields to recalculate price in real-time
     const [serviceType, pickup, dropoff, hours] = watch([
         "serviceType",
         "pickupAddress",
@@ -43,20 +40,16 @@ export function useBookingForm() {
 
     // Memoized Price Calculation
     const price = useMemo(() => {
-        // We map "transfer" -> "One Way" and "hourly" -> "By the hour" to match your existing utils logic
-        const utilType = serviceType === "transfer" ? "One Way" : "By the hour";
-        return calculateTripPrice(utilType, pickup, dropoff, hours);
+        return calculateTripPrice(serviceType, pickup, dropoff, hours);
     }, [serviceType, pickup, dropoff, hours]);
 
     // --- Handlers ---
-
     const onTabChange = (val: string) => {
-        const newType = val as "transfer" | "hourly";
+        const newType = val as typeof SERVICE_TYPES[keyof typeof SERVICE_TYPES];
         setValue("serviceType", newType);
 
-        // Optional: clear dropoff if switching to hourly, as it's not strictly needed
-        if (newType === "hourly") {
-            setValue("dropoffAddress", "");
+        if (newType === SERVICE_TYPES.HOURLY) {
+            setValue("dropoffAddress", ""); // Clear dropoff for cleaner state
             form.clearErrors("dropoffAddress");
         }
     };
@@ -65,25 +58,17 @@ export function useBookingForm() {
         let isValid = false;
 
         if (step === 1) {
-            // 1. Trigger Zod validation for Step 1 fields
+            // Trigger validation for Step 1 specific fields
+            // Zod `superRefine` will automatically check if dropoff/hours are needed based on serviceType
             isValid = await trigger([
                 "pickupAddress",
                 "dropoffAddress",
+                "hours",
                 "date",
                 "time",
                 "passengers"
             ]);
-
-            // 2. Custom Business Logic: One Way transfers MUST have a dropoff
-            if (serviceType === "transfer" && !getValues("dropoffAddress")) {
-                setError("dropoffAddress", {
-                    type: "manual",
-                    message: "Drop-off address is required for transfers"
-                });
-                isValid = false;
-            }
         } else if (step === 2) {
-            // Validate Step 2 fields
             isValid = await trigger(["fullName", "email", "phone"]);
         }
 

@@ -17,6 +17,7 @@ export function usePlacesAutocomplete() {
     // 1. Initialize Session Token when library loads
     useEffect(() => {
         if (placesLib && !sessionToken) {
+            // eslint-disable-next-line react-hooks/set-state-in-effect
             setSessionToken(new placesLib.AutocompleteSessionToken());
         }
     }, [placesLib, sessionToken]);
