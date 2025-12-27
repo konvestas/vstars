@@ -35,6 +35,7 @@ import DateTimeInput from "@/app/[locale]/features/booking/_components/date-time
 import { DurationInput } from "./duration-input";
 import { useBookingForm } from "../hooks/use-booking";
 import { SERVICE_TYPES } from "../schemas";
+import {Textarea} from "@/components/ui/textarea";
 
 const styles = {
     glassInput: "pl-10 text-white bg-white/10 hover:bg-white/30 focus:bg-white/20 border-white/20 placeholder:text-white/30 transition-all duration-300",
@@ -342,7 +343,7 @@ export default function BookingWidget() {
                                         </div>
                                         <div className="relative">
                                             <MessageSquare className={styles.iconContainerTop} />
-                                            <textarea
+                                            <Textarea
                                                 placeholder="Child seat required, extra luggage, etc..."
                                                 className={styles.glassTextArea}
                                                 {...register("notes")}
