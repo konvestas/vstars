@@ -12,7 +12,6 @@ import {
     Phone,
     Mail,
     UploadCloud,
-    FileText,
     X,
     ChevronLeft,
     Calendar,
@@ -20,7 +19,6 @@ import {
     Check,
     AlertCircle,
     Plane,
-    MessageSquare
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -323,7 +321,6 @@ export default function BookingWidget() {
                                         <div className="relative group">
                                             <div className="flex justify-between items-center">
                                                 <Label className={styles.glassLabel}>Flight No</Label>
-                                                <span className="text-[10px] sm:text-xs text-white/40 uppercase tracking-wider">(Opt)</span>
                                             </div>
                                             <div className="relative">
                                                 <Plane className={styles.iconContainer} />
@@ -339,13 +336,12 @@ export default function BookingWidget() {
                                     {/* ROW 3: Driver Notes */}
                                     <div className="relative group">
                                         <div className="flex justify-between items-center">
-                                            <Label className={styles.glassLabel}>Driver Notes</Label>
+                                            <Label className={styles.glassLabel}>Note to driver</Label>
                                             <span className="text-xs text-white/40 uppercase tracking-wider">(Optional)</span>
                                         </div>
                                         <div className="relative">
-                                            <MessageSquare className={styles.iconContainerTop} />
                                             <Textarea
-                                                placeholder="Child seat required, extra luggage, etc..."
+                                                placeholder="Child seat required etc..."
                                                 className={styles.glassTextArea}
                                                 {...register("notes")}
                                             />
@@ -356,7 +352,6 @@ export default function BookingWidget() {
                                     <div className="space-y-2">
                                         <div className="flex justify-between items-center">
                                             <Label className={styles.glassLabel}>Passport Photo</Label>
-                                            <span className="text-xs text-white/40 uppercase tracking-wider">(Optional)</span>
                                         </div>
 
                                         {!previewUrl ? (
@@ -375,10 +370,11 @@ export default function BookingWidget() {
                                                 <img src={previewUrl} alt="Passport Preview" className="w-full h-full object-cover opacity-60" />
                                                 <div className="absolute inset-0 flex items-center justify-between px-4">
                                                     <div className="flex items-center gap-3">
-                                                        <FileText className="h-5 w-5 text-green-400" />
+                                                        <CheckCircle2 className="h-5 w-5 text-green-400" />
                                                         <span className="text-sm font-medium text-white truncate max-w-37.5">{fileName}</span>
                                                     </div>
-                                                    <Button size="icon" variant="ghost" type="button" className="h-8 w-8 text-white hover:bg-red-500/20 hover:text-red-400 rounded-full" onClick={clearFile}>
+                                                    <Button size="icon" variant="ghost" type="button" className="h-8 w-8 text-white
+                                                    hover:bg-red-500/20 hover:text-red-400 rounded-full" onClick={clearFile}>
                                                         <X className="h-4 w-4" />
                                                     </Button>
                                                 </div>
@@ -411,7 +407,6 @@ export default function BookingWidget() {
                         <div className="space-y-3">
                             <div className="flex gap-3 w-full">
                                 <Button
-                                    variant="ghost"
                                     onClick={back}
                                     className="h-14 px-4 rounded-xl text-white hover:bg-white/10 shrink-0"
                                 >
@@ -434,10 +429,11 @@ export default function BookingWidget() {
                     ) : (
                         // STEP 3 ACTIONS
                         <div className="flex gap-3 w-full">
-                            <Button variant="ghost" onClick={back} className="h-14 px-4 rounded-xl text-white hover:bg-white/10 shrink-0">
-                                <ChevronLeft className="h-6 w-6" />
+                            <Button  onClick={back} className="h-14 px-4 rounded-xl text-white hover:bg-white/10 shrink-0">
+                                <ChevronLeft className="h-6 w-6 text-white" />
                             </Button>
-                            <Button onClick={next} className={`${styles.actionBtn} bg-green-600 hover:bg-green-500 text-white shadow-green-900/20 flex-1`}>
+                            <Button onClick={next} className={`${styles.actionBtn} bg-green-600 hover:bg-green-500 
+                            text-white shadow-green-900/20 flex-1 mt-2 h-10`}>
                                 Confirm Booking <CheckCircle2 className="ml-2 h-5 w-5" />
                             </Button>
                         </div>
