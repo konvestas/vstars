@@ -205,7 +205,7 @@ export default function BookingWidget() {
                                         </span>
                                     </div>
                                     <div className="flex flex-col gap-3 relative">
-                                        <div className="absolute left-[7px] top-2 bottom-2 w-0.5 bg-white/20" />
+                                        <div className="absolute left-1.75 top-2 bottom-2 w-0.5 bg-white/20" />
                                         <div className="flex items-start gap-3 z-10">
                                             <div className="w-4 h-4 rounded-full bg-green-500 border-2 border-black/50 shrink-0 mt-0.5" />
                                             <div className="flex flex-col">
@@ -227,13 +227,14 @@ export default function BookingWidget() {
 
                                 {/* 2. VEHICLE INFO CARD */}
                                 <div className="bg-black/40 border border-white/10 rounded-2xl overflow-hidden">
-                                    <div className="relative h-48 w-full bg-gradient-to-b from-white/10 to-transparent">
+                                    <div className="relative h-48 w-full bg-linear-to-b from-white/10 to-transparent">
+                                        {/* eslint-disable-next-line @next/next/no-img-element */}
                                         <img
                                             src="/images/d2.png"
                                             alt="Mercedes Maybach Vito"
                                             className="w-full h-full object-cover object-center"
                                         />
-                                        <div className="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black via-black/80 to-transparent">
+                                        <div className="absolute bottom-0 left-0 w-full p-4 bg-linear-to-t from-black via-black/80 to-transparent">
                                             <h3 className="text-xl font-bold text-white">Mercedes-Benz Maybach Vito</h3>
                                             <p className="text-sm text-white/70">Ultra Luxury VIP Series</p>
                                         </div>
@@ -280,8 +281,8 @@ export default function BookingWidget() {
                                 </div>
 
                                 <div className="space-y-4">
-                                    {/* ROW 1: Name & Phone */}
-                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    {/* ROW 1: Name & Phone - FORCED SIDE BY SIDE */}
+                                    <div className="grid grid-cols-2 gap-4">
                                         <div className="relative group">
                                             <Label className={styles.glassLabel}>Full Name</Label>
                                             <div className="relative">
@@ -306,8 +307,8 @@ export default function BookingWidget() {
                                         </div>
                                     </div>
 
-                                    {/* ROW 2: Email & Flight No */}
-                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    {/* ROW 2: Email & Flight No - FORCED SIDE BY SIDE */}
+                                    <div className="grid grid-cols-2 gap-4">
                                         <div className="relative group">
                                             <Label className={styles.glassLabel}>Email Address</Label>
                                             <div className="relative">
@@ -322,7 +323,7 @@ export default function BookingWidget() {
                                         <div className="relative group">
                                             <div className="flex justify-between items-center">
                                                 <Label className={styles.glassLabel}>Flight No</Label>
-                                                <span className="text-xs text-white/40 uppercase tracking-wider">(Optional)</span>
+                                                <span className="text-[10px] sm:text-xs text-white/40 uppercase tracking-wider">(Opt)</span>
                                             </div>
                                             <div className="relative">
                                                 <Plane className={styles.iconContainer} />
@@ -370,11 +371,12 @@ export default function BookingWidget() {
                                             </div>
                                         ) : (
                                             <div className="relative w-full h-20 rounded-xl overflow-hidden border border-white/20 group bg-black/40">
+                                                {/* eslint-disable-next-line @next/next/no-img-element */}
                                                 <img src={previewUrl} alt="Passport Preview" className="w-full h-full object-cover opacity-60" />
                                                 <div className="absolute inset-0 flex items-center justify-between px-4">
                                                     <div className="flex items-center gap-3">
                                                         <FileText className="h-5 w-5 text-green-400" />
-                                                        <span className="text-sm font-medium text-white truncate max-w-[150px]">{fileName}</span>
+                                                        <span className="text-sm font-medium text-white truncate max-w-37.5">{fileName}</span>
                                                     </div>
                                                     <Button size="icon" variant="ghost" type="button" className="h-8 w-8 text-white hover:bg-red-500/20 hover:text-red-400 rounded-full" onClick={clearFile}>
                                                         <X className="h-4 w-4" />
@@ -417,7 +419,8 @@ export default function BookingWidget() {
                                 </Button>
                                 <Button
                                     onClick={next}
-                                    className={`${styles.actionBtn} bg-green-600 hover:bg-green-500 text-white shadow-green-900/20 flex-1`}
+                                    className={`${styles.actionBtn} bg-green-600 hover:bg-green-500 
+                                    text-white shadow-green-900/20 flex-1 mt-2 h-10 cursor-pointer`}
                                 >
                                     Continue
                                 </Button>
