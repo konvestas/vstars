@@ -81,16 +81,14 @@ export function LocationInput({
     return (
         <div ref={containerRef} className="relative group w-full">
             {/* Icon */}
-            <div className="absolute left-3 top-1/2 -translate-y-1/2 text-white z-10 pointer-events-none">
-                {isLoadingDetails ? (
-                    <Loader2 className="h-4 w-4 animate-spin" />
-                ) : (
-                    icon || <MapPin className="h-4 w-4" />
+            <div className="absolute left-3 top-1/2 -translate-y-1/2 text-white z-10 ">
+                {isLoadingDetails ? (<Loader2 className="h-4 w-4 animate-spin"/>) :
+                    (icon || <MapPin className="h-4 w-4"/>
                 )}
             </div>
 
             {/* Floating Label */}
-            <div className="absolute left-10 top-2 text-xs text-white/70 font-medium transition-colors pointer-events-none">
+            <div className="absolute left-10 top-2 text-xs text-white/80 font-medium transition-colors">
                 {label}
             </div>
 
@@ -101,7 +99,7 @@ export function LocationInput({
                 placeholder={placeholder}
                 autoComplete="off"
                 className={cn(
-                    "pt-6 pb-2 h-16 pl-10 text-white placeholder:text-white/30", // Increased Height & Padding
+                    "pt-6 pb-2 h-16 pl-10",
                     className,
                     error && "border-red-500/50 focus-visible:ring-red-500/50"
                 )}
@@ -109,9 +107,7 @@ export function LocationInput({
 
             {/* Dropdown */}
             {isOpen && predictions.length > 0 && (
-                <ul className="absolute z-50 w-full mt-2 p-1
-                bg-white/90 dark:bg-black/90 backdrop-blur-xl
-                border border-white/20 dark:border-white/10
+                <ul className="absolute z-50 w-full mt-2 p-1 bg-white/90  backdrop-blur-xl border border-white/20
                 rounded-2xl shadow-2xl max-h-60 overflow-y-auto no-scrollbar animate-in fade-in zoom-in-95 duration-200">
                     {predictions.map((pred) => (
                         <li
@@ -132,12 +128,7 @@ export function LocationInput({
                     ))}
                 </ul>
             )}
-
-            {error && (
-                <span className="text-xs text-red-400 absolute -bottom-5 left-1 font-medium">
-                    {error}
-                </span>
-            )}
+            {error && (<span className="text-xs text-red-400 absolute -bottom-5 left-1 font-medium">{error}</span>)}
         </div>
     );
 }

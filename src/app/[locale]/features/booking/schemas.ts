@@ -29,6 +29,7 @@ export const bookingSchema = z.object({
     phone: z.string().min(6, "Phone number is required"),
     flightNo: z.string().optional(),
     notes: z.string().optional(),
+    passport: z.any().optional(),
 })
     .superRefine((data, ctx) => {
         // CONDITIONAL VALIDATION:

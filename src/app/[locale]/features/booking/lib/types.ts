@@ -1,8 +1,7 @@
-import { z } from "zod";
-import { formSchema } from "../schemas";
+import { bookingSchema, type BookingFormValues } from "../schemas";
 
-// Infer the form values from the Zod schema
-export type FormValues = z.infer<typeof formSchema>;
+// FIX: Use the imported type. Alias it to FormValues if you want to keep compatibility.
+export type FormValues = BookingFormValues;
 
 export interface PassportPhotoData {
     filename: string;
@@ -10,7 +9,8 @@ export interface PassportPhotoData {
     mimeType: string;
 }
 
-export interface BookingPayload extends FormValues {
+// FIX: Extend 'BookingFormValues' instead of the undefined schema inference
+export interface BookingPayload extends BookingFormValues {
     bookingType: string;
     passportPhoto?: PassportPhotoData;
     calculatedPrice?: number;

@@ -69,12 +69,11 @@ export default function DateTimeInput({
         <Dialog open={isOpen} onOpenChange={setIsOpen}>
             <DialogTrigger asChild>
                 <div className="group text-white/80">
-                    <div className="absolute left-3 top-1/2 -translate-y-1/2 text-white z-10 pointer-events-none">
-                        <CalendarIcon className="h-4 w-4" />
+                    <div className="absolute left-3 top-1/2 -translate-y-1/2 text-white z-10">
+                        <CalendarIcon className="h-4 w-4"/>
                     </div>
 
-                    <div className="absolute left-10 top-2 text-xs
-                     font-normal transition-colors pointer-events-none">{label}</div>
+                    <div className="absolute left-10 top-2 text-xs font-normal transition-colors text-white ">{label} </div>
                     <button
                         type="button"
                         className={cn(
@@ -86,7 +85,7 @@ export default function DateTimeInput({
                     >
                         <div className="flex flex-col justify-end pb-3 mt-1 h-full">
                             {!displayValue && (
-                                <span className=" text-normal text-white/80">Select Date & Time</span>
+                                <span className=" text-normal text-white/60">Select Date & Time</span>
                             )}
                             {displayValue}
                         </div>
@@ -98,8 +97,7 @@ export default function DateTimeInput({
                     )}
                 </div>
             </DialogTrigger>
-            {/* ... DIALOG CONTENT SAME AS PREVIOUS (Simple white theme) ... */}
-            <DialogContent className="w-[75vw] h-[64vh] max-w-[650px] p-0 overflow-hidden
+            <DialogContent className="w-[75vw] max-w-[650px] p-0 overflow-hidden
             bg-white border-none rounded-2xl">
                 <DialogHeader className="p-4 pb-0">
                     <DialogTitle className="text-xl font-bold">Pick Date & Time</DialogTitle>
@@ -114,7 +112,6 @@ export default function DateTimeInput({
                             onSelect={setTempDate}
                             captionLayout="dropdown-months"
                             disabled={(date) => date < new Date(new Date().setHours(0, 0, 0, 0))}
-                            initialFocus
                             className="bg-transparent p-0"
                         />
                     </div>

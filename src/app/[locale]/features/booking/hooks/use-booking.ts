@@ -49,7 +49,7 @@ export function useBookingForm() {
         setValue("serviceType", newType);
 
         if (newType === SERVICE_TYPES.HOURLY) {
-            setValue("dropoffAddress", ""); // Clear dropoff for cleaner state
+            setValue("dropoffAddress", "");
             form.clearErrors("dropoffAddress");
         }
     };
@@ -58,8 +58,7 @@ export function useBookingForm() {
         let isValid = false;
 
         if (step === 1) {
-            // Trigger validation for Step 1 specific fields
-            // Zod `superRefine` will automatically check if dropoff/hours are needed based on serviceType
+            // Validate Search Criteria
             isValid = await trigger([
                 "pickupAddress",
                 "dropoffAddress",
@@ -69,6 +68,10 @@ export function useBookingForm() {
                 "passengers"
             ]);
         } else if (step === 2) {
+            // Step 2 is just "Select Vehicle", so it's always valid
+            isValid = true;
+        } else if (step === 3) {
+            // Validate Contact Details
             isValid = await trigger(["fullName", "email", "phone"]);
         }
 
