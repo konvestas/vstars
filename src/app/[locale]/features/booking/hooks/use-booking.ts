@@ -72,7 +72,7 @@ export function useBookingForm() {
             isValid = true;
         } else if (step === 3) {
             // Validate Contact Details
-            isValid = await trigger(["fullName", "email", "phone"]);
+            isValid = await trigger(["fullName", "email", "phone","flightNo","passport"]);
         }
 
         if (isValid) {

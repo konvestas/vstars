@@ -35,6 +35,6 @@ export const PRICING_ZONES: PricingRule[] = [
     }
 ];
 // Keywords to identify airports
-export const AIRPORT_KEYWORDS = ["SABIHA", "SAW", "GOKCEN", "ISTANBUL AIRPORT", "IST", "HAVALIMANI"];
+export const AIRPORT_KEYWORDS = ["SABIHA", "SAW", "GOKCEN", "ISTANBUL AIRPORT", "IST"];
 export const GREETING_FEE = 200;
 export const HOURLY_RATE = 750;
