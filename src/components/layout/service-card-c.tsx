@@ -20,22 +20,22 @@ export default function OurServicesSection() {
         {
             title: t("items.hourlyHire.title"),
             description: t("items.hourlyHire.desc"),
-            image: "/images/vitoIc.jpg",
+            image: "/images/vstarsTransferVehicle.webp",
         },
         {
             title: t("items.airportTransfers.title"),
             description: t("items.airportTransfers.desc"),
-            image: "/images/vitoIc.jpg",
+            image: "/images/vstarsTransferVehicleOutside.webp",
         },
         {
             title: t("items.medicalTourism.title"),
             description: t("items.medicalTourism.desc"),
-            image: "/images/vitoIcTers.jpg",
+            image: "/images/vstarsTransferVehicleInside.webp",
         },
         {
             title: t("items.cityTour.title"),
             description: t("items.cityTour.desc"),
-            image: "/images/vitoIcTers.jpg",
+            image: "/images/istanbul.webp",
         },
     ];
 

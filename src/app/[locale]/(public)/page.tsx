@@ -42,7 +42,6 @@ export default function App() {
                 </div>
                 {/* Widget */}
                 <div className="z-10 w-full max-w-4xl -mt-8 "><APIProvider apiKey={API_KEY}><BookingWidget/></APIProvider></div>
-                {/* Scroll Button */}
                 <div className="z-10 mt-auto md:mt-8"><ScrollButton title="View our services" scrollTo="our-services"/></div>
             </section>
 
