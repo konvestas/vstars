@@ -2,35 +2,35 @@ import { PricingRule } from "./types";
 
 export const PRICING_ZONES: PricingRule[] = [
     {
-        regions: ["MALTEPE", "KARTAL", "PENDİK", "SULTANBEYLİ", "ÇEKMEKÖY"],
+        regions: ["MALTEPE/ISTANBUL", "KARTAL/ISTANBUL", "PENDİK/ISTANBUL", "SULTANBEYLİ/ISTANBUL", "ÇEKMEKÖY/ISTANBUL"],
         price: 2000
     },
     {
-        regions: ["BOSTANCI", "KADIKÖY", "BEYKOZ"],
+        regions: ["BOSTANCI/ISTANBUL", "KADIKÖY/ISTANBUL", "BEYKOZ/ISTANBUL"],
         price: 2500
     },
     {
-        regions: ["TUZLA", "ÇAYIROVA", "GEBZE"],
+        regions: ["TUZLA/ISTANBUL", "ÇAYIROVA/ISTANBUL", "GEBZE/ISTANBUL"],
         price: 2500
     },
     {
-        regions: ["ŞİLE"],
+        regions: ["ŞİLE/ISTANBUL"],
         price: 3500
     },
     {
-        regions: ["ŞİŞLİ", "KAĞITHANE", "TAKSİM"],
+        regions: ["ŞİŞLİ/ISTANBUL", "KAĞITHANE/ISTANBUL", "TAKSİM/ISTANBUL"],
         price: 2500
     },
     {
-        regions: ["BEŞİKTAŞ", "BEYOĞLU", "EMİNÖNÜ", "SİRKECİ"],
+        regions: ["BEŞİKTAŞ/ISTANBUL", "BEYOĞLU/ISTANBUL", "EMİNÖNÜ/ISTANBUL", "SİRKECİ/ISTANBUL"],
         price: 2500
     },
     {
-        regions: ["BAĞCILAR", "BAKIRKÖY", "ZEYTİNBURNU"],
+        regions: ["BAĞCILAR/ISTANBUL", "BAKIRKÖY/ISTANBUL", "ZEYTİNBURNU/ISTANBUL"],
         price: 2750
     },
     {
-        regions: ["AVCILAR", "ESENYURT", "BÜYÜKÇEKMECE"],
+        regions: ["AVCILAR/ISTANBUL", "ESENYURT/ISTANBUL", "BÜYÜKÇEKMECE/ISTANBUL"],
         price: 3000
     }
 ];
