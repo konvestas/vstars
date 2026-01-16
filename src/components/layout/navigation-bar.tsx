@@ -1,12 +1,18 @@
 "use client";
 
 import { useState } from "react";
+import { Lexend_Peta } from "next/font/google";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { ChevronDown, Globe, Menu, User } from "lucide-react";
 import {NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuList, NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
+
+const lexendPeta = Lexend_Peta({
+    subsets: ["latin"],
+    weight: "500"
+});
 
 export default function NavigationBar() {
     const t = useTranslations("Navigation");
@@ -15,7 +21,6 @@ export default function NavigationBar() {
     const [isServicesOpen, setIsServicesOpen] = useState(false);
     const [isLanguageOpen, setIsLanguageOpen] = useState(false);
 
-    // Reusable style for dropdown links
     const menuLinkStyle = cn(
         "block select-none rounded-md p-3 leading-none no-underline outline-none " +
         "transition-colors hover:bg-slate-100 hover:text-black focus:bg-slate-100 " +
@@ -37,7 +42,7 @@ export default function NavigationBar() {
                             <NavigationMenuItem>
                                 <NavigationMenuTrigger
                                     className={cn(
-                                        "bg-transparent cursor-pointer text-base font-normal " +
+                                        " bg-transparent cursor-pointer text-base font-normal " +
                                         "px-3 md:px-14 py-2 rounded-md transition-colors",
                                         "text-white hover:bg-white/10 data-[state=open]:bg-white/10"
                                     )}
@@ -140,8 +145,7 @@ export default function NavigationBar() {
                 <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-0">
                     <Link
                         href="/"
-                        className="text-lg md:text-2xl font-bold tracking-widest
-                        md:tracking-[0.2em] whitespace-nowrap transition-opacity text-white hover:text-zinc-300"
+                        className={`${lexendPeta.className} text-lg md:text-2xl font-bold tracking-widest md:tracking-[0.2em] whitespace-nowrap transition-opacity text-white hover:text-zinc-300`}
                     >
                         VSTARS
                     </Link>
@@ -152,7 +156,7 @@ export default function NavigationBar() {
                     <Link
                         href="/login"
                         className="group flex items-center gap-2 px-3 md:px-5 py-2.5
-                        rounded-full text-sm font-normal transition-colors text-white hover:bg-white/10"
+                        rounded-full text-sm font-normal uppercase transition-colors text-white hover:bg-white/10"
                     >
                         <span>{t("signIn")}</span>
                         <div className="p-1.5 rounded-full transition-colors bg-white/20 group-hover:bg-white/30">
