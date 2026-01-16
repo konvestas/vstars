@@ -229,13 +229,13 @@ export default function BookingWidget() {
                                     <div className="relative h-48 w-full bg-linear-to-b from-white/10 to-transparent">
                                         {/* eslint-disable-next-line @next/next/no-img-element */}
                                         <img
-                                            src="/images/vstarsFleet.webp"
+                                            src="/images/vstarsTransferVehicle.webp"
                                             alt="Mercedes Maybach Vito"
                                             className="w-full h-full object-cover object-center"
                                         />
                                         <div className="absolute bottom-0 left-0 w-full p-4 bg-linear-to-t from-black via-black/80 to-transparent">
                                             <h3 className="text-xl font-bold text-white">Mercedes-Benz Maybach Vito</h3>
-                                            <p className="text-sm text-white/70">Luxury VIP Series</p>
+                                            <p className="text-sm text-white/70">VIP Series</p>
                                         </div>
                                     </div>
                                 </div>

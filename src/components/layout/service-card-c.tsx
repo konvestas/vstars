@@ -54,8 +54,8 @@ export default function OurServicesSection() {
     }, [api]);
 
     return (
-        <section id="our-services" className="w-full py-16 md:py-24 bg-white dark:bg-black transition-colors">
-            <div className="w-full max-w-[1400px] mx-auto px-6 md:px-8">
+        <section id="our-services" className="w-full py-20 md:py-24 bg-white dark:bg-black transition-colors">
+            <div className="w-full mx-auto px-6 md:px-8">
 
                 {/* HEADER */}
                 <div className="text-center mb-12">
@@ -63,7 +63,7 @@ export default function OurServicesSection() {
                         {t("title")}
                     </h2>
                     <p className="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">
-                        Experience the highest standard of luxury travel in Istanbul.
+                        Experience the highest standard of <br/> luxury travel in Istanbul.
                     </p>
                 </div>
 

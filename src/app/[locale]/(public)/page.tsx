@@ -46,7 +46,7 @@ export default function App() {
                 <div className="z-10 mt-auto md:mt-8"><ScrollButton title="View our services" scrollTo="our-services"/></div>
             </section>
 
-            <section className="w-full h-[50vh]"><OurServicesSection/></section>
+            <section className="w-full min-h-screen"><OurServicesSection/></section>
 
             <FloatingWhatsApp/>
         </main>
