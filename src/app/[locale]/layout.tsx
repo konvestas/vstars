@@ -73,7 +73,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
             siteName: "Vstars Transfer",
             images: [
                 {
-                    url: "https://www.vstarstransfer.com/images/d2.png",
+                    url: "https://www.vstarstransfer.com/images/vstarsFleet.webp",
                     width: 1200,
                     height: 630,
                     alt: "Vstars Luxury Fleet",
@@ -84,7 +84,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
             card: "summary_large_image",
             site: "@vstarstransfer",
             creator: "@vstarstransfer",
-            images: "https://www.vstarstransfer.com/images/d2.png"
+            images: "https://www.vstarstransfer.com/images/vstarsFleet.webp"
         },
     };
 }
@@ -108,7 +108,7 @@ export default async function RootLayout({
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "name": "Vstars Transfer",
-        "image": "https://www.vstarstransfer.com/images/d2.png",
+        "image": "https://www.vstarstransfer.com/images/vstarsFleet.webp",
         "url": "https://www.vstarstransfer.com",
         "telephone": "+905326432234",
         "email": "info@candumandanismanlik.com",
