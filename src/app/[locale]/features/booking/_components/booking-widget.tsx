@@ -415,7 +415,7 @@ export default function BookingWidget() {
                             >
                                 <div className="text-center">
                                     <h3 className="text-2xl font-bold text-white tracking-tight">Review & Pay</h3>
-                                    <p className="text-sm text-white/60 mt-1">Finalize your reservation securely</p>
+                                    <p className="text-sm text-white/60 mt-1">Finalize your reservation </p>
                                 </div>
 
                                 <div className="space-y-4">
@@ -428,18 +428,15 @@ export default function BookingWidget() {
                                         {/* Route & Date */}
                                         <div className="grid grid-cols-[auto_1fr] gap-3 text-sm">
                                             <div className="flex flex-col gap-1 text-white/50">
-                                                <span>Date:</span>
-                                                <span>Route:</span>
-                                                <span>Guest:</span>
+                                                <div>Date: <span className="text-white  font-medium">{watchedDate ? format(watchedDate, "dd MMM yyyy") : "-"} • {watchedTime} </span> </div>
+                                                <br/>
+                                                <div>Route: <span className=" max-w-[200px] text-white font-medium text-left">
+                                                    {serviceType === "hourly" ? "Hourly Rental" : pickupAddr } <br/> {dropoffAddr}</span> </div>
+                                                <br/>
+                                                <div>Guest:  <span className="text-white font-medium">{watch("fullName")}</span></div>
                                             </div>
-                                            <div className="flex flex-col gap-1 text-white font-medium text-right">
-                        <span>
-                            {watchedDate ? format(watchedDate, "dd MMM yyyy") : "-"} • {watchedTime}
-                        </span>
-                                                <span className="truncate max-w-[200px]">
-                            {serviceType === "hourly" ? "Hourly Rental" : pickupAddr}
-                        </span>
-                                                <span>{watch("fullName")}</span>
+                                            <div className="flex flex-col gap-1 text-white font-medium text-left">
+
                                             </div>
                                         </div>
 
@@ -464,7 +461,7 @@ export default function BookingWidget() {
                         <Button
                             onClick={next}
                             className={`${styles.actionBtn} bg-green-600 hover:bg-green-500 
-                                    text-white shadow-green-900/20 flex-1 mt-2 h-10 cursor-pointer`}
+                                    text-white shadow-green-900/20 flex-1 h-10 cursor-pointer`}
                         >
                             Continue
                         </Button>
@@ -472,13 +469,13 @@ export default function BookingWidget() {
                         // STEP 2 ACTIONS (Fixed Alignment)
                         <div className="space-y-3">
                             <div className="flex gap-3 w-full">
-                                <Button  onClick={back} className="h-10 mt-2 px-4 rounded-xl text-white bg-white/5 hover:bg-white/10 shrink-0">
+                                <Button  onClick={back} className="h-10 px-4 rounded-xl text-white bg-white/5 hover:bg-white/10 shrink-0">
                                     <ChevronLeft className="h-6 w-6 text-white " />
                                 </Button>
                                 <Button
                                     onClick={next}
                                     className={`${styles.actionBtn} bg-green-600 hover:bg-green-500 
-                                    text-white shadow-green-900/20 flex-1 mt-2 h-10 cursor-pointer`}
+                                    text-white shadow-green-900/20 flex-1 h-10 cursor-pointer`}
                                 >
                                     Continue
                                 </Button>
