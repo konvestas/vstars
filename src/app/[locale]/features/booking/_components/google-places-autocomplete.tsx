@@ -6,7 +6,7 @@ import { useMapsLibrary } from "@vis.gl/react-google-maps";
 interface Suggestion {
     placeId: string;
     text: string;
-    place: google.maps.places.Place; // We keep the official Place object
+    place: google.maps.places.Place;
 }
 
 export function usePlacesAutocomplete() {
@@ -36,8 +36,8 @@ export function usePlacesAutocomplete() {
                 const request: google.maps.places.AutocompleteRequest = {
                     input: inputValue,
                     sessionToken: sessionToken,
-                    // Optional: Restrict to 'airport' or 'locality' if needed
-                    // includedPrimaryTypes: ['airport', 'locality'],
+                    includedRegionCodes: ["tr"],
+                    language: "tr"
                 };
 
                 const { suggestions } = await AutocompleteSuggestion.fetchAutocompleteSuggestions(request);
