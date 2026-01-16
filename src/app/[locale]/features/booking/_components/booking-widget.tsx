@@ -77,7 +77,7 @@ export default function BookingWidget() {
     };
 
     return (
-        <Card className="w-full max-w-xl mx-auto border border-white/20 shadow-2xl overflow-hidden
+        <Card className="w-full max-w-xl mt-5 mx-auto border border-white/20 shadow-2xl overflow-hidden
         rounded-[2rem] bg-black/20 backdrop-blur-xl animate-in fade-in duration-500 relative">
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-20 bg-blue-400/20 blur-[60px] -z-10 pointer-events-none"/>
 
@@ -447,6 +447,11 @@ export default function BookingWidget() {
                                         </div>
                                     </div>
 
+                                    <div className="text-center">
+                                        <button type="button" className="text-xs text-white/40 hover:text-white/80 underline underline-offset-4 transition-colors">
+                                            View Terms & Conditions
+                                        </button>
+                                    </div>
 
                                 </div>
                             </motion.div>
@@ -456,7 +461,7 @@ export default function BookingWidget() {
                 </div>
 
                 {/* --- FOOTER BUTTONS --- */}
-                <div className="p-6 pt-0">
+                <div className="p-6 pt-1">
                     {step === 1 ? (
                         <Button
                             onClick={next}
@@ -479,11 +484,6 @@ export default function BookingWidget() {
                                 >
                                     Continue
                                 </Button>
-                            </div>
-                            <div className="text-center">
-                                <button type="button" className="text-xs text-white/40 hover:text-white/80 underline underline-offset-4 transition-colors">
-                                    View Terms & Conditions
-                                </button>
                             </div>
                         </div>
                     ) : step === 3 ? (
