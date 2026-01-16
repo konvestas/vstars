@@ -72,7 +72,7 @@ export const PassengerLuggageInput = forwardRef<HTMLButtonElement, PassengerLugg
                                 )}
                                 <p className="text-sm text-white flex items-center mt-5 gap-2">
                                     {t("selected")}
-                                    <span className="font-semibold flex items-center gap-2">
+                                    <span className="font-semibold flex items-center gap-1">
                                         {tempPassengers} <Users size={14}/> • {tempLuggage} <Luggage size={14}/>
                                     </span>
                                 </p>
