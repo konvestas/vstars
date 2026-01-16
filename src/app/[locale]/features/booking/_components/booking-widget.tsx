@@ -204,7 +204,7 @@ export default function BookingWidget() {
                                         </span>
                                     </div>
                                     <div className="flex flex-col gap-3 relative">
-                                        <div className="absolute left-1.75 top-2 bottom-2 w-0.5 bg-white/20" />
+                                        <div className="absolute left-1.75 top-2 bottom-5 w-0.5 bg-white/20" />
                                         <div className="flex items-start gap-3 z-10">
                                             <div className="w-4 h-4 rounded-full bg-green-500 border-2 border-black/50 shrink-0 mt-0.5" />
                                             <div className="flex flex-col">
@@ -235,7 +235,7 @@ export default function BookingWidget() {
                                         />
                                         <div className="absolute bottom-0 left-0 w-full p-4 bg-linear-to-t from-black via-black/80 to-transparent">
                                             <h3 className="text-xl font-bold text-white">Mercedes-Benz Maybach Vito</h3>
-                                            <p className="text-sm text-white/70">Ultra Luxury VIP Series</p>
+                                            <p className="text-sm text-white/70">Luxury VIP Series</p>
                                         </div>
                                     </div>
                                 </div>
