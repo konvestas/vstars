@@ -1,18 +1,14 @@
 "use client";
 
 import Image from "next/image";
-import { Lexend_Peta } from "next/font/google";
 import { APIProvider } from "@vis.gl/react-google-maps";
 import NavigationBar from "@/components/layout/navigation-bar";
 import FloatingWhatsApp from "@/components/layout/floating-whatsapp";
 import OurServicesSection from "@/components/layout/service-card-c";
 import ScrollButton from "@/components/layout/scroll-button";
 import BookingWidget from "@/app/[locale]/features/booking/_components/booking-widget";
+import Footer from "@/components/layout/footer";
 
-const lexendPeta = Lexend_Peta({
-    subsets: ["latin"],
-    weight: "400"
-});
 
 export default function App() {
     const API_KEY = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY as string;
@@ -36,7 +32,7 @@ export default function App() {
                 <div className="absolute inset-0 bg-black/40 -z-10"></div>
                 {/* Title */}
                 <div className="w-full max-w-4xl px-4 z-10">
-                    <h1 className={`${lexendPeta.className} text-white text-xl md:text-4xl font-bold tracking-widest uppercase drop-shadow-lg text-left`}>
+                    <h1 className="font-lexend text-white text-xl md:text-4xl font-semilight tracking-widest uppercase drop-shadow-lg text-left">
                         Istanbul&#39;s <br/>Transfer Service
                     </h1>
                 </div>
@@ -47,6 +43,7 @@ export default function App() {
 
             <section className="w-full min-h-screen"><OurServicesSection/></section>
 
+                <footer><Footer/></footer>
             <FloatingWhatsApp/>
         </main>
     );
