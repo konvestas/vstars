@@ -1,10 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { Instagram, Facebook, Download } from "lucide-react";
+import {  Download } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
-
-
 
 export default function Footer() {
     return (
@@ -125,16 +123,39 @@ export default function Footer() {
                             <Link
                                 href="https://instagram.com"
                                 target="_blank"
+                                aria-label="Instagram"
                                 className="p-2 rounded-xl hover:bg-muted transition"
                             >
-                                <Instagram className="h-5 w-5" />
+                                <img
+                                    src="/icons/Instagram.svg"
+                                    alt="Instagram"
+                                    className="h-5 w-5"
+                                />
+                            </Link>
+                            <Link
+                                href="https://wa.me/+905326432234"
+                                target="_blank"
+                                aria-label="WhatsApp"
+                                className="p-2 rounded-xl hover:bg-muted transition"
+                            >
+                                <img
+                                    src="/icons/WhatsApp.svg"
+                                    alt="WhatsApp"
+                                    className="h-5 w-5"
+                                />
                             </Link>
                             <Link
                                 href="https://facebook.com"
                                 target="_blank"
+                                aria-label="Facebook"
                                 className="p-2 rounded-xl hover:bg-muted transition"
                             >
-                                <Facebook className="h-5 w-5" />
+                                <img
+                                src="/icons/facebook.png"
+                                alt="Facebook"
+                                loading="lazy"
+                                className="h-5 w-5"
+                            />
                             </Link>
                         </div>
                     </div>
