@@ -85,7 +85,7 @@ export default function DateTimeInput({
                     >
                         <div className="flex flex-col justify-end pb-3 mt-1 h-full">
                             {!displayValue && (
-                                <span className=" text-normal text-white/60">Select Date & Time</span>
+                                <span className=" text-xs font-semibold text-white/60">Select Date & Time</span>
                             )}
                             {displayValue}
                         </div>
