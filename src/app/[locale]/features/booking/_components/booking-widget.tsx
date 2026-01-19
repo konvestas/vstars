@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import {motion, AnimatePresence, LazyMotion, domAnimation} from "framer-motion";
 import { FormProvider } from "react-hook-form";
 import { useTranslations } from "next-intl";
 import { format } from "date-fns";
@@ -77,6 +77,7 @@ export default function BookingWidget() {
     };
 
     return (
+        <LazyMotion features={domAnimation}>
         <Card className="w-full max-w-xl mt-5 mx-auto border border-white/20 shadow-2xl overflow-hidden
         rounded-[2rem] bg-black/20 backdrop-blur-xl animate-in fade-in duration-500 relative">
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-20 bg-blue-400/20 blur-[60px] -z-10 pointer-events-none"/>
@@ -157,7 +158,7 @@ export default function BookingWidget() {
                                         )}
                                     />
                                 )}
-                                <div className="grid grid-cols-2 gap-2">
+                                <div className="grid grid-cols-2 gap-2 ">
                                     <DateTimeInput
                                         label="Date"
                                         date={watchedDate}
@@ -430,7 +431,7 @@ export default function BookingWidget() {
                                             <div className="flex flex-col gap-1 text-white/50">
                                                 <div>Date: <span className="text-white  font-medium">{watchedDate ? format(watchedDate, "dd MMM yyyy") : "-"} • {watchedTime} </span> </div>
                                                 <br/>
-                                                <div>Route: <span className=" max-w-[200px] text-white font-medium text-left">
+                                                <div>Route: <span className=" max-w-50 text-white font-medium text-left">
                                                     {serviceType === "hourly" ? "Hourly Rental" : pickupAddr } <br/> {dropoffAddr}</span> </div>
                                                 <br/>
                                                 <div>Guest:  <span className="text-white font-medium">{watch("fullName")}</span></div>
@@ -517,5 +518,6 @@ export default function BookingWidget() {
 
             </FormProvider>
         </Card>
+        </LazyMotion>
     );
 }
