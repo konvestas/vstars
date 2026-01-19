@@ -41,6 +41,20 @@
     },
     "seeMore": "Подробнее"
   },
+  "Fleet": {
+    "title": "Наш автопарк",
+    "items": {
+      "Vito": {
+        "title": "Mercedes-Benz Vito",
+        "desc": "До 9 + 1 человек\nТВ\nПодсветка\nКонференц-стол\n6 мест багажа"
+      },
+      "Sprinter": {
+        "title": "Mercedes-Benz Sprinter",
+        "desc": "До 15 + 1 человек\nПодсветка\n6 мест багажа"
+      }
+    },
+    "seeMore": "Подробнее"
+  },
   "Booking": {
     "Tabs": {
       "oneWay": "Трансфер",

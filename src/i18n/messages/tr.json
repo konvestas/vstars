@@ -41,6 +41,20 @@
     },
     "seeMore": "Daha Fazla"
   },
+  "Fleet": {
+    "title": "Filomuzu Keşfedin",
+    "items": {
+      "Vito": {
+        "title": "Mercedes-Benz Vito",
+        "desc": "9 + 1 Kişilik\nTV\nAmbiyans Aydınlatma\nToplantı Masası\n6 Bagaj"
+      },
+      "Sprinter": {
+        "title": "Mercedes-Benz Sprinter",
+        "desc": "15 + 1 Kişilik\nAmbiyans Aydınlatma\n6 Bagaj"
+      }
+    },
+    "seeMore": "İncele"
+  },
   "Booking": {
     "Tabs": {
       "oneWay": "Tek Yön",

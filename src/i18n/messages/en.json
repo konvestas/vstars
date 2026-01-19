@@ -41,6 +41,20 @@
     },
     "seeMore": "See More"
   },
+  "Fleet": {
+    "title": "Explore our fleet",
+    "items": {
+      "Vito": {
+        "title": "Mercedes-Benz Vito",
+        "desc": "Fits up to 9 + 1 people\n6 baggage\nAmbient lighting\nWifi & Smart TV\nMini-bar\nUSB-C & wireless charging"
+      },
+      "Sprinter": {
+        "title": "Mercedes-Benz Sprinter",
+        "desc": "Fits up to 15 + 1 people\n6 baggage\nAmbient lighting\nWifi & Smart TV\nUSB-C & wireless charging"
+      }
+    },
+    "seeMore": "See More"
+  },
   "Booking": {
     "Tabs": {
       "oneWay": "One Way",

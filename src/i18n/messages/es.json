@@ -41,6 +41,20 @@
     },
     "seeMore": "Ver Más"
   },
+  "Fleet": {
+    "title": "Explore nuestra flota",
+    "items": {
+      "Vito": {
+        "title": "Mercedes-Benz Vito",
+        "desc": "Hasta 9 + 1 personas\nTV\nIluminación ambiental\nMesa de conferencias\n6 maletas"
+      },
+      "Sprinter": {
+        "title": "Mercedes-Benz Sprinter",
+        "desc": "Hasta 15 + 1 personas\nIluminación ambiental\n6 maletas"
+      }
+    },
+    "seeMore": "Ver más"
+  },
   "Booking": {
     "Tabs": {
       "oneWay": "Solo Ida",

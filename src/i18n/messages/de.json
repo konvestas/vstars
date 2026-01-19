@@ -41,6 +41,20 @@
     },
     "seeMore": "Mehr sehen"
   },
+  "Fleet": {
+    "title": "Entdecken Sie unsere Flotte",
+    "items": {
+      "Vito": {
+        "title": "Mercedes-Benz Vito",
+        "desc": "Bis zu 9 + 1 Personen\nTV\nAmbientebeleuchtung\nKonferenztisch\n6 Gepäckstücke"
+      },
+      "Sprinter": {
+        "title": "Mercedes-Benz Sprinter",
+        "desc": "Bis zu 15 + 1 Personen\nAmbientebeleuchtung\n6 Gepäckstücke"
+      }
+    },
+    "seeMore": "Mehr sehen"
+  },
   "Booking": {
     "Tabs": {
       "oneWay": "Transfer",
