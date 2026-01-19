@@ -46,6 +46,7 @@ export default function OurServicesSection() {
 
     useEffect(() => {
         if (!api) return;
+        // eslint-disable-next-line react-hooks/set-state-in-effect
         setCount(api.scrollSnapList().length);
         setCurrent(api.selectedScrollSnap() + 1);
         api.on("select", () => {
@@ -54,7 +55,7 @@ export default function OurServicesSection() {
     }, [api]);
 
     return (
-        <section id="our-services" className="w-full  py-20 md:py-24 bg-white dark:bg-black font-sans transition-colors">
+        <section id="our-services" className="w-full py-20 md:py-24 bg-white dark:bg-black font-sans transition-colors">
             <div className="w-full mx-auto px-6 md:px-8">
 
                 {/* HEADER */}

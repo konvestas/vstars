@@ -97,7 +97,7 @@ export default function DateTimeInput({
                     )}
                 </div>
             </DialogTrigger>
-            <DialogContent className="w-[75vw] max-w-[650px] p-0 overflow-hidden
+            <DialogContent className="w-[75vw] max-w-162.5 p-0 overflow-hidden
             bg-white border-none rounded-2xl">
                 <DialogHeader className="p-4 pb-0">
                     <DialogTitle className="text-xl font-bold">Pick Date & Time</DialogTitle>

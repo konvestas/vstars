@@ -32,9 +32,8 @@ export default function App() {
                         alt="Vstars transfer fleet"
                         fill
                         className="object-cover object-center"
-                        priority // Keep priority for LCP
+                        priority
                         sizes="100vw"
-                        quality={85} // Slightly reduce quality for performance if needed
                     />
                 </div>
                 {/* Dark Overlay */}
