@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import {Geist, Geist_Mono, Lexend_Peta} from "next/font/google";
 import { NextIntlClientProvider } from 'next-intl';
 import { notFound } from 'next/navigation';
 import { getMessages, getTranslations } from 'next-intl/server';
@@ -18,6 +18,12 @@ const geistSans = Geist({
 
 const geistMono = Geist_Mono({
     variable: "--font-geist-mono",
+    subsets: ["latin"],
+    display: "swap",
+    preload: true
+});
+const lexendPeta = Lexend_Peta({
+    variable: "--font-lexend",
     subsets: ["latin"],
     display: "swap",
     preload: true
@@ -173,7 +179,7 @@ export default async function RootLayout({
 
     return (
         <html lang={locale} data-scroll-behavior="smooth" suppressHydrationWarning>
-        <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <body className={`${geistSans.variable} ${geistMono.variable} ${lexendPeta.variable} antialiased`}>
         <link rel="preconnect" href="https://maps.googleapis.com" />
 
         <script
