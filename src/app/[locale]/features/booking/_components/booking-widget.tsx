@@ -41,15 +41,75 @@ const styles = {
     glassTextArea: "pl-10 pt-3 text-white bg-white/10 hover:bg-white/30 focus:bg-white/20 border-white/20 placeholder:text-white/30 transition-all duration-300 min-h-[80px]",
     glassLabel: "text-white/70 text-sm font-medium mb-1.5 block",
     tabTrigger: "rounded-full text-m font-semibold data-[state=active]:bg-white data-[state=active]:text-black data-[state=active]:shadow-lg transition-all duration-300 h-11",
-    actionBtn: "w-full text-lg font-medium rounded-xl transition-all duration-300 shadow-xl",
+    actionBtn: "w-full flex-1 h-10 cursor-pointer text-lg font-medium text-white " + "rounded-xl bg-green-700 hover:bg-green-600 " +
+        "shadow-xl shadow-green-900/30 transition-all duration-300 " + "focus-visible:ring-2 focus-visible:ring-green-400",
+    backBtn:   "h-10 mt-2 px-4 rounded-xl text-white bg-white/5 hover:bg-white/10 shrink-0",
     iconContainer: "absolute left-3 top-1/2 -translate-y-1/2 text-white/50 h-5 w-5 pointer-events-none",
     iconContainerTop: "absolute left-3 top-3 text-white/50 h-5 w-5 pointer-events-none"
 };
+
+// date dokundugumumz zaman hat veriyor luggage icinde gecerli
 
 export default function BookingWidget() {
     const t = useTranslations('Booking');
     const { form, step, price, onTabChange, next, back } = useBookingForm();
     const { watch, setValue, register } = form;
+
+    // SEND EMAIL
+    // const handleGetQuoteClick = useCallback(async () => {
+    //     const newErrors = {
+    //         name: !formData.name,
+    //         contact: !formData.contact,
+    //         from: !formData.from,
+    //         to: !formData.to,
+    //         date: !formData.date,
+    //         passengers: !formData.passengers,
+    //         suitcase: !formData.suitcase,
+    //     };
+    //     setErrors(newErrors);
+    //
+    //     const hasError = Object.values(newErrors).some(Boolean);
+    //     if (hasError) {
+    //         toast.error("Please fill in all required fields");
+    //         return;
+    //     }
+    //
+    //     try {
+    //         const res = await fetch("/api/sendQuote", {
+    //             method: "POST",
+    //             headers: { "Content-Type": "application/json" },
+    //             body: JSON.stringify(formData),
+    //         });
+    //
+    //         if (res.ok) {
+    //             toast.success("Quote request submitted!");
+    //             setIsDialogOpen(true);
+    //             setFormData({
+    //                 name: "",
+    //                 contact: "",
+    //                 from: "",
+    //                 to: "",
+    //                 date: "",
+    //                 passengers: "",
+    //                 suitcase: "",
+    //             });
+    //             setErrors({
+    //                 name: false,
+    //                 contact: false,
+    //                 from: false,
+    //                 to: false,
+    //                 date: false,
+    //                 passengers: false,
+    //                 suitcase: false,
+    //             });
+    //         } else {
+    //             toast.error("Failed to send request");
+    //         }
+    //     } catch (err) {
+    //         console.error(err);
+    //         toast.error("Something went wrong");
+    //     }
+    // }, [formData]);
 
     const serviceType = watch("serviceType");
     const [watchedDate, watchedTime, watchedPassengers, watchedLuggage, pickupAddr, dropoffAddr] = watch([
@@ -123,7 +183,7 @@ export default function BookingWidget() {
                                             value={field.value}
                                             onChange={field.onChange}
                                             error={form.formState.errors.pickupAddress?.message}
-                                            className="text-white bg-white/10 hover:bg-white/30 focus:bg-white/20 border-white/20 placeholder:text-white/30 transition-all duration-300"
+                                            className={styles.glassInput}
                                         />
                                     )}
                                 />
@@ -138,7 +198,7 @@ export default function BookingWidget() {
                                                 value={field.value}
                                                 onChange={field.onChange}
                                                 error={form.formState.errors.dropoffAddress?.message}
-                                                className="text-white bg-white/10 hover:bg-white/30 focus:bg-white/20 border-white/20 placeholder:text-white/30 transition-all duration-300"
+                                                className={styles.glassInput}
                                             />
                                         )}
                                     />
@@ -153,7 +213,7 @@ export default function BookingWidget() {
                                                 value={field.value || ""}
                                                 onChange={field.onChange}
                                                 error={form.formState.errors.hours?.message}
-                                                className="text-white bg-white/10 hover:bg-white/30 focus:bg-white/20 border-white/20 placeholder:text-white/30 transition-all duration-300"
+                                                className={styles.glassInput}
                                             />
                                         )}
                                     />
@@ -167,7 +227,7 @@ export default function BookingWidget() {
                                             setValue("date", date, { shouldValidate: true });
                                             setValue("time", time, { shouldValidate: true });
                                         }}
-                                        className="text-white bg-white/10 hover:bg-white/30 focus:bg-white/20 border-white/20 placeholder:text-white/30 transition-all duration-300"
+                                        className={styles.glassInput}
                                         error={form.formState.errors.date?.message || form.formState.errors.time?.message}
                                     />
                                     <PassengerLuggageInput
@@ -180,7 +240,7 @@ export default function BookingWidget() {
                                             setValue("passengers", parseInt(val.passengers), { shouldValidate: true });
                                             setValue("luggage", parseInt(val.luggage), { shouldValidate: true });
                                         }}
-                                        className="text-white bg-white/10 hover:bg-white/30 focus:bg-white/20 border-white/20 placeholder:text-white/30 transition-all duration-300"
+                                        className={styles.glassInput}
                                         error={form.formState.errors.passengers?.message}
                                     />
                                 </div>
@@ -372,7 +432,9 @@ export default function BookingWidget() {
                                         {!previewUrl ? (
                                             <div className="relative">
                                                 <Input type="file" accept="image/*" className="hidden" id="passport-upload" onChange={handleFileChange} />
-                                                <label htmlFor="passport-upload" className="flex flex-col items-center justify-center w-full h-20 border-2 border-dashed border-white/20 rounded-xl bg-white/5 hover:bg-white/10 cursor-pointer transition-all hover:border-white/40 group">
+                                                <label htmlFor="passport-upload" className="flex flex-col items-center
+                                                justify-center w-full h-20 border-2 border-dashed border-white/20 rounded-xl
+                                                bg-white/5 hover:bg-white/10 cursor-pointer transition-all hover:border-white/40 group">
                                                     <div className="flex items-center gap-2 text-white/60 group-hover:text-white transition-colors">
                                                         <UploadCloud className="h-5 w-5" />
                                                         <span className="text-sm font-medium">Click to upload</span>
@@ -388,7 +450,9 @@ export default function BookingWidget() {
                                                         <CheckCircle2 className="h-5 w-5 text-green-400" />
                                                         <span className="text-sm font-medium text-white truncate max-w-37.5">{fileName}</span>
                                                     </div>
-                                                    <Button size="icon" variant="ghost" type="button" className="h-8 w-8 text-white hover:bg-red-500/20 hover:text-red-400 rounded-full" onClick={clearFile}>
+                                                    <Button size="icon" variant="ghost" type="button"
+                                                            className="h-8 w-8 text-white hover:bg-red-500/20
+                                                            hover:text-red-400 rounded-full" onClick={clearFile}>
                                                         <X className="h-4 w-4" />
                                                     </Button>
                                                 </div>
@@ -397,7 +461,8 @@ export default function BookingWidget() {
                                     </div>
 
                                     {/* ROW 5: Price Total */}
-                                    <div className="flex justify-between items-center px-4 py-3 bg-white/10 rounded-xl border border-white/10">
+                                    <div className="flex justify-between items-center px-4 py-3 bg-white/10 rounded-xl
+                                     border border-white/10">
                                         <span className="text-sm text-white/80">Estimated Total</span>
                                         <span className="text-xl font-bold text-green-400">{price} TL</span>
                                     </div>
@@ -449,7 +514,8 @@ export default function BookingWidget() {
                                     </div>
 
                                     <div className="text-center">
-                                        <button type="button" className="text-xs text-white/40 hover:text-white/80 underline underline-offset-4 transition-colors">
+                                        <button type="button" className="text-xs text-white/40
+                                        hover:text-white/80 underline underline-offset-4 transition-colors">
                                             View Terms & Conditions
                                         </button>
                                     </div>
@@ -457,7 +523,6 @@ export default function BookingWidget() {
                                 </div>
                             </motion.div>
                         )}
-
                     </AnimatePresence>
                 </div>
 
@@ -466,51 +531,36 @@ export default function BookingWidget() {
                     {step === 1 ? (
                         <Button
                             onClick={next}
-                            className={`${styles.actionBtn} bg-green-600 hover:bg-green-500 
-                                    text-white shadow-green-900/20 flex-1 h-10 cursor-pointer`}
+                            className={`${styles.actionBtn}`}
                         >
                             Continue
                         </Button>
-                    ) : step === 2 ? (
+                    ) : step === 2 && 3 ? (
                         // STEP 2 ACTIONS (Fixed Alignment)
                         <div className="space-y-3">
                             <div className="flex gap-3 w-full">
-                                <Button  onClick={back} className="h-10 px-4 rounded-xl text-white bg-white/5 hover:bg-white/10 shrink-0">
-                                    <ChevronLeft className="h-6 w-6 text-white " />
+                                <Button  onClick={back} className={`${styles.backBtn}`}>
+                                    <ChevronLeft className="h-6 w-6 text-white"/>
                                 </Button>
                                 <Button
                                     onClick={next}
-                                    className={`${styles.actionBtn} bg-green-600 hover:bg-green-500 
-                                    text-white shadow-green-900/20 flex-1 h-10 cursor-pointer`}
+                                    className={`${styles.actionBtn}`}
                                 >
                                     Continue
                                 </Button>
                             </div>
                         </div>
-                    ) : step === 3 ? (
-                        // STEP 3 ACTIONS
-                        <div className="flex gap-3 w-full">
-                            <Button  onClick={back} className="h-10 mt-2 px-4 rounded-xl text-white bg-white/5 hover:bg-white/10 shrink-0">
-                                <ChevronLeft className="h-6 w-6 text-white " />
-                            </Button>
-                            <Button
-                                onClick={next}
-                                className={`${styles.actionBtn} bg-green-600 hover:bg-green-500 text-white shadow-green-900/20 flex-1 mt-2 h-10`}
-                            >
-                                Continue to Payment <ArrowRight className="ml-2 h-5 w-5" />
-                            </Button>
-                        </div>
                     ) : (
                         // STEP 4 ACTIONS
                         <div className="flex gap-3 w-full">
-                            <Button  onClick={back} className="h-10 mt-2 px-4 rounded-xl text-white bg-white/5 hover:bg-white/10 shrink-0">
-                                <ChevronLeft className="h-6 w-6 text-white " />
+                            <Button  onClick={back} className={`${styles.backBtn}`}>
+                                <ChevronLeft className="h-6 w-6 text-white"/>
                             </Button>
                             <Button
                                 onClick={next}
-                                className={`${styles.actionBtn} bg-green-600 hover:bg-green-500 text-white shadow-green-900/20 flex-1 mt-2 h-10`}
+                                className={`${styles.actionBtn}`}
                             >
-                                Pay & Reserve <ArrowRight className="ml-2 h-5 w-5" />
+                                Pay & Reserve <ArrowRight className="ml-2 h-5 w-5"/>
                             </Button>
                         </div>
                     )}
