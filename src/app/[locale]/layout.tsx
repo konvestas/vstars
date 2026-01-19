@@ -7,17 +7,16 @@ import "../globals.css";
 import React from "react";
 import { routing } from "@/i18n/routing";
 import { Toaster } from "@/components/ui/sonner";
-import Script from "next/script";
 
 const geistSans = Geist({
-    variable: "--font-geist-sans",
+    variable: "--font-sans",
     subsets: ["latin"],
     display: "swap",
     preload: true
 });
 
 const geistMono = Geist_Mono({
-    variable: "--font-geist-mono",
+    variable: "--font-mono",
     subsets: ["latin"],
     display: "swap",
     preload: true
