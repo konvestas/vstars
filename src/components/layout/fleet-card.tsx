@@ -14,7 +14,7 @@ import { Button } from "@/components/ui/button";
 interface FleetCardProps {
     title: string;
     description: string;
-    images: string[]; // Changed from image to images array
+    images: string[];
     index: number;
     className?: string;
 }
@@ -56,7 +56,7 @@ export function FleetCard({ title, description, images, index, className }: Flee
             transition={{ duration: 0.5, delay: index * 0.1 }}
             className={cn("h-full group", className)}
         >
-            <Link href="/fleet" className="block h-full">
+            <div className="block h-full">
                 <article
                     className={cn(
                         "flex flex-col h-full overflow-hidden rounded-xl border transition-all duration-300",
@@ -64,12 +64,12 @@ export function FleetCard({ title, description, images, index, className }: Flee
                     )}
                 >
                     {/* Image Carousel Container */}
-                    <div className="relative h-[220px] w-full shrink-0 overflow-hidden bg-gray-100 dark:bg-zinc-800">
+                    <div className="relative h-55 w-full shrink-0 overflow-hidden bg-gray-100 dark:bg-zinc-800">
                         <Carousel setApi={setApi} opts={{ loop: true }} className="w-full h-full">
                             <CarouselContent className="h-full">
                                 {images.map((image, i) => (
                                     <CarouselItem key={i} className="h-full">
-                                        <div className="relative h-[220px] w-full">
+                                        <div className="relative h-55 w-full">
                                             <Image
                                                 src={image}
                                                 alt={`${title} - Image ${i + 1}`}
@@ -78,7 +78,8 @@ export function FleetCard({ title, description, images, index, className }: Flee
                                                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                             />
                                             {/* Overlay */}
-                                            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300" />
+                                            <div className="absolute inset-0 bg-black/0
+                                             group-hover:bg-black/5 transition-colors duration-300" />
                                         </div>
                                     </CarouselItem>
                                 ))}
@@ -106,7 +107,6 @@ export function FleetCard({ title, description, images, index, className }: Flee
                                 </Button>
                             </>
                         )}
-
                         {/* Dots Indicator - Only show if multiple images */}
                         {images.length > 1 && (
                             <div className="absolute bottom-3 left-0 right-0 flex justify-center gap-1.5 z-10 pointer-events-none">
@@ -128,41 +128,34 @@ export function FleetCard({ title, description, images, index, className }: Flee
                     {/* Content */}
                     <div className="flex flex-col flex-1 p-6">
                         {/* Title */}
-                        <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white leading-tight">
-                            {title}
-                        </h3>
+                        <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white leading-tight">{title}</h3>
 
-                        {/* Black Separator */}
                         <Separator orientation="horizontal" decorative={true} className="bg-black dark:bg-white mb-4" />
 
                         {/* Feature List with Checkmarks */}
                         <ul className="space-y-3 mb-6 flex-1">
                             {features.map((feature, i) => (
                                 <li key={i} className="flex items-start gap-3">
-                                    {/* Checkmark Icon */}
                                     <Check className="h-5 w-5 text-black dark:text-white shrink-0 mt-0.5" strokeWidth={2} />
-                                    {/* Feature Text */}
                                     <span className="text-sm font-medium text-gray-600 dark:text-gray-300 leading-tight">
-                                        {/* Removes bullet if present to be safe */}
-                                        {feature.replace(/^[•\-\*]\s*/, '')}
+                                        {feature.replace(/^[•\-*]\s*/, '')}
                                     </span>
                                 </li>
                             ))}
                         </ul>
 
                         {/* Footer / CTA */}
-                        <div
-                            className={cn(
-                                "pt-4 border-t flex items-center justify-between text-xs font-bold uppercase tracking-wider transition-colors",
-                                "border-gray-100 dark:border-zinc-800 text-gray-400 group-hover:text-black dark:text-gray-500 dark:group-hover:text-white"
-                            )}
+                        <Link href="/fleet"
+                            className="pt-4 border-t flex items-center justify-between text-xs font-bold uppercase
+                             tracking-wider transition-colors border-gray-100 dark:border-zinc-800 text-gray-400
+                              group-hover:text-black dark:text-gray-500 dark:group-hover:text-white"
                         >
                             <span>{t("seeMore")}</span>
                             <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                        </div>
+                        </Link>
                     </div>
                 </article>
-            </Link>
+            </div>
         </motion.div>
     );
 }
