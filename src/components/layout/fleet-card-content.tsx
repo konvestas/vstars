@@ -9,7 +9,7 @@ import {Carousel, CarouselContent, CarouselItem, type CarouselApi,} from "@/comp
 interface FleetItem {
     title: string;
     description: string;
-    images: string[]; // Changed to array for multiple images
+    images: string[];
 }
 
 export default function FleetSection() {
@@ -44,6 +44,7 @@ export default function FleetSection() {
 
     useEffect(() => {
         if (!api) return;
+        // eslint-disable-next-line react-hooks/set-state-in-effect
         setCount(api.scrollSnapList().length);
         setCurrent(api.selectedScrollSnap() + 1);
         api.on("select", () => {
@@ -89,24 +90,29 @@ export default function FleetSection() {
                     </Carousel>
 
                     {/* Custom Dots */}
-                    <div className="flex justify-center gap-2 mt-4">
+                    <div className="flex justify-center gap-1 mt-4">
                         {Array.from({ length: count }).map((_, index) => (
                             <button
                                 key={index}
                                 onClick={() => api?.scrollTo(index)}
-                                className={cn(
-                                    "h-2 rounded-full transition-all duration-300",
-                                    index === current - 1
-                                        ? "w-8 bg-gray-900 dark:bg-white"
-                                        : "w-2 bg-gray-300 hover:bg-gray-400 dark:bg-gray-700 dark:hover:bg-gray-600"
-                                )}
+                                className="flex h-11 w-11 items-center justify-center rounded-full
+                                 hover:bg-black/5 dark:hover:bg-white/5 transition-colors"
                                 aria-label={`Go to slide ${index + 1}`}
-                            />
+                            >
+                                <span
+                                    className={cn(
+                                        "h-2 rounded-full transition-all duration-300 block",
+                                        index === current - 1
+                                            ? "w-8 bg-gray-900 dark:bg-white"
+                                            : "w-2 bg-gray-300 dark:bg-gray-700"
+                                    )}
+                                />
+                            </button>
                         ))}
                     </div>
                 </div>
 
-                {/* --- DESKTOP VIEW (Flexbox centered) --- */}
+                {/* --- DESKTOP VIEW  */}
                 <div className="hidden lg:flex lg:flex-wrap lg:justify-center lg:gap-6">
                     {fleetData.map((item, index) => (
                         <FleetCard
