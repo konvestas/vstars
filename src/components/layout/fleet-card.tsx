@@ -56,13 +56,11 @@ export function FleetCard({ title, description, images, index, className }: Flee
             transition={{ duration: 0.5, delay: index * 0.1 }}
             className={cn("h-full group", className)}
         >
-            <div className="block h-full">
-                <article
-                    className={cn(
-                        "flex flex-col h-full overflow-hidden rounded-xl border transition-all duration-300",
-                        "bg-white dark:bg-zinc-900 border-gray-200 dark:border-zinc-800 shadow-sm hover:shadow-xl"
-                    )}
-                >
+            <div  className={cn(
+                " block h-full  flex-col overflow-hidden rounded-xl " +
+                "border transition-all duration-300",
+                "bg-white dark:bg-zinc-900 border-gray-200 dark:border-zinc-800 shadow-sm hover:shadow-xl"
+            )}>
                     {/* Image Carousel Container */}
                     <div className="relative h-55 w-full shrink-0 overflow-hidden bg-gray-100 dark:bg-zinc-800">
                         <Carousel setApi={setApi} opts={{ loop: true }} className="w-full h-full">
@@ -146,6 +144,7 @@ export function FleetCard({ title, description, images, index, className }: Flee
 
                         {/* Footer / CTA */}
                         <Link href="/fleet"
+                              aria-label="See more about our fleet"
                             className="pt-4 border-t flex items-center justify-between text-xs font-bold uppercase
                              tracking-wider transition-colors border-gray-100 dark:border-zinc-800 text-gray-400
                               group-hover:text-black dark:text-gray-500 dark:group-hover:text-white"
@@ -154,7 +153,6 @@ export function FleetCard({ title, description, images, index, className }: Flee
                             <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                         </Link>
                     </div>
-                </article>
             </div>
         </motion.div>
     );
