@@ -39,3 +39,4 @@ public/images
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+/.idea/dictionaries/project.xml
