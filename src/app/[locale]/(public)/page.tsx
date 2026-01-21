@@ -1,13 +1,14 @@
 "use client";
 
 import Image from "next/image";
-import dynamic from "next/dynamic"; // Import dynamic
+import dynamic from "next/dynamic";
 import { APIProvider } from "@vis.gl/react-google-maps";
 import NavigationBar from "@/components/layout/navigation-bar";
 import FloatingWhatsApp from "@/components/layout/floating-whatsapp";
 import ScrollButton from "@/components/layout/scroll-button";
 import BookingWidget from "@/app/[locale]/features/booking/_components/booking-widget";
 import Footer from "@/components/layout/footer";
+import ChooseUs from "@/components/layout/choose-us";
 
 // Lazy load below-the-fold sections
 const OurServicesSection = dynamic(() => import("@/components/layout/service-card-content"), {
@@ -40,7 +41,8 @@ export default function App() {
                 <div className="absolute inset-0 bg-black/40 -z-10"></div>
                 {/* Title */}
                 <div className=" max-w-4xl px-4 z-10">
-                    <h1 className="font-lexend text-white text-xl md:text-4xl font-semilight tracking-widest uppercase drop-shadow-lg text-left">
+                    <h1 className="font-lexend text-white text-xl md:text-4xl font-semilight tracking-widest
+                    uppercase drop-shadow-lg text-left">
                         Istanbul&#39;s <br/>Transfer Service
                     </h1>
                 </div>
@@ -49,8 +51,8 @@ export default function App() {
                 <div className="z-10 mt-auto md:mt-8"><ScrollButton title="View our services" scrollTo="our-services"/></div>
             </section>
 
-            {/* These sections are now lazy loaded */}
             <section className="min-h-1/2"><OurServicesSection/></section>
+            <section className="min-h-1/2"><ChooseUs/></section>
             <section className="min-h-1/2"><FleetSection/></section>
 
             <footer><Footer/></footer>
