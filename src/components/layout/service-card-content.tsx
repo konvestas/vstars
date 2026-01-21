@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 import { cn } from "@/lib/utils";
 import { ServiceCard } from "./service-card";
 import {Carousel, CarouselContent, CarouselItem, type CarouselApi,} from "@/components/ui/carousel";
+import { motion } from "framer-motion";
 
 interface ServiceItem {
     title: string;
@@ -58,6 +59,13 @@ export default function OurServicesSection() {
         <section id="our-services" className="w-full py-20 md:py-24 bg-white dark:bg-black font-sans transition-colors">
             <div className="w-full mx-auto px-6 md:px-8">
 
+                <motion.div
+                    initial={{ opacity: 0, y: 18 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-80px" }}
+                    transition={{ duration: 0.6, ease: "easeOut" }}
+                    className="text-center mb-12"
+                >
                 {/* HEADER */}
                 <div className="text-center mb-12">
                     <h2 className="text-4xl md:text-5xl font-semibold mb-4 leading-none text-gray-900 dark:text-white">
@@ -67,6 +75,7 @@ export default function OurServicesSection() {
                         Experience the highest standard of <br/> luxury travel in Istanbul.
                     </p>
                 </div>
+                </motion.div>
 
                 {/* --- MOBILE VIEW (Carousel) --- */}
                 <div className="block lg:hidden">
