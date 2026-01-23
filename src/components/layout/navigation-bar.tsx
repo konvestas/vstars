@@ -15,11 +15,11 @@ export default function NavigationBar() {
     const [isServicesOpen, setIsServicesOpen] = useState(false);
     const [isLanguageOpen, setIsLanguageOpen] = useState(false);
 
-    const menuLinkStyle = cn(
-        "font-lexend font-semibold text-sm block select-none rounded-md p-3 leading-none no-underline outline-none " +
-        "transition-colors hover:bg-slate-100 hover:text-black focus:bg-slate-100 " +
+    const menuLinkStyle = cn("font-lexend font-semibold text-sm block select-none rounded-md p-3 leading-none " +
+        "no-underline outline-none transition-colors hover:bg-slate-100 hover:text-black focus:bg-slate-100 " +
         "focus:text-black cursor-pointer text-black");
-    const dropdownToggleStyle = "font-lexend font-semibold text-sm flex items-center justify-between w-full px-3 py-2 rounded-md transition-colors text-black hover:bg-slate-100 hover:text-black focus:bg-slate-100 cursor-pointer";
+    const dropdownToggleStyle = "font-lexend font-semibold text-sm flex items-center justify-between w-full px-3 py-2 " +
+        "rounded-md transition-colors text-black hover:bg-slate-100 hover:text-black focus:bg-slate-100 cursor-pointer";
 
     return (
         <nav className="sticky top-0 z-40 w-full">
@@ -134,7 +134,8 @@ export default function NavigationBar() {
                 <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-0">
                     <Link
                         href="/"
-                        className="font-lexend font-bold text-lg md:text-2xl tracking-widest md:tracking-[0.2em] whitespace-nowrap transition-opacity text-white hover:text-zinc-300"
+                        className="font-lexend font-bold text-lg md:text-2xl tracking-widest md:tracking-[0.2em]
+                        whitespace-nowrap transition-opacity text-white hover:text-zinc-300"
                     >
                         VSTARS
                     </Link>
