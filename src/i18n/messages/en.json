@@ -79,24 +79,32 @@
     },
     "seeMore": "See More"
   },
-  "Booking": {
+  "BookingWidget": {
     "Tabs": {
-      "oneay": "One Way",
+      "oneWay": "One Way",
       "hourly": "Hourly Hire"
-    },
-    "Steps": {
-      "details": "Ride Details",
-      "summary": "Summary",
-      "payment": "Payment"
     },
     "Form": {
       "pickUpLocation": "Pick-up Location",
       "pickUpLocationPlaceHolder": "Enter pick-up location",
       "dropOffLocation": "Drop-off Location",
       "dropOffLocationPlaceHolder": "Enter drop-off location",
+
       "duration": "Duration",
-      "hours": "{count, plural, =1 {# Hour} other {# Hours}}",
+      "durationPlaceHolder": "Select Duration",
       "date": "Date",
+      "datePlaceHolder": "Select Date & Time",
+      "insideTitle": "Pick Date & Time",
+      "availableTime": "Available Times",
+
+      "PassLugTitle": "Select Passengers & Luggage",
+      "selected": "Selected:",
+      "passengers": "Passengers",
+      "luggage": "Luggage",
+      "SelectedConfiguration": "Selected Configuration:",
+      "cancel": "cancel",
+      "confirm": "confirm",
+
       "PassengerLuggage": "Passenger & Luggage",
       "addressPlaceholder": "Enter Airport, Hotel, or Address...",
       "SelectDateHours": "Select Date & Time",
