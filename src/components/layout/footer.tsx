@@ -3,8 +3,13 @@
 import Link from "next/link";
 import {  Download } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
+import {useTranslations} from "next-intl";
+import {cn} from "@/lib/utils";
 
 export default function Footer() {
+    const t = useTranslations("Footer");
+    const textHover = cn("hover:underline text-muted-foreground hover:text-foreground ")
+
     return (
         <footer className="w-full bg-muted/40 border-t">
             <div className="max-w-7xl mx-auto px-6 py-12">
@@ -20,7 +25,8 @@ export default function Footer() {
                     {/* Right Side: Download Button */}
                     <Link
                         href="/download"
-                        className="inline-flex items-center gap-2 rounded-xl bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow hover:opacity-90 transition whitespace-nowrap"
+                        className="inline-flex items-center gap-2 rounded-xl bg-primary px-4 py-2 text-sm font-medium
+                        text-primary-foreground shadow hover:opacity-90 transition whitespace-nowrap"
                     >
                         <Download className="h-4 w-4" />
                         Download App
@@ -34,24 +40,24 @@ export default function Footer() {
                     {/* Services */}
                     <div>
                         <h3 className="font-semibold mb-4">Services</h3>
-                        <ul className="space-y-2 text-muted-foreground hover:text-foreground transition">
+                        <ul className="space-y-2 transition">
                             <li>
-                                <Link href="/services" >
+                                <Link href="/services" className={textHover} >
                                     Airport Transfer
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/services">
+                                <Link href="/services" className={textHover}>
                                     Hourly Chauffeur Ride
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/services">
+                                <Link href="/services" className={textHover}>
                                     Medical Tourism
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/services">
+                                <Link href="/services" className={textHover}>
                                     City Tours
                                 </Link>
                             </li>
@@ -63,27 +69,27 @@ export default function Footer() {
                         <h3 className="text-m font-semibold mb-4">Affiliates</h3>
                         <ul className="space-y-2 text-muted-foreground hover:text-foreground transition">
                             <li>
-                                <Link href="/contact" >
+                                <Link href="/contact" className={textHover} >
                                     Can Duman Travel Agency
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/contact">
+                                <Link href="/contact" className={textHover}>
                                     Visitoria Grup Sigorta
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/contact" >
+                                <Link href="/contact" className={textHover} >
                                     Can Duman Medical Turizm
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/contact">
+                                <Link href="/contact" className={textHover}>
                                     Can Duman Danışmanlık
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/contact" >
+                                <Link href="/contact" className={textHover} >
                                     Agon
                                 </Link>
                             </li>
@@ -95,12 +101,12 @@ export default function Footer() {
                         <h3 className=" font-semibold mb-4">Support</h3>
                         <ul className="space-y-2 text-muted-foreground hover:text-foreground transition">
                             <li>
-                                <Link href="/contact-us">
+                                <Link href="/contact-us" className={textHover}>
                                     Contact Us
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/faq">
+                                <Link href="/faq" className={textHover}>
                                     Help & FAQ
                                 </Link>
                             </li>
@@ -119,49 +125,46 @@ export default function Footer() {
                         >
                             Go to Contact Page
                         </Link>
-                        <div className="flex items-center gap-5 mt-5">
+                        <div className="flex items-center gap-7 mt-8">
                             <Link
                                 href="https://instagram.com"
                                 target="_blank"
                                 aria-label="Instagram"
-                                className="p-2 rounded-xl hover:bg-muted transition"
                             >
                                 <img
                                     src="/icons/Instagram.svg"
                                     alt="Instagram"
-                                    className="h-5 w-5"
+                                    className="h-7 w-7"
                                 />
                             </Link>
                             <Link
                                 href="https://wa.me/+905326432234"
                                 target="_blank"
                                 aria-label="WhatsApp"
-                                className="p-2 rounded-xl hover:bg-muted transition"
                             >
                                 <img
                                     src="/icons/WhatsApp.svg"
                                     alt="WhatsApp"
-                                    className="h-5 w-5"
+                                    className="h-7 w-7"
                                 />
                             </Link>
                             <Link
                                 href="https://facebook.com"
                                 target="_blank"
                                 aria-label="Facebook"
-                                className="p-2 rounded-xl hover:bg-muted transition"
                             >
                                 <img
                                 src="/icons/facebook.png"
                                 alt="Facebook"
                                 loading="lazy"
-                                className="h-5 w-5"
+                                className="h-7 w-7"
                             />
                             </Link>
                         </div>
                     </div>
                 </div>
 
-                <Separator className="my-10" />
+                <Separator className="my-10 bg-black"/>
 
                 {/* Bottom */}
                 <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-s text-muted-foreground">
