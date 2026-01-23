@@ -128,58 +128,45 @@
         "uploaded": "✓ Uploaded"
       }
     },
-    "Calendar": {
-      "label": "Date",
-      "placeholder": "Select Date & Time",
-      "modalTitle": "Select Date & Time",
-      "dateFormatInfo": "Date format: DD/MM/YYYY • 24-hour clock",
-      "selectTime": "Select Time",
-      "appointmentFor": "Your booking is for",
-      "selectPrompt": "Please select a date and time for your transfer."
-    },
-    "PackagePerks": {
-      "details": "Package Details",
+
+    "PackageDetail": {
+      "title": "Package Details",
       "waitTime": "Free 30 minutes of wait time",
       "greet": "Includes Meet & Greet service",
       "alert": "Guest/luggage capacities must be abided by. If unsure, select a larger class as service may be refused"
     },
+
     "GuestInfo": {
       "title": "Final Details",
-      "description": "Please provide your contact information",
+      "desc": "Please provide your contact information",
       "fullname": "Full name",
       "phone": "Phone number",
-      "email": "Email adress",
-      "flightnumber": "Flight number",
-      "optional": "optional",
-      "drivernote": "Note to the driver:",
-      "drivernotePlaceHolder": "Child seat required, extra luggage, etc...",
-      "passportphoto": "Child seat required, extra luggage, etc...",
-      "click": "Click to upload passport photo"
+      "email": "Email Address",
+      "flightNumber": "Flight number",
+      "optional": "(Optional)",
+      "driverNote": "Note to the driver:",
+      "driverNotePlaceHolder": "Child seat required, extra luggage, etc...",
+      "passportPhoto": "Passport Photo",
+      "click": "Click to upload passport photo",
+      "summaryEstimated": "Total Estimated Price:",
+      "reserve": "Reserve"
+
     },
-    "Passengers": {
-      "modalTitle": "Select Passengers & Luggage",
-      "passengerLabel": "Passenger",
-      "luggageLabel": "Luggage",
-      "selected": "Selected:"
-    },
+
     "Summary": {
       "title": "Review Your Booking",
-      "dateTime": "Date & Time",
+      "desc": "Finalize your reservation",
+      "bookingSummary": "Booking Summary",
+      "date": "Date:",
+      "guest": "Guest:",
+      "phone": "Phone",
+      "route": "Route:",
       "passengers": "Passengers",
       "paxCount": "{count} Pax",
       "bagCount": "{count} Bags",
-      "guest": "Guest",
-      "phone": "Phone",
-      "waitingTime": "30 Minutes Free Waiting Time",
-      "totalEstimated": "Total Estimated Price:",
-      "taxesIncluded": "* Includes all taxes & fees",
-      "review": "Review & Pay",
-      "finalize": "Finalize your reservation",
-      "summary": "Booking Summary",
-      "date": "Date:",
-      "route": "Route:",
       "total": "Total Amount",
       "terms": "View Terms & Conditions"
+
     },
     "Payment": {
       "integrationTitle": "Secure Payment",
