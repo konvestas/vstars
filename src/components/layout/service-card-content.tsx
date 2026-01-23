@@ -72,7 +72,7 @@ export default function OurServicesSection() {
                         {t("title")}
                     </h2>
                     <p className="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">
-                        Experience the highest standard of <br/> luxury travel in Istanbul.
+                        {t("description")}
                     </p>
                 </div>
                 </motion.div>
