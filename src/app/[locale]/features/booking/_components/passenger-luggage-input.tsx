@@ -18,15 +18,15 @@ interface PassengerLuggageInputProps {
     value?: PassengerValue;
     onChange: (value: PassengerValue) => void;
     label: string;
+    placeholder: string;
     error?: string;
     className: string;
 }
 
 export const PassengerLuggageInput = forwardRef<HTMLButtonElement, PassengerLuggageInputProps>(
-    ({ value = { passengers: "1", luggage: "0" }, onChange, label, error, className, ...props }, ref) => {
+    ({ value = { passengers: "1", luggage: "0" }, onChange, label,placeholder, error, className, ...props }, ref) => {
 
-        const t = useTranslations('Booking.Passengers');
-        const tShared = useTranslations('Shared');
+        const t = useTranslations('BookingWidget');
 
         const [isOpen, setIsOpen] = useState(false);
         const [tempPassengers, setTempPassengers] = useState(value.passengers);
@@ -71,7 +71,7 @@ export const PassengerLuggageInput = forwardRef<HTMLButtonElement, PassengerLugg
                                     <span className="text-white">{label}</span>
                                 )}
                                 <p className="text-sm text-white flex items-center mt-5 gap-2">
-                                    {t("selected")}
+                                    {placeholder}
                                     <span className="font-semibold flex items-center gap-1">
                                         {tempPassengers}<Users size={14}/> •{tempLuggage}<Luggage size={14}/>
                                     </span>
@@ -91,7 +91,7 @@ export const PassengerLuggageInput = forwardRef<HTMLButtonElement, PassengerLugg
                 <DialogContent className="sm:max-w-md bg-white/95 dark:bg-zinc-900/95 backdrop-blur-xl border
                 border-white/20 dark:border-white/10 rounded-2xl shadow-2xl">
                     <DialogHeader>
-                        <DialogTitle className="text-xl font-semibold">{t("modalTitle") || "Passengers & Luggage"}</DialogTitle>
+                        <DialogTitle className="text-xl font-semibold">{t("Form.PassLugTitle")}</DialogTitle>
                     </DialogHeader>
 
                     <div className="py-1 space-y-4">
@@ -99,7 +99,7 @@ export const PassengerLuggageInput = forwardRef<HTMLButtonElement, PassengerLugg
                         <div className="grid grid-cols-2 ">
                             {/* Passengers Select */}
                             <div className="space-y-2">
-                                <label className="text-xs font-semibold ml-3">Passengers</label>
+                                <label className="text-xs font-semibold ml-3">{t("Form.passengers")}</label>
                                 <Select value={tempPassengers} onValueChange={setTempPassengers}>
                                     <SelectTrigger className="h-12 mt-1 bg-gray-300  border-0 font-semibold rounded-sm-">
                                     <div className="flex items-center gap-2">
@@ -119,7 +119,7 @@ export const PassengerLuggageInput = forwardRef<HTMLButtonElement, PassengerLugg
 
                             {/* Luggage Select */}
                             <div className="space-y-2">
-                                <label className="text-xs font-semibold ml-3">Luggage</label>
+                                <label className="text-xs font-semibold ml-3">{t("Form.luggage")}</label>
                                 <Select value={tempLuggage} onValueChange={setTempLuggage}>
                                     <SelectTrigger className="h-12 mt-1 bg-gray-300  border-0 font-semibold rounded-sm-">
                                         <div className="flex items-center gap-2 ">
@@ -141,7 +141,7 @@ export const PassengerLuggageInput = forwardRef<HTMLButtonElement, PassengerLugg
                         {/* Summary Box */}
                         <div className="p-4 bg-gray-300 rounded-xl border
                          border-gray-400 flex items-center justify-between">
-                            <span className="text-m text-black ">Selected Configuration:</span>
+                            <span className="text-m text-black ">{t("Form.SelectedConfiguration")}</span>
                             <div className="flex items-center gap-3">
                                  <span className="font-semibold text-black flex items-center gap-2">
                                         {tempPassengers} <Users size={14}/> • {tempLuggage} <Luggage size={14}/>
@@ -153,7 +153,7 @@ export const PassengerLuggageInput = forwardRef<HTMLButtonElement, PassengerLugg
                     <DialogFooter className="gap-2 sm:gap-0 ">
                         <DialogClose asChild>
                             <Button variant="ghost" className="rounded-xl h-10 cursor-pointer">
-                                {tShared("cancel") || "Cancel"}
+                                {t("Form.cancel")}
                             </Button>
                         </DialogClose>
                         <Button
@@ -162,7 +162,7 @@ export const PassengerLuggageInput = forwardRef<HTMLButtonElement, PassengerLugg
                             className="bg-green-600/90 hover:bg-green-700 text-white
                             rounded-xl h-12 px-8 shadow-lg shadow-green-900/20"
                         >
-                            {tShared("confirm") || "Confirm"}
+                            {t("Form.confirm")}
                         </Button>
                     </DialogFooter>
                 </DialogContent>

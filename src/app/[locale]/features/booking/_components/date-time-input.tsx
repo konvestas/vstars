@@ -8,12 +8,14 @@ import { Button } from "@/components/ui/button";
 import { Calendar } from "@/components/ui/calendar";
 import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import {useTranslations} from "next-intl";
 
 interface DateTimeInputProps {
     date: Date | undefined;
     time: string | undefined;
     onConfirm: (date: Date, time: string) => void;
     label: string;
+    placeholder: string;
     className: string;
     error?: string;
 }
@@ -23,12 +25,14 @@ export default function DateTimeInput({
                                           time,
                                           onConfirm,
                                           label,
+                                          placeholder,
                                           className,
                                           error
                                       }: DateTimeInputProps) {
     const [isOpen, setIsOpen] = React.useState(false);
     const [tempDate, setTempDate] = React.useState<Date | undefined>(date);
     const [tempTime, setTempTime] = React.useState<string | undefined>(time);
+    const t = useTranslations('BookingWidget');
 
     React.useEffect(() => {
         if (isOpen) {
@@ -72,8 +76,7 @@ export default function DateTimeInput({
                     <div className="absolute left-3 top-1/2 -translate-y-1/2 text-white z-10">
                         <CalendarIcon className="h-4 w-4"/>
                     </div>
-
-                    <div className="absolute left-10 top-2 text-xs font-normal transition-colors text-white ">{label} </div>
+                    <div className="absolute left-10 top-2 text-xs font-normal transition-colors text-white ">{label}</div>
                     <button
                         type="button"
                         className={cn(
@@ -85,7 +88,7 @@ export default function DateTimeInput({
                     >
                         <div className="flex flex-col justify-end pb-3 mt-1 h-full">
                             {!displayValue && (
-                                <span className=" text-xs font-semibold text-white/60">Select Date & Time</span>
+                                <span className=" text-xs font-semibold text-white/60">{placeholder}</span>
                             )}
                             {displayValue}
                         </div>
@@ -100,7 +103,7 @@ export default function DateTimeInput({
             <DialogContent className="w-[75vw] max-w-162.5 p-0 overflow-hidden
             bg-white border-none rounded-2xl">
                 <DialogHeader className="p-4 pb-0">
-                    <DialogTitle className="text-xl font-bold">Pick Date & Time</DialogTitle>
+                    <DialogTitle className="text-xl font-bold">{t("Form.insideTitle")}</DialogTitle>
                 </DialogHeader>
 
                 <div className="flex flex-col md:flex-row">
@@ -115,12 +118,12 @@ export default function DateTimeInput({
                             className="bg-transparent p-0"
                         />
                     </div>
-                    <div className="flex-1 min-h-[200px] md:h-auto bg-gray-50/50 ">
+                    <div className="flex-1 min-h-50 md:h-auto bg-gray-50/50 ">
                         <div className="p-3 text-sm font-medium text-center text-muted-foreground
                         border-b border-gray-100 ">
-                            Available Times
+                            {t("Form.availableTime")}
                         </div>
-                        <ScrollArea className="h-[250px] md:h-[320px] p-3">
+                        <ScrollArea className="h-62.5 md:h-80 p-3">
                             <div className="grid grid-cols-2 md:grid-cols-2 gap-2">
                                 {timeSlots.map((slot) => (
                                     <Button
@@ -142,14 +145,13 @@ export default function DateTimeInput({
                         </ScrollArea>
                     </div>
                 </div>
-
                 <DialogFooter className="p-4 bg-gray-50 border-t flex-row gap-2 justify-between">
                     <div className="text-sm text-muted-foreground hidden sm:block">
                         {tempDate && tempTime ? `${format(tempDate, "EEE, MMM dd")} at ${tempTime}` : ""}
                     </div>
                     <Button onClick={handleConfirm} disabled={!tempDate || !tempTime}
                             className="bg-green-600 text-white">
-                        Confirm
+                        {t("Form.confirm")}
                     </Button>
                 </DialogFooter>
             </DialogContent>

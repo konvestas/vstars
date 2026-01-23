@@ -37,12 +37,15 @@ import {Textarea} from "@/components/ui/textarea";
 import {cn} from "@/lib/utils";
 
 const styles = {
-    glassInput:    "pl-10 text-white bg-white/10 hover:bg-white/30 focus:bg-white/20 border-white/20 placeholder:text-white/30 transition-all duration-300",
-    glassTextArea: "pl-10 pt-3 text-white bg-white/10 hover:bg-white/30 focus:bg-white/20 border-white/20 placeholder:text-white/30 transition-all duration-300 min-h-[80px]",
+    glassInput:    "pl-10 text-white bg-white/10 hover:bg-white/30 focus:bg-white/20 border-white/20 " +
+                   "placeholder:text-white/30 transition-all duration-300",
+    glassTextArea: "pl-10 pt-3 text-white bg-white/10 hover:bg-white/30 focus:bg-white/20 border-white/20 " +
+                   "placeholder:text-white/30 transition-all duration-300 min-h-[80px]",
     glassLabel:    "text-white/70 text-sm font-medium mb-1.5 block",
-    tabTrigger:    "rounded-full text-m font-semibold data-[state=active]:bg-white data-[state=active]:text-black data-[state=active]:shadow-lg transition-all duration-300 h-11",
-    actionBtn:     "w-full flex-1 h-10 cursor-pointer text-lg font-medium text-white " + "rounded-xl bg-green-700 hover:bg-green-600 " +
-                   "shadow-xl shadow-green-900/30 transition-all duration-300 " + "focus-visible:ring-2 focus-visible:ring-green-400",
+    tabTrigger:    "rounded-full text-m font-semibold data-[state=active]:bg-white data-[state=active]:text-black " +
+                   "data-[state=active]:shadow-lg transition-all duration-300 h-11",
+    actionBtn:     "w-full flex-1 h-10 cursor-pointer text-lg font-medium text-white rounded-xl bg-green-700 hover:bg-green-600 " +
+                   "shadow-xl shadow-green-900/30 transition-all duration-300 focus-visible:ring-2 focus-visible:ring-green-400",
     backBtn:       "h-10 mt-2 px-4 rounded-xl text-white bg-white/5 hover:bg-white/10 shrink-0",
     iconContainer: "absolute left-3 top-1/2 -translate-y-1/2 text-white/50 h-5 w-5 pointer-events-none",
     iconContainerTop: "absolute left-3 top-3 text-white/50 h-5 w-5 pointer-events-none"
@@ -51,7 +54,7 @@ const styles = {
 // date dokundugumumz zaman hat veriyor luggage icinde gecerli
 
 export default function BookingWidget() {
-    const t = useTranslations('Booking');
+    const t = useTranslations('BookingWidget');
     const { form, step, price, onTabChange, next, back } = useBookingForm();
     const { watch, setValue, register } = form;
 
@@ -144,7 +147,7 @@ export default function BookingWidget() {
 
             <FormProvider {...form}>
 
-                {/* --- HEADER (Only show tabs on Step 1) --- */}
+                {/* --- HEADER  TABS ) --- */}
                 {step === 1 && (
                     <div className="pt-6 px-6 pb-2">
                         <Tabs value={serviceType} onValueChange={onTabChange} className="w-full">
@@ -203,13 +206,14 @@ export default function BookingWidget() {
                                         )}
                                     />
                                 ) : (
+                                    // HOURLY TAB DURATION
                                     <FormField
                                         control={form.control}
                                         name="hours"
                                         render={({ field }) => (
                                             <DurationInput
                                                 label={t("Form.duration")}
-                                                placeholder={t("Form.hours")}
+                                                placeholder={t("Form.durationPlaceHolder")}
                                                 value={field.value || ""}
                                                 onChange={field.onChange}
                                                 error={form.formState.errors.hours?.message}
@@ -221,6 +225,7 @@ export default function BookingWidget() {
                                 <div className="grid grid-cols-2 gap-2 ">
                                     <DateTimeInput
                                         label={t("Form.date")}
+                                        placeholder={t("Form.datePlaceHolder")}
                                         date={watchedDate}
                                         time={watchedTime}
                                         onConfirm={(date, time) => {
@@ -232,6 +237,7 @@ export default function BookingWidget() {
                                     />
                                     <PassengerLuggageInput
                                         label={t("Form.PassengerLuggage")}
+                                        placeholder={t("Form.selected")}
                                         value={{
                                             passengers: watchedPassengers?.toString() || "1",
                                             luggage: watchedLuggage?.toString() || "0"
