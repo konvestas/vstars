@@ -14,7 +14,7 @@ interface ServiceItem {
 }
 
 export default function OurServicesSection() {
-    const t = useTranslations("Services");
+    const t = useTranslations("OurServices");
 
     // Data Definition
     const servicesData: ServiceItem[] = [
@@ -69,10 +69,10 @@ export default function OurServicesSection() {
                 {/* HEADER */}
                 <div className="text-center mb-12">
                     <h2 className="text-4xl md:text-5xl font-semibold mb-4 leading-none text-gray-900 dark:text-white">
-                        {t("title")}
+                        {t("section_title")}
                     </h2>
                     <p className="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">
-                        {t("description")}
+                        {t("section_desc")}
                     </p>
                 </div>
                 </motion.div>

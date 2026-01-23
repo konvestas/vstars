@@ -153,7 +153,7 @@ export default function BookingWidget() {
                                     {t("Tabs.oneWay")}
                                 </TabsTrigger>
                                 <TabsTrigger value={SERVICE_TYPES.HOURLY} className={styles.tabTrigger}>
-                                    Hourly
+                                    {t("Tabs.hourly")}
                                 </TabsTrigger>
                             </TabsList>
                         </Tabs>
@@ -178,8 +178,8 @@ export default function BookingWidget() {
                                     name="pickupAddress"
                                     render={({ field }) => (
                                         <LocationInput
-                                            label="Pick-up location"
-                                            placeholder="Enter pick-up location"
+                                            label={t("Form.pickUpLocation")}
+                                            placeholder={t("Form.pickUpLocationPlaceHolder")}
                                             value={field.value}
                                             onChange={field.onChange}
                                             error={form.formState.errors.pickupAddress?.message}
@@ -193,8 +193,8 @@ export default function BookingWidget() {
                                         name="dropoffAddress"
                                         render={({ field }) => (
                                             <LocationInput
-                                                label="Drop-off location"
-                                                placeholder="Enter drop-off location"
+                                                label={t("Form.dropOffLocation")}
+                                                placeholder={t("Form.dropOffLocationPlaceHolder")}
                                                 value={field.value}
                                                 onChange={field.onChange}
                                                 error={form.formState.errors.dropoffAddress?.message}
@@ -208,8 +208,8 @@ export default function BookingWidget() {
                                         name="hours"
                                         render={({ field }) => (
                                             <DurationInput
-                                                label="Duration"
-                                                placeholder="Selected hour"
+                                                label={t("Form.duration")}
+                                                placeholder={t("Form.hours")}
                                                 value={field.value || ""}
                                                 onChange={field.onChange}
                                                 error={form.formState.errors.hours?.message}
@@ -220,7 +220,7 @@ export default function BookingWidget() {
                                 )}
                                 <div className="grid grid-cols-2 gap-2 ">
                                     <DateTimeInput
-                                        label="Date"
+                                        label={t("Form.date")}
                                         date={watchedDate}
                                         time={watchedTime}
                                         onConfirm={(date, time) => {
@@ -231,7 +231,7 @@ export default function BookingWidget() {
                                         error={form.formState.errors.date?.message || form.formState.errors.time?.message}
                                     />
                                     <PassengerLuggageInput
-                                        label="Pass & Luggage"
+                                        label={t("Form.PassengerLuggage")}
                                         value={{
                                             passengers: watchedPassengers?.toString() || "1",
                                             luggage: watchedLuggage?.toString() || "0"
@@ -269,7 +269,7 @@ export default function BookingWidget() {
                                         <div className="flex items-start gap-3 z-10">
                                             <div className="w-4 h-4 rounded-full bg-green-500 border-2 border-black/50 shrink-0 mt-0.5" />
                                             <div className="flex flex-col">
-                                                <span className="text-xs text-white/50 uppercase">Pick-up</span>
+                                                <span className="text-xs text-white/50 uppercase">{t("Form.pickUpLocation")}</span>
                                                 <span className="text-sm text-white font-medium line-clamp-1">{pickupAddr}</span>
                                             </div>
                                         </div>
@@ -277,7 +277,7 @@ export default function BookingWidget() {
                                             <div className="flex items-start gap-3 z-10">
                                                 <div className="w-4 h-4 rounded-full bg-red-400 border-2 border-black/50 shrink-0 mt-0.5" />
                                                 <div className="flex flex-col">
-                                                    <span className="text-xs text-white/50 uppercase">Drop-off</span>
+                                                    <span className="text-xs text-white/50 uppercase">{t("Form.dropOffLocation")}</span>
                                                     <span className="text-sm text-white font-medium line-clamp-1">{dropoffAddr}</span>
                                                 </div>
                                             </div>
@@ -304,21 +304,21 @@ export default function BookingWidget() {
                                 {/* 3. PACKAGE PERKS & TERMS */}
                                 <div className="bg-white/5 rounded-2xl p-5 border border-white/10 space-y-4">
                                     <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-2 flex items-center gap-2">
-                                        <Info className="h-4 w-4 text-green-400"/> Package Details
+                                        <Info className="h-4 w-4 text-green-400"/> {t("PackagePerks.details")}
                                     </h4>
                                     <ul className="space-y-2">
                                         <li className="flex items-start gap-3 text-sm text-white/80">
                                             <Check className="h-4 w-4 text-green-400 mt-0.5 shrink-0" />
-                                            <span>Free 30 minutes of wait time.</span>
+                                            <span>{t("PackagePerks.waitTime")}</span>
                                         </li>
                                         <li className="flex items-start gap-3 text-sm text-white/80">
                                             <Check className="h-4 w-4 text-green-400 mt-0.5 shrink-0" />
-                                            <span>Includes Meet & Greet service.</span>
+                                            <span>{t("PackagePerks.greet")}</span>
                                         </li>
                                         <li className="flex items-start gap-3 text-xs text-yellow-200/90 bg-yellow-500/10 p-2 rounded-lg border border-yellow-500/20">
                                             <AlertCircle className="h-4 w-4 shrink-0 mt-0.5" />
                                             <span>
-                                                Guest/luggage capacities must be abided by. If unsure, select a larger class as service may be refused.
+                                                {t("PackagePerks.alert")}
                                             </span>
                                         </li>
                                     </ul>
@@ -326,7 +326,7 @@ export default function BookingWidget() {
                             </motion.div>
                         )}
 
-                        {/* --- STEP 3: GUEST DETAILS & CHECKOUT --- */}
+                        {/* --- STEP 3: GUEST Info & CHECKOUT --- */}
                         {step === 3 && (
                             <motion.div
                                 key="step3"
@@ -336,7 +336,7 @@ export default function BookingWidget() {
                                 className="space-y-6"
                             >
                                 <div className="text-center">
-                                    <h3 className="text-2xl font-bold text-white tracking-tight">Final Details</h3>
+                                    <h3 className="text-2xl font-bold text-white tracking-tight">{t("Guestinfo.title")}</h3>
                                     <p className="text-sm text-white/60 mt-1">Please provide your contact information</p>
                                 </div>
 
@@ -344,7 +344,7 @@ export default function BookingWidget() {
                                     {/* ROW 1: Name & Phone */}
                                     <div className="grid grid-cols-2 gap-4">
                                         <div className="relative group">
-                                            <Label className={styles.glassLabel}>Full Name</Label>
+                                            <Label className={styles.glassLabel}>{t("Guestinfo.fullname")}</Label>
                                             <div className="relative">
                                                 <User className={styles.iconContainer} />
                                                 <Input
@@ -359,7 +359,7 @@ export default function BookingWidget() {
                                             </div>
                                         </div>
                                         <div className="relative group">
-                                            <Label className={styles.glassLabel}>Phone Number</Label>
+                                            <Label className={styles.glassLabel}>{t("Guestinfo.phone")}</Label>
                                             <div className="relative">
                                                 <Phone className={styles.iconContainer} />
                                                 <Input
@@ -377,13 +377,12 @@ export default function BookingWidget() {
                                     {/* ROW 2: Email & Flight No */}
                                     <div className="grid grid-cols-2 gap-4">
                                         <div className="relative group">
-                                            <Label className={styles.glassLabel}>Email Address</Label>
+                                            <Label className={styles.glassLabel}>{t("Guestinfo.email")}</Label>
                                             <div className="relative">
                                                 <Mail className={styles.iconContainer} />
                                                 <Input
                                                     placeholder="john@example.com"
                                                     {...register("email")}
-                                                    // FIX: Conditionally add red border if error exists
                                                     className={cn(
                                                         styles.glassInput,
                                                         form.formState.errors.email && "border-red-500 ring-1 ring-red-500 focus-visible:ring-red-500"
@@ -393,8 +392,8 @@ export default function BookingWidget() {
                                         </div>
                                         <div className="relative group">
                                             <div className="flex justify-between items-center">
-                                                <Label className={styles.glassLabel}>Flight No</Label>
-                                                <span className="text-[10px] sm:text-xs text-white/40 uppercase tracking-wider">(Opt)</span>
+                                                <Label className={styles.glassLabel}>{t("Guestinfo.flightnumber")}</Label>
+                                                <span className="text-[10px] sm:text-xs text-white/40 uppercase tracking-wider">{t("Guestinfo.optional")}</span>
                                             </div>
                                             <div className="relative">
                                                 <Plane className={styles.iconContainer} />
@@ -410,12 +409,12 @@ export default function BookingWidget() {
                                     {/* ROW 3: Driver Notes */}
                                     <div className="relative group">
                                         <div className="flex justify-between items-center">
-                                            <Label className={styles.glassLabel}>Driver Notes</Label>
-                                            <span className="text-xs text-white/40 uppercase tracking-wider">(Optional)</span>
+                                            <Label className={styles.glassLabel}>{t("Guestinfo.drivernote")}</Label>
+                                            <span className="text-xs text-white/40 uppercase tracking-wider">{t("Guestinfo.optional")}</span>
                                         </div>
                                         <div className="relative">
                                             <Textarea
-                                                placeholder="Child seat required, extra luggage, etc..."
+                                                placeholder={t("Guestinfo.drivernotePlaceHolder")}
                                                 className={styles.glassTextArea}
                                                 {...register("notes")}
                                             />
@@ -424,9 +423,9 @@ export default function BookingWidget() {
 
                                     {/* ROW 4: Passport Upload */}
                                     <div className="space-y-2">
-                                        <div className="flex justify-between items-center">
-                                            <Label className={styles.glassLabel}>Passport Photo</Label>
-                                            <span className="text-xs text-white/40 uppercase tracking-wider">(Optional)</span>
+                                        <div className="flex justify-between items-center">passportphoto
+                                            <Label className={styles.glassLabel}>{t("Guestinfo.passportphoto")}</Label>
+                                            <span className="text-xs text-white/40 uppercase tracking-wider">{t("Guestinfo.optional")}</span>
                                         </div>
 
                                         {!previewUrl ? (
@@ -437,7 +436,7 @@ export default function BookingWidget() {
                                                 bg-white/5 hover:bg-white/10 cursor-pointer transition-all hover:border-white/40 group">
                                                     <div className="flex items-center gap-2 text-white/60 group-hover:text-white transition-colors">
                                                         <UploadCloud className="h-5 w-5" />
-                                                        <span className="text-sm font-medium">Click to upload</span>
+                                                        <span className="text-sm font-medium">{t("Guestinfo.click")}</span>
                                                     </div>
                                                 </label>
                                             </div>
@@ -463,7 +462,7 @@ export default function BookingWidget() {
                                     {/* ROW 5: Price Total */}
                                     <div className="flex justify-between items-center px-4 py-3 bg-white/10 rounded-xl
                                      border border-white/10">
-                                        <span className="text-sm text-white/80">Estimated Total</span>
+                                        <span className="text-sm text-white/80">{t("Summary.totalEstimated")}</span>
                                         <span className="text-xl font-bold text-green-400">{price} TL</span>
                                     </div>
                                 </div>
@@ -480,26 +479,26 @@ export default function BookingWidget() {
                                 className="space-y-6"
                             >
                                 <div className="text-center">
-                                    <h3 className="text-2xl font-bold text-white tracking-tight">Review & Pay</h3>
-                                    <p className="text-sm text-white/60 mt-1">Finalize your reservation </p>
+                                    <h3 className="text-2xl font-bold text-white tracking-tight">{t("Summary.review")}</h3>
+                                    <p className="text-sm text-white/60 mt-1">{t("Summary.finalize")}</p>
                                 </div>
 
                                 <div className="space-y-4">
                                     {/* 1. SUMMARY CARD */}
                                     <div className="bg-white/5 border border-white/10 rounded-2xl p-5 space-y-4">
                                         <h4 className="text-sm font-semibold text-white/90 uppercase tracking-wider border-b border-white/10 pb-2">
-                                            Booking Summary
+                                            {t("Summary.summary")}
                                         </h4>
 
                                         {/* Route & Date */}
                                         <div className="grid grid-cols-[auto_1fr] gap-3 text-sm">
                                             <div className="flex flex-col gap-1 text-white/50">
-                                                <div>Date: <span className="text-white  font-medium">{watchedDate ? format(watchedDate, "dd MMM yyyy") : "-"} • {watchedTime} </span> </div>
+                                                <div>{t("Summary.date")} <span className="text-white  font-medium">{watchedDate ? format(watchedDate, "dd MMM yyyy") : "-"} • {watchedTime} </span> </div>
                                                 <br/>
-                                                <div>Route: <span className=" max-w-50 text-white font-medium text-left">
+                                                <div>{t("Summary.route")} <span className=" max-w-50 text-white font-medium text-left">
                                                     {serviceType === "hourly" ? "Hourly Rental" : pickupAddr } <br/> {dropoffAddr}</span> </div>
                                                 <br/>
-                                                <div>Guest:  <span className="text-white font-medium">{watch("fullName")}</span></div>
+                                                <div>{t("Summary.guest")}  <span className="text-white font-medium">{watch("fullName")}</span></div>
                                             </div>
                                             <div className="flex flex-col gap-1 text-white font-medium text-left">
 
@@ -508,7 +507,7 @@ export default function BookingWidget() {
 
                                         {/* Price */}
                                         <div className="flex justify-between items-center pt-3 border-t border-white/10">
-                                            <span className="text-white/80">Total Amount</span>
+                                            <span className="text-white/80">{t("Summary.total")}</span>
                                             <span className="text-2xl font-bold text-green-400">{price} TL</span>
                                         </div>
                                     </div>
@@ -516,7 +515,7 @@ export default function BookingWidget() {
                                     <div className="text-center">
                                         <button type="button" className="text-xs text-white/40
                                         hover:text-white/80 underline underline-offset-4 transition-colors">
-                                            View Terms & Conditions
+                                            {t("Summary.terms")}
                                         </button>
                                     </div>
 
@@ -533,7 +532,7 @@ export default function BookingWidget() {
                             onClick={next}
                             className={`${styles.actionBtn}`}
                         >
-                            Continue
+                            {t("Success.continue")}
                         </Button>
                     ) : step === 2 && 3 ? (
                         // STEP 2 ACTIONS (Fixed Alignment)
@@ -546,7 +545,7 @@ export default function BookingWidget() {
                                     onClick={next}
                                     className={`${styles.actionBtn}`}
                                 >
-                                    Continue
+                                    {t("Success.continue")}
                                 </Button>
                             </div>
                         </div>
@@ -560,7 +559,7 @@ export default function BookingWidget() {
                                 onClick={next}
                                 className={`${styles.actionBtn}`}
                             >
-                                Pay & Reserve <ArrowRight className="ml-2 h-5 w-5"/>
+                                {t("payreserve")} <ArrowRight className="ml-2 h-5 w-5"/>
                             </Button>
                         </div>
                     )}

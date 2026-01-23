@@ -17,7 +17,7 @@ interface ServiceCardProps {
 }
 
 export function ServiceCard({ title, description, image, index, className }: ServiceCardProps) {
-    const t = useTranslations("Services");
+    const t = useTranslations("OurServices");
 
     return (
         <motion.div
@@ -36,7 +36,7 @@ export function ServiceCard({ title, description, image, index, className }: Ser
                     )}
                 >
                     {/* Image Container */}
-                    <div className="relative h-[200px] sm:h-[220px] w-full shrink-0 overflow-hidden">
+                    <div className="relative h-50 sm:h-55 w-full shrink-0 overflow-hidden">
                         <Image
                             src={image}
                             alt={title}
@@ -66,7 +66,7 @@ export function ServiceCard({ title, description, image, index, className }: Ser
                                 "dark:border-white/10 dark:text-gray-500 dark:group-hover:text-white"
                             )}
                         >
-                            <span>{t("seeMore")}</span>
+                            <span>{t("see_more")}</span>
                             <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                         </div>
                     </div>

@@ -59,10 +59,10 @@ export default function FleetSection() {
                 {/* HEADER */}
                 <div className="text-center mb-12">
                     <h2 className="text-4xl md:text-5xl font-semibold mb-4 leading-none text-gray-900 dark:text-white">
-                        {t("title")}
+                        {t("sectionTitle")}
                     </h2>
                     <p className="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">
-                        Experience the highest standard of <br/> luxury travel in Istanbul.
+                        {t("sectionDesc")}
                     </p>
                 </div>
 

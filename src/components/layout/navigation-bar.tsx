@@ -9,12 +9,12 @@ import {NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMen
 import { cn } from "@/lib/utils";
 
 export default function NavigationBar() {
-    const t = useTranslations("Navigation");
-    const tServices = useTranslations("Services");
+    const t = useTranslations("Navbar");
+    const tServices = useTranslations("OurServices");
 
     const [isServicesOpen, setIsServicesOpen] = useState(false);
     const [isLanguageOpen, setIsLanguageOpen] = useState(false);
-
+    // font degistir
     const menuLinkStyle = cn("font-lexend font-semibold text-sm block select-none rounded-md p-3 leading-none " +
         "no-underline outline-none transition-colors hover:bg-slate-100 hover:text-black focus:bg-slate-100 " +
         "focus:text-black cursor-pointer text-black");
@@ -48,7 +48,7 @@ export default function NavigationBar() {
                                 </NavigationMenuTrigger>
 
                                 <NavigationMenuContent
-                                    className="p-2 shadow-xl border-t-0 min-w-[250px] bg-white border-zinc-800"
+                                    className="p-2 shadow-xl border-t-0 min-w-62.5 bg-white border-zinc-800"
                                 >
                                     <div className="space-y-1 p-1">
 
@@ -90,7 +90,7 @@ export default function NavigationBar() {
                                             <span>{t("contact")}</span>
                                         </Link>
                                         <Link href="/our-affiliates" className={menuLinkStyle}>
-                                            <span>{t("our affiliates")}</span>
+                                            <span>{t("ourAffiliates")}</span>
                                         </Link>
 
                                         <div className="h-px my-2 mx-2 bg-zinc-200" />
@@ -102,7 +102,7 @@ export default function NavigationBar() {
                                                 className={dropdownToggleStyle}
                                             >
                                                 <span className="flex items-center gap-2">
-                                                    {t("MenuLanguages")}
+                                                    {t("languages")}
                                                     <Globe className="h-4 w-4 text-gray-400"/>
                                                 </span>
                                                 <ChevronDown
@@ -115,11 +115,11 @@ export default function NavigationBar() {
 
                                             {isLanguageOpen && (
                                                 <div className="pl-2 mt-1 space-y-1 border-l-2 ml-3 border-zinc-200">
-                                                    <Link href="/en" className={menuLinkStyle}>{t("languages.en")}</Link>
-                                                    <Link href="/de" className={menuLinkStyle}>{t("languages.de")}</Link>
-                                                    <Link href="/ru" className={menuLinkStyle}>{t("languages.ru")}</Link>
-                                                    <Link href="/tr" className={menuLinkStyle}>{t("languages.tr")}</Link>
-                                                    <Link href="/es" className={menuLinkStyle}>{t("languages.es")}</Link>
+                                                    <Link href="/en" className={menuLinkStyle}>{t("languagesOption.en")}</Link>
+                                                    <Link href="/de" className={menuLinkStyle}>{t("languagesOption.de")}</Link>
+                                                    <Link href="/ru" className={menuLinkStyle}>{t("languagesOption.ru")}</Link>
+                                                    <Link href="/tr" className={menuLinkStyle}>{t("languagesOption.tr")}</Link>
+                                                    <Link href="/es" className={menuLinkStyle}>{t("languagesOption.es")}</Link>
                                                 </div>
                                             )}
                                         </div>

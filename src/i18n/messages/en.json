@@ -4,23 +4,24 @@
     "description": "Experience luxurious rides in Istanbul. VIP Airport transfers (IST & SAW), hourly chauffeur hire, and private tours with Mercedes-Benz vehicles.",
     "keywords": "Istanbul airport transfer, VIP transfer Istanbul, Sabiha Gokcen transfer, IST airport shuttle, Mercedes Vito VIP, Private chauffeur Istanbul, Luxury car service Istanbul, Istanbul hotel transfer, Galataport transfer, Safe travel Istanbul, 24/7 airport transfer, Executive car service, Istanbul city tours"
   },
-  "Navigation": {
+  "Navbar": {
     "menu": "Menu",
     "signIn": "Sign in",
     "ourServices": "Our Services",
     "contact": "Contact Us",
-    "our affiliates": "Partners",
-    "MenuLanguages": "Languages",
-    "languages": {
+    "ourAffiliates": "Affiliates",
+    "languages": "Languages",
+    "languagesOption": {
       "en": "English",
       "ru": "Русский",
       "tr": "Türkçe",
       "de": "Deutsch",
-      "es": "Espanyol"
+      "es": "Español"
     }
   },
-  "Services": {
-    "title": "Our Services",
+  "OurServices": {
+    "section_title": "Our Services",
+    "section_desc": "Experience the highest standard of\nluxury travel in Istanbul",
     "items": {
       "airportTransfers": {
         "title": "Airport Transfers",
@@ -35,18 +36,41 @@
         "desc": "Private, hygienic, and comfortable transport for medical guests. Direct transfers to hospitals and hotels."
       },
       "cityTour": {
-        "title": "City Tours",
+        "title": "City Tour",
         "desc": "Explore Istanbul with a private driver. Visit historical landmarks and top attractions at your own pace."
       }
     },
-    "seeMore": "See More"
+    "see_more": "See More"
+  },
+  "ChooseUs": {
+    "section_title": "Why Us?",
+    "section_desc": "Reliable, refined, and ready whenever you are.",
+    "highlights": [
+      {
+        "title": "Safety First",
+        "desc": "Licensed drivers, insured vehicles, and strict hygiene standards for peace of mind."
+      },
+      {
+        "title": "Always On‑Time",
+        "desc": "Flight tracking and smart routing ensure you never miss a pickup or drop‑off."
+      },
+      {
+        "title": "Premium Comfort",
+        "desc": "Executive vehicles with spacious seating, climate control, and smooth rides."
+      },
+      {
+        "title": "24/7 Support",
+        "desc": "Real people available anytime to assist with changes or special requests."
+      }
+    ]
   },
   "Fleet": {
-    "title": "Explore our fleet",
+    "sectionTitle": "Explore our fleet",
+    "sectionDesc": "Experience the highest standard of luxury travel in Istanbul",
     "items": {
       "Vito": {
         "title": "Mercedes-Benz Vito",
-        "desc": "Fits up to 9 + 1 people\n6 baggage\nAmbient lighting\nWifi & Smart TV\nMini-bar\nUSB-C & wireless charging"
+        "desc": "Fits up to 5 + 2 people\n6 baggage\nAmbient lighting\nWifi & Smart TV\nMini-bar\nUSB-C & wireless charging"
       },
       "Sprinter": {
         "title": "Mercedes-Benz Sprinter",
@@ -57,7 +81,7 @@
   },
   "Booking": {
     "Tabs": {
-      "oneWay": "One Way",
+      "oneay": "One Way",
       "hourly": "Hourly Hire"
     },
     "Steps": {
@@ -66,10 +90,14 @@
       "payment": "Payment"
     },
     "Form": {
-      "from": "Pick-up Location",
-      "to": "Drop-off Location",
+      "pickUpLocation": "Pick-up Location",
+      "pickUpLocationPlaceHolder": "Enter pick-up location",
+      "dropOffLocation": "Drop-off Location",
+      "dropOffLocationPlaceHolder": "Enter drop-off location",
       "duration": "Duration",
       "hours": "{count, plural, =1 {# Hour} other {# Hours}}",
+      "date": "Date",
+      "PassengerLuggage": "Passenger & Luggage",
       "addressPlaceholder": "Enter Airport, Hotel, or Address...",
       "SelectDateHours": "Select Date & Time",
       "selectHours": "Select Duration",
@@ -101,6 +129,25 @@
       "appointmentFor": "Your booking is for",
       "selectPrompt": "Please select a date and time for your transfer."
     },
+    "PackagePerks": {
+      "details": "Package Details",
+      "waitTime": "Free 30 minutes of wait time",
+      "greet": "Includes Meet & Greet service",
+      "alert": "Guest/luggage capacities must be abided by. If unsure, select a larger class as service may be refused"
+    },
+    "GuestInfo": {
+      "title": "Final Details",
+      "description": "Please provide your contact information",
+      "fullname": "Full name",
+      "phone": "Phone number",
+      "email": "Email adress",
+      "flightnumber": "Flight number",
+      "optional": "optional",
+      "drivernote": "Note to the driver:",
+      "drivernotePlaceHolder": "Child seat required, extra luggage, etc...",
+      "passportphoto": "Child seat required, extra luggage, etc...",
+      "click": "Click to upload passport photo"
+    },
     "Passengers": {
       "modalTitle": "Select Passengers & Luggage",
       "passengerLabel": "Passenger",
@@ -117,7 +164,14 @@
       "phone": "Phone",
       "waitingTime": "30 Minutes Free Waiting Time",
       "totalEstimated": "Total Estimated Price:",
-      "taxesIncluded": "* Includes all taxes & fees"
+      "taxesIncluded": "* Includes all taxes & fees",
+      "review": "Review & Pay",
+      "finalize": "Finalize your reservation",
+      "summary": "Booking Summary",
+      "date": "Date:",
+      "route": "Route:",
+      "total": "Total Amount",
+      "terms": "View Terms & Conditions"
     },
     "Payment": {
       "integrationTitle": "Secure Payment",
@@ -127,6 +181,8 @@
       "sending": "Processing..."
     },
     "Success": {
+      "continue": "Continue",
+      "payreserve": "Pay & Reserve",
       "title": "Booking Confirmed!",
       "subtitle": "We will contact you shortly with your driver details.",
       "bookAnother": "Book Another Ride"

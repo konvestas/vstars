@@ -90,7 +90,9 @@ export function FleetCard({ title, description, images, index, className }: Flee
                                 <Button
                                     variant="ghost"
                                     size="icon"
-                                    className="md:hidden absolute left-2 top-1/2 -translate-y-1/2 h-8 w-8 rounded-full bg-white/90 dark:bg-zinc-800/90 border-0 shadow-lg hover:bg-white dark:hover:bg-zinc-800 z-10"
+                                    className="md:hidden absolute left-2 top-1/2 -translate-y-1/2 h-8 w-8 rounded-full
+                                    bg-white/90 dark:bg-zinc-800/90 border-0 shadow-lg hover:bg-white
+                                    dark:hover:bg-zinc-800 z-10"
                                     onClick={scrollPrev}
                                 >
                                     <ChevronLeft className="h-4 w-4" />
@@ -98,7 +100,9 @@ export function FleetCard({ title, description, images, index, className }: Flee
                                 <Button
                                     variant="ghost"
                                     size="icon"
-                                    className="md:hidden absolute right-2 top-1/2 -translate-y-1/2 h-8 w-8 rounded-full bg-white/90 dark:bg-zinc-800/90 border-0 shadow-lg hover:bg-white dark:hover:bg-zinc-800 z-10"
+                                    className="md:hidden absolute right-2 top-1/2 -translate-y-1/2 h-8 w-8 rounded-full
+                                    bg-white/90 dark:bg-zinc-800/90 border-0 shadow-lg hover:bg-white
+                                    dark:hover:bg-zinc-800 z-10"
                                     onClick={scrollNext}
                                 >
                                     <ChevronRight className="h-4 w-4" />
