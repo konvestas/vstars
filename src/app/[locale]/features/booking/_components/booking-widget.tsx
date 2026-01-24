@@ -1,4 +1,3 @@
-"use client";
 
 import { useState } from "react";
 import {motion, AnimatePresence, LazyMotion, domAnimation} from "framer-motion";
@@ -588,7 +587,7 @@ export default function BookingWidget() {
                                     onClick={next}
                                     className={`${styles.actionBtn}`}
                                 >
-                                    {t("Success.continue")}
+                                    {t("Shared.continue")}
                                 </Button>
                             </div>
                         </div>
@@ -607,7 +606,6 @@ export default function BookingWidget() {
                         </div>
                     )}
                 </div>
-
             </FormProvider>
         </Card>
         </LazyMotion>
