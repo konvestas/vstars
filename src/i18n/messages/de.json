@@ -1,17 +1,17 @@
 {
   "Metadata": {
-    "title": "VIP Flughafentransfer Istanbul | Vstars",
-    "description": "Luxus-Transfer in Istanbul. VIP-Flughafentransfer, Chauffeurservice und private Touren mit Mercedes-Benz Fahrzeugen.",
-    "keywords": "Flughafentransfer Istanbul, VIP Transfer Istanbul, Mercedes Vito mieten Istanbul, Chauffeurservice Istanbul, Sabiha Gokcen Transfer, Luxus Auto mieten Istanbul, Istanbul Stadtrundfahrt, Privater Fahrer Istanbul, Hotel Transfer Istanbul"
+    "title": "Istanbuls Transferwahl | Vstars",
+    "description": "Erleben Sie luxuriöse Fahrten in Istanbul. VIP-Flughafentransfers (IST & SAW), stundenweise Chauffeurdienste und private Touren mit Mercedes-Benz Fahrzeugen.",
+    "keywords": "Istanbul Flughafentransfer, VIP Transfer Istanbul, Sabiha Gökçen Transfer, IST Flughafen Shuttle, Mercedes Vito VIP, Privatchauffeur Istanbul, Luxusfahrdienst Istanbul, Istanbul Hoteltransfer, Galataport Transfer, Sicher reisen Istanbul, 24/7 Flughafentransfer, Executive Fahrservice, Istanbul Stadttouren"
   },
-  "Navigation": {
+  "Navbar": {
     "menu": "Menü",
     "signIn": "Anmelden",
-    "ourServices": "Leistungen",
+    "ourServices": "Unsere Services",
     "contact": "Kontakt",
-    "our affiliates": "Partner",
-    "MenuLanguages": "Sprache",
-    "languages": {
+    "ourAffiliates": "Partner",
+    "languages": "Sprachen",
+    "languagesOption": {
       "en": "English",
       "ru": "Русский",
       "tr": "Türkçe",
@@ -19,117 +19,163 @@
       "es": "Español"
     }
   },
-  "Services": {
-    "title": "Unsere Leistungen",
+  "OurServices": {
+    "section_title": "Unsere Services",
+    "section_desc": "Erleben Sie den höchsten Standard\nluxuriösen Reisens in Istanbul",
     "items": {
       "airportTransfers": {
         "title": "Flughafentransfers",
-        "desc": "Zuverlässiger VIP-Transfer mit Flugverfolgung, Abholung am Gate und professionellem Chauffeur."
+        "desc": "Zuverlässiger VIP-Transferservice mit Flugverfolgung, Meet & Greet und professionellen Chauffeuren."
       },
       "hourlyHire": {
-        "title": "Chauffeurservice (Stundenweise)",
-        "desc": "Mieten Sie ein Fahrzeug stunden- oder tageweise. Genießen Sie flexiblen Luxus nach Ihrem Zeitplan."
+        "title": "Stundenweiser Chauffeurservice",
+        "desc": "Ganztägige oder stundenweise Miete. Genießen Sie luxuriösen Transport nach Ihrem Zeitplan."
       },
       "medicalTourism": {
         "title": "Medizintourismus",
-        "desc": "Diskreter und hygienischer Transport für Patienten. Direkte Transfers zwischen Flughafen, Klinik und Hotel."
+        "desc": "Privater, hygienischer und komfortabler Transport für medizinische Gäste. Direkte Transfers zu Krankenhäusern und Hotels."
       },
       "cityTour": {
-        "title": "Stadtrundfahrten",
+        "title": "Stadttour",
         "desc": "Entdecken Sie Istanbul mit einem privaten Fahrer. Besuchen Sie historische Sehenswürdigkeiten in Ihrem eigenen Tempo."
       }
     },
-    "seeMore": "Mehr sehen"
+    "see_more": "Mehr anzeigen"
+  },
+  "ChooseUs": {
+    "section_title": "Warum wir?",
+    "section_desc": "Zuverlässig, stilvoll und jederzeit bereit.",
+    "highlights": [
+      {
+        "title": "Sicherheit zuerst",
+        "desc": "Lizenzierte Fahrer, versicherte Fahrzeuge und strenge Hygienestandards für Ihre Sicherheit."
+      },
+      {
+        "title": "Immer pünktlich",
+        "desc": "Flugverfolgung und intelligente Routenplanung sorgen für pünktliche Abholung und Ankunft."
+      },
+      {
+        "title": "Premium-Komfort",
+        "desc": "Executive-Fahrzeuge mit großzügigem Platzangebot, Klimaanlage und ruhiger Fahrt."
+      },
+      {
+        "title": "24/7 Support",
+        "desc": "Echte Menschen stehen jederzeit für Änderungen oder Sonderwünsche zur Verfügung."
+      }
+    ]
   },
   "Fleet": {
-    "title": "Entdecken Sie unsere Flotte",
+    "sectionTitle": "Unsere Flotte entdecken",
+    "sectionDesc": "Erleben Sie den höchsten Standard luxuriösen Reisens in Istanbul",
     "items": {
       "Vito": {
         "title": "Mercedes-Benz Vito",
-        "desc": "Bis zu 9 + 1 Personen\nTV\nAmbientebeleuchtung\nKonferenztisch\n6 Gepäckstücke"
+        "desc": "Platz für bis zu 5 + 2 Personen\n6 Gepäckstücke\nAmbientebeleuchtung\nWLAN & Smart-TV\nMini-Bar\nUSB-C & kabelloses Laden"
       },
       "Sprinter": {
         "title": "Mercedes-Benz Sprinter",
-        "desc": "Bis zu 15 + 1 Personen\nAmbientebeleuchtung\n6 Gepäckstücke"
+        "desc": "Platz für bis zu 15 + 1 Personen\n6 Gepäckstücke\nAmbientebeleuchtung\nWLAN & Smart-TV\nUSB-C & kabelloses Laden"
       }
     },
-    "seeMore": "Mehr sehen"
+    "seeMore": "Mehr anzeigen"
   },
-  "Booking": {
+  "BookingWidget": {
     "Tabs": {
-      "oneWay": "Transfer",
-      "hourly": "Stundenmiete"
-    },
-    "Steps": {
-      "details": "Details",
-      "summary": "Übersicht",
-      "payment": "Zahlung"
+      "oneWay": "Einfache Fahrt",
+      "hourly": "Stundenweise Buchung"
     },
     "Form": {
-      "from": "Abholort",
-      "to": "Zielort",
+      "pickUpLocation": "Abholort",
+      "pickUpLocationPlaceHolder": "Abholort eingeben",
+      "dropOffLocation": "Zielort",
+      "dropOffLocationPlaceHolder": "Zielort eingeben",
       "duration": "Dauer",
-      "hours": "{count, plural, =1 {# Stunde} other {# Stunden}}",
-      "addressPlaceholder": "Flughafen, Hotel oder Adresse...",
-      "SelectDateHours": "Datum & Zeit wählen",
-      "selectHours": "Dauer wählen",
+      "durationPlaceHolder": "Dauer auswählen",
+      "date": "Datum",
+      "datePlaceHolder": "Datum & Uhrzeit auswählen",
+      "insideTitle": "Datum & Uhrzeit wählen",
+      "availableTime": "Verfügbare Zeiten",
+      "PassLugTitle": "Passagiere & Gepäck auswählen",
+      "selected": "Ausgewählt:",
+      "passengers": "Passagiere",
+      "luggage": "Gepäck",
+      "SelectedConfiguration": "Ausgewählte Konfiguration:",
+      "cancel": "abbrechen",
+      "confirm": "bestätigen",
+      "PassengerLuggage": "Passagiere & Gepäck",
+      "addressPlaceholder": "Flughafen, Hotel oder Adresse eingeben...",
+      "SelectDateHours": "Datum & Uhrzeit auswählen",
+      "selectHours": "Dauer auswählen",
       "passengersAndLuggage": "Passagiere & Gepäck",
-      "guestInfo": "Gastinformationen",
-      "driverNeeds": "Hinweise für den Fahrer",
+      "guestInfo": "Gästeinformationen",
+      "driverNeeds": "Fahrerhinweise",
       "fullName": "Vollständiger Name",
       "phoneNumber": "Telefonnummer",
       "email": "E-Mail-Adresse",
       "flightNumber": "Flugnummer (Optional)",
-      "signboardName": "Abholname (Optional)",
-      "signboardPlaceholder": "Name auf dem Abholschild",
+      "signboardName": "Name auf dem Schild (Optional)",
+      "signboardPlaceholder": "Name auf dem Begrüßungsschild",
       "specialRequests": "Sonderwünsche",
-      "notesPlaceholder": "Kindersitz, Übergepäck, etc...",
+      "notesPlaceholder": "Kindersitz, zusätzliches Gepäck usw...",
       "passport": {
         "title": "Passfoto (Optional)",
-        "formats": "JPG, PNG, WebP hochladen (Max. {size}MB)",
+        "formats": "JPG, PNG, WebP hochladen (Max {size}MB)",
         "chooseFile": "Datei auswählen",
-        "processing": "Verarbeitung...",
+        "processing": "Wird verarbeitet...",
         "uploaded": "✓ Hochgeladen"
       }
     },
-    "Calendar": {
-      "label": "Datum",
-      "placeholder": "Datum & Zeit wählen",
-      "modalTitle": "Zeitpunkt wählen",
-      "dateFormatInfo": "Format: TT/MM/JJJJ • 24-Stunden-Format",
-      "selectTime": "Uhrzeit",
-      "appointmentFor": "Buchung für",
-      "selectPrompt": "Bitte wählen Sie Datum und Uhrzeit."
+    "PackageDetail": {
+      "title": "Paketdetails",
+      "waitTime": "Kostenlose 30 Minuten Wartezeit",
+      "greet": "Meet & Greet Service inklusive",
+      "alert": "Die Kapazitäten für Gäste und Gepäck müssen eingehalten werden. Im Zweifel eine größere Klasse wählen, da der Service sonst verweigert werden kann"
     },
-    "Passengers": {
-      "modalTitle": "Passagiere & Gepäck",
-      "passengerLabel": "Personen",
-      "luggageLabel": "Gepäck",
-      "selected": "Ausgewählt:"
+    "GuestInfo": {
+      "title": "Letzte Details",
+      "desc": "Bitte geben Sie Ihre Kontaktdaten an",
+      "fullname": "Vollständiger Name",
+      "phone": "Telefonnummer",
+      "email": "E-Mail-Adresse",
+      "flightNumber": "Flugnummer",
+      "optional": "(Optional)",
+      "driverNote": "Hinweis an den Fahrer:",
+      "driverNotePlaceHolder": "Kindersitz erforderlich, zusätzliches Gepäck usw...",
+      "passportPhoto": "Passfoto",
+      "click": "Klicken, um Passfoto hochzuladen",
+      "summaryEstimated": "Geschätzter Gesamtpreis:",
+      "reserve": "Reservieren"
     },
     "Summary": {
-      "title": "Buchungsübersicht",
-      "dateTime": "Datum & Zeit",
-      "passengers": "Passagiere",
-      "paxCount": "{count} Pers.",
-      "bagCount": "{count} Koffer",
-      "guest": "Gast",
-      "phone": "Telefon",
-      "waitingTime": "30 Min. kostenlose Wartezeit",
-      "totalEstimated": "Gesamtpreis:",
-      "taxesIncluded": "* Inklusive aller Steuern & Gebühren"
+      "title": "Buchung überprüfen",
+      "desc": "Reservierung abschließen",
+      "bookingSummary": "Buchungsübersicht",
+      "serviceType": "Serviceart:",
+      "guest": "Gast:",
+      "phone": "Telefon:",
+      "date": "Datum:",
+      "route": "Route:",
+      "pickUpAddress": "Abholadresse:",
+      "dropOffAddress": "Zieladresse:",
+      "passengers": "Passagiere:",
+      "pax": "{count} Personen",
+      "bag": "Gepäck:",
+      "total": "Gesamtbetrag",
+      "terms": "Allgemeine Geschäftsbedingungen anzeigen"
     },
     "Payment": {
       "integrationTitle": "Sichere Zahlung",
-      "info": "Bezahlen Sie Ihre Reservierung sicher über Stripe/Iyzico.",
-      "payAndConfirm": "Bezahlen & Bestätigen",
-      "proceedToPayment": "Zur Kasse",
-      "sending": "Verarbeitung..."
+      "info": "Schließen Sie Ihre Reservierung sicher über Stripe/Iyzico ab.",
+      "payAndConfirm": "Bezahlen & bestätigen",
+      "proceedToPayment": "Zur Zahlung fortfahren",
+      "sending": "Wird verarbeitet..."
     },
     "Success": {
-      "title": "Buchung Bestätigt!",
-      "subtitle": "Wir senden Ihnen in Kürze die Fahrerdetails.",
-      "bookAnother": "Neue Buchung"
+      "continue": "Weiter",
+      "payreserve": "Bezahlen & reservieren",
+      "title": "Buchung bestätigt!",
+      "subtitle": "Wir kontaktieren Sie in Kürze mit den Fahrerdetails.",
+      "bookAnother": "Weitere Fahrt buchen"
     }
   },
   "Shared": {

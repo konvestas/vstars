@@ -109,6 +109,7 @@
       "addressPlaceholder": "Enter Airport, Hotel, or Address...",
       "SelectDateHours": "Select Date & Time",
       "selectHours": "Select Duration",
+
       "passengersAndLuggage": "Passengers & Luggage",
       "guestInfo": "Guest Information",
       "driverNeeds": "Driver Notes",
@@ -150,20 +151,22 @@
       "click": "Click to upload passport photo",
       "summaryEstimated": "Total Estimated Price:",
       "reserve": "Reserve"
-
     },
 
     "Summary": {
       "title": "Review Your Booking",
       "desc": "Finalize your reservation",
       "bookingSummary": "Booking Summary",
-      "date": "Date:",
+      "serviceType": "Service Type:",
       "guest": "Guest:",
-      "phone": "Phone",
+      "phone": "Phone:",
+      "date": "Date:",
       "route": "Route:",
-      "passengers": "Passengers",
-      "paxCount": "{count} Pax",
-      "bagCount": "{count} Bags",
+      "pickUpAddress": "Pick up address:",
+      "dropOffAddress": "Drop off address:",
+      "passengers": "Passengers:",
+      "pax": "{count} Pax",
+      "bag": "Luggage:",
       "total": "Total Amount",
       "terms": "View Terms & Conditions"
 

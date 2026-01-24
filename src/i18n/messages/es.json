@@ -1,17 +1,17 @@
 {
   "Metadata": {
-    "title": "Traslados VIP Estambul | Vstars",
-    "description": "Viajes de lujo en Estambul. Traslados VIP al aeropuerto, chófer privado por horas y tours exclusivos en Mercedes-Benz.",
-    "keywords": "traslado aeropuerto estambul, taxi vip estambul, chofer privado estambul, alquiler mercedes vito estambul, traslado sabiha gokcen, tour estambul privado, transporte lujo estambul, servicio transfer estambul"
+    "title": "La elección de transfer en Estambul | Vstars",
+    "description": "Disfruta de traslados de lujo en Estambul. Traslados VIP al aeropuerto (IST y SAW), alquiler de chófer por horas y tours privados con vehículos Mercedes-Benz.",
+    "keywords": "traslado aeropuerto Estambul, traslado VIP Estambul, traslado Sabiha Gokcen, transporte aeropuerto IST, Mercedes Vito VIP, chófer privado Estambul, servicio de coche de lujo Estambul, traslado hotel Estambul, traslado Galataport, viaje seguro Estambul, traslado aeropuerto 24/7, servicio ejecutivo, tours por la ciudad de Estambul"
   },
-  "Navigation": {
+  "Navbar": {
     "menu": "Menú",
     "signIn": "Iniciar sesión",
-    "ourServices": "Servicios",
-    "contact": "Contacto",
-    "our affiliates": "Socios",
-    "MenuLanguages": "Idiomas",
-    "languages": {
+    "ourServices": "Nuestros Servicios",
+    "contact": "Contáctanos",
+    "ourAffiliates": "Afiliados",
+    "languages": "Idiomas",
+    "languagesOption": {
       "en": "English",
       "ru": "Русский",
       "tr": "Türkçe",
@@ -19,117 +19,163 @@
       "es": "Español"
     }
   },
-  "Services": {
-    "title": "Nuestros Servicios",
+  "OurServices": {
+    "section_title": "Nuestros Servicios",
+    "section_desc": "Vive el más alto estándar de\nviajes de lujo en Estambul",
     "items": {
       "airportTransfers": {
         "title": "Traslados al Aeropuerto",
-        "desc": "Servicio VIP confiable con seguimiento de vuelo, bienvenida en la terminal y chófer profesional."
+        "desc": "Servicio de traslado VIP confiable con seguimiento de vuelos, meet & greet y chóferes profesionales."
       },
       "hourlyHire": {
-        "title": "Alquiler por Horas",
-        "desc": "Alquiler por horas o día completo. Disfrute de transporte de lujo adaptado a su agenda personal."
+        "title": "Alquiler de Chófer por Horas",
+        "desc": "Alquiler por horas o día completo. Transporte de lujo bajo demanda adaptado a tu horario."
       },
       "medicalTourism": {
         "title": "Turismo Médico",
-        "desc": "Transporte privado, higiénico y cómodo para pacientes. Traslados directos entre hospital y hotel."
+        "desc": "Transporte privado, higiénico y cómodo para pacientes médicos. Traslados directos a hospitales y hoteles."
       },
       "cityTour": {
-        "title": "Tours por la Ciudad",
-        "desc": "Explore Estambul con un conductor privado. Visite lugares históricos y atracciones a su propio ritmo."
+        "title": "Tour por la Ciudad",
+        "desc": "Explora Estambul con un conductor privado. Visita lugares históricos y atracciones a tu propio ritmo."
       }
     },
-    "seeMore": "Ver Más"
+    "see_more": "Ver más"
+  },
+  "ChooseUs": {
+    "section_title": "¿Por qué nosotros?",
+    "section_desc": "Confiables, elegantes y siempre listos.",
+    "highlights": [
+      {
+        "title": "Seguridad Primero",
+        "desc": "Conductores con licencia, vehículos asegurados y estrictos estándares de higiene para tu tranquilidad."
+      },
+      {
+        "title": "Siempre Puntuales",
+        "desc": "Seguimiento de vuelos y rutas inteligentes garantizan puntualidad en cada traslado."
+      },
+      {
+        "title": "Confort Premium",
+        "desc": "Vehículos ejecutivos con amplio espacio, control climático y viajes suaves."
+      },
+      {
+        "title": "Soporte 24/7",
+        "desc": "Personas reales disponibles en cualquier momento para ayudarte con cambios o solicitudes especiales."
+      }
+    ]
   },
   "Fleet": {
-    "title": "Explore nuestra flota",
+    "sectionTitle": "Explora nuestra flota",
+    "sectionDesc": "Vive el más alto estándar de viajes de lujo en Estambul",
     "items": {
       "Vito": {
         "title": "Mercedes-Benz Vito",
-        "desc": "Hasta 9 + 1 personas\nTV\nIluminación ambiental\nMesa de conferencias\n6 maletas"
+        "desc": "Capacidad para hasta 5 + 2 personas\n6 maletas\nIluminación ambiental\nWiFi y Smart TV\nMini-bar\nUSB-C y carga inalámbrica"
       },
       "Sprinter": {
         "title": "Mercedes-Benz Sprinter",
-        "desc": "Hasta 15 + 1 personas\nIluminación ambiental\n6 maletas"
+        "desc": "Capacidad para hasta 15 + 1 personas\n6 maletas\nIluminación ambiental\nWiFi y Smart TV\nUSB-C y carga inalámbrica"
       }
     },
     "seeMore": "Ver más"
   },
-  "Booking": {
+  "BookingWidget": {
     "Tabs": {
       "oneWay": "Solo Ida",
-      "hourly": "Por Horas"
-    },
-    "Steps": {
-      "details": "Detalles",
-      "summary": "Resumen",
-      "payment": "Pago"
+      "hourly": "Alquiler por Horas"
     },
     "Form": {
-      "from": "Origen",
-      "to": "Destino",
+      "pickUpLocation": "Lugar de recogida",
+      "pickUpLocationPlaceHolder": "Introduce el lugar de recogida",
+      "dropOffLocation": "Lugar de destino",
+      "dropOffLocationPlaceHolder": "Introduce el lugar de destino",
       "duration": "Duración",
-      "hours": "{count, plural, =1 {# Hora} other {# Horas}}",
-      "addressPlaceholder": "Aeropuerto, Hotel o Dirección...",
-      "SelectDateHours": "Seleccionar Fecha y Hora",
-      "selectHours": "Seleccionar Duración",
-      "passengersAndLuggage": "Pasajeros y Equipaje",
-      "guestInfo": "Datos del Huésped",
-      "driverNeeds": "Notas para el Conductor",
-      "fullName": "Nombre Completo",
-      "phoneNumber": "Número de Teléfono",
-      "email": "Correo Electrónico",
-      "flightNumber": "Número de Vuelo (Opcional)",
-      "signboardName": "Nombre en Cartel (Opcional)",
-      "signboardPlaceholder": "Nombre para el cartel de bienvenida",
-      "specialRequests": "Peticiones Especiales",
-      "notesPlaceholder": "Silla de bebé, equipaje extra, etc...",
+      "durationPlaceHolder": "Seleccionar duración",
+      "date": "Fecha",
+      "datePlaceHolder": "Seleccionar fecha y hora",
+      "insideTitle": "Seleccionar fecha y hora",
+      "availableTime": "Horarios disponibles",
+      "PassLugTitle": "Seleccionar pasajeros y equipaje",
+      "selected": "Seleccionado:",
+      "passengers": "Pasajeros",
+      "luggage": "Equipaje",
+      "SelectedConfiguration": "Configuración seleccionada:",
+      "cancel": "cancelar",
+      "confirm": "confirmar",
+      "PassengerLuggage": "Pasajeros y equipaje",
+      "addressPlaceholder": "Introduce aeropuerto, hotel o dirección...",
+      "SelectDateHours": "Seleccionar fecha y hora",
+      "selectHours": "Seleccionar duración",
+      "passengersAndLuggage": "Pasajeros y equipaje",
+      "guestInfo": "Información del huésped",
+      "driverNeeds": "Notas para el conductor",
+      "fullName": "Nombre completo",
+      "phoneNumber": "Número de teléfono",
+      "email": "Correo electrónico",
+      "flightNumber": "Número de vuelo (Opcional)",
+      "signboardName": "Nombre en el cartel (Opcional)",
+      "signboardPlaceholder": "Nombre en el cartel de bienvenida",
+      "specialRequests": "Solicitudes especiales",
+      "notesPlaceholder": "Silla para niños, equipaje extra, etc...",
       "passport": {
-        "title": "Foto del Pasaporte (Opcional)",
-        "formats": "Subir JPG, PNG, WebP (Máx. {size}MB)",
-        "chooseFile": "Elegir Archivo",
+        "title": "Foto del pasaporte (Opcional)",
+        "formats": "Subir JPG, PNG, WebP (Máx {size}MB)",
+        "chooseFile": "Elegir archivo",
         "processing": "Procesando...",
         "uploaded": "✓ Subido"
       }
     },
-    "Calendar": {
-      "label": "Fecha y Hora",
-      "placeholder": "Selecciona",
-      "modalTitle": "Seleccionar Fecha y Hora",
-      "dateFormatInfo": "Formato: DD/MM/AAAA • Formato 24 horas",
-      "selectTime": "Seleccionar Hora",
-      "appointmentFor": "Su reserva es para",
-      "selectPrompt": "Por favor seleccione fecha y hora para su traslado."
+    "PackageDetail": {
+      "title": "Detalles del paquete",
+      "waitTime": "30 minutos de espera gratuitos",
+      "greet": "Incluye servicio Meet & Greet",
+      "alert": "Las capacidades de pasajeros y equipaje deben respetarse. En caso de duda, seleccione una clase superior."
     },
-    "Passengers": {
-      "modalTitle": "Pasajeros y Equipaje",
-      "passengerLabel": "Pasajeros",
-      "luggageLabel": "Equipaje",
-      "selected": "Seleccionado:"
+    "GuestInfo": {
+      "title": "Detalles finales",
+      "desc": "Por favor, proporciona tu información de contacto",
+      "fullname": "Nombre completo",
+      "phone": "Número de teléfono",
+      "email": "Correo electrónico",
+      "flightNumber": "Número de vuelo",
+      "optional": "(Opcional)",
+      "driverNote": "Nota para el conductor:",
+      "driverNotePlaceHolder": "Silla para niños requerida, equipaje extra, etc...",
+      "passportPhoto": "Foto del pasaporte",
+      "click": "Haz clic para subir la foto del pasaporte",
+      "summaryEstimated": "Precio total estimado:",
+      "reserve": "Reservar"
     },
     "Summary": {
-      "title": "Revisar Reserva",
-      "dateTime": "Fecha y Hora",
-      "passengers": "Pasajeros",
-      "paxCount": "{count} Pers.",
-      "bagCount": "{count} Maletas",
-      "guest": "Huésped",
-      "phone": "Teléfono",
-      "waitingTime": "30 Minutos de Espera Gratuita",
-      "totalEstimated": "Precio Total Estimado:",
-      "taxesIncluded": "* Incluye impuestos y tasas"
+      "title": "Revisar tu reserva",
+      "desc": "Finaliza tu reserva",
+      "bookingSummary": "Resumen de la reserva",
+      "serviceType": "Tipo de servicio:",
+      "guest": "Huésped:",
+      "phone": "Teléfono:",
+      "date": "Fecha:",
+      "route": "Ruta:",
+      "pickUpAddress": "Dirección de recogida:",
+      "dropOffAddress": "Dirección de destino:",
+      "passengers": "Pasajeros:",
+      "pax": "{count} Pax",
+      "bag": "Equipaje:",
+      "total": "Importe total",
+      "terms": "Ver términos y condiciones"
     },
     "Payment": {
-      "integrationTitle": "Pago Seguro",
-      "info": "Complete su reserva de forma segura vía Stripe/Iyzico.",
-      "payAndConfirm": "Pagar y Confirmar",
-      "proceedToPayment": "Proceder al Pago",
+      "integrationTitle": "Pago seguro",
+      "info": "Completa tu reserva de forma segura mediante Stripe/Iyzico.",
+      "payAndConfirm": "Pagar y confirmar",
+      "proceedToPayment": "Proceder al pago",
       "sending": "Procesando..."
     },
     "Success": {
-      "title": "¡Reserva Confirmada!",
-      "subtitle": "Le contactaremos en breve con los datos del conductor.",
-      "bookAnother": "Reservar Otro Viaje"
+      "continue": "Continuar",
+      "payreserve": "Pagar y reservar",
+      "title": "¡Reserva confirmada!",
+      "subtitle": "Nos pondremos en contacto contigo pronto con los detalles del conductor.",
+      "bookAnother": "Reservar otro viaje"
     }
   },
   "Shared": {

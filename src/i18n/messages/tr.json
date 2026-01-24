@@ -1,17 +1,17 @@
 {
   "Metadata": {
-    "title": "İstanbul Lüks VIP Transfer | Vstars",
-    "description": "İstanbul'da konforlu seyahat deneyimi. Havalimanı transferi, şoförlü araç kiralama ve VIP turlar.",
-    "keywords": "İstanbul havalimanı transfer, VIP transfer İstanbul, Sabiha Gökçen transfer, İstanbul şoförlü araç kiralama, Havalimanı karşılama, Otel transferi, Mercedes Vito kiralama, Lüks transfer İstanbul, İstanbul şehir turu, 7/24 transfer, SAW transfer, İstanbul Yeni Havalimanı transfer"
+    "title": "İstanbul’un Transfer Tercihi | Vstars",
+    "description": "İstanbul’da lüks yolculuğu deneyimleyin. VIP havalimanı transferleri (IST & SAW), saatlik şoför kiralama ve Mercedes-Benz araçlarla özel turlar.",
+    "keywords": "İstanbul havalimanı transferi, VIP transfer İstanbul, Sabiha Gökçen transfer, IST transfer, Mercedes Vito VIP, özel şoför İstanbul, lüks araç hizmeti İstanbul, otel transferi İstanbul, Galataport transfer, güvenli seyahat İstanbul, 7/24 havalimanı transferi, executive araç hizmeti, İstanbul şehir turları"
   },
-  "Navigation": {
+  "Navbar": {
     "menu": "Menü",
     "signIn": "Giriş Yap",
     "ourServices": "Hizmetlerimiz",
     "contact": "İletişim",
-    "our affiliates": "İş Ortakları",
-    "MenuLanguages": "Diller",
-    "languages": {
+    "ourAffiliates": "Partnerlerimiz",
+    "languages": "Diller",
+    "languagesOption": {
       "en": "English",
       "ru": "Русский",
       "tr": "Türkçe",
@@ -19,117 +19,163 @@
       "es": "Español"
     }
   },
-  "Services": {
-    "title": "Hizmetlerimiz",
+  "OurServices": {
+    "section_title": "Hizmetlerimiz",
+    "section_desc": "İstanbul’da en yüksek standartta\nlüks seyahati deneyimleyin",
     "items": {
       "airportTransfers": {
-        "title": "Havalimanı Transferi",
-        "desc": "Uçuş takibi, karşılama hizmeti ve profesyonel şoförler ile güvenilir VIP transfer."
+        "title": "Havalimanı Transferleri",
+        "desc": "Uçuş takibi, karşılama hizmeti ve profesyonel şoförlerle güvenilir VIP transfer."
       },
       "hourlyHire": {
-        "title": "Şoförlü Araç Kiralama",
-        "desc": "Saatlik veya günlük kiralama. Kişisel programınıza uygun, konforlu ulaşımın keyfini çıkarın."
+        "title": "Saatlik Şoför Kiralama",
+        "desc": "Saatlik veya tam gün kiralama. Programınıza uygun lüks ulaşım."
       },
       "medicalTourism": {
-        "title": "Sağlık Turizmi Transferi",
-        "desc": "Medikal misafirler için hijyenik ve konforlu ulaşım. Hastane ve otel arası özel transferler."
+        "title": "Sağlık Turizmi",
+        "desc": "Medikal misafirler için özel, hijyenik ve konforlu ulaşım. Hastane ve otellere direkt transfer."
       },
       "cityTour": {
-        "title": "Şehir Turları",
-        "desc": "Özel şoförünüzle İstanbul'u keşfedin. Tarihi yarımada ve popüler mekanları kendi hızınızda gezin."
+        "title": "Şehir Turu",
+        "desc": "Özel şoförle İstanbul’u keşfedin. Tarihi yerleri kendi temponuzda gezin."
+      }
+    },
+    "see_more": "Daha Fazla"
+  },
+  "ChooseUs": {
+    "section_title": "Neden Biz?",
+    "section_desc": "Güvenilir, seçkin ve her zaman hazır.",
+    "highlights": [
+      {
+        "title": "Önce Güvenlik",
+        "desc": "Lisanslı şoförler, sigortalı araçlar ve sıkı hijyen standartları."
+      },
+      {
+        "title": "Her Zaman Zamanında",
+        "desc": "Uçuş takibi ve akıllı rota planlaması ile asla gecikme olmaz."
+      },
+      {
+        "title": "Premium Konfor",
+        "desc": "Geniş iç hacim, klima ve yumuşak sürüşe sahip executive araçlar."
+      },
+      {
+        "title": "7/24 Destek",
+        "desc": "Değişiklikler ve özel talepler için her zaman ulaşılabilir gerçek insanlar."
+      }
+    ]
+  },
+  "Fleet": {
+    "sectionTitle": "Araç filomuzu keşfedin",
+    "sectionDesc": "İstanbul’da en yüksek standartta lüks seyahati deneyimleyin",
+    "items": {
+      "Vito": {
+        "title": "Mercedes-Benz Vito",
+        "desc": "5 + 2 kişiye kadar kapasite\n6 bagaj\nAmbiyans aydınlatma\nWiFi & Smart TV\nMini-bar\nUSB-C & kablosuz şarj"
+      },
+      "Sprinter": {
+        "title": "Mercedes-Benz Sprinter",
+        "desc": "15 + 1 kişiye kadar kapasite\n6 bagaj\nAmbiyans aydınlatma\nWiFi & Smart TV\nUSB-C & kablosuz şarj"
       }
     },
     "seeMore": "Daha Fazla"
   },
-  "Fleet": {
-    "title": "Filomuzu Keşfedin",
-    "items": {
-      "Vito": {
-        "title": "Mercedes-Benz Vito",
-        "desc": "9 + 1 Kişilik\nTV\nAmbiyans Aydınlatma\nToplantı Masası\n6 Bagaj"
-      },
-      "Sprinter": {
-        "title": "Mercedes-Benz Sprinter",
-        "desc": "15 + 1 Kişilik\nAmbiyans Aydınlatma\n6 Bagaj"
-      }
-    },
-    "seeMore": "İncele"
-  },
-  "Booking": {
+  "BookingWidget": {
     "Tabs": {
       "oneWay": "Tek Yön",
-      "hourly": "Saatlik Tahsis"
-    },
-    "Steps": {
-      "details": "Detaylar",
-      "summary": "Özet",
-      "payment": "Ödeme"
+      "hourly": "Saatlik Kiralama"
     },
     "Form": {
-      "from": "Alış Noktası",
-      "to": "Varış Noktası",
+      "pickUpLocation": "Alış Noktası",
+      "pickUpLocationPlaceHolder": "Alış noktası girin",
+      "dropOffLocation": "Bırakış Noktası",
+      "dropOffLocationPlaceHolder": "Bırakış noktası girin",
       "duration": "Süre",
-      "hours": "{count, plural, =1 {# Saat} other {# Saat}}",
-      "addressPlaceholder": "Havalimanı, Otel veya Adres...",
+      "durationPlaceHolder": "Süre Seçin",
+      "date": "Tarih",
+      "datePlaceHolder": "Tarih ve Saat Seçin",
+      "insideTitle": "Tarih ve Saat Seçin",
+      "availableTime": "Uygun Saatler",
+      "PassLugTitle": "Yolcu ve Bagaj Seçimi",
+      "selected": "Seçilen:",
+      "passengers": "Yolcular",
+      "luggage": "Bagaj",
+      "SelectedConfiguration": "Seçilen Konfigürasyon:",
+      "cancel": "iptal",
+      "confirm": "onayla",
+      "PassengerLuggage": "Yolcu ve Bagaj",
+      "addressPlaceholder": "Havalimanı, Otel veya Adres girin...",
       "SelectDateHours": "Tarih ve Saat Seçin",
       "selectHours": "Süre Seçin",
-      "passengersAndLuggage": "Yolcu & Bagaj",
+      "passengersAndLuggage": "Yolcu ve Bagaj",
       "guestInfo": "Misafir Bilgileri",
       "driverNeeds": "Şoför Notları",
       "fullName": "Ad Soyad",
       "phoneNumber": "Telefon Numarası",
       "email": "E-posta Adresi",
       "flightNumber": "Uçuş Numarası (Opsiyonel)",
-      "signboardName": "Tabela İsmi (Opsiyonel)",
-      "signboardPlaceholder": "Karşılama tabelasında yazacak isim",
-      "specialRequests": "Özel İstekler",
-      "notesPlaceholder": "Çocuk koltuğu, fazla bagaj vb...",
+      "signboardName": "Tabeladaki İsim (Opsiyonel)",
+      "signboardPlaceholder": "Karşılama tabelasındaki isim",
+      "specialRequests": "Özel Talepler",
+      "notesPlaceholder": "Çocuk koltuğu, ekstra bagaj vb...",
       "passport": {
         "title": "Pasaport Fotoğrafı (Opsiyonel)",
-        "formats": "JPG, PNG, WebP (Maks. {size}MB)",
+        "formats": "JPG, PNG, WebP yükleyin (Maks {size}MB)",
         "chooseFile": "Dosya Seç",
         "processing": "İşleniyor...",
         "uploaded": "✓ Yüklendi"
       }
     },
-    "Calendar": {
-      "label": "Tarih",
-      "placeholder": "Tarih ve Saat Seçin",
-      "modalTitle": "Tarih ve Saat Seçin",
-      "dateFormatInfo": "Format: GG/AA/YYYY • 24 Saatlik Dilim",
-      "selectTime": "Saat Seçin",
-      "appointmentFor": "Rezervasyon Tarihi:",
-      "selectPrompt": "Lütfen transferiniz için bir tarih ve saat seçin."
+    "PackageDetail": {
+      "title": "Paket Detayları",
+      "waitTime": "30 dakika ücretsiz bekleme",
+      "greet": "Karşılama hizmeti dahildir",
+      "alert": "Yolcu ve bagaj kapasitesine uyulmalıdır. Emin değilseniz daha büyük araç sınıfı seçin."
     },
-    "Passengers": {
-      "modalTitle": "Yolcu ve Bagaj Seçimi",
-      "passengerLabel": "Yolcu",
-      "luggageLabel": "Bagaj",
-      "selected": "Seçilen:"
+    "GuestInfo": {
+      "title": "Son Detaylar",
+      "desc": "Lütfen iletişim bilgilerinizi girin",
+      "fullname": "Ad Soyad",
+      "phone": "Telefon Numarası",
+      "email": "E-posta Adresi",
+      "flightNumber": "Uçuş Numarası",
+      "optional": "(Opsiyonel)",
+      "driverNote": "Şoföre not:",
+      "driverNotePlaceHolder": "Çocuk koltuğu gerekli, ekstra bagaj vb...",
+      "passportPhoto": "Pasaport Fotoğrafı",
+      "click": "Pasaport fotoğrafı yüklemek için tıklayın",
+      "summaryEstimated": "Tahmini Toplam Tutar:",
+      "reserve": "Rezerve Et"
     },
     "Summary": {
-      "title": "Rezervasyon Özeti",
-      "dateTime": "Tarih & Saat",
-      "passengers": "Yolcular",
-      "paxCount": "{count} Kişi",
-      "bagCount": "{count} Bagaj",
-      "guest": "Misafir",
-      "phone": "Telefon",
-      "waitingTime": "30 Dakika Ücretsiz Bekleme",
-      "totalEstimated": "Tahmini Toplam Tutar:",
-      "taxesIncluded": "* Tüm vergi ve ücretler dahildir"
+      "title": "Rezervasyonu İncele",
+      "desc": "Rezervasyonunuzu tamamlayın",
+      "bookingSummary": "Rezervasyon Özeti",
+      "serviceType": "Hizmet Türü:",
+      "guest": "Misafir:",
+      "phone": "Telefon:",
+      "date": "Tarih:",
+      "route": "Rota:",
+      "pickUpAddress": "Alış adresi:",
+      "dropOffAddress": "Bırakış adresi:",
+      "passengers": "Yolcular:",
+      "pax": "{count} Kişi",
+      "bag": "Bagaj:",
+      "total": "Toplam Tutar",
+      "terms": "Şartlar ve Koşulları Görüntüle"
     },
     "Payment": {
       "integrationTitle": "Güvenli Ödeme",
-      "info": "Rezervasyonunuzu Stripe/Iyzico ile güvenle tamamlayın.",
+      "info": "Rezervasyonunuzu Stripe/Iyzico üzerinden güvenle tamamlayın.",
       "payAndConfirm": "Öde ve Onayla",
       "proceedToPayment": "Ödemeye Geç",
       "sending": "İşleniyor..."
     },
     "Success": {
+      "continue": "Devam Et",
+      "payreserve": "Öde ve Rezerve Et",
       "title": "Rezervasyon Onaylandı!",
-      "subtitle": "Şoför bilgileriyle birlikte en kısa sürede size ulaşacağız.",
-      "bookAnother": "Yeni Rezervasyon Yap"
+      "subtitle": "Şoför bilgileriyle kısa süre içinde sizinle iletişime geçeceğiz.",
+      "bookAnother": "Başka Bir Yolculuk Rezerve Et"
     }
   },
   "Shared": {
