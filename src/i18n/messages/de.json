@@ -1,13 +1,13 @@
 {
   "Metadata": {
     "title": "Istanbuls Transferwahl | Vstars",
-    "description": "Erleben Sie luxuriöse Fahrten in Istanbul. VIP-Flughafentransfers (IST & SAW), stundenweise Chauffeurdienste und private Touren mit Mercedes-Benz Fahrzeugen.",
-    "keywords": "Istanbul Flughafentransfer, VIP Transfer Istanbul, Sabiha Gökçen Transfer, IST Flughafen Shuttle, Mercedes Vito VIP, Privatchauffeur Istanbul, Luxusfahrdienst Istanbul, Istanbul Hoteltransfer, Galataport Transfer, Sicher reisen Istanbul, 24/7 Flughafentransfer, Executive Fahrservice, Istanbul Stadttouren"
+    "description": "Erleben Sie luxuriöse Fahrten in Istanbul. VIP-Flughafentransfers (IST & SAW), stundenweise Chauffeurmiete und private Touren mit Mercedes-Benz-Fahrzeugen.",
+    "keywords": "Istanbul Flughafentransfer, VIP Transfer Istanbul, Sabiha Gökçen Transfer, IST Flughafen Shuttle, Mercedes Vito VIP, Privater Chauffeur Istanbul, Luxusautoservice Istanbul, Istanbul Hoteltransfer, Galataport Transfer, Sicheres Reisen Istanbul, 24/7 Flughafentransfer, Exklusiver Fahrservice, Istanbul Stadttouren"
   },
   "Navbar": {
     "menu": "Menü",
     "signIn": "Anmelden",
-    "ourServices": "Unsere Services",
+    "ourServices": "Unsere Dienstleistungen",
     "contact": "Kontakt",
     "ourAffiliates": "Partner",
     "languages": "Sprachen",
@@ -20,7 +20,7 @@
     }
   },
   "OurServices": {
-    "section_title": "Unsere Services",
+    "section_title": "Unsere Dienstleistungen",
     "section_desc": "Erleben Sie den höchsten Standard\nluxuriösen Reisens in Istanbul",
     "items": {
       "airportTransfers": {
@@ -28,8 +28,8 @@
         "desc": "Zuverlässiger VIP-Transferservice mit Flugverfolgung, Meet & Greet und professionellen Chauffeuren."
       },
       "hourlyHire": {
-        "title": "Stundenweiser Chauffeurservice",
-        "desc": "Ganztägige oder stundenweise Miete. Genießen Sie luxuriösen Transport nach Ihrem Zeitplan."
+        "title": "Stundenweise Chauffeurmiete",
+        "desc": "Ganztägige oder stundenweise Anmietung. Genießen Sie luxuriösen Transport auf Abruf, abgestimmt auf Ihren persönlichen Zeitplan."
       },
       "medicalTourism": {
         "title": "Medizintourismus",
@@ -37,40 +37,40 @@
       },
       "cityTour": {
         "title": "Stadttour",
-        "desc": "Entdecken Sie Istanbul mit einem privaten Fahrer. Besuchen Sie historische Sehenswürdigkeiten in Ihrem eigenen Tempo."
+        "desc": "Entdecken Sie Istanbul mit einem privaten Fahrer. Besuchen Sie historische Sehenswürdigkeiten und Top-Attraktionen in Ihrem eigenen Tempo."
       }
     },
     "see_more": "Mehr anzeigen"
   },
   "ChooseUs": {
     "section_title": "Warum wir?",
-    "section_desc": "Zuverlässig, stilvoll und jederzeit bereit.",
+    "section_desc": "Zuverlässig, stilvoll und bereit, wann immer Sie es sind.",
     "highlights": [
       {
         "title": "Sicherheit zuerst",
-        "desc": "Lizenzierte Fahrer, versicherte Fahrzeuge und strenge Hygienestandards für Ihre Sicherheit."
+        "desc": "Lizenzierte Fahrer, versicherte Fahrzeuge und strenge Hygienestandards für ein beruhigendes Gefühl."
       },
       {
         "title": "Immer pünktlich",
-        "desc": "Flugverfolgung und intelligente Routenplanung sorgen für pünktliche Abholung und Ankunft."
+        "desc": "Flugverfolgung und intelligente Routenplanung sorgen dafür, dass Sie keinen Abhol- oder Absetztermin verpassen."
       },
       {
         "title": "Premium-Komfort",
-        "desc": "Executive-Fahrzeuge mit großzügigem Platzangebot, Klimaanlage und ruhiger Fahrt."
+        "desc": "Exklusive Fahrzeuge mit großzügigem Sitzplatz, Klimaanlage und ruhigen Fahrten."
       },
       {
         "title": "24/7 Support",
-        "desc": "Echte Menschen stehen jederzeit für Änderungen oder Sonderwünsche zur Verfügung."
+        "desc": "Echte Menschen stehen jederzeit zur Verfügung, um bei Änderungen oder Sonderwünschen zu helfen."
       }
     ]
   },
   "Fleet": {
-    "sectionTitle": "Unsere Flotte entdecken",
+    "sectionTitle": "Entdecken Sie unsere Flotte",
     "sectionDesc": "Erleben Sie den höchsten Standard luxuriösen Reisens in Istanbul",
     "items": {
       "Vito": {
         "title": "Mercedes-Benz Vito",
-        "desc": "Platz für bis zu 5 + 2 Personen\n6 Gepäckstücke\nAmbientebeleuchtung\nWLAN & Smart-TV\nMini-Bar\nUSB-C & kabelloses Laden"
+        "desc": "Platz für bis zu 5 + 2 Personen\n6 Gepäckstücke\nAmbientebeleuchtung\nWLAN & Smart-TV\nMinibar\nUSB-C & kabelloses Laden"
       },
       "Sprinter": {
         "title": "Mercedes-Benz Sprinter",
@@ -82,30 +82,33 @@
   "BookingWidget": {
     "Tabs": {
       "oneWay": "Einfache Fahrt",
-      "hourly": "Stundenweise Buchung"
+      "hourly": "Stundenweise Miete"
     },
     "Form": {
       "pickUpLocation": "Abholort",
       "pickUpLocationPlaceHolder": "Abholort eingeben",
       "dropOffLocation": "Zielort",
       "dropOffLocationPlaceHolder": "Zielort eingeben",
+
       "duration": "Dauer",
       "durationPlaceHolder": "Dauer auswählen",
       "date": "Datum",
       "datePlaceHolder": "Datum & Uhrzeit auswählen",
-      "insideTitle": "Datum & Uhrzeit wählen",
+      "insideTitle": "Datum & Uhrzeit auswählen",
       "availableTime": "Verfügbare Zeiten",
+
       "PassLugTitle": "Passagiere & Gepäck auswählen",
       "selected": "Ausgewählt:",
       "passengers": "Passagiere",
       "luggage": "Gepäck",
       "SelectedConfiguration": "Ausgewählte Konfiguration:",
-      "cancel": "abbrechen",
-      "confirm": "bestätigen",
+
       "PassengerLuggage": "Passagiere & Gepäck",
       "addressPlaceholder": "Flughafen, Hotel oder Adresse eingeben...",
       "SelectDateHours": "Datum & Uhrzeit auswählen",
       "selectHours": "Dauer auswählen",
+      "hour": "Stunde",
+
       "passengersAndLuggage": "Passagiere & Gepäck",
       "guestInfo": "Gästeinformationen",
       "driverNeeds": "Fahrerhinweise",
@@ -113,26 +116,28 @@
       "phoneNumber": "Telefonnummer",
       "email": "E-Mail-Adresse",
       "flightNumber": "Flugnummer (Optional)",
-      "signboardName": "Name auf dem Schild (Optional)",
-      "signboardPlaceholder": "Name auf dem Begrüßungsschild",
+      "signboardName": "Namensschild (Optional)",
+      "signboardPlaceholder": "Name auf dem Willkommensschild",
       "specialRequests": "Sonderwünsche",
-      "notesPlaceholder": "Kindersitz, zusätzliches Gepäck usw...",
+      "notesPlaceholder": "Kindersitz, zusätzliches Gepäck, etc...",
       "passport": {
         "title": "Passfoto (Optional)",
-        "formats": "JPG, PNG, WebP hochladen (Max {size}MB)",
+        "formats": "JPG, PNG, WebP hochladen (Max. {size}MB)",
         "chooseFile": "Datei auswählen",
         "processing": "Wird verarbeitet...",
         "uploaded": "✓ Hochgeladen"
       }
     },
+
     "PackageDetail": {
       "title": "Paketdetails",
       "waitTime": "Kostenlose 30 Minuten Wartezeit",
-      "greet": "Meet & Greet Service inklusive",
+      "greet": "Meet-&-Greet-Service inklusive",
       "alert": "Die Kapazitäten für Gäste und Gepäck müssen eingehalten werden. Im Zweifel eine größere Klasse wählen, da der Service sonst verweigert werden kann"
     },
+
     "GuestInfo": {
-      "title": "Letzte Details",
+      "title": "Abschließende Details",
       "desc": "Bitte geben Sie Ihre Kontaktdaten an",
       "fullname": "Vollständiger Name",
       "phone": "Telefonnummer",
@@ -140,7 +145,7 @@
       "flightNumber": "Flugnummer",
       "optional": "(Optional)",
       "driverNote": "Hinweis an den Fahrer:",
-      "driverNotePlaceHolder": "Kindersitz erforderlich, zusätzliches Gepäck usw...",
+      "driverNotePlaceHolder": "Kindersitz erforderlich, zusätzliches Gepäck, etc...",
       "passportPhoto": "Passfoto",
       "click": "Klicken, um Passfoto hochzuladen",
       "summaryEstimated": "Geschätzter Gesamtpreis:",
@@ -148,7 +153,7 @@
     },
     "Summary": {
       "title": "Buchung überprüfen",
-      "desc": "Reservierung abschließen",
+      "desc": "Schließen Sie Ihre Reservierung ab",
       "bookingSummary": "Buchungsübersicht",
       "serviceType": "Serviceart:",
       "guest": "Gast:",
@@ -163,26 +168,31 @@
       "total": "Gesamtbetrag",
       "terms": "Allgemeine Geschäftsbedingungen anzeigen"
     },
-    "Payment": {
-      "integrationTitle": "Sichere Zahlung",
-      "info": "Schließen Sie Ihre Reservierung sicher über Stripe/Iyzico ab.",
-      "payAndConfirm": "Bezahlen & bestätigen",
-      "proceedToPayment": "Zur Zahlung fortfahren",
-      "sending": "Wird verarbeitet..."
-    },
-    "Success": {
+    "Shared": {
       "continue": "Weiter",
-      "payreserve": "Bezahlen & reservieren",
-      "title": "Buchung bestätigt!",
-      "subtitle": "Wir kontaktieren Sie in Kürze mit den Fahrerdetails.",
-      "bookAnother": "Weitere Fahrt buchen"
+      "back": "Zurück",
+      "submit": "Absenden",
+      "confirm": "Bestätigen",
+      "cancel": "Abbrechen"
     }
   },
-  "Shared": {
-    "cancel": "Abbrechen",
-    "confirm": "Bestätigen",
-    "continue": "Weiter",
-    "back": "Zurück",
-    "submit": "Absenden"
+  "Footer": {
+    "downloadApp": "App herunterladen",
+    "services": "Dienstleistungen",
+    "airportTransfer": "Flughafentransfer",
+    "hourlyChauffeurRide": "Stündliche Fahrt mit Chauffeur",
+    "medicalTourism": "Medizintourismus",
+    "cityTours": "Stadttouren",
+
+    "affiliates": "Partner",
+
+    "Support": "Support",
+    "contactUs": "Kontaktieren Sie uns",
+    "helpFaq": "Hilfe & FAQ",
+
+    "getInTouch": "Kontakt aufnehmen:",
+    "questions": "Fragen, Partnerschaften oder Buchungen — wir sind für Sie da.",
+    "goToContactPage": "Zur Kontaktseite",
+    "premium": "Premium-Chauffeur- und Reisedienstleistungen"
   }
 }

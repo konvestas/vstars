@@ -21,7 +21,7 @@
   },
   "OurServices": {
     "section_title": "Our Services",
-    "section_desc": "Experience the highest standard of\nluxury travel in Istanbul",
+    "section_desc": "Experience the highest standard of luxury travel in Istanbul",
     "items": {
       "airportTransfers": {
         "title": "Airport Transfers",
@@ -175,5 +175,24 @@
       "confirm": "Confirm",
       "cancel": "cancel"
     }
+  },
+  "Footer": {
+    "downloadApp": "Download App",
+    "services": "Services",
+    "airportTransfer": "Airport Transfer",
+    "hourlyChauffeurRide": "Hourly Chauffeur Ride",
+    "medicalTourism": "Medical Tourism",
+    "cityTours": "City Tours",
+
+    "affiliates": "Affiliates",
+
+    "Support": "Support",
+    "contactUs": "Contact Us",
+    "helpFaq": "Help & FAQ",
+
+    "getInTouch": "Get in Touch:",
+    "questions": "Questions, partnerships, or bookings — we're here to help.",
+    "goToContactPage": "Go to Contact Page",
+    "premium": "Premium chauffeur & travel services"
   }
 }
