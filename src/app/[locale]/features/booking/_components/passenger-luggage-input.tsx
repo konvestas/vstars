@@ -153,7 +153,7 @@ export const PassengerLuggageInput = forwardRef<HTMLButtonElement, PassengerLugg
                     <DialogFooter className="gap-2 sm:gap-0 ">
                         <DialogClose asChild>
                             <Button variant="ghost" className="rounded-xl h-10 cursor-pointer">
-                                {t("Form.cancel")}
+                                {t("Shared.cancel")}
                             </Button>
                         </DialogClose>
                         <Button
@@ -162,7 +162,7 @@ export const PassengerLuggageInput = forwardRef<HTMLButtonElement, PassengerLugg
                             className="bg-green-600/90 hover:bg-green-700 text-white
                             rounded-xl h-12 px-8 shadow-lg shadow-green-900/20"
                         >
-                            {t("Form.confirm")}
+                            {t("Shared.confirm")}
                         </Button>
                     </DialogFooter>
                 </DialogContent>

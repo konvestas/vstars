@@ -1,4 +1,3 @@
-"use client";
 
 import Link from "next/link";
 import {  Download } from "lucide-react";
@@ -29,7 +28,7 @@ export default function Footer() {
                         text-primary-foreground shadow hover:opacity-90 transition whitespace-nowrap"
                     >
                         <Download className="h-4 w-4" />
-                        Download App
+                        {t("downloadApp")}
                     </Link>
                 </div>
 
@@ -37,36 +36,34 @@ export default function Footer() {
 
                 {/* Main grid */}
                 <div className=" text-lg grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
-                    {/* Services */}
                     <div>
-                        <h3 className="font-semibold mb-4">Services</h3>
+                        <h3 className="font-semibold mb-4">{t("services")}</h3>
                         <ul className="space-y-2 transition">
                             <li>
                                 <Link href="/services" className={textHover} >
-                                    Airport Transfer
+                                    {t("airportTransfer")}
                                 </Link>
                             </li>
                             <li>
                                 <Link href="/services" className={textHover}>
-                                    Hourly Chauffeur Ride
+                                    {t("hourlyChauffeurRide")}
                                 </Link>
                             </li>
                             <li>
                                 <Link href="/services" className={textHover}>
-                                    Medical Tourism
+                                    {t("medicalTourism")}
                                 </Link>
                             </li>
                             <li>
                                 <Link href="/services" className={textHover}>
-                                    City Tours
+                                    {t("cityTours")}
                                 </Link>
                             </li>
                         </ul>
                     </div>
 
-                    {/* Affiliates */}
                     <div>
-                        <h3 className="text-m font-semibold mb-4">Affiliates</h3>
+                        <h3 className="text-m font-semibold mb-4">{("affiliates")}</h3>
                         <ul className="space-y-2 text-muted-foreground hover:text-foreground transition">
                             <li>
                                 <Link href="/contact" className={textHover} >
@@ -98,16 +95,16 @@ export default function Footer() {
 
                     {/* Support */}
                     <div  className="text-lg">
-                        <h3 className=" font-semibold mb-4">Support</h3>
+                        <h3 className=" font-semibold mb-4">{t("Support")}</h3>
                         <ul className="space-y-2 text-muted-foreground hover:text-foreground transition">
                             <li>
-                                <Link href="/contact-us" className={textHover}>
-                                    Contact Us
+                                <Link href="/contact" className={textHover}>
+                                    {t("contactUs")}
                                 </Link>
                             </li>
                             <li>
                                 <Link href="/faq" className={textHover}>
-                                    Help & FAQ
+                                    {t("helpFaq")}
                                 </Link>
                             </li>
                         </ul>
@@ -115,15 +112,15 @@ export default function Footer() {
 
                     {/* Contact info */}
                     <div className="text-lg">
-                        <h3 className="font-semibold mb-4">Get in Touch</h3>
+                        <h3 className="font-semibold mb-4">  {t("getInTouch")}</h3>
                         <p className="text-muted-foreground">
-                            Questions, partnerships, or bookings — we&#39;re here to help.
+                            {t("questions")}
                         </p>
                         <Link
-                            href="/contact-us"
+                            href="/contact"
                             className="inline-block mt-4 font-medium underline underline-offset-4"
                         >
-                            Go to Contact Page
+                            {t("goToContactPage")}
                         </Link>
                         <div className="flex items-center gap-7 mt-8">
                             <Link
@@ -169,7 +166,7 @@ export default function Footer() {
                 {/* Bottom */}
                 <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-s text-muted-foreground">
                     <span>© {new Date().getFullYear()} Vstars Transfer. All rights reserved.</span>
-                    <span>Premium chauffeur & travel services</span>
+                    <span>{t("premium")}</span>
                 </div>
             </div>
         </footer>
