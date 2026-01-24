@@ -102,13 +102,12 @@
       "passengers": "Passengers",
       "luggage": "Luggage",
       "SelectedConfiguration": "Selected Configuration:",
-      "cancel": "cancel",
-      "confirm": "confirm",
 
       "PassengerLuggage": "Passenger & Luggage",
       "addressPlaceholder": "Enter Airport, Hotel, or Address...",
       "SelectDateHours": "Select Date & Time",
       "selectHours": "Select Duration",
+      "hour": "Hour",
 
       "passengersAndLuggage": "Passengers & Luggage",
       "guestInfo": "Guest Information",
@@ -152,7 +151,6 @@
       "summaryEstimated": "Total Estimated Price:",
       "reserve": "Reserve"
     },
-
     "Summary": {
       "title": "Review Your Booking",
       "desc": "Finalize your reservation",
@@ -169,28 +167,13 @@
       "bag": "Luggage:",
       "total": "Total Amount",
       "terms": "View Terms & Conditions"
-
     },
-    "Payment": {
-      "integrationTitle": "Secure Payment",
-      "info": "Complete your reservation securely via Stripe/Iyzico.",
-      "payAndConfirm": "Pay & Confirm",
-      "proceedToPayment": "Proceed to Payment",
-      "sending": "Processing..."
-    },
-    "Success": {
+    "Shared": {
       "continue": "Continue",
-      "payreserve": "Pay & Reserve",
-      "title": "Booking Confirmed!",
-      "subtitle": "We will contact you shortly with your driver details.",
-      "bookAnother": "Book Another Ride"
+      "back": "Back",
+      "submit": "Submit",
+      "confirm": "Confirm",
+      "cancel": "cancel"
     }
-  },
-  "Shared": {
-    "cancel": "Cancel",
-    "confirm": "Confirm",
-    "continue": "Continue",
-    "back": "Back",
-    "submit": "Submit"
   }
 }
