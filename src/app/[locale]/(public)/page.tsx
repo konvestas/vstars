@@ -10,7 +10,6 @@ import BookingWidget from "@/app/[locale]/features/booking/_components/booking-w
 import Footer from "@/components/layout/footer";
 import ChooseUs from "@/components/layout/choose-us";
 
-// Lazy load below-the-fold sections
 const OurServicesSection = dynamic(() => import("@/components/layout/service-card-content"), {
     loading: () => <div className="min-h-[50vh] flex items-center justify-center">Loading services...</div>
 });
@@ -47,6 +46,7 @@ export default function App() {
                     </h1>
                 </div>
                 {/* Widget */}
+                {/*API PROVIDER OLUYORSA WIDGET ICINE AL*/}
                 <div className="z-10  max-w-4xl -mt-8 "><APIProvider apiKey={API_KEY}><BookingWidget/></APIProvider></div>
                 <div className="z-10 mt-auto md:mt-8"><ScrollButton title="View our services" scrollTo="our-services"/></div>
             </section>

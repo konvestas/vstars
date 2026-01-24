@@ -1,5 +1,3 @@
-"use client";
-
 import { useState } from "react";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
@@ -14,7 +12,7 @@ export default function NavigationBar() {
 
     const [isServicesOpen, setIsServicesOpen] = useState(false);
     const [isLanguageOpen, setIsLanguageOpen] = useState(false);
-    // font degistir
+
     const menuLinkStyle = cn("font-lexend font-semibold text-sm block select-none rounded-md p-3 leading-none " +
         "no-underline outline-none transition-colors hover:bg-slate-100 hover:text-black focus:bg-slate-100 " +
         "focus:text-black cursor-pointer text-black");
@@ -89,7 +87,7 @@ export default function NavigationBar() {
                                         <Link href="/contact" className={menuLinkStyle}>
                                             <span>{t("contact")}</span>
                                         </Link>
-                                        <Link href="/our-affiliates" className={menuLinkStyle}>
+                                        <Link href="/affiliates" className={menuLinkStyle}>
                                             <span>{t("ourAffiliates")}</span>
                                         </Link>
 

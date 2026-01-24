@@ -1,4 +1,3 @@
-"use client";
 
 import React from "react";
 import { ShieldCheck, Clock, Star, Headset } from "lucide-react";
