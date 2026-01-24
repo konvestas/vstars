@@ -2,8 +2,8 @@ import { z } from "zod";
 
 // Centralized constants to avoid magic strings
 export const SERVICE_TYPES = {
-    TRANSFER: "transfer",
-    HOURLY: "hourly",
+    TRANSFER: "Transfer",
+    HOURLY: "Hourly Hire",
 } as const;
 
 export const bookingSchema = z.object({
