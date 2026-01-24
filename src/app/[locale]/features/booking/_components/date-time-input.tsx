@@ -151,7 +151,7 @@ export default function DateTimeInput({
                     </div>
                     <Button onClick={handleConfirm} disabled={!tempDate || !tempTime}
                             className="bg-green-600 text-white">
-                        {t("Form.confirm")}
+                        {t("Shared.confirm")}
                     </Button>
                 </DialogFooter>
             </DialogContent>

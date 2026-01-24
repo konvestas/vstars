@@ -26,7 +26,7 @@ export function DurationInput({
                                   className,
                                   error,
                               }: DurationInputProps) {
-    const tShared = useTranslations('Shared');
+    const t = useTranslations('BookingWidget');
     const [isOpen, setIsOpen] = useState(false);
 
     // Initialize with current value or default to "4"
@@ -81,12 +81,12 @@ export function DurationInput({
                 {/* MODAL CONTENT */}
                 <DialogContent className="sm:max-w-md bg-white/95 dark:bg-zinc-900/95 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-2xl shadow-2xl">
                     <DialogHeader>
-                        <DialogTitle className="text-xl font-semibold">Select Duration</DialogTitle>
+                        <DialogTitle className="text-xl font-semibold">{t("Form.selectHours")}</DialogTitle>
                     </DialogHeader>
 
                     <div className="py-1 space-y-4">
                         <div className="grid grid-cols-2 gap-0">
-                            <label className="text-s font-semibold ml-3 mt-2">Hour</label>
+                            <label className="text-s font-semibold ml-3 mt-2">{t("Form.hour")}</label>
                             {/* Controlled Select using tempValue */}
                             <Select value={tempValue} onValueChange={setTempValue}>
                                 <SelectTrigger className="h-12 mt-1 bg-gray-300 border-0 font-semibold rounded-sm">
@@ -109,7 +109,7 @@ export function DurationInput({
                     <DialogFooter className="gap-2 sm:gap-0">
                         <DialogClose asChild>
                             <Button variant="ghost" className="rounded-xl h-10 cursor-pointer">
-                                {tShared("cancel") || "Cancel"}
+                                {t("Shared.cancel")}
                             </Button>
                         </DialogClose>
                         <Button
@@ -117,7 +117,7 @@ export function DurationInput({
                             onClick={handleConfirm}
                             className="bg-green-600/90 hover:bg-green-700 text-white rounded-xl h-12 px-8 shadow-lg shadow-green-900/20"
                         >
-                            {tShared("confirm") || "Confirm"}
+                            {t("Shared.confirm")}
                         </Button>
                     </DialogFooter>
                 </DialogContent>

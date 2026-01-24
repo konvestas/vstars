@@ -575,7 +575,7 @@ export default function BookingWidget() {
                             onClick={next}
                             className={`${styles.actionBtn}`}
                         >
-                            {t("Success.continue")}
+                            {t("Shared.continue")}
                         </Button>
                     ) : step === 2 && 3 ? (
                         // STEP 2 ACTIONS (Fixed Alignment)
