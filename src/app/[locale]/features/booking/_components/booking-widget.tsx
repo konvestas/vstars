@@ -51,8 +51,6 @@ const styles = {
     iconContainerTop: "absolute left-3 top-3 text-white/50 h-5 w-5 pointer-events-none"
 };
 
-// date dokundugumumz zaman hat veriyor luggage icinde gecerli
-
 export default function BookingWidget() {
     const t = useTranslations('BookingWidget');
     const { form, step, price, onTabChange, next, back } = useBookingForm();
@@ -466,7 +464,7 @@ export default function BookingWidget() {
                                     {/* ROW 5: Price Total */}
                                     <div className="flex justify-between items-center px-4 py-3 bg-white/10 rounded-xl
                                      border border-white/10">
-                                        <span className="text-sm text-white/80">{t("Summary.totalEstimated")}</span>
+                                        <span className="text-sm text-white/80">{t("GuestInfo.summaryEstimated")}</span>
                                         <span className="text-xl font-bold text-green-400">{price} TL</span>
                                     </div>
                                 </div>
@@ -487,47 +485,83 @@ export default function BookingWidget() {
                                     <p className="text-sm text-white/60 mt-1">{t("Summary.desc")}</p>
                                 </div>
 
-                                <div className="space-y-4">
+                                <div className="space-y-8">
                                     {/* 1. SUMMARY CARD */}
-                                    <div className="bg-white/5 border border-white/10 rounded-2xl p-5 space-y-4">
-                                        <h4 className="text-sm font-semibold text-white/90 uppercase tracking-wider border-b border-white/10 pb-2">
+                                    <div className="bg-white/5 border border-white/10 rounded-2xl p-6 space-y-6">
+                                        <h4 className="text-sm font-semibold text-white/90 uppercase tracking-wider border-b border-white/10 pb-3">
                                             {t("Summary.bookingSummary")}
                                         </h4>
 
-                                        {/* Route & Date */}
-                                        {/*ROUTE DEGISTIR ALIS VE BIRAKIS OLARAK VE BAGAJ */}
-                                        <div className="grid grid-cols-[auto_1fr] gap-3 text-sm">
-                                            <div className="flex flex-col gap-1 text-white/50">
-                                                <div>{t("Summary.guest")}  <span className="text-white font-medium">{watch("fullName")}</span></div>
-
-                                                <div>{t("Summary.date")} <span className="text-white pl-1 font-medium">{watchedDate ? format(watchedDate, "dd MMM yyyy") : "-"} • {watchedTime} </span></div>
-                                                <br/>
-                                                <div>{t("Summary.route")} <span className=" max-w-50 text-white pl-1 font-medium text-left">
-                                                    {serviceType === "hourly" ? "Hourly Rental" : pickupAddr }<br/> drop-off: {dropoffAddr}</span>
-
+                                        {/* DETAILS */}
+                                        <div className="space-y-5 text-sm">
+                                            {/* Basic Info */}
+                                            <div className="space-y-2 text-white/50">
+                                                <div>
+                                                    {t("Summary.serviceType")}
+                                                    <span className="text-white font-medium pl-1">{watch("serviceType")}</span>
                                                 </div>
-                                                <br/>
 
+                                                <div>
+                                                    {t("Summary.guest")}
+                                                    <span className="text-white font-medium pl-1">{watch("fullName")}</span>
+                                                </div>
 
+                                                <div>
+                                                    {t("Summary.phone")}
+                                                    <span className="text-white font-medium pl-1">{watch("phone")}</span>
+                                                </div>
+
+                                                <div>
+                                                    {t("Summary.date")}
+                                                    <span className="text-white pl-1 font-medium">{watchedDate ? format(watchedDate, "dd MMM yyyy") : "-"} • {watchedTime}</span>
+                                                </div>
+                                            </div>
+
+                                            {/* Route */}
+                                            <div className="space-y-2 text-white/50">
+                                                <div className="text-white/70 font-semibold">
+                                                    {t("Summary.route")}
+                                                </div>
+
+                                                <div>
+                                                    {t("Summary.pickUpAddress")}
+                                                    <span className="text-white font-medium pl-1 block">{watch("pickupAddress")}</span>
+                                                </div>
+
+                                                <div>
+                                                    {t("Summary.dropOffAddress")}
+                                                    <span className="text-white font-medium pl-1 block">{watch("dropoffAddress")}</span>
+                                                </div>
+                                            </div>
+
+                                            {/* Passengers */}
+                                            <div className="space-y-2 text-white/50">
+                                                <div>
+                                                    {t("Summary.passengers")}
+                                                    <span className="text-white font-medium pl-1">{watch("passengers")}</span>
+                                                </div>
+
+                                                <div>
+                                                    {t("Summary.bag")}
+                                                    <span className="text-white font-medium pl-1">{watch("luggage")}</span>
+                                                </div>
                                             </div>
                                         </div>
 
-
-
                                         {/* Price */}
-                                        <div className="flex justify-between items-center pt-3 border-t border-white/10">
-                                            <span className="text-white/80">{t("Summary.total")}</span>
+                                        <div className="flex justify-between items-center pt-4 border-t border-white/10"><span className="text-white/80">{t("Summary.total")}</span>
                                             <span className="text-2xl font-bold text-green-400">{price} TL</span>
                                         </div>
                                     </div>
 
-                                    <div className="text-center">
-                                        <button type="button" className="text-xs text-white/40
-                                        hover:text-white/80 underline underline-offset-4 transition-colors">
+                                    {/* Terms */}
+                                    <div className="text-center pt-2">
+                                        <button
+                                            type="button"
+                                            className="text-xs text-white/40 hover:text-white/80 underline underline-offset-4 transition-colors">
                                             {t("Summary.terms")}
                                         </button>
                                     </div>
-
                                 </div>
                             </motion.div>
                         )}
