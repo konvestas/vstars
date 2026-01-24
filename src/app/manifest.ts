@@ -4,8 +4,9 @@ export default function manifest(): MetadataRoute.Manifest {
     return {
         name: 'Vstars Transfer',
         short_name: 'Vstars',
-        description: "Istanbul's transfer choice " ,
-        start_url: '/',
+        description: "Premium VIP transfer services in Istanbul for business and leisure travelers, including private airport transfers with stress-free arrivals & departures " +
+            "also chauffeured city travel and medical tourism",
+        start_url: '/en',
         display: 'standalone',
         background_color: '#000000',
         theme_color: '#000000',
@@ -16,14 +17,20 @@ export default function manifest(): MetadataRoute.Manifest {
                 type: 'image/x-icon',
             },
             {
-                src: '/icon-192.png',
+                src: '/logo-icon-192x192.png',
                 sizes: '192x192',
                 type: 'image/png',
             },
             {
-                src: '/icon-512.png',
+                src: '/logo-icon-512x512.png',
                 sizes: '512x512',
                 type: 'image/png',
+            },
+            {
+                src: '/logo-icon-512x512.png',
+                sizes: '512x512',
+                type: 'image/png',
+                purpose: 'maskable',
             },
         ],
     };
