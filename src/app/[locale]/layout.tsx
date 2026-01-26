@@ -68,21 +68,61 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
                 { url: "/apple-icon-152x152.png", sizes: "152x152" },
                 { url: "/apple-icon-180x180.png", sizes: "180x180" },
             ],
-            shortcut: "/favicon.ico",
+            shortcut: "/public/favicon.ico",
         },
         manifest: "/manifest.webmanifest",
         openGraph: {
             type: "website",
             url: `https://www.vstarstransfer.com/${locale}`,
+            emails:"hello@visitoria.com.tr",
+            phoneNumbers:"+905326432234",
+            locale: locale,
+            countryName:"Türkiye",
             title: t('title'),
             description: t('description'),
             siteName: "Vstars Transfer",
             images: [
                 {
                     url: "https://www.vstarstransfer.com/images/vstarsFleet.webp",
-                    width: 1200,
-                    height: 630,
+                    width: 1920,
+                    height: 1059,
                     alt: "Vstars Luxury Fleet",
+                    type: "image/webp"
+                },
+                {
+                    url: "https://www.vstarstransfer.com/images/vstarsTransferVehicle.webp",
+                    width: 800,
+                    height: 450,
+                    alt: "Vstars Luxury Fleet",
+                    type: "image/webp"
+                },
+                {
+                    url: "https://www.vstarstransfer.com/images/vstarsTransferVehicleInside.webp",
+                    width: 800,
+                    height: 450,
+                    alt: "Vstars Luxury Fleet",
+                    type: "image/webp"
+                },
+                {
+                    url: "https://www.vstarstransfer.com/images/vstarsTransferVehicleOutside.webp",
+                    width: 600,
+                    height: 600,
+                    alt: "Vstars Luxury Fleet",
+                    type: "image/webp"
+                },
+                {
+                    url: "https://www.vstarstransfer.com/images/istanbul.webp",
+                    width: 3072,
+                    height: 1376,
+                    alt: "Vstars Luxury Fleet",
+                    type: "image/webp"
+                },
+                {
+                    url: "https://www.vstarstransfer.com/images/medical.webp",
+                    width: 800,
+                    height: 600,
+                    alt: "Vstars Luxury Fleet",
+                    type: "image/webp"
                 },
             ]
         },
