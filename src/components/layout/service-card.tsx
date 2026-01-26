@@ -41,7 +41,8 @@ export function ServiceCard({ title, description, image, index, className }: Ser
                             src={image}
                             alt={title}
                             fill
-                            className="object-cover transition-transform duration-700 group-hover:scale-110"
+                            loading="eager"
+                            className="object-cover transition-transform duration-700 group-hover:scale-105"
                             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         />
                         {/* Dark Overlay on Hover */}
@@ -61,8 +62,8 @@ export function ServiceCard({ title, description, image, index, className }: Ser
                         {/* Footer / CTA */}
                         <div
                             className={cn(
-                                "pt-4 border-t flex items-center justify-between text-xs font-bold uppercase tracking-wider transition-colors",
-                                "border-gray-100 text-gray-400 group-hover:text-black",
+                                "pt-4 border-t flex items-center justify-between text-xs font-bold uppercase " +
+                                "tracking-wider transition-colors border-gray-100 text-gray-400 group-hover:text-black",
                                 "dark:border-white/10 dark:text-gray-500 dark:group-hover:text-white"
                             )}
                         >
