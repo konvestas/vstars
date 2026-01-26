@@ -19,18 +19,18 @@ export default function FleetSection() {
             title: t("items.Vito.title"),
             description: t("items.Vito.desc"),
             images: [
-                "/images/vstarsTransferVehicle.webp",
-                "/images/vstarsTransferVehicleInside.webp",
-                "/images/vstarsTransferVehicleOutside.webp",
+                "/images/vstars-transfer-vehicle-vip-interior.webp",
+                "/images/vstars-transfer-vehicle-inside-reverse-view.webp",
+                "/images/vstars-transfer-vehicle-outside-view.webp",
             ],
         },
         {
             title: t("items.Sprinter.title"),
             description: t("items.Sprinter.desc"),
             images: [
-                "/images/vstarsTransferVehicle.webp",
-                "/images/vstarsTransferVehicleInside.webp",
-                "/images/vstarsTransferVehicleOutside.webp"
+                "/images/vstars-transfer-vehicle-vip-interior.webp",
+                "/images/vstars-transfer-vehicle-inside-reverse-view.webp",
+                "/images/vstars-transfer-vehicle-outside-view.webp"
             ],
         },
     ];

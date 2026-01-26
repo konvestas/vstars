@@ -31,7 +31,7 @@ export default function OurServicesSection() {
         {
             title: t("items.medicalTourism.title"),
             description: t("items.medicalTourism.desc"),
-            image: "/images/medical.webp",
+            image: "/images/can-duman-medical-tourism.webp",
         },
         {
             title: t("items.cityTour.title"),

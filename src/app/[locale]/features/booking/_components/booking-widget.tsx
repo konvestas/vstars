@@ -293,7 +293,7 @@ export default function BookingWidget() {
                                     <div className="relative h-48 w-full bg-linear-to-b from-white/10 to-transparent">
                                         {/* eslint-disable-next-line @next/next/no-img-element */}
                                         <img
-                                            src="/images/vstarsTransferVehicle.webp"
+                                            src="/images/vstars-transfer-vehicle-vip-interior.webp"
                                             alt="Mercedes Maybach Vito"
                                             className="w-full h-full object-cover object-center"
                                         />
