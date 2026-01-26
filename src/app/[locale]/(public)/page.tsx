@@ -1,21 +1,17 @@
 "use client";
 
 import Image from "next/image";
-import dynamic from "next/dynamic";
 import { APIProvider } from "@vis.gl/react-google-maps";
 import NavigationBar from "@/components/layout/navigation-bar";
-import FloatingWhatsApp from "@/components/layout/floating-whatsapp";
-import ScrollButton from "@/components/layout/scroll-button";
 import BookingWidget from "@/app/[locale]/features/booking/_components/booking-widget";
-import Footer from "@/components/layout/footer";
+import ScrollButton from "@/components/layout/scroll-button";
+import OurServicesSection from "@/components/layout/service-card-content";
 import ChooseUs from "@/components/layout/choose-us";
+import FloatingWhatsApp from "@/components/layout/floating-whatsapp";
+import Footer from "@/components/layout/footer";
+import FleetSection from "@/components/layout/fleet-card-content";
 
-const OurServicesSection = dynamic(() => import("@/components/layout/service-card-content"), {
-    loading: () => <div className="min-h-[50vh] flex items-center justify-center">Loading services...</div>
-});
-const FleetSection = dynamic(() => import("@/components/layout/fleet-card-content"), {
-    loading: () => <div className="min-h-[50vh] flex items-center justify-center">Loading fleet...</div>
-});
+
 
 export default function App() {
     const API_KEY = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY as string;
