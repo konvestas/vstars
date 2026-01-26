@@ -25,7 +25,7 @@ export default function ServicesPage() {
             title: "Medical Tourism",
             description:
                 "Private, hygienic, and comfortable transport for medical guests. We provide direct transfers to hospitals and hotels with vehicles specifically prepared for post-procedure comfort.",
-            image: "/images/medical.webp",
+            image: "/images/can-duman-medical-tourism.webp",
         },
         {
             title: "City Tour",
