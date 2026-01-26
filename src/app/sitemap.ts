@@ -5,10 +5,11 @@ const locales = ['en', 'tr', 'de', 'ru'];
 
 const paths = [
     '',
-    '/about',
     '/services',
     '/fleet',
+    '/affiliates',
     '/contact',
+    '/FAQ'
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
