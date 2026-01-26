@@ -6,7 +6,7 @@ import { getMessages, getTranslations } from 'next-intl/server';
 import "../globals.css";
 import React from "react";
 import { routing } from "@/i18n/routing";
-import { Toaster } from "@/components/ui/sonner";
+
 
 const geistSans = Geist({
     variable: "--font-sans",
@@ -74,8 +74,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
         openGraph: {
             type: "website",
             url: `https://www.vstarstransfer.com/${locale}`,
-            emails:"hello@visitoria.com.tr",
-            phoneNumbers:"+905326432234",
+            emails:"",
+            phoneNumbers:"+90 5326432234",
             locale: locale,
             countryName:"Türkiye",
             title: t('title'),
@@ -83,45 +83,80 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
             siteName: "Vstars Transfer",
             images: [
                 {
-                    url: "https://www.vstarstransfer.com/images/vstarsFleet.webp",
+                    url: "https://www.vstarstransfer.com/images/istanbul-15-Temmuz-bridge-view-scenery.webp",
+                    width: 1500,
+                    height: 1500,
+                    alt: "Scenery view from the 15 Temmuz bridge of Istanbul",
+                    type: "image/webp"
+                },
+                {
+                    url: "https://www.vstarstransfer.com/images/istanbul-airport-private-chauffeur-transfer.webp",
+                    width: 1500,
+                    height: 1500,
+                    alt: "Airport private chauffeur transfer with Mercedes-Benz Maybach van",
+                    type: "image/webp"
+                },
+                {
+                    url: "https://www.vstarstransfer.com/images/istanbul-airport-vip-transfer-mercedes-vito.webp",
+                    width: 1500,
+                    height: 1500,
+                    alt: "Airport vip transfer with Mercedes-Benz Maybach van",
+                    type: "image/webp"
+                },
+                {
+                    url: "https://www.vstarstransfer.com/images/istanbul-city-tour-private-driver-galata-tower.webp",
+                    width: 1200,
+                    height: 800,
+                    alt: "City tour with private driver in Istanbul with a view to galata tower",
+                    type: "image/webp"
+                },
+                {
+                    url: "https://www.vstarstransfer.com/images/istanbul-hourly-hire-private-driver.webp",
+                    width: 1500,
+                    height: 1500,
+                    alt: "Hourly hire for Vstars transfers in Istanbul",
+                    type: "image/webp"
+                },
+                {
+                    url: "https://www.vstarstransfer.com/images/can-duman-medical-tourism.webp",
+                    width: 800,
+                    height: 600,
+                    alt: "One of the affiliates of Vstars Transfer for medical tourism in Istanbul",
+                    type: "image/webp"
+                },
+                {
+                    url: "https://www.vstarstransfer.com/images/private-chauffeur-hire-istanbul-transfer-mercedes-vito.webp",
+                    width: 1500,
+                    height: 1500,
+                    alt: "Private chauffeur hire for Vstars transfers in Istanbul",
+                    type: "image/webp"
+                },
+                {
+                    url: "https://www.vstarstransfer.com/images/vstars-fleet.webp",
                     width: 1920,
                     height: 1059,
-                    alt: "Vstars Luxury Fleet",
+                    alt: "Vstars transfers fleet with a view to the Bosporus",
                     type: "image/webp"
                 },
                 {
-                    url: "https://www.vstarstransfer.com/images/vstarsTransferVehicle.webp",
+                    url: "https://www.vstarstransfer.com/images/vstars-transfer-vehicle-vip-interior.webp",
                     width: 800,
                     height: 450,
-                    alt: "Vstars Luxury Fleet",
+                    alt: "Inside view for the Mercedes-Benz Maybach van",
                     type: "image/webp"
                 },
                 {
-                    url: "https://www.vstarstransfer.com/images/vstarsTransferVehicleInside.webp",
+                    url: "https://www.vstarstransfer.com/images/vstars-transfer-vehicle-inside-reverse-view.webp",
                     width: 800,
                     height: 450,
-                    alt: "Vstars Luxury Fleet",
+                    alt: "Inside view for the Mercedes-Benz Maybach van",
                     type: "image/webp"
                 },
                 {
-                    url: "https://www.vstarstransfer.com/images/vstarsTransferVehicleOutside.webp",
+                    url: "https://www.vstarstransfer.com/images/vstars-transfer-vehicle-outside-view.webp",
                     width: 600,
                     height: 600,
-                    alt: "Vstars Luxury Fleet",
-                    type: "image/webp"
-                },
-                {
-                    url: "https://www.vstarstransfer.com/images/istanbul.webp",
-                    width: 3072,
-                    height: 1376,
-                    alt: "Vstars Luxury Fleet",
-                    type: "image/webp"
-                },
-                {
-                    url: "https://www.vstarstransfer.com/images/medical.webp",
-                    width: 800,
-                    height: 600,
-                    alt: "Vstars Luxury Fleet",
+                    alt: "Mercedes-Benz Maybach van outside view",
                     type: "image/webp"
                 },
             ]
@@ -130,7 +165,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
             card: "summary_large_image",
             site: "@vstarstransfer",
             creator: "@vstarstransfer",
-            images: "https://www.vstarstransfer.com/images/vstarsFleet.webp"
+            images: "https://www.vstarstransfer.com/images/vstars-fleet.webp"
         },
     };
 }
@@ -154,7 +189,7 @@ export default async function RootLayout({
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "name": "Vstars Transfer",
-        "image": "https://www.vstarstransfer.com/images/vstarsFleet.webp",
+        "image": "https://www.vstarstransfer.com/images/vstars-fleet.webp",
         "url": "https://www.vstarstransfer.com",
         "telephone": "+905326432234",
         "email": "info@candumandanismanlik.com",
@@ -229,7 +264,6 @@ export default async function RootLayout({
         <NextIntlClientProvider messages={messages}>
             {children}
         </NextIntlClientProvider>
-        {/*<Toaster richColors position="top-center" closeButton />*/}
         </body>
         </html>
     );
