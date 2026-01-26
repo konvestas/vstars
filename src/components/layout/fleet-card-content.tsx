@@ -14,8 +14,6 @@ interface FleetItem {
 
 export default function FleetSection() {
     const t = useTranslations("Fleet");
-
-    // Data Definition
     const fleetData: FleetItem[] = [
         {
             title: t("items.Vito.title"),
