@@ -21,22 +21,22 @@ export default function OurServicesSection() {
         {
             title: t("items.hourlyHire.title"),
             description: t("items.hourlyHire.desc"),
-            image: "/images/vstarsTransferVehicle.webp",
+            image: "/images/istanbul-hourly-hire-private-driver.webp",
         },
         {
             title: t("items.airportTransfers.title"),
             description: t("items.airportTransfers.desc"),
-            image: "/images/vstarsTransferVehicleOutside.webp",
+            image: "/images/istanbul-airport-vip-transfer-mercedes-vito.webp",
         },
         {
             title: t("items.medicalTourism.title"),
             description: t("items.medicalTourism.desc"),
-            image: "/images/vstarsTransferVehicleInside.webp",
+            image: "/images/medical.webp",
         },
         {
             title: t("items.cityTour.title"),
             description: t("items.cityTour.desc"),
-            image: "/images/istanbul.webp",
+            image: "/images/istanbul-15-Temmuz-bridge-view-scenery.webp",
         },
     ];
 

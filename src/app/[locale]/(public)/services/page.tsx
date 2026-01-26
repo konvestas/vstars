@@ -13,13 +13,13 @@ export default function ServicesPage() {
             title: "Airport Transfers",
             description:
                 "Reliable VIP transfer service with flight tracking, meet & greet, and professional chauffeurs. We ensure a seamless transition from the runway to the road, taking the stress out of your arrival.",
-            image: "/images/airport.png",
+             image: "/images/istanbul-airport-vip-transfer-mercedes-vito.webp",
         },
         {
             title: "Hourly Chauffeur Hire",
             description:
                 "Full-day or hourly rental. Enjoy on-demand luxury transportation tailored to your personal schedule. Whether for business meetings or a shopping spree, your driver waits for you.",
-            image: "/images/chaffeur1.png",
+            image: "/images/istanbul-airport-vip-transfer-mercedes-vito.webp",
         },
         {
             title: "Medical Tourism",
@@ -31,7 +31,7 @@ export default function ServicesPage() {
             title: "City Tour",
             description:
                 "Explore Istanbul with a private driver. Visit historical landmarks and top attractions at your own pace without the hassle of parking or navigating traffic.",
-            image: "/images/istanbul.webp",
+            image: "/images/istanbul-city-tour-private-driver-galata-tower.webp",
         },
     ];
 
@@ -56,7 +56,7 @@ export default function ServicesPage() {
 
     return (
         // Changed bg-gray-50 to bg-stone-50 for a warmer, more premium 'paper' feel
-        <main className="min-h-screen pt-32 bg-b ">
+        <main className="min-h-screen pt-32 bg-white ">
             <nav className="fixed top-0 left-0 w-full z-50">
                 <NavigationBar />
             </nav>
