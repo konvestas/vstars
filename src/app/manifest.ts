@@ -8,29 +8,26 @@ export default function manifest(): MetadataRoute.Manifest {
             "also chauffeured city travel and medical tourism",
         start_url: '/en',
         display: 'standalone',
-        background_color: '#000000',
-        theme_color: '#000000',
+        background_color: '#FFFFFF',
+        theme_color: '#FFFFFF',
         icons: [
             {
-                src: '/favicon.ico',
-                sizes: 'any',
-                type: 'image/x-icon',
+                src: '/public/favicon.ico',
+                sizes: '48x48',
+                type: 'image/ico',
+                purpose: "maskable"
             },
             {
                 src: '/logo-icon-192x192.png',
                 sizes: '192x192',
                 type: 'image/png',
+                purpose: "maskable"
             },
             {
                 src: '/logo-icon-512x512.png',
                 sizes: '512x512',
                 type: 'image/png',
-            },
-            {
-                src: '/logo-icon-512x512.png',
-                sizes: '512x512',
-                type: 'image/png',
-                purpose: 'maskable',
+                purpose: "maskable"
             },
         ],
     };
