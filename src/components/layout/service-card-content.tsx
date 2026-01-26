@@ -26,7 +26,7 @@ export default function OurServicesSection() {
         {
             title: t("items.airportTransfers.title"),
             description: t("items.airportTransfers.desc"),
-            image: "/images/istanbul-airport-vip-transfer-mercedes-vito.webp",
+            image: "/images/istanbul-airport-vip-transfer-mercedes.webp",
         },
         {
             title: t("items.medicalTourism.title"),

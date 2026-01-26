@@ -13,13 +13,13 @@ export default function ServicesPage() {
             title: "Airport Transfers",
             description:
                 "Reliable VIP transfer service with flight tracking, meet & greet, and professional chauffeurs. We ensure a seamless transition from the runway to the road, taking the stress out of your arrival.",
-             image: "/images/istanbul-airport-vip-transfer-mercedes-vito.webp",
+             image: "/images/istanbul-airport-private-chauffeur-transfer.webp",
         },
         {
             title: "Hourly Chauffeur Hire",
             description:
                 "Full-day or hourly rental. Enjoy on-demand luxury transportation tailored to your personal schedule. Whether for business meetings or a shopping spree, your driver waits for you.",
-            image: "/images/istanbul-airport-vip-transfer-mercedes-vito.webp",
+            image: "/images/vstars-fleet.webp",
         },
         {
             title: "Medical Tourism",
@@ -86,11 +86,13 @@ export default function ServicesPage() {
                                 {/* Image Side */}
                                 <div className={`relative ${isEven ? "lg:order-1" : "lg:order-2"}`}>
                                     {/* Added a subtle shadow colored slightly amber to warm up the image */}
-                                    <div className="aspect-4/3 relative overflow-hidden rounded-lg bg-gray-200 dark:bg-gray-800 shadow-2xl shadow-stone-200 dark:shadow-none ring-1 ring-black/5">
+                                    <div className="aspect-4/3 relative overflow-hidden rounded-lg bg-gray-200
+                                    dark:bg-gray-800 shadow-2xl shadow-stone-200 dark:shadow-none ring-1 ring-black/5">
                                         <Image
                                             src={item.image}
                                             alt={item.title}
                                             fill
+                                            loading="eager"
                                             className="object-cover transition-transform duration-700 "
                                             sizes="(max-width: 1024px) 100vw, 50vw"
                                         />
