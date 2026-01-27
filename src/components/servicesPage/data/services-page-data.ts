@@ -5,6 +5,9 @@ export const getServices = (t: any) => [
         description: t("items.airportTransfers.desc"),
         image: "/images/istanbul-airport-private-chauffeur-transfer.webp",
         alt: "Airport private chauffeur transfer with Mercedes-Benz Maybach van",
+        width: 1500,
+        height: 1500,
+        type:"webp",
         id: "airport-transfers",
         faqs: [
             { q: t("FAQS.items.q1"), a: t("FAQS.items.a1") },
@@ -20,6 +23,9 @@ export const getServices = (t: any) => [
         description: t("items.hourlyHire.desc"),
         image: "/images/private-chauffeur-hire-istanbul-transfer-mercedes-vito.webp",
         alt: "Private chauffeur hire for Vstars transfers in Istanbul",
+        width: 1500,
+        height: 1500,
+        type:"webp",
         id: "hourly-hire",
         faqs: [
             { q: t("FAQS.items.q7"), a: t("FAQS.items.a7") },
@@ -32,6 +38,9 @@ export const getServices = (t: any) => [
         description: t("items.medicalTourism.desc"),
         image: "/images/can-duman-medical-tourism.webp",
         alt: "One of the affiliates of Vstars Transfer for medical tourism in Istanbul",
+        width: 800,
+        height: 600,
+        type:"webp",
         id: "medical-tourism",
         faqs: [
             { q: t("FAQS.items.q10"), a: t("FAQS.items.a10") },
@@ -44,6 +53,9 @@ export const getServices = (t: any) => [
         description: t("items.cityTour.desc"),
         image: "/images/istanbul-city-tour-private-driver-galata-tower.webp",
         alt: "City tour with private driver in Istanbul with a view to galata tower",
+        width: 1200,
+        height: 800,
+        type:"webp",
         id: "city-tour",
         faqs: [
             { q: t("FAQS.items.q13"), a: t("FAQS.items.a13") },
