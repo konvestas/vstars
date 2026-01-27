@@ -4,7 +4,7 @@ import { useState, useMemo } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { bookingSchema, type BookingFormValues, SERVICE_TYPES } from "../schemas";
-import { calculateTripPrice } from "../lib/utils";
+import { calculateTripPrice } from "@/features/booking/lib/utils";
 
 export function useBookingForm() {
     const [step, setStep] = useState(1);
