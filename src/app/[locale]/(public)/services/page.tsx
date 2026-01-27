@@ -4,8 +4,52 @@ import FloatingWhatsApp from "@/components/layout/floating-whatsapp";
 import Image from "next/image";
 import ReadyToBookSection from "@/components/layout/ready-to-book";
 import {useTranslations} from "next-intl";
-import {getServices} from "@/lib/data/services-page-data";
+import {getServices} from "@/components/servicesPage/data/services-page-data";
+import {Metadata} from "next";
+import {getTranslations} from "next-intl/server";
 
+export async function generateMetadata({params,}: {
+    params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+    const { locale } = await params;
+    const t = await getTranslations({locale, namespace: "ServicesMetadata"});
+    return {
+        title: t("title"),
+        description: t("description"),
+        alternates: {
+            canonical: `/${locale}/services`,
+        },
+
+        openGraph: {
+            title: t("title"),
+            description: t("description"),
+            url: `https://www.vstarstransfer.com/${locale}/services`,
+            type: "website",
+            images: [
+                {
+                    url: "https://www.vstarstransfer.com/images/vstars-fleet.webp",
+                    width: 1920,
+                    height: 1059,
+                    alt: "Vstars Transfer luxury fleet in Istanbul",
+                    type: "image/webp",
+                }
+            ],
+        },
+
+        twitter: {
+            card: "summary_large_image",
+            title: t("title"),
+            description: t("description"),
+            images:
+                {
+                    url: "https://www.vstarstransfer.com/images/vstars-fleet.webp",
+                    alt: "Vstars Transfers luxury fleet in Istanbul",
+                    type: "image/webp",
+                }
+
+        },
+    };
+}
 
 export default function ServicesPage() {
     const t = useTranslations('ServicesPage');
@@ -13,9 +57,7 @@ export default function ServicesPage() {
 
     return (
         <main className="min-h-screen pt-20 bg-white ">
-            <nav className="fixed top-0 left-0 w-full z-50">
-                <NavigationBar />
-            </nav>
+            <nav className="fixed top-0 left-0 w-full z-50"><NavigationBar /></nav>
 
             <section className="w-full px-6 md:px-8">
                 {/* Header Section */}
