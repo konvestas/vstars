@@ -4,6 +4,14 @@
     "description": "Experience luxurious rides in Istanbul. VIP Airport transfers (IST & SAW), hourly chauffeur hire, and private tours with Mercedes-Benz vehicles.",
     "keywords": "Istanbul airport transfer, VIP transfer Istanbul, Sabiha Gokcen transfer, IST airport shuttle, Mercedes Vito VIP, Private chauffeur Istanbul, Luxury car service Istanbul, Istanbul hotel transfer, Galataport transfer, Safe travel Istanbul, 24/7 airport transfer, Executive car service, Istanbul city tours"
   },
+  "ServicesMetadata": {
+    "title": "Services | Vstars",
+    "description": "Experience premium chauffeur services designed for comfort, safety, and efficiency."
+  },
+  "AffiliatesMetadata": {
+    "title": "Affiliates | Vstars",
+    "description": "Experience premium chauffeur services designed for comfort, safety, and efficiency."
+  },
   "Navbar": {
     "menu": "Menu",
     "signIn": "Sign in",
@@ -176,6 +184,12 @@
       "cancel": "cancel"
     }
   },
+  "ReadyToBook": {
+    "title": "Ready to book your ride?",
+    "desc": "Let us tailor your transfer or tour — fast replies, real people, 24/7 support.",
+    "contactUs": "Contact Us",
+    "bookNow": "Book Now"
+  },
   "Footer": {
     "downloadApp": "Download App",
     "services": "Services",
@@ -266,10 +280,35 @@
       }
     }
   },
-  "ReadyToBook": {
-    "title": "Ready to book your ride?",
-    "desc": "Let us tailor your transfer or tour — fast replies, real people, 24/7 support.",
-    "contactUs": "Contact Us",
-    "bookNow": "Book Now"
+  "AffiliatesPage": {
+    "title": "Our Affiliates",
+    "desc": "Experience premium chauffeur services designed for comfort, safety, and efficiency.",
+    "items": {
+      "medical": {
+        "title": "Can Duman Medical Tourism",
+        "desc": "Arrive or depart in comfort with our airport transfer service, available in Istanbul airport and Sabiha Gökçen airport.\n     Skip the stress of public transport and unreliable taxis — your chauffeur will meet you on time and take you directly to your destination. \n     We track your flight in real time, adjusting for delays so you never have to worry. Our experienced, locally knowledgeable drivers handle \n     your luggage and ensure a smooth, relaxed ride. Choose from luxury sedans or spacious vans for families and groups. Transparent pricing, no hidden fees, and effortless online booking make every journey seamless from start to finish."
+      },
+      "travelAgency": {
+        "title": "Can Duman Travel Agency",
+        "desc": "Enjoy total flexibility with our hourly chauffeur service, designed for seamless multi-stop travel within the city. Set your own itinerary and move at your pace while your professional chauffeur remains on standby. Skip taxis, parking, and public transport, and travel comfortably in a premium vehicle. Get picked up and dropped off right at the door at every stop, saving time and effort. Leave personal belongings safely in the car while you’re out. Transparent hourly pricing includes distance, taxes, and tolls, with no hidden fees. Ideal for business meetings, events, sightseeing, or leisure, this service lets you focus on your day while we handle the drive."
+      },
+      "visitoria": {
+        "title": "Visitoria Grup Sigorta",
+        "desc": "Through our trusted affiliate, Can Duman Medical Tourism, we facilitate access to a wide range of high-quality medical and wellness services. From aesthetic surgery, dental care, eye treatments, hair transplant to advanced procedures. All services are coordinated with experienced medical institutions. Our role is to ensure a smooth, well-organized experience by connecting patients with reliable healthcare providers, prioritizing comfort, transparency, and professional coordination throughout the journey."
+      },
+      "danismanlik": {
+        "title": "Can Duman Danismanlik",
+        "desc": "Explore Istanbul in comfort with a private driver and a flexible itinerary tailored to you. Visit iconic landmarks and hidden gems at your own pace, without worrying about traffic, parking, or public transport. Enjoy door-to-door service in a premium vehicle while your chauffeur remains on standby throughout the day. Ideal for sightseeing, shopping, or cultural experiences, our city tours offer a relaxed and personalized way to discover the city. Focus on the journey and the moments — we take care of the drive."
+      },
+      "agon": {
+        "title": "Agon",
+        "desc": "Explore Istanbul in comfort with a private driver and a flexible itinerary tailored to you. Visit iconic landmarks and hidden gems at your own pace, without worrying about traffic, parking, or public transport. Enjoy door-to-door service in a premium vehicle while your chauffeur remains on standby throughout the day. Ideal for sightseeing, shopping, or cultural experiences, our city tours offer a relaxed and personalized way to discover the city. Focus on the journey and the moments — we take care of the drive."
+      },
+      "akademi": {
+        "title": "Can Duman Akademi",
+        "desc": "Explore Istanbul in comfort with a private driver and a flexible itinerary tailored to you. Visit iconic landmarks and hidden gems at your own pace, without worrying about traffic, parking, or public transport. Enjoy door-to-door service in a premium vehicle while your chauffeur remains on standby throughout the day. Ideal for sightseeing, shopping, or cultural experiences, our city tours offer a relaxed and personalized way to discover the city. Focus on the journey and the moments — we take care of the drive."
+      }
+    }
   }
+
 }
