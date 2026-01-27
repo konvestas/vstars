@@ -1,34 +1,10 @@
-
-import React from "react";
-import { ShieldCheck, Clock, Star, Headset } from "lucide-react";
 import { motion, Variants } from "framer-motion";
 import {useTranslations} from "next-intl";
-
+import {getHomeChooseUsData} from "@/components/homepage/data/home-chooseUs-data";
 
 export default function ChooseUs() {
     const t = useTranslations("ChooseUs");
-    const highlights = [
-        {
-            title: t("highlights.0.title"),
-            desc: t("highlights.0.desc"),
-            icon: ShieldCheck,
-        },
-        {
-            title: t("highlights.1.title"),
-            desc: t("highlights.1.desc"),
-            icon: Clock,
-        },
-        {
-            title: t("highlights.2.title"),
-            desc: t("highlights.2.desc"),
-            icon: Star,
-        },
-        {
-            title: t("highlights.3.title"),
-            desc: t("highlights.3.desc"),
-            icon: Headset,
-        },
-    ];
+    const data = getHomeChooseUsData(t)
 
     const container: Variants = {
         hidden: { opacity: 0, y: 20 },
@@ -64,7 +40,7 @@ export default function ChooseUs() {
                     viewport={{ once: true, margin: "-80px" }}
                     className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4"
                 >
-                    {highlights.map((itemData) => {
+                    {data.map((itemData) => {
                         const Icon = itemData.icon;
                         return (
                             <motion.article
