@@ -12,7 +12,6 @@ import Footer from "@/components/layout/footer";
 import FleetSection from "@/components/layout/fleet-card-content";
 
 
-
 export default function App() {
     const API_KEY = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY as string;
 
@@ -20,11 +19,11 @@ export default function App() {
         <main className="relative w-full">
             <nav className="fixed top-0 left-0 w-full z-50"><NavigationBar/></nav>
 
-            <section className="relative min-h-screen flex flex-col items-center justify-center pt-24 pb-10 gap-8">
+            <section className="relative min-h-screen flex flex-col items-center justify-center pt-30 pb-40 gap-8">
                 {/* Background Image */}
                 <div className="absolute inset-0 -z-20">
                     <Image
-                        src="/images/vstarsFleet.webp"
+                        src="/images/vstars-fleet.webp"
                         alt="Vstars transfer fleet"
                         fill
                         className="object-cover object-center"
