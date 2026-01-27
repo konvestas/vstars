@@ -74,7 +74,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
         openGraph: {
             type: "website",
             url: `https://www.vstarstransfer.com/${locale}`,
-            emails:"",
+            emails: "info@candumandanismanlik.com",
             phoneNumbers:"+90 5326432234",
             locale: locale,
             countryName:"Türkiye",
@@ -162,11 +162,22 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
             ]
         },
         twitter: {
+            site:`https://www.vstarstransfer.com/${locale}/services`,
+            // siteId?: string | undefined;
+            creator:"Vstars Transfer & Onur Akgülay",
+            // creatorId?: string | undefined;
             card: "summary_large_image",
-            site: "@vstarstransfer",
-            creator: "@vstarstransfer",
-            images: "https://www.vstarstransfer.com/images/vstars-fleet.webp"
+            title: t("title"),
+            description: t("description"),
+            images: {
+                url: "https://www.vstarstransfer.com/images/vstars-fleet.webp",
+                width: 1920,
+                height: 1059,
+                alt: "Vstars transfers fleet with a view to the Bosporus",
+                type: "image/webp"
+            },
         },
+        assets: 'https://www.vstarstransfer.com/public/images',
     };
 }
 
