@@ -9,22 +9,44 @@ const paths = [
     '/fleet',
     '/affiliates',
     '/contact',
-    '/FAQ'
+    '/faq',
 ];
 
+const imagesByPath: Record<string, string[]> = {
+    '': [
+        '/images/vstars-fleet.webp',
+        '/images/istanbul-hourly-hire-private-driver.webp',
+        '/images/istanbul-airport-vip-transfer-mercedes.webp',
+        '/images/can-duman-medical-tourism.webp',
+        '/images/istanbul-15-Temmuz-bridge-view-scenery.webp',
+        '/images/vstars-transfer-vehicle-inside-reverse-view.webp',
+        '/images/vstars-transfer-vehicle-outside-view.webp',
+        '/images/vstars-transfer-vehicle-vip-interior.webp'
+    ],
+    '/services': [
+        '/images/istanbul-airport-private-chauffeur-transfer.webp',
+        '/images/private-chauffeur-hire-istanbul-transfer-mercedes-vito.webp',
+        '/images/can-duman-medical-tourism.webp',
+        '/images/istanbul-city-tour-private-driver-galata-tower.webp',
+    ],
+    '/fleet': [
+        '/images/vstars-fleet.webp',
+        '/images/vstars-transfer-vehicle-vip-interior.webp',
+    ],
+    '/affiliates': [
+        '/images/vstars-transfer-affiliates.webp',
+    ],
+};
+
 export default function sitemap(): MetadataRoute.Sitemap {
-    const sitemapEntries: MetadataRoute.Sitemap = [];
-
-    paths.forEach((path) => {
-        locales.forEach((locale) => {
-            sitemapEntries.push({
-                url: `${BASE_URL}/${locale}${path}`,
-                lastModified: new Date(),
-                changeFrequency: 'monthly',
-                priority: path === '' ? 1.0 : 0.8,
-            });
-        });
-    });
-
-    return sitemapEntries;
+    return locales.flatMap((locale) =>
+        paths.map((path) => ({
+            url: `${BASE_URL}/${locale}${path}`,
+            priority: path === '' ? 1.0 : 0.8,
+            changeFrequency: 'monthly',
+            images: imagesByPath[path]?.map(
+                (img) => `${BASE_URL}${img}`
+            ),
+        }))
+    );
 }
