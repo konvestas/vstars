@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
@@ -10,14 +10,8 @@ import { Separator } from "@/components/ui/separator";
 import { Carousel, CarouselContent, CarouselItem, type CarouselApi } from "@/components/ui/carousel";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
+import {FleetCardProps} from "@/components/homepage/data/home-fleet-data";
 
-interface FleetCardProps {
-    title: string;
-    description: string;
-    images: string[];
-    index: number;
-    className?: string;
-}
 
 export function FleetCard({ title, description, images, index, className }: FleetCardProps) {
     const t = useTranslations("Fleet");

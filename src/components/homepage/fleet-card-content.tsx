@@ -1,39 +1,15 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
 import { cn } from "@/lib/utils";
 import { FleetCard } from "./fleet-card";
 import {Carousel, CarouselContent, CarouselItem, type CarouselApi,} from "@/components/ui/carousel";
-
-interface FleetItem {
-    title: string;
-    description: string;
-    images: string[];
-}
+import {getHomeFleetData} from "@/components/homepage/data/home-fleet-data";
 
 export default function FleetSection() {
     const t = useTranslations("Fleet");
-    const fleetData: FleetItem[] = [
-        {
-            title: t("items.Vito.title"),
-            description: t("items.Vito.desc"),
-            images: [
-                "/images/vstars-transfer-vehicle-vip-interior.webp",
-                "/images/vstars-transfer-vehicle-inside-reverse-view.webp",
-                "/images/vstars-transfer-vehicle-outside-view.webp",
-            ],
-        },
-        {
-            title: t("items.Sprinter.title"),
-            description: t("items.Sprinter.desc"),
-            images: [
-                "/images/vstars-transfer-vehicle-vip-interior.webp",
-                "/images/vstars-transfer-vehicle-inside-reverse-view.webp",
-                "/images/vstars-transfer-vehicle-outside-view.webp"
-            ],
-        },
-    ];
+    const data = getHomeFleetData(t)
 
     // Carousel State (Mobile)
     const [api, setApi] = useState<CarouselApi>();
@@ -72,7 +48,7 @@ export default function FleetSection() {
                         className="w-full"
                     >
                         <CarouselContent className="-ml-4 items-stretch pb-4">
-                            {fleetData.map((item, index) => (
+                            {data.map((item, index) => (
                                 <CarouselItem
                                     key={index}
                                     className="basis-[85%] sm:basis-[60%] pl-4 h-auto"
@@ -112,7 +88,7 @@ export default function FleetSection() {
 
                 {/* --- DESKTOP VIEW  */}
                 <div className="hidden lg:flex lg:flex-wrap lg:justify-center lg:gap-6">
-                    {fleetData.map((item, index) => (
+                    {data.map((item, index) => (
                         <FleetCard
                             key={index}
                             {...item}

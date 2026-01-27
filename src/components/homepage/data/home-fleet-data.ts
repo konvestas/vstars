@@ -1,3 +1,11 @@
+export interface FleetCardProps {
+    title: string;
+    description: string;
+    images: string[];
+    index: number;
+    className?: string;
+}
+
 interface FleetItem {
     title: string;
     description: string;
