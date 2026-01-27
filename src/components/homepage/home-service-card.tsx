@@ -7,16 +7,9 @@ import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { ServiceCardProps } from "@/components/homepage/data/home-services-data";
 
-interface ServiceCardProps {
-    title: string;
-    description: string;
-    image: string;
-    index: number;
-    className?: string;
-}
-
-export function ServiceCard({ title, description, image, index, className }: ServiceCardProps) {
+export function HomeServiceCard({ title, description, image, toServicesId, index, className }: ServiceCardProps) {
     const t = useTranslations("OurServices");
 
     return (
@@ -27,12 +20,11 @@ export function ServiceCard({ title, description, image, index, className }: Ser
             transition={{ duration: 0.5, delay: index * 0.1 }}
             className={cn("h-full group", className)}
         >
-            <Link href="/services" className="block h-full">
+            <Link href={`/services#${toServicesId}`} className="block h-full">
                 <article
                     className={cn(
                         "flex flex-col h-full overflow-hidden rounded-xl border transition-all duration-300",
-                        "bg-white border-gray-200 shadow-sm hover:shadow-xl",
-
+                        "bg-white border-gray-200 shadow-sm hover:shadow-xl"
                     )}
                 >
                     {/* Image Container */}
@@ -46,7 +38,8 @@ export function ServiceCard({ title, description, image, index, className }: Ser
                             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         />
                         {/* Dark Overlay on Hover */}
-                        <div className="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-300 dark:bg-black/20" />
+                        <div className="absolute inset-0 bg-black/5 group-hover:bg-transparent
+                        transition-colors duration-300 dark:bg-black/20" />
                     </div>
 
                     {/* Content */}
