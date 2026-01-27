@@ -28,9 +28,9 @@ import { Label } from "@/components/ui/label";
 
 import { LocationInput } from "./location-input";
 import { PassengerLuggageInput } from "./passenger-luggage-input";
-import DateTimeInput from "@/app/[locale]/features/booking/_components/date-time-input";
+import DateTimeInput from "@/features/booking/_components/date-time-input";
 import { DurationInput } from "./duration-input";
-import { useBookingForm } from "../hooks/use-booking";
+import { useBookingForm } from "@/features/booking/hooks/use-booking";
 import { SERVICE_TYPES } from "../schemas";
 import {Textarea} from "@/components/ui/textarea";
 import {cn} from "@/lib/utils";
