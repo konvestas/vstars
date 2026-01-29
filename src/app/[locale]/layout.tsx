@@ -267,15 +267,11 @@ export default async function RootLayout({
         <html lang={locale} data-scroll-behavior="smooth" suppressHydrationWarning>
         <body className={`${geistSans.variable} ${geistMono.variable} ${lexendPeta.variable} antialiased`}>
         <link rel="preconnect" href="https://maps.googleapis.com" />
-
-        <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}/>
         <NextIntlClientProvider messages={messages}>
             {children}
         </NextIntlClientProvider>
-        <Toaster richColors position="top-center" closeButton />
+        <Toaster theme={"light"} richColors={true} duration={5000} position="top-center" closeButton />
         </body>
         </html>
     );
