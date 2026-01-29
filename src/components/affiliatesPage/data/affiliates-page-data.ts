@@ -3,7 +3,7 @@ export const getAffiliatesInfo = (t: any) => [
     {
         title: t("items.medical.title"),
         description: t("items.medical.desc"),
-        image: "/images/istanbul-airport-private-chauffeur-transfer.webp",
+        image: "/images/can-duman-medical-tourism.webp",
         alt: "Airport private chauffeur transfer with Mercedes-Benz Maybach van",
         width: 1500,
         height: 1500,

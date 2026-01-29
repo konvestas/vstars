@@ -4,7 +4,6 @@ import FloatingWhatsApp from "@/components/layout/floating-whatsapp";
 import Image from "next/image";
 import ReadyToBookSection from "@/components/layout/ready-to-book";
 import {useTranslations} from "next-intl";
-import {getServices} from "@/components/servicesPage/data/services-page-data";
 import {Metadata} from "next";
 import {getTranslations} from "next-intl/server";
 import {getAffiliatesInfo} from "@/components/affiliatesPage/data/affiliates-page-data";
