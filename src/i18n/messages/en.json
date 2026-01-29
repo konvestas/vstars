@@ -12,6 +12,10 @@
     "title": "Affiliates | Vstars",
     "description": "Experience premium chauffeur services designed for comfort, safety, and efficiency."
   },
+  "ContactPageMetadata": {
+    "title": "Contact Us | Vstars",
+    "description": "Experience premium chauffeur services designed for comfort, safety, and efficiency."
+  },
   "Navbar": {
     "menu": "Menu",
     "signIn": "Sign in",
@@ -223,7 +227,7 @@
       },
       "medicalTourism": {
         "title": "Medical Tourism",
-        "desc": "Through our trusted affiliate, Can Duman Medical Tourism, we facilitate access to a wide range of high-quality medical and wellness services. From aesthetic surgery, dental care, eye treatments, hair transplant to advanced procedures. All services are coordinated with experienced medical institutions. Our role is to ensure a smooth, well-organized experience by connecting patients with reliable healthcare providers, prioritizing comfort, transparency, and professional coordination throughout the journey."
+        "desc": "Through our trusted affiliate, Can Duman Medical Tourism, we facilitate access to a wide range of high-quality medical and wellness services. From aesthetic surgery, dental care, hair transplant to advanced procedures. All services are coordinated with experienced medical institutions. Our role is to ensure a smooth, well-organized experience by connecting patients with reliable healthcare providers, prioritizing comfort, transparency, and professional coordination throughout the journey."
       },
       "cityTour": {
         "title": "City Tour",
@@ -261,7 +265,7 @@
         "a9": "Absolutely, we can arrange licensed tour guides, baby seats, and specific in-car amenities like refreshments or Wi-Fi. Please specify your needs during booking so we can prepare everything for you.",
 
         "q10": "What types of treatments do you arrange?",
-        "a10": "We specialize in coordinating Hair Transplants, Dental Aesthetics, Eye Treatments, and Plastic Surgery. Through our partner, Can Duman Medical Tourism, we connect you with specific experts for each procedure.",
+        "a10": "We specialize in coordinating Hair Transplants, Dental Aesthetics and Plastic Surgery. Through our partner, Can Duman Medical Tourism, we connect you with specific experts for each procedure.",
 
         "q11": "Are the vehicles sanitized and hygienic?",
         "a11": "Yes, our vehicles are thoroughly cleaned and sanitized before every trip to ensure safe environment. ",
@@ -286,29 +290,52 @@
     "items": {
       "medical": {
         "title": "Can Duman Medical Tourism",
-        "desc": "Arrive or depart in comfort with our airport transfer service, available in Istanbul airport and Sabiha Gökçen airport.\n     Skip the stress of public transport and unreliable taxis — your chauffeur will meet you on time and take you directly to your destination. \n     We track your flight in real time, adjusting for delays so you never have to worry. Our experienced, locally knowledgeable drivers handle \n     your luggage and ensure a smooth, relaxed ride. Choose from luxury sedans or spacious vans for families and groups. Transparent pricing, no hidden fees, and effortless online booking make every journey seamless from start to finish."
+        "desc": "Can Duman Medical Tourism, facilitates access to a wide range of high-quality medical and wellness services. From aesthetic surgery, dental care, hair transplant to advanced procedures. All services are coordinated with experienced medical institutions. Our role is to ensure a smooth, well-organized experience by connecting patients with reliable healthcare providers, prioritizing comfort, transparency, and professional coordination throughout the journey."
       },
       "travelAgency": {
         "title": "Can Duman Travel Agency",
-        "desc": "Enjoy total flexibility with our hourly chauffeur service, designed for seamless multi-stop travel within the city. Set your own itinerary and move at your pace while your professional chauffeur remains on standby. Skip taxis, parking, and public transport, and travel comfortably in a premium vehicle. Get picked up and dropped off right at the door at every stop, saving time and effort. Leave personal belongings safely in the car while you’re out. Transparent hourly pricing includes distance, taxes, and tolls, with no hidden fees. Ideal for business meetings, events, sightseeing, or leisure, this service lets you focus on your day while we handle the drive."
+        "desc": "Can Duman Travel Agency, provides tailored travel solutions for individual and corporate needs. With a focus on organized, reliable, and customer-oriented service, they support travel planning, transportation, and destination-related arrangements. Their services are designed to simplify travel logistics while ensuring a smooth and comfortable experience. Through our collaboration, we aim to offer seamless coordination and trusted travel support for our clients."
       },
       "visitoria": {
         "title": "Visitoria Grup Sigorta",
-        "desc": "Through our trusted affiliate, Can Duman Medical Tourism, we facilitate access to a wide range of high-quality medical and wellness services. From aesthetic surgery, dental care, eye treatments, hair transplant to advanced procedures. All services are coordinated with experienced medical institutions. Our role is to ensure a smooth, well-organized experience by connecting patients with reliable healthcare providers, prioritizing comfort, transparency, and professional coordination throughout the journey."
+        "desc": "Visitoria Grup Sigorta brings over 25 years of experience in finance and insurance services. They provide a wide range of solutions across motor, health, travel, property, commercial, and financial insurance branches. Working with leading insurance companies in Türkiye and international partners, they offer flexible pricing and payment options tailored to individual and corporate needs. With a strong focus on customer satisfaction, reliability, and professional expertise, Visitoria Group Insurance acts as a trusted solution partner for comprehensive insurance needs."
       },
       "danismanlik": {
         "title": "Can Duman Danismanlik",
-        "desc": "Explore Istanbul in comfort with a private driver and a flexible itinerary tailored to you. Visit iconic landmarks and hidden gems at your own pace, without worrying about traffic, parking, or public transport. Enjoy door-to-door service in a premium vehicle while your chauffeur remains on standby throughout the day. Ideal for sightseeing, shopping, or cultural experiences, our city tours offer a relaxed and personalized way to discover the city. Focus on the journey and the moments — we take care of the drive."
+        "desc": "Can Duman Consultancy provides professional guidance and support across various service areas. With a structured and solution-oriented approach, they assist individuals and organizations with planning, coordination, and process management. Their services are designed to simplify complex procedures and ensure efficient outcomes. By focusing on reliability, clarity, and client needs, they aim to deliver practical and effective consultancy solutions. Through our collaboration, we help clients access trusted expertise and well-organized support."
       },
       "agon": {
         "title": "Agon",
-        "desc": "Explore Istanbul in comfort with a private driver and a flexible itinerary tailored to you. Visit iconic landmarks and hidden gems at your own pace, without worrying about traffic, parking, or public transport. Enjoy door-to-door service in a premium vehicle while your chauffeur remains on standby throughout the day. Ideal for sightseeing, shopping, or cultural experiences, our city tours offer a relaxed and personalized way to discover the city. Focus on the journey and the moments — we take care of the drive."
+        "desc": "Agon, "
       },
       "akademi": {
         "title": "Can Duman Akademi",
-        "desc": "Explore Istanbul in comfort with a private driver and a flexible itinerary tailored to you. Visit iconic landmarks and hidden gems at your own pace, without worrying about traffic, parking, or public transport. Enjoy door-to-door service in a premium vehicle while your chauffeur remains on standby throughout the day. Ideal for sightseeing, shopping, or cultural experiences, our city tours offer a relaxed and personalized way to discover the city. Focus on the journey and the moments — we take care of the drive."
+        "desc": "Can Duman Akademi is our affiliated academy program partner, providing rich and high-quality educational content with a strong belief in continuous learning and personal development. Guided by the motto “Education for Everyone, Growth Together,” it prioritizes lifelong education and professional development. With diverse training fields and high service standards, the academy contributes to developing qualified human capital aligned with market needs. It aims to become a leading lifelong learning center supporting individual, regional, and national growth through education."
       }
     }
+  },
+  "ContactPage": {
+    "title": "Get in Touch",
+    "description": "Have questions about your transfer or need a custom quote? Our team is ready to help you 24/7.",
+    "infoTitle": "Contact Information",
+    "infoDesc": "We are available via phone, email, and WhatsApp to ensure your trip in Istanbul is smooth and comfortable.",
+    "phone": "Phone & WhatsApp",
+    "email": "Email Address",
+    "address": "Location",
+    "maps": "Open in Google Maps ↗",
+    "form": {
+      "name": "Full Name",
+      "namePlaceholder": "John Doe",
+      "email": "Email Address",
+      "emailPlaceholder": "john@example.com",
+      "subject": "Subject",
+      "subjectPlaceholder": "Transfer Inquiry / Custom Tour",
+      "message": "Message",
+      "messagePlaceholder": "How can we help you?",
+      "submit": "Send Message"
+    },
+    "successMessage": "Message sent successfully! We will contact you soon.",
+    "errorMessage": "Something went wrong. Please try again."
   }
 
 }
