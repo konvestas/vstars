@@ -110,21 +110,21 @@ export default function ServicesPage() {
                                         <details
                                             key={faq.q}
                                             className="group rounded-xl border bg-white border-gray-200
-                                                dark:border-white/10 dark:bg-white/5 p-6 open:shadow-lg open:shadow-stone-200/50
-                                                dark:open:shadow-none transition-all duration-300"
+                                                    dark:border-white/10 dark:bg-white/5 p-6 min-h-35 open:shadow-lg
+                                                    open:shadow-stone-200/50 dark:open:shadow-none transition-all duration-300"
                                         >
                                             <summary className="flex cursor-pointer items-center justify-between font-semibold
-                                                text-lg text-gray-900 dark:text-white list-none select-none">
+                                                    text-lg text-gray-900 dark:text-white list-none select-none">
                                                 {faq.q}
                                                 <span className="ml-4 text-amber-600 transition-transform duration-300 group-open:rotate-180">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2}
-                                                         stroke="currentColor" className="w-5 h-5">
-                                                        <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-                                                    </svg>
-                                                </span>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2}
+                                                             stroke="currentColor" className="w-5 h-5">
+                                                            <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                                                        </svg>
+                                                    </span>
                                             </summary>
                                             <p className="mt-4 text-gray-600 dark:text-gray-400 leading-relaxed animate-in
-                                                slide-in-from-top-2 fade-in duration-300">
+                                                    slide-in-from-top-2 fade-in duration-300">
                                                 {faq.a}
                                             </p>
                                         </details>
