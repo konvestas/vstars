@@ -40,22 +40,22 @@ export default function Footer() {
                         <h3 className="font-semibold mb-4">{t("services")}</h3>
                         <ul className="space-y-2 transition">
                             <li>
-                                <Link href="/services" className={textHover} >
+                                <Link href="/services#airport-transfers" className={textHover}>
                                     {t("airportTransfer")}
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/services" className={textHover}>
+                                <Link href="/services#hourly-hire" className={textHover}>
                                     {t("hourlyChauffeurRide")}
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/services" className={textHover}>
+                                <Link href="/services#medical-tourism" className={textHover}>
                                     {t("medicalTourism")}
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/services" className={textHover}>
+                                <Link href="/services#city-tour" className={textHover}>
                                     {t("cityTours")}
                                 </Link>
                             </li>
@@ -63,30 +63,35 @@ export default function Footer() {
                     </div>
 
                     <div>
-                        <h3 className="text-m font-semibold mb-4">{("affiliates")}</h3>
+                        <h3 className="text-m font-semibold mb-4">{("Affiliates")}</h3>
                         <ul className="space-y-2 text-muted-foreground hover:text-foreground transition">
                             <li>
-                                <Link href="/contact" className={textHover} >
-                                    Can Duman Travel Agency
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/contact" className={textHover}>
-                                    Visitoria Grup Sigorta
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/contact" className={textHover} >
+                                <Link href="/affiliates#affiliates-information-can-duman-medical-tourism" className={textHover} >
                                     Can Duman Medical Turizm
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/contact" className={textHover}>
+                                <Link href="/affiliates#affiliates-information-can-duamn-Travel-Agency" className={textHover} >
+                                    Can Duman Travel Agency
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/affiliates#affiliates-information-visitoria" className={textHover}>
+                                    Visitoria Grup Sigorta
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/affiliates#affiliates-information-can-duman-danismanlik" className={textHover}>
                                     Can Duman Danışmanlık
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/contact" className={textHover} >
+                                <Link href="/affiliates#affiliates-information-can-duman-akademi" className={textHover} >
+                                    Can Duman Akademi
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/affiliates#affiliates-information-agon" className={textHover} >
                                     Agon
                                 </Link>
                             </li>
@@ -103,7 +108,7 @@ export default function Footer() {
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/faq" className={textHover}>
+                                <Link href="/FAQ" className={textHover}>
                                     {t("helpFaq")}
                                 </Link>
                             </li>
