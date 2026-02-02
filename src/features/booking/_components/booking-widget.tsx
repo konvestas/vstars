@@ -19,7 +19,7 @@ import { useBookingForm } from "@/features/booking/hooks/use-booking";
 import { SERVICE_TYPES } from "../schemas";
 import {Textarea} from "@/components/ui/textarea";
 import {cn} from "@/lib/utils";
-import { toast } from "sonner"; // or your toast library
+import { toast } from "sonner";
 
 const styles = {
     glassInput:    "pl-10 text-white bg-white/10 hover:bg-white/30 focus:bg-white/20 border-white/20 " +
@@ -296,7 +296,7 @@ export default function BookingWidget() {
                                         <div className="relative h-48 w-full bg-linear-to-b from-white/10 to-transparent">
                                             {/* eslint-disable-next-line @next/next/no-img-element */}
                                             <img
-                                                src="/images/vstars-transfer-vehicle-vip-interior.webp"
+                                                src="/vstars/vstars-transfer-vehicle-vip-interior.webp"
                                                 alt="Mercedes Vito"
                                                 className="w-full h-full object-cover opacity-90"
                                             />
