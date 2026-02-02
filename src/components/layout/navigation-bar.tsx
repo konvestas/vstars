@@ -14,10 +14,9 @@ export default function NavigationBar() {
     const [isServicesOpen, setIsServicesOpen] = useState(false);
     const [isLanguageOpen, setIsLanguageOpen] = useState(false);
 
-    const menuLinkStyle = cn("font-lexend font-semibold text-sm block select-none rounded-md p-3 leading-none " +
-        "no-underline outline-none transition-colors hover:bg-slate-100 hover:text-black focus:bg-slate-100 " +
-        "focus:text-black cursor-pointer text-black");
-    const dropdownToggleStyle = "font-lexend font-semibold text-sm flex items-center justify-between w-full px-3 py-2 " +
+    const menuLinkStyle = cn("font-lexend font-semibold  block rounded-md p-3 outline-none transition-colors hover:bg-slate-100" +
+        " hover:text-black focus:bg-slate-100  focus:text-black cursor-pointer text-black");
+    const dropdownToggleStyle = "font-lexend font-semibold  text-sm flex items-center justify-between w-full px-3 py-2 " +
         "rounded-md transition-colors text-black hover:bg-slate-100 hover:text-black focus:bg-slate-100 cursor-pointer";
 
     return (
@@ -91,6 +90,9 @@ export default function NavigationBar() {
                                         <Link href="/affiliates" className={menuLinkStyle}>
                                             <span>{t("ourAffiliates")}</span>
                                         </Link>
+                                        <Link href="/FAQ" className={menuLinkStyle}>
+                                            <span>{t("faq")}</span>
+                                        </Link>
 
                                         <div className="h-px my-2 mx-2 bg-zinc-200" />
 
@@ -116,9 +118,9 @@ export default function NavigationBar() {
                                                 <div className="pl-2 mt-1 space-y-1 border-l-2 ml-3 border-zinc-200">
                                                     <Link href="/en" className={menuLinkStyle}>{t("languagesOption.en")}</Link>
                                                     <Link href="/de" className={menuLinkStyle}>{t("languagesOption.de")}</Link>
-                                                    <Link href="/ru" className={menuLinkStyle}>{t("languagesOption.ru")}</Link>
-                                                    <Link href="/tr" className={menuLinkStyle}>{t("languagesOption.tr")}</Link>
                                                     <Link href="/es" className={menuLinkStyle}>{t("languagesOption.es")}</Link>
+                                                    <Link href="/tr" className={menuLinkStyle}>{t("languagesOption.tr")}</Link>
+                                                    <Link href="/ru" className={menuLinkStyle}>{t("languagesOption.ru")}</Link>
                                                 </div>
                                             )}
                                         </div>
