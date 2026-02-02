@@ -46,7 +46,7 @@ export async function generateMetadata({params,}: {
 
 export default function ContactPage() {
     const t = useTranslations('ContactPage');
-    const mapSrc = `https://maps.google.com/maps?q=40.88461295159555,29.205337482484815&t=&z=15&ie=UTF8&iwloc=&output=embed`;
+    const mapSrc = `https://maps.google.com/maps?q=40.884600538194476,29.20526621261032&t=&z=15&ie=UTF8&iwloc=&output=embed`;
 
     return (
         <main className="min-h-screen bg-gray-50 dark:bg-black">
@@ -62,6 +62,7 @@ export default function ContactPage() {
                         <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto text-lg">
                             {t("description")}
                         </p>
+                        <div className="w-24 h-1 bg-amber-500 mx-auto mt-8 rounded-full opacity-80"></div>
                     </div>
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-start">
@@ -130,7 +131,7 @@ export default function ContactPage() {
 
                                     {/* "Open in Maps" Button Overlay */}
                                     <a
-                                        href={`https://www.google.com/maps/search/?api=1&query=40.8846129515955529.205337482484815`}
+                                        href={`https://www.google.com/maps/search/?api=1&query=40.884600538194476,29.20526621261032`}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="absolute bottom-4 left-4 bg-white dark:bg-zinc-900 text-xs
