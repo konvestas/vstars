@@ -1,27 +1,40 @@
 {
   "Metadata": {
-    "title": "Istanbuls Transferwahl | Vstars",
-    "description": "Erleben Sie luxuriöse Fahrten in Istanbul. VIP-Flughafentransfers (IST & SAW), stundenweise Chauffeurmiete und private Touren mit Mercedes-Benz-Fahrzeugen.",
-    "keywords": "Istanbul Flughafentransfer, VIP Transfer Istanbul, Sabiha Gökçen Transfer, IST Flughafen Shuttle, Mercedes Vito VIP, Privater Chauffeur Istanbul, Luxusautoservice Istanbul, Istanbul Hoteltransfer, Galataport Transfer, Sicheres Reisen Istanbul, 24/7 Flughafentransfer, Exklusiver Fahrservice, Istanbul Stadttouren"
+    "title": "Istanbuls erste Wahl für Transfers | Vstars",
+    "description": "Erleben Sie luxuriöse Fahrten in Istanbul. VIP-Flughafentransfers (IST & SAW), stundenweise Chauffeurmiete und private Touren mit Mercedes-Benz Fahrzeugen.",
+    "keywords": "Flughafentransfer Istanbul, VIP-Transfer Istanbul, Sabiha Gökçen Transfer, IST Flughafen Shuttle, Mercedes Vito VIP, Privater Chauffeur Istanbul, Luxusautoservice Istanbul, Hoteltransfer Istanbul, Galataport Transfer, Sicheres Reisen Istanbul, 24/7 Flughafentransfer, Business-Fahrservice, Istanbul Stadtrundfahrten"
+  },
+  "ServicesMetadata": {
+    "title": "Dienstleistungen | Vstars",
+    "description": "Erleben Sie erstklassige Chauffeurdienste, die auf Komfort, Sicherheit und Effizienz ausgelegt sind."
+  },
+  "AffiliatesMetadata": {
+    "title": "Partner | Vstars",
+    "description": "Erleben Sie erstklassige Chauffeurdienste, die auf Komfort, Sicherheit und Effizienz ausgelegt sind."
+  },
+  "ContactPageMetadata": {
+    "title": "Kontaktieren Sie uns | Vstars",
+    "description": "Erleben Sie erstklassige Chauffeurdienste, die auf Komfort, Sicherheit und Effizienz ausgelegt sind."
   },
   "Navbar": {
     "menu": "Menü",
     "signIn": "Anmelden",
-    "ourServices": "Unsere Dienstleistungen",
+    "ourServices": "Unsere Leistungen",
     "contact": "Kontakt",
     "ourAffiliates": "Partner",
+    "faq": "FAQ",
     "languages": "Sprachen",
     "languagesOption": {
       "en": "English",
-      "ru": "Русский",
-      "tr": "Türkçe",
       "de": "Deutsch",
-      "es": "Español"
+      "es": "Español",
+      "ru": "Русский",
+      "tr": "Türkçe"
     }
   },
   "OurServices": {
-    "section_title": "Unsere Dienstleistungen",
-    "section_desc": "Erleben Sie den höchsten Standard\nluxuriösen Reisens in Istanbul",
+    "section_title": "Unsere Leistungen",
+    "section_desc": "Erleben Sie den höchsten Standard für Luxusreisen in Istanbul",
     "items": {
       "airportTransfers": {
         "title": "Flughafentransfers",
@@ -29,44 +42,44 @@
       },
       "hourlyHire": {
         "title": "Stundenweise Chauffeurmiete",
-        "desc": "Ganztägige oder stundenweise Anmietung. Genießen Sie luxuriösen Transport auf Abruf, abgestimmt auf Ihren persönlichen Zeitplan."
+        "desc": "Ganztägige oder stundenweise Miete. Genießen Sie luxuriöse Transportlösungen auf Abruf, angepasst an Ihren Zeitplan."
       },
       "medicalTourism": {
-        "title": "Medizintourismus",
+        "title": "Medizinischer Tourismus",
         "desc": "Privater, hygienischer und komfortabler Transport für medizinische Gäste. Direkte Transfers zu Krankenhäusern und Hotels."
       },
       "cityTour": {
-        "title": "Stadttour",
-        "desc": "Entdecken Sie Istanbul mit einem privaten Fahrer. Besuchen Sie historische Sehenswürdigkeiten und Top-Attraktionen in Ihrem eigenen Tempo."
+        "title": "Stadtrundfahrt",
+        "desc": "Erkunden Sie Istanbul mit einem privaten Fahrer. Besuchen Sie historische Wahrzeichen und Top-Attraktionen in Ihrem eigenen Tempo."
       }
     },
     "see_more": "Mehr anzeigen"
   },
   "ChooseUs": {
     "section_title": "Warum wir?",
-    "section_desc": "Zuverlässig, stilvoll und bereit, wann immer Sie es sind.",
+    "section_desc": "Zuverlässig, anspruchsvoll und jederzeit bereit.",
     "highlights": [
       {
-        "title": "Sicherheit zuerst",
-        "desc": "Lizenzierte Fahrer, versicherte Fahrzeuge und strenge Hygienestandards für ein beruhigendes Gefühl."
+        "title": "Sicherheit an erster Stelle",
+        "desc": "Lizenzierte Fahrer, versicherte Fahrzeuge und strenge Hygienestandards für Ihre Sorgenfreiheit."
       },
       {
         "title": "Immer pünktlich",
-        "desc": "Flugverfolgung und intelligente Routenplanung sorgen dafür, dass Sie keinen Abhol- oder Absetztermin verpassen."
+        "desc": "Flugverfolgung und intelligente Routenplanung stellen sicher, dass Sie keine Abholung oder Rückfahrt verpassen."
       },
       {
-        "title": "Premium-Komfort",
-        "desc": "Exklusive Fahrzeuge mit großzügigem Sitzplatz, Klimaanlage und ruhigen Fahrten."
+        "title": "Premium Komfort",
+        "desc": "Oberklasse-Fahrzeuge mit großzügigem Platzangebot, Klimaanlage und sanftem Fahrverhalten."
       },
       {
         "title": "24/7 Support",
-        "desc": "Echte Menschen stehen jederzeit zur Verfügung, um bei Änderungen oder Sonderwünschen zu helfen."
+        "desc": "Persönliche Ansprechpartner stehen Ihnen jederzeit für Änderungen oder Sonderwünsche zur Verfügung."
       }
     ]
   },
   "Fleet": {
     "sectionTitle": "Entdecken Sie unsere Flotte",
-    "sectionDesc": "Erleben Sie den höchsten Standard luxuriösen Reisens in Istanbul",
+    "sectionDesc": "Erleben Sie den höchsten Standard für Luxusreisen in Istanbul",
     "items": {
       "Vito": {
         "title": "Mercedes-Benz Vito",
@@ -89,73 +102,67 @@
       "pickUpLocationPlaceHolder": "Abholort eingeben",
       "dropOffLocation": "Zielort",
       "dropOffLocationPlaceHolder": "Zielort eingeben",
-
       "duration": "Dauer",
       "durationPlaceHolder": "Dauer auswählen",
       "date": "Datum",
-      "datePlaceHolder": "Datum & Uhrzeit auswählen",
-      "insideTitle": "Datum & Uhrzeit auswählen",
+      "datePlaceHolder": "Datum & Uhrzeit wählen",
+      "insideTitle": "Datum & Uhrzeit wählen",
       "availableTime": "Verfügbare Zeiten",
-
       "PassLugTitle": "Passagiere & Gepäck auswählen",
       "selected": "Ausgewählt:",
       "passengers": "Passagiere",
       "luggage": "Gepäck",
-      "SelectedConfiguration": "Ausgewählte Konfiguration:",
-
+      "SelectedConfiguration": "Gewählte Konfiguration:",
       "PassengerLuggage": "Passagiere & Gepäck",
       "addressPlaceholder": "Flughafen, Hotel oder Adresse eingeben...",
-      "SelectDateHours": "Datum & Uhrzeit auswählen",
+      "SelectDateHours": "Datum & Uhrzeit wählen",
       "selectHours": "Dauer auswählen",
       "hour": "Stunde",
-
       "passengersAndLuggage": "Passagiere & Gepäck",
-      "guestInfo": "Gästeinformationen",
-      "driverNeeds": "Fahrerhinweise",
+      "guestInfo": "Gastinformationen",
+      "driverNeeds": "Hinweise für den Fahrer",
       "fullName": "Vollständiger Name",
       "phoneNumber": "Telefonnummer",
       "email": "E-Mail-Adresse",
       "flightNumber": "Flugnummer (Optional)",
-      "signboardName": "Namensschild (Optional)",
+      "signboardName": "Name auf Abholschild (Optional)",
       "signboardPlaceholder": "Name auf dem Willkommensschild",
-      "specialRequests": "Sonderwünsche",
+      "specialRequests": "Besondere Wünsche",
       "notesPlaceholder": "Kindersitz, zusätzliches Gepäck, etc...",
       "passport": {
         "title": "Passfoto (Optional)",
-        "formats": "JPG, PNG, WebP hochladen (Max. {size}MB)",
+        "formats": "JPG, PNG, WebP hochladen (Max {size}MB)",
         "chooseFile": "Datei auswählen",
         "processing": "Wird verarbeitet...",
         "uploaded": "✓ Hochgeladen"
       }
     },
-
     "PackageDetail": {
       "title": "Paketdetails",
-      "waitTime": "Kostenlose 30 Minuten Wartezeit",
-      "greet": "Meet-&-Greet-Service inklusive",
-      "alert": "Die Kapazitäten für Gäste und Gepäck müssen eingehalten werden. Im Zweifel eine größere Klasse wählen, da der Service sonst verweigert werden kann"
+      "waitTime": "30 Minuten kostenlose Wartezeit inklusive",
+      "greet": "Inklusive Meet & Greet Service",
+      "alert": "Die Kapazitäten für Gäste/Gepäck müssen eingehalten werden. Im Zweifelsfall wählen Sie bitte eine größere Fahrzeugklasse, da der Service sonst verweigert werden kann."
     },
-
     "GuestInfo": {
-      "title": "Abschließende Details",
-      "desc": "Bitte geben Sie Ihre Kontaktdaten an",
+      "title": "Letzte Details",
+      "desc": "Bitte geben Sie Ihre Kontaktinformationen an",
       "fullname": "Vollständiger Name",
       "phone": "Telefonnummer",
       "email": "E-Mail-Adresse",
       "flightNumber": "Flugnummer",
       "optional": "(Optional)",
       "driverNote": "Hinweis an den Fahrer:",
-      "driverNotePlaceHolder": "Kindersitz erforderlich, zusätzliches Gepäck, etc...",
+      "driverNotePlaceHolder": "Kindersitz benötigt, extra Gepäck, etc...",
       "passportPhoto": "Passfoto",
-      "click": "Klicken, um Passfoto hochzuladen",
-      "summaryEstimated": "Geschätzter Gesamtpreis:",
+      "click": "Hier klicken, um Passfoto hochzuladen",
+      "summaryEstimated": "Voraussichtlicher Gesamtpreis:",
       "reserve": "Reservieren"
     },
     "Summary": {
       "title": "Buchung überprüfen",
       "desc": "Schließen Sie Ihre Reservierung ab",
-      "bookingSummary": "Buchungsübersicht",
-      "serviceType": "Serviceart:",
+      "bookingSummary": "Zusammenfassung der Buchung",
+      "serviceType": "Leistungsart:",
       "guest": "Gast:",
       "phone": "Telefon:",
       "date": "Datum:",
@@ -176,23 +183,228 @@
       "cancel": "Abbrechen"
     }
   },
+  "ReadyToBook": {
+    "title": "Bereit für Ihre Fahrt?",
+    "desc": "Lassen Sie uns Ihren Transfer oder Ihre Tour maßschneidern — schnelle Antworten, echte Menschen, 24/7 Support.",
+    "contactUs": "Kontaktieren Sie uns",
+    "bookNow": "Jetzt buchen"
+  },
   "Footer": {
     "downloadApp": "App herunterladen",
-    "services": "Dienstleistungen",
+    "services": "Leistungen",
     "airportTransfer": "Flughafentransfer",
-    "hourlyChauffeurRide": "Stündliche Fahrt mit Chauffeur",
-    "medicalTourism": "Medizintourismus",
-    "cityTours": "Stadttouren",
-
-    "affiliates": "Partner",
-
+    "hourlyChauffeurRide": "Stundenweise Chauffeurfahrt",
+    "medicalTourism": "Medizinischer Tourismus",
+    "cityTours": "Stadtrundfahrt",
+    "Affiliates": "Partner",
     "Support": "Support",
-    "contactUs": "Kontaktieren Sie uns",
+    "contactUs": "Kontakt",
     "helpFaq": "Hilfe & FAQ",
-
     "getInTouch": "Kontakt aufnehmen:",
     "questions": "Fragen, Partnerschaften oder Buchungen — wir sind für Sie da.",
     "goToContactPage": "Zur Kontaktseite",
-    "premium": "Premium-Chauffeur- und Reisedienstleistungen"
+    "premium": "Premium Chauffeur- & Reisedienste"
+  },
+  "ServicesPage": {
+    "title": "Weltklasse-Service",
+    "desc": "Erleben Sie erstklassige Chauffeurdienste, die auf Komfort, Sicherheit und Effizienz ausgelegt sind.",
+    "items": {
+      "airportTransfers": {
+        "title": "Flughafentransfers",
+        "desc": "Kommen Sie entspannt an oder reisen Sie komfortabel ab mit unserem Flughafentransfer-Service, verfügbar für den Flughafen Istanbul (IST) und Sabiha Gökçen (SAW). Ersparen Sie sich den Stress öffentlicher Verkehrsmittel und unzuverlässiger Taxis — Ihr Chauffeur erwartet Sie pünktlich und bringt Sie direkt an Ihr Ziel. Wir verfolgen Ihren Flug in Echtzeit und passen uns Verspätungen an, damit Sie sich keine Sorgen machen müssen. Unsere erfahrenen, ortskundigen Fahrer kümmern sich um Ihr Gepäck und sorgen für eine ruhige Fahrt. Wählen Sie zwischen Luxus-Limousinen oder geräumigen Vans für Familien und Gruppen. Transparente Preise ohne versteckte Kosten und eine mühelose Online-Buchung machen jede Reise von Anfang bis Ende nahtlos."
+      },
+      "hourlyHire": {
+        "title": "Stundenweise Chauffeurmiete",
+        "desc": "Genießen Sie totale Flexibilität mit unserem stundenweisen Chauffeurservice, ideal für Fahrten mit mehreren Stopps in der Stadt. Legen Sie Ihre eigene Route fest und bewegen Sie sich in Ihrem eigenen Tempo, während Ihr professioneller Chauffeur in Bereitschaft bleibt. Verzichten Sie auf Taxis, Parkplatzsuche und öffentliche Verkehrsmittel und reisen Sie komfortabel in einem Premium-Fahrzeug. Lassen Sie sich bei jedem Halt direkt vor der Tür abholen und absetzen, was Zeit und Mühe spart. Lassen Sie persönliche Gegenstände sicher im Auto, während Sie unterwegs sind. Die transparente stundenweise Abrechnung beinhaltet Distanz, Steuern und Mautgebühren ohne versteckte Kosten. Ideal für Geschäftstermine, Veranstaltungen, Sightseeing oder Freizeitaktivitäten – so können Sie sich auf Ihren Tag konzentrieren, während wir das Fahren übernehmen."
+      },
+      "medicalTourism": {
+        "title": "Medizinischer Tourismus",
+        "desc": "Über unseren vertrauenswürdigen Partner Can Duman Medical Tourism ermöglichen wir den Zugang zu einer breiten Palette hochwertiger medizinischer und Wellness-Dienstleistungen. Von ästhetischer Chirurgie, Zahnpflege, Haartransplantationen bis hin zu fortgeschrittenen Eingriffen. Alle Leistungen werden mit erfahrenen medizinischen Einrichtungen koordiniert. Unsere Rolle ist es, eine reibungslose, gut organisierte Erfahrung zu gewährleisten, indem wir Patienten mit zuverlässigen Gesundheitsdienstleistern verbinden und dabei Komfort, Transparenz und professionelle Koordination während der gesamten Reise priorisieren."
+      },
+      "cityTour": {
+        "title": "Stadtrundfahrt",
+        "desc": "Erkunden Sie Istanbul bequem mit einem privaten Fahrer und einer flexiblen, auf Sie zugeschnittenen Route. Besuchen Sie ikonische Wahrzeichen und versteckte Juwelen in Ihrem eigenen Tempo, ohne sich um Verkehr, Parkplätze oder öffentliche Verkehrsmittel kümmern zu müssen. Genießen Sie Tür-zu-Tür-Service in einem Premium-Fahrzeug, während Ihr Chauffeur den ganzen Tag über auf Abruf bereitsteht. Ideal für Sightseeing, Shopping oder kulturelle Erlebnisse – unsere Stadtrundfahrten bieten eine entspannte und persönliche Art, die Stadt zu entdecken. Konzentrieren Sie sich auf die Reise und die Momente — wir kümmern uns um die Fahrt."
+      }
+    },
+    "FAQS": {
+      "title": "Häufig gestellte Fragen",
+      "items": {
+        "q1": "Bieten Sie ein Meet & Greet am Flughafen an?",
+        "a1": "Ja, unsere Chauffeure warten am Ankunftsterminal des Flughafens Istanbul (IST) oder Sabiha Gökçen (SAW) mit einem persönlichen Schild mit Ihrem Namen auf Sie.",
+        "q2": "Ist eine Flugverfolgung inklusive?",
+        "a2": "Absolut, wir passen Ihre Abholzeit automatisch an, damit Ihr Fahrer immer da ist, wenn Sie landen.",
+        "q3": "Bieten Sie Transfers von IST und Sabiha Gökçen an?",
+        "a3": "Ja, wir bieten 24/7 Premium-Transferservices von beiden Flughäfen (IST und SAW) zu jedem Hotel, Wohnsitz oder Ort im Stadtzentrum und der Umgebung an.",
+        "q4": "Berechnen Sie pro Person oder pro Fahrzeug?",
+        "a4": "Wir berechnen einen Festpreis pro Fahrzeug, nicht pro Person. Egal ob Sie alleine oder in einer Gruppe reisen, Sie zahlen einen Pauschalbetrag ohne versteckte Kosten.",
+        "q5": "Holen Sie uns zu jeder Tageszeit ab?",
+        "a5": "Ja, unser Betrieb läuft 24/7, 365 Tage im Jahr. Ob Sie spät nachts ankommen oder früh morgens abreisen, unser professionelles Team ist jederzeit für Sie bereit.",
+        "q6": "Wie weit im Voraus sollten Transferfahrzeuge reserviert werden?",
+        "a6": "Wir empfehlen eine Buchung mindestens 48 Stunden im Voraus, um die Verfügbarkeit zu garantieren. Wir tun jedoch unser Bestes, um auch kurzfristige Anfragen nach Möglichkeit zu erfüllen.",
+        "q7": "Kann ich mehrere Stopps einlegen und die Route ändern?",
+        "a7": "Ja. Bei unserer stundenweisen Miete gehört das Fahrzeug exklusiv Ihnen. Sie haben die volle Flexibilität für unbegrenzte Stopps, Routenänderungen oder aufeinanderfolgende Termine in Istanbul.",
+        "q8": "Wartet der Fahrer auf mich, während ich in einem Termin, beim Shoppen oder auf Erkundungstour bin?",
+        "a8": "Absolut. Ihr privater Chauffeur bleibt an einem günstig gelegenen Ort in der Nähe in Bereitschaft, während Sie einkaufen, essen oder Termine wahrnehmen, und holt Sie sofort ab, wenn Sie bereit sind.",
+        "q9": "Kann ich zusätzliche Leistungen wie einen Reiseleiter oder spezielle Annehmlichkeiten im Fahrzeug anfragen?",
+        "a9": "Absolut, wir können lizenzierte Reiseleiter, Babysitze und spezifische Annehmlichkeiten wie Erfrischungen oder WLAN arrangieren. Bitte geben Sie Ihre Wünsche bei der Buchung an.",
+        "q10": "Welche Arten von Behandlungen organisieren Sie?",
+        "a10": "Wir sind auf die Koordination von Haartransplantationen, Zahnästhetik und plastischer Chirurgie spezialisiert. Über unseren Partner Can Duman Medical Tourism verbinden wir Sie mit Experten für jeden Eingriff.",
+        "q11": "Sind die Fahrzeuge desinfiziert und hygienisch?",
+        "a11": "Ja, unsere Fahrzeuge werden vor jeder Fahrt gründlich gereinigt und desinfiziert, um eine sichere Umgebung zu gewährleisten.",
+        "q12": "Übernehmen Sie die gesamte Reiseplanung?",
+        "a12": "Ja. Wir verwalten Ihre gesamte medizinische Reise. Von VIP-Flughafentransfers und Hotelkoordination bis hin zu Klinikterminen sorgen wir für einen stressfreien Ablauf.",
+        "q13": "Kann ich meine eigene Route zusammenstellen?",
+        "a13": "Absolut. Die Tour ist zu 100 % flexibel. Sie können Ihre eigene Route erstellen, Sehenswürdigkeiten wählen und entscheiden, wie lange Sie an jedem Ort bleiben.",
+        "q14": "Können wir einen professionellen Reiseleiter anfragen?",
+        "a14": "Ja. Während sich unsere Chauffeure auf den sicheren Transport konzentrieren, können wir auf Anfrage einen lizenzierten professionellen Reiseleiter für ein detailliertes historisches Erlebnis arrangieren (vorbehaltlich Verfügbarkeit und Aufpreis).",
+        "q15": "Muss ich mir Gedanken über Park- oder Wartegebühren machen?",
+        "a15": "Ganz und gar nicht. Wir kümmern uns um die gesamte Logistik. Ihr Chauffeur setzt Sie direkt am Eingang ab und wartet in der Nähe. Sie können sich ganz auf das Sightseeing konzentrieren."
+      }
+    }
+  },
+  "AffiliatesPage": {
+    "title": "Unsere Partner",
+    "desc": "Erleben Sie erstklassige Chauffeurdienste, die auf Komfort, Sicherheit und Effizienz ausgelegt sind.",
+    "items": {
+      "medical": {
+        "title": "Can Duman Medical Tourism",
+        "desc": "Can Duman Medical Tourism ermöglicht den Zugang zu einer breiten Palette hochwertiger medizinischer und Wellness-Dienstleistungen. Von ästhetischer Chirurgie bis hin zu fortgeschrittenen Eingriffen werden alle Leistungen mit erfahrenen Institutionen koordiniert, um eine reibungslose Erfahrung zu gewährleisten."
+      },
+      "travelAgency": {
+        "title": "Can Duman Travel Agency",
+        "desc": "Can Duman Travel Agency bietet maßgeschneiderte Reiselösungen für individuelle und geschäftliche Bedürfnisse. Mit Fokus auf zuverlässigen und kundenorientierten Service unterstützen sie bei der Reiseplanung und Logistik für ein komfortables Erlebnis."
+      },
+      "visitoria": {
+        "title": "Visitoria Grup Sigorta",
+        "desc": "Visitoria Grup Sigorta bringt über 25 Jahre Erfahrung im Finanz- und Versicherungssektor ein. Sie bieten flexible Lösungen in den Bereichen Kfz-, Gesundheits-, Reise- und Sachversicherungen an, maßgeschneidert auf individuelle Bedürfnisse."
+      },
+      "danismanlik": {
+        "title": "Can Duman Danismanlik",
+        "desc": "Can Duman Consultancy bietet professionelle Beratung und Unterstützung in verschiedenen Servicebereichen. Mit einem lösungsorientierten Ansatz helfen sie Einzelpersonen und Organisationen bei der Planung und Prozesssteuerung."
+      },
+      "agon": {
+        "title": "Agon",
+        "desc": "Agon Group Company ist eine multidimensionale Marke, die in den Bereichen Textil, maßgeschneiderte Events, Bio-Produkte und E-Commerce tätig ist. Stärke durch Vision und Liebe zum Detail zeichnen Agon aus."
+      },
+      "akademi": {
+        "title": "Can Duman Akademi",
+        "desc": "Can Duman Akademi ist unser Partner für Bildungsinhalte und persönliche Entwicklung. Unter dem Motto „Bildung für alle, gemeinsam wachsen“ fördert die Akademie lebenslanges Lernen und berufliche Weiterbildung."
+      }
+    }
+  },
+  "ContactPage": {
+    "title": "Kontakt aufnehmen",
+    "description": "Haben Sie Fragen zu Ihrem Transfer oder benötigen Sie ein individuelles Angebot? Unser Team ist rund um die Uhr für Sie da.",
+    "infoTitle": "Kontaktinformationen",
+    "infoDesc": "Wir sind per Telefon, E-Mail und WhatsApp erreichbar, um sicherzustellen, dass Ihre Reise in Istanbul reibungslos verläuft.",
+    "phone": "Telefon & WhatsApp",
+    "email": "E-Mail-Adresse",
+    "address": "Standort",
+    "maps": "In Google Maps öffnen ↗",
+    "form": {
+      "name": "Vollständiger Name",
+      "namePlaceholder": "Max Mustermann",
+      "email": "E-Mail-Adresse",
+      "emailPlaceholder": "max@beispiel.de",
+      "subject": "Betreff",
+      "subjectPlaceholder": "Transferanfrage / Individuelle Tour",
+      "message": "Nachricht",
+      "messagePlaceholder": "Wie können wir Ihnen helfen?",
+      "submit": "Nachricht senden"
+    },
+    "successMessage": "Nachricht erfolgreich gesendet! Wir werden uns in Kürze bei Ihnen melden.",
+    "errorMessage": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut."
+  },
+  "FAQPage": {
+    "title": "Häufig gestellte Fragen",
+    "desc": "Hier finden Sie Antworten auf die am häufigsten gestellten Fragen zu unseren Dienstleistungen.",
+    "noResults": "Keine Ergebnisse gefunden für",
+    "items": {
+      "general": {
+        "title": "Allgemeines & Leistungen",
+        "questions": {
+          "1": {
+            "q": "Bieten Sie ein Meet & Greet am Flughafen an?",
+            "a": "Ja, unsere Chauffeure erwarten Sie am Ankunftsterminal (IST oder SAW) mit einem persönlichen Namensschild."
+          },
+          "2": {
+            "q": "Ist eine Flugverfolgung inklusive?",
+            "a": "Absolut, wir passen die Abholzeit automatisch an Ihre tatsächliche Landezeit an."
+          },
+          "3": {
+            "q": "Bieten Sie Transfers von IST und Sabiha Gökçen an?",
+            "a": "Ja, wir bieten einen 24/7 Premium-Service von beiden Flughäfen zu jedem Ort in der Stadt."
+          },
+          "4": {
+            "q": "Holen Sie uns zu jeder Tageszeit ab?",
+            "a": "Ja, wir sind 365 Tage im Jahr rund um die Uhr für Sie im Einsatz."
+          }
+        }
+      },
+      "booking": {
+        "title": "Buchung & Ablauf",
+        "questions": {
+          "1": {
+            "q": "Wie weit im Voraus sollte ich reservieren?",
+            "a": "Wir empfehlen eine Buchung mindestens 48 Stunden vorher, versuchen aber auch kurzfristige Anfragen zu erfüllen."
+          },
+          "2": {
+            "q": "Kann ich die Route während der Fahrt ändern?",
+            "a": "Ja, bei stundenweiser Miete haben Sie die volle Flexibilität für Zwischenstopps und Routenänderungen."
+          },
+          "3": {
+            "q": "Kann ich meine eigene Tour zusammenstellen?",
+            "a": "Absolut. Unsere Stadtrundfahrten sind zu 100 % flexibel und richten sich nach Ihren Wünschen."
+          },
+          "4": {
+            "q": "Wartet der Fahrer während meiner Termine?",
+            "a": "Ja, Ihr privater Chauffeur bleibt in der Nähe auf Abruf bereit, während Sie Ihre Termine wahrnehmen."
+          }
+        }
+      },
+      "vehicles": {
+        "title": "Fahrzeuge & Ausstattung",
+        "questions": {
+          "1": {
+            "q": "Sind die Fahrzeuge hygienisch?",
+            "a": "Ja, alle Fahrzeuge werden vor jeder Fahrt gründlich gereinigt und desinfiziert."
+          },
+          "2": {
+            "q": "Gibt es Extras wie Kindersitze oder WLAN?",
+            "a": "Ja, wir bieten Kindersitze, WLAN und Erfrischungen an. Bitte geben Sie dies bei der Buchung an."
+          },
+          "3": {
+            "q": "Können wir einen Reiseleiter dazu buchen?",
+            "a": "Ja, wir können gegen Aufpreis einen lizenzierten professionellen Reiseleiter für Ihre Tour organisieren."
+          }
+        }
+      },
+      "billing": {
+        "title": "Abrechnung & Preise",
+        "questions": {
+          "1": {
+            "q": "Zahle ich pro Person?",
+            "a": "Nein, wir berechnen einen festen Pauschalpreis pro Fahrzeug."
+          },
+          "2": {
+            "q": "Fallen zusätzliche Parkgebühren an?",
+            "a": "Nein, wir übernehmen die gesamte Logistik. Sie müssen sich nicht um Park- oder Wartegebühren kümmern."
+          }
+        }
+      },
+      "medical": {
+        "title": "Medizinische Dienste",
+        "questions": {
+          "1": {
+            "q": "Welche Behandlungen werden koordiniert?",
+            "a": "Wir koordinieren Haartransplantationen, Zahnästhetik und plastische Chirurgie über unseren Partner Can Duman Medical Tourism."
+          },
+          "2": {
+            "q": "Wird der gesamte Aufenthalt geplant?",
+            "a": "Ja, vom Flughafentransfer über das Hotel bis hin zu den Klinikterminen organisieren wir den kompletten Ablauf."
+          }
+        }
+      }
+    }
   }
 }

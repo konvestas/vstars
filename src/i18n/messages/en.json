@@ -22,13 +22,14 @@
     "ourServices": "Our Services",
     "contact": "Contact Us",
     "ourAffiliates": "Affiliates",
+    "faq": "FAQ",
     "languages": "Languages",
     "languagesOption": {
       "en": "English",
-      "ru": "Русский",
-      "tr": "Türkçe",
       "de": "Deutsch",
-      "es": "Español"
+      "es": "Español",
+      "ru": "Русский",
+      "tr": "Türkçe"
     }
   },
   "OurServices": {
@@ -200,10 +201,8 @@
     "airportTransfer": "Airport Transfer",
     "hourlyChauffeurRide": "Hourly Chauffeur Ride",
     "medicalTourism": "Medical Tourism",
-    "cityTours": "City Tours",
-
-    "affiliates": "Affiliates",
-
+    "cityTours": "City Tour",
+    "Affiliates": "Affiliates",
     "Support": "Support",
     "contactUs": "Contact Us",
     "helpFaq": "Help & FAQ",
@@ -306,7 +305,7 @@
       },
       "agon": {
         "title": "Agon",
-        "desc": "Agon, "
+        "desc": "Agon Group Company is a multi-dimensional brand operating across textiles, bespoke events, organic products, e-commerce, and exclusive fan club concepts. With a strong focus on aesthetics, quality, and sustainability, Agon Group creates refined experiences in every field it touches. Its strength lies in vision; its distinction is defined by attention to detail."
       },
       "akademi": {
         "title": "Can Duman Akademi",
@@ -336,6 +335,97 @@
     },
     "successMessage": "Message sent successfully! We will contact you soon.",
     "errorMessage": "Something went wrong. Please try again."
+  },
+  "FAQPage": {
+    "title": "Frequently Asked Questions",
+    "desc": "Check out our frequently asked questions to find answers to your questions about our services.",
+    "noResults": "No results found for",
+    "items": {
+      "general": {
+        "title": "General & Services",
+        "questions": {
+          "1": {
+            "q": "Do you provide meet & greet at the airport?",
+            "a": "Yes, our chauffeurs will be waiting for you at the arrivals terminal at Istanbul Airport (IST) or Sabiha Gökçen (SAW) holding a personalized sign with your name."
+          },
+          "2": {
+            "q": "Is flight tracking included?",
+            "a": "Absolutely, we automatically adjust your pickup time so your driver is always there when you land."
+          },
+          "3": {
+            "q": "Do you transfer from both IST and Sabiha Gökçen?",
+            "a": "Yes, we provide 24/7 premium transfer services from both Istanbul Airport (IST) and Sabiha Gökçen Airport (SAW) to any hotel, residence, or location within the city center and surrounding areas."
+          },
+          "4": {
+            "q": "Will you meet us at any time of day?",
+            "a": "Yes, our operations run 24/7, 365 days a year. Whether you have a late-night arrival or an early morning departure, our professional team is ready to serve you at any hour."
+          }
+        }
+      },
+      "booking": {
+        "title": "Booking & Itinerary",
+        "questions": {
+          "1": {
+            "q": "How far in advance should transfer vehicles be reserved?",
+            "a": "We recommend booking at least 48 hours in advance to guarantee availability. However, we do our best to accommodate last-minute requests whenever possible."
+          },
+          "2": {
+            "q": "Can I make multiple stops and change the route?",
+            "a": "Yes. With our hourly hire service, the vehicle is exclusively yours. You have total flexibility to make unlimited stops, change your route, or attend back-to-back meetings across Istanbul as you wish."
+          },
+          "3": {
+            "q": "Can I customize my own itinerary?",
+            "a": "Absolutely. The tour is 100% flexible. You can create your own route, choose exactly which landmarks to visit, and decide how long to stay at each stop. Our driver follows your lead."
+          },
+          "4": {
+            "q": "Does the driver wait for me while I am in a meeting, shopping or exploring?",
+            "a": "Absolutely. Your private chauffeur remains on standby at a convenient nearby location while you shop, dine, or attend meetings, ensuring you are picked up immediately when you are ready."
+          }
+        }
+      },
+      "vehicles": {
+        "title": "Vehicles & Amenities",
+        "questions": {
+          "1": {
+            "q": "Are the vehicles sanitized and hygienic?",
+            "a": "Yes, our vehicles are thoroughly cleaned and sanitized before every trip to ensure safe environment."
+          },
+          "2": {
+            "q": "Can I request additional services, such as a tour guide or special amenities?",
+            "a": "Absolutely, we can arrange licensed tour guides, baby seats, and specific in-car amenities like refreshments or Wi-Fi. Please specify your needs during booking so we can prepare everything for you."
+          },
+          "3": {
+            "q": "Can we request a professional tour guide?",
+            "a": "Yes. While our chauffeurs focus on safe transportation, we can arrange a licensed professional tour guide to accompany you for a detailed historical experience upon request (subject to availability and extra fee)."
+          }
+        }
+      },
+      "billing": {
+        "title": "Billing & Pricing",
+        "questions": {
+          "1": {
+            "q": "Do you charge per person or per vehicle?",
+            "a": "We charge a fixed rate per vehicle, not per person. Whether you are traveling alone or with a group, you pay one flat fee, no hidden costs."
+          },
+          "2": {
+            "q": "Do I need to worry about parking or waiting fees?",
+            "a": "Not at all. We handle all logistics. Your chauffeur drops you off right at the entrance and waits nearby. You can focus entirely on sightseeing without the stress of finding parking or hailing a taxi."
+          }
+        }
+      },
+      "medical": {
+        "title": "Medical Services",
+        "questions": {
+          "1": {
+            "q": "What types of treatments do you arrange?",
+            "a": "We specialize in coordinating Hair Transplants, Dental Aesthetics and Plastic Surgery. Through our partner, Can Duman Medical Tourism, we connect you with specific experts for each procedure."
+          },
+          "2": {
+            "q": "Do you handle the entire travel itinerary?",
+            "a": "Yes. We manage your entire medical journey. From VIP airport transfers and hotel coordination to clinic appointments, we ensure a seamless, stress-free experience so you can focus entirely on your treatment."
+          }
+        }
+      }
+    }
   }
-
 }

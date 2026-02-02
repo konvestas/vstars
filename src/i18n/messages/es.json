@@ -1,8 +1,20 @@
 {
   "Metadata": {
-    "title": "La elección de traslado de Estambul | Vstars",
+    "title": "La mejor opción de traslados en Estambul | Vstars",
     "description": "Experimente viajes de lujo en Estambul. Traslados VIP al aeropuerto (IST y SAW), alquiler de chófer por horas y tours privados con vehículos Mercedes-Benz.",
-    "keywords": "traslado aeropuerto Estambul, traslado VIP Estambul, traslado Sabiha Gokcen, lanzadera aeropuerto IST, Mercedes Vito VIP, chófer privado Estambul, servicio de coches de lujo Estambul, traslado hotel Estambul, traslado Galataport, viaje seguro Estambul, traslado aeropuerto 24/7, servicio ejecutivo de coches, tours por la ciudad de Estambul"
+    "keywords": "Traslado aeropuerto Estambul, traslado VIP Estambul, traslado Sabiha Gokcen, transporte aeropuerto IST, Mercedes Vito VIP, chófer privado Estambul, servicio de coches de lujo Estambul, traslado hotel Estambul, traslado Galataport, viaje seguro Estambul, traslado aeropuerto 24/7, servicio de coche ejecutivo, tours por la ciudad de Estambul"
+  },
+  "ServicesMetadata": {
+    "title": "Servicios | Vstars",
+    "description": "Experimente servicios de chófer premium diseñados para su comodidad, seguridad y eficiencia."
+  },
+  "AffiliatesMetadata": {
+    "title": "Afiliados | Vstars",
+    "description": "Experimente servicios de chófer premium diseñados para su comodidad, seguridad y eficiencia."
+  },
+  "ContactPageMetadata": {
+    "title": "Contáctenos | Vstars",
+    "description": "Experimente servicios de chófer premium diseñados para su comodidad, seguridad y eficiencia."
   },
   "Navbar": {
     "menu": "Menú",
@@ -10,30 +22,31 @@
     "ourServices": "Nuestros Servicios",
     "contact": "Contáctenos",
     "ourAffiliates": "Afiliados",
+    "faq": "Preguntas frecuentes",
     "languages": "Idiomas",
     "languagesOption": {
       "en": "English",
-      "ru": "Русский",
-      "tr": "Türkçe",
       "de": "Deutsch",
-      "es": "Español"
+      "es": "Español",
+      "ru": "Русский",
+      "tr": "Türkçe"
     }
   },
   "OurServices": {
     "section_title": "Nuestros Servicios",
-    "section_desc": "Experimente el más alto estándar de\nviajes de lujo en Estambul",
+    "section_desc": "Experimente el más alto estándar de viajes de lujo en Estambul",
     "items": {
       "airportTransfers": {
         "title": "Traslados al Aeropuerto",
-        "desc": "Servicio de traslado VIP confiable con seguimiento de vuelos, meet & greet y chóferes profesionales."
+        "desc": "Servicio de traslado VIP fiable con seguimiento de vuelos, recepción personalizada y chóferes profesionales."
       },
       "hourlyHire": {
         "title": "Alquiler de Chófer por Horas",
-        "desc": "Alquiler por día completo o por horas. Disfrute de transporte de lujo bajo demanda, adaptado a su horario personal."
+        "desc": "Alquiler por día completo o por horas. Disfrute de transporte de lujo a la carta adaptado a su agenda personal."
       },
       "medicalTourism": {
         "title": "Turismo Médico",
-        "desc": "Transporte privado, higiénico y cómodo para huéspedes médicos. Traslados directos a hospitales y hoteles."
+        "desc": "Transporte privado, higiénico y cómodo para pacientes médicos. Traslados directos a hospitales y hoteles."
       },
       "cityTour": {
         "title": "Tour por la Ciudad",
@@ -43,8 +56,8 @@
     "see_more": "Ver más"
   },
   "ChooseUs": {
-    "section_title": "¿Por qué nosotros?",
-    "section_desc": "Confiable, refinado y listo cuando usted lo esté.",
+    "section_title": "¿Por qué elegirnos?",
+    "section_desc": "Fiables, refinados y listos cuando usted lo esté.",
     "highlights": [
       {
         "title": "La seguridad es lo primero",
@@ -52,15 +65,15 @@
       },
       {
         "title": "Siempre a tiempo",
-        "desc": "El seguimiento de vuelos y el enrutamiento inteligente garantizan que nunca pierda una recogida o un traslado."
+        "desc": "El seguimiento de vuelos y las rutas inteligentes garantizan que nunca pierda una recogida o un trayecto."
       },
       {
-        "title": "Confort premium",
-        "desc": "Vehículos ejecutivos con asientos espaciosos, control de clima y viajes suaves."
+        "title": "Confort Premium",
+        "desc": "Vehículos ejecutivos con asientos espaciosos, control de clima y una conducción suave."
       },
       {
         "title": "Soporte 24/7",
-        "desc": "Personas reales disponibles en todo momento para ayudar con cambios o solicitudes especiales."
+        "desc": "Personas reales disponibles en cualquier momento para ayudar con cambios o solicitudes especiales."
       }
     ]
   },
@@ -70,11 +83,11 @@
     "items": {
       "Vito": {
         "title": "Mercedes-Benz Vito",
-        "desc": "Capacidad para hasta 5 + 2 personas\n6 equipajes\nIluminación ambiental\nWifi y Smart TV\nMini-bar\nCarga USB-C e inalámbrica"
+        "desc": "Capacidad hasta 5 + 2 personas\n6 maletas\nIluminación ambiental\nWifi y Smart TV\nMinibar\nUSB-C y carga inalámbrica"
       },
       "Sprinter": {
         "title": "Mercedes-Benz Sprinter",
-        "desc": "Capacidad para hasta 15 + 1 personas\n6 equipajes\nIluminación ambiental\nWifi y Smart TV\nCarga USB-C e inalámbrica"
+        "desc": "Capacidad hasta 15 + 1 personas\n6 maletas\nIluminación ambiental\nWifi y Smart TV\nUSB-C y carga inalámbrica"
       }
     },
     "seeMore": "Ver más"
@@ -89,63 +102,57 @@
       "pickUpLocationPlaceHolder": "Ingrese el lugar de recogida",
       "dropOffLocation": "Lugar de destino",
       "dropOffLocationPlaceHolder": "Ingrese el lugar de destino",
-
       "duration": "Duración",
       "durationPlaceHolder": "Seleccione la duración",
       "date": "Fecha",
       "datePlaceHolder": "Seleccione fecha y hora",
-      "insideTitle": "Seleccione fecha y hora",
+      "insideTitle": "Elegir fecha y hora",
       "availableTime": "Horarios disponibles",
-
-      "PassLugTitle": "Seleccione pasajeros y equipaje",
+      "PassLugTitle": "Seleccionar pasajeros y equipaje",
       "selected": "Seleccionado:",
       "passengers": "Pasajeros",
       "luggage": "Equipaje",
       "SelectedConfiguration": "Configuración seleccionada:",
-
       "PassengerLuggage": "Pasajeros y equipaje",
       "addressPlaceholder": "Ingrese aeropuerto, hotel o dirección...",
       "SelectDateHours": "Seleccione fecha y hora",
-      "selectHours": "Seleccione la duración",
+      "selectHours": "Seleccione duración",
       "hour": "Hora",
-
       "passengersAndLuggage": "Pasajeros y equipaje",
       "guestInfo": "Información del huésped",
       "driverNeeds": "Notas para el conductor",
       "fullName": "Nombre completo",
       "phoneNumber": "Número de teléfono",
-      "email": "Dirección de correo electrónico",
+      "email": "Correo electrónico",
       "flightNumber": "Número de vuelo (Opcional)",
       "signboardName": "Nombre en el cartel (Opcional)",
       "signboardPlaceholder": "Nombre en el cartel de bienvenida",
       "specialRequests": "Solicitudes especiales",
-      "notesPlaceholder": "Asiento para niños, equipaje extra, etc...",
+      "notesPlaceholder": "Silla de bebé, equipaje extra, etc...",
       "passport": {
         "title": "Foto del pasaporte (Opcional)",
-        "formats": "Subir JPG, PNG, WebP (Máx. {size}MB)",
+        "formats": "Subir JPG, PNG, WebP (Máx {size}MB)",
         "chooseFile": "Elegir archivo",
         "processing": "Procesando...",
         "uploaded": "✓ Subido"
       }
     },
-
     "PackageDetail": {
       "title": "Detalles del paquete",
-      "waitTime": "30 minutos de espera gratuita",
-      "greet": "Incluye servicio Meet & Greet",
-      "alert": "Se deben respetar las capacidades de huéspedes y equipaje. En caso de duda, seleccione una clase superior, ya que el servicio puede ser rechazado"
+      "waitTime": "Incluye 30 minutos de tiempo de espera gratuito",
+      "greet": "Incluye servicio de recepción (Meet & Greet)",
+      "alert": "Se debe respetar la capacidad de pasajeros/equipaje. Si no está seguro, seleccione una clase superior, ya que el servicio puede ser rechazado."
     },
-
     "GuestInfo": {
       "title": "Detalles finales",
-      "desc": "Por favor proporcione su información de contacto",
+      "desc": "Por favor, proporcione su información de contacto",
       "fullname": "Nombre completo",
       "phone": "Número de teléfono",
-      "email": "Dirección de correo electrónico",
+      "email": "Correo electrónico",
       "flightNumber": "Número de vuelo",
       "optional": "(Opcional)",
       "driverNote": "Nota para el conductor:",
-      "driverNotePlaceHolder": "Asiento para niños requerido, equipaje extra, etc...",
+      "driverNotePlaceHolder": "Se requiere silla de bebé, equipaje extra, etc...",
       "passportPhoto": "Foto del pasaporte",
       "click": "Haga clic para subir la foto del pasaporte",
       "summaryEstimated": "Precio total estimado:",
@@ -165,7 +172,7 @@
       "passengers": "Pasajeros:",
       "pax": "{count} Pax",
       "bag": "Equipaje:",
-      "total": "Importe total",
+      "total": "Monto total",
       "terms": "Ver Términos y Condiciones"
     },
     "Shared": {
@@ -176,23 +183,228 @@
       "cancel": "Cancelar"
     }
   },
+  "ReadyToBook": {
+    "title": "¿Listo para reservar su viaje?",
+    "desc": "Permítanos personalizar su traslado o tour: respuestas rápidas, personas reales, soporte 24/7.",
+    "contactUs": "Contáctenos",
+    "bookNow": "Reservar ahora"
+  },
   "Footer": {
-    "downloadApp": "Descargar aplicación",
+    "downloadApp": "Descargar App",
     "services": "Servicios",
     "airportTransfer": "Traslado al aeropuerto",
-    "hourlyChauffeurRide": "Servicio de chófer por horas",
+    "hourlyChauffeurRide": "Viaje con chófer por horas",
     "medicalTourism": "Turismo médico",
     "cityTours": "Tours por la ciudad",
-
-    "affiliates": "Afiliados",
-
+    "Affiliates": "Afiliados",
     "Support": "Soporte",
     "contactUs": "Contáctenos",
-    "helpFaq": "Ayuda y Preguntas Frecuentes",
-
+    "helpFaq": "Ayuda y preguntas frecuentes",
     "getInTouch": "Póngase en contacto:",
-    "questions": "Preguntas, asociaciones o reservas — estamos aquí para ayudar.",
+    "questions": "Preguntas, colaboraciones o reservas: estamos aquí para ayudarle.",
     "goToContactPage": "Ir a la página de contacto",
     "premium": "Servicios premium de chófer y viajes"
+  },
+  "ServicesPage": {
+    "title": "Servicios de clase mundial",
+    "desc": "Experimente servicios de chófer premium diseñados para su comodidad, seguridad y eficiencia.",
+    "items": {
+      "airportTransfers": {
+        "title": "Traslados al Aeropuerto",
+        "desc": "Llegue o salga con comodidad con nuestro servicio de traslado al aeropuerto, disponible en el aeropuerto de Estambul (IST) y en el aeropuerto Sabiha Gökçen (SAW). Evite el estrés del transporte público y los taxis poco fiables: su chófer le recibirá puntualmente y le llevará directamente a su destino. Realizamos un seguimiento de su vuelo en tiempo real, ajustándonos a los retrasos para que nunca tenga que preocuparse. Nuestros conductores experimentados y con conocimiento local se encargan de su equipaje y garantizan un viaje tranquilo y relajado. Elija entre sedanes de lujo o furgonetas espaciosas para familias y grupos. Precios transparentes, sin tarifas ocultas y una reserva en línea sin esfuerzo hacen que cada viaje sea perfecto de principio a fin."
+      },
+      "hourlyHire": {
+        "title": "Alquiler de Chófer por Horas",
+        "desc": "Disfrute de una flexibilidad total con nuestro servicio de chófer por horas, diseñado para viajes con múltiples paradas dentro de la ciudad. Establezca su propio itinerario y muévase a su ritmo mientras su chófer profesional permanece a su disposición. Olvídese de los taxis, el aparcamiento y el transporte público, y viaje cómodamente en un vehículo premium. Solicite recogida y entrega directamente en la puerta de cada parada, ahorrando tiempo y esfuerzo. Deje sus pertenencias personales seguras en el coche mientras está fuera. El precio por hora transparente incluye distancia, impuestos y peajes, sin cargos ocultos. Ideal para reuniones de negocios, eventos, turismo o placer, este servicio le permite concentrarse en su día mientras nosotros nos encargamos de conducir."
+      },
+      "medicalTourism": {
+        "title": "Turismo Médico",
+        "desc": "A través de nuestro afiliado de confianza, Can Duman Medical Tourism, facilitamos el acceso a una amplia gama de servicios médicos y de bienestar de alta calidad. Desde cirugía estética, cuidado dental, trasplante capilar hasta procedimientos avanzados. Todos los servicios se coordinan con instituciones médicas experimentadas. Nuestro papel es garantizar una experiencia fluida y bien organizada conectando a los pacientes con proveedores de atención médica fiables, priorizando la comodidad, la transparencia y la coordinación profesional durante todo el viaje."
+      },
+      "cityTour": {
+        "title": "Tour por la Ciudad",
+        "desc": "Explore Estambul con comodidad con un conductor privado y un itinerario flexible adaptado a usted. Visite monumentos icónicos y joyas ocultas a su propio ritmo, sin preocuparse por el tráfico, el aparcamiento o el transporte público. Disfrute de un servicio de puerta a puerta en un vehículo premium mientras su chófer permanece a su disposición durante todo el día. Ideal para turismo, compras o experiencias culturales, nuestros tours por la ciudad ofrecen una forma relajada y personalizada de descubrir la ciudad. Concéntrese en el viaje y los momentos: nosotros nos encargamos de conducir."
+      }
+    },
+    "FAQS": {
+      "title": "Preguntas Frecuentes",
+      "items": {
+        "q1": "¿Ofrecen servicio de recepción en el aeropuerto?",
+        "a1": "Sí, nuestros chóferes le estarán esperando en la terminal de llegadas del aeropuerto de Estambul (IST) o de Sabiha Gökçen (SAW) con un cartel personalizado con su nombre.",
+        "q2": "¿Está incluido el seguimiento del vuelo?",
+        "a2": "Absolutamente, ajustamos automáticamente su hora de recogida para que su conductor esté siempre allí cuando aterrice.",
+        "q3": "¿Realizan traslados tanto desde IST como desde Sabiha Gökçen?",
+        "a3": "Sí, ofrecemos servicios de traslado premium las 24 horas, los 7 días de la semana, desde el aeropuerto de Estambul (IST) y el aeropuerto Sabiha Gökçen (SAW) a cualquier hotel, residencia o ubicación dentro del centro de la ciudad y las áreas circundantes.",
+        "q4": "¿Cobran por persona o por vehículo?",
+        "a4": "Cobramos una tarifa fija por vehículo, no por persona. Ya sea que viaje solo o en grupo, paga una tarifa plana, sin costos ocultos.",
+        "q5": "¿Nos recogerán a cualquier hora del día?",
+        "a5": "Sí, nuestras operaciones funcionan las 24 horas del día, los 365 días del año. Ya sea que llegue tarde por la noche o salga temprano por la mañana, nuestro equipo profesional está listo para servirle a cualquier hora.",
+        "q6": "¿Con cuánta antelación se deben reservar los vehículos de traslado?",
+        "a6": "Recomendamos reservar al menos con 48 horas de antelación para garantizar la disponibilidad. Sin embargo, hacemos todo lo posible para atender solicitudes de última hora siempre que sea posible.",
+        "q7": "¿Puedo hacer varias paradas y cambiar la ruta?",
+        "a7": "Sí. Con nuestro servicio de alquiler por horas, el vehículo es exclusivamente suyo. Tiene total flexibilidad para realizar paradas ilimitadas, cambiar su ruta o asistir a reuniones consecutivas en Estambul según lo desee.",
+        "q8": "¿El conductor me espera mientras estoy en una reunión, de compras o explorando?",
+        "a8": "Absolutamente. Su chófer privado permanece a su disposición en un lugar cercano conveniente mientras usted compra, cena o asiste a reuniones, asegurándose de que le recojan inmediatamente cuando esté listo.",
+        "q9": "¿Puedo solicitar servicios adicionales, como un guía turístico o comodidades especiales en el vehículo?",
+        "a9": "Absolutamente, podemos organizar guías turísticos con licencia, sillas de bebé y comodidades específicas en el coche como refrigerios o Wi-Fi. Especifique sus necesidades durante la reserva para que podamos prepararlo todo para usted.",
+        "q10": "¿Qué tipos de tratamientos organizan?",
+        "a10": "Nos especializamos en la coordinación de trasplantes capilares, estética dental y cirugía plástica. A través de nuestro socio, Can Duman Medical Tourism, le conectamos con expertos específicos para cada procedimiento.",
+        "q11": "¿Los vehículos están desinfectados e higienizados?",
+        "a11": "Sí, nuestros vehículos se limpian y desinfectan a fondo antes de cada viaje para garantizar un entorno seguro.",
+        "q12": "¿Se encargan de todo el itinerario de viaje?",
+        "a12": "Sí. Gestionamos todo su viaje médico. Desde traslados VIP al aeropuerto y coordinación de hoteles hasta citas en clínicas, garantizamos una experiencia fluida y sin estrés para que pueda concentrarse por completo en su tratamiento.",
+        "q13": "¿Puedo personalizar mi propio itinerario?",
+        "a13": "Absolutamente. El tour es 100% flexible. Puede crear su propia ruta, elegir exactamente qué monumentos visitar y decidir cuánto tiempo quedarse en cada parada. Nuestro conductor sigue sus indicaciones.",
+        "q14": "¿Podemos solicitar un guía turístico profesional?",
+        "a14": "Sí. Mientras nuestros chóferes se centran en el transporte seguro, podemos organizar un guía turístico profesional con licencia para que le acompañe en una experiencia histórica detallada previa solicitud (sujeto a disponibilidad y tarifa adicional).",
+        "q15": "¿Debo preocuparme por las tarifas de aparcamiento o de espera?",
+        "a15": "En absoluto. Nosotros nos encargamos de toda la logística. Su chófer le deja justo en la entrada y espera cerca. Puede concentrarse plenamente en las visitas turísticas sin el estrés de buscar aparcamiento o pedir un taxi."
+      }
+    }
+  },
+  "AffiliatesPage": {
+    "title": "Nuestros Afiliados",
+    "desc": "Experimente servicios de chófer premium diseñados para su comodidad, seguridad y eficiencia.",
+    "items": {
+      "medical": {
+        "title": "Can Duman Medical Tourism",
+        "desc": "Can Duman Medical Tourism facilita el acceso a una amplia gama de servicios médicos y de bienestar de alta calidad. Desde cirugía estética hasta procedimientos avanzados, todos los servicios se coordinan con instituciones médicas experimentadas para garantizar una experiencia fluida."
+      },
+      "travelAgency": {
+        "title": "Can Duman Travel Agency",
+        "desc": "Can Duman Travel Agency ofrece soluciones de viaje personalizadas para necesidades individuales y corporativas. Con un enfoque en un servicio organizado y orientado al cliente, apoyan la planificación de viajes y la logística para garantizar una experiencia cómoda."
+      },
+      "visitoria": {
+        "title": "Visitoria Grup Sigorta",
+        "desc": "Visitoria Grup Sigorta aporta más de 25 años de experiencia en servicios financieros y de seguros. Ofrecen una amplia gama de soluciones en salud, viajes y seguros comerciales adaptadas a las necesidades individuales y corporativas."
+      },
+      "danismanlik": {
+        "title": "Can Duman Danismanlik",
+        "desc": "Can Duman Consultancy brinda orientación y apoyo profesional en diversas áreas de servicio. Con un enfoque orientado a soluciones, asisten a personas y organizaciones en la planificación y gestión de procesos eficientes."
+      },
+      "agon": {
+        "title": "Agon",
+        "desc": "Agon Group Company es una marca multidimensional que opera en textiles, eventos a medida, productos orgánicos y comercio electrónico. Su fuerza reside en la visión y su distinción se define por la atención al detalle."
+      },
+      "akademi": {
+        "title": "Can Duman Akademi",
+        "desc": "Can Duman Akademi es nuestro socio de programas académicos, que ofrece contenido educativo de alta calidad. Bajo el lema “Educación para todos, crecimiento conjunto”, prioriza la formación continua y el desarrollo profesional."
+      }
+    }
+  },
+  "ContactPage": {
+    "title": "Póngase en contacto",
+    "description": "¿Tiene preguntas sobre su traslado o necesita un presupuesto personalizado? Nuestro equipo está listo para ayudarle las 24 horas, los 7 días de la semana.",
+    "infoTitle": "Información de contacto",
+    "infoDesc": "Estamos disponibles por teléfono, correo electrónico y WhatsApp para asegurar que su viaje en Estambul sea tranquilo y cómodo.",
+    "phone": "Teléfono y WhatsApp",
+    "email": "Correo electrónico",
+    "address": "Ubicación",
+    "maps": "Abrir en Google Maps ↗",
+    "form": {
+      "name": "Nombre completo",
+      "namePlaceholder": "Juan Pérez",
+      "email": "Correo electrónico",
+      "emailPlaceholder": "juan@ejemplo.com",
+      "subject": "Asunto",
+      "subjectPlaceholder": "Consulta de traslado / Tour personalizado",
+      "message": "Mensaje",
+      "messagePlaceholder": "¿Cómo podemos ayudarle?",
+      "submit": "Enviar mensaje"
+    },
+    "successMessage": "¡Mensaje enviado con éxito! Nos pondremos en contacto con usted pronto.",
+    "errorMessage": "Algo salió mal. Por favor, inténtelo de nuevo."
+  },
+  "FAQPage": {
+    "title": "Preguntas Frecuentes",
+    "desc": "Consulte nuestras preguntas frecuentes para encontrar respuestas sobre nuestros servicios.",
+    "noResults": "No se encontraron resultados para",
+    "items": {
+      "general": {
+        "title": "General y Servicios",
+        "questions": {
+          "1": {
+            "q": "¿Ofrecen servicio de recepción en el aeropuerto?",
+            "a": "Sí, nuestros chóferes le esperarán en la terminal de llegadas (IST o SAW) con un cartel personalizado con su nombre."
+          },
+          "2": {
+            "q": "¿Está incluido el seguimiento del vuelo?",
+            "a": "Sí, ajustamos la hora de recogida automáticamente según su aterrizaje real."
+          },
+          "3": {
+            "q": "¿Realizan traslados desde ambos aeropuertos?",
+            "a": "Sí, ofrecemos servicio 24/7 desde Estambul (IST) y Sabiha Gökçen (SAW) a cualquier punto de la ciudad."
+          },
+          "4": {
+            "q": "¿Atienden a cualquier hora?",
+            "a": "Sí, operamos las 24 horas del día, los 365 días del año."
+          }
+        }
+      },
+      "booking": {
+        "title": "Reserva e Itinerario",
+        "questions": {
+          "1": {
+            "q": "¿Con cuánto tiempo debo reservar?",
+            "a": "Recomendamos al menos 48 horas de antelación, aunque intentamos atender pedidos de última hora."
+          },
+          "2": {
+            "q": "¿Puedo cambiar la ruta durante el servicio?",
+            "a": "Sí, con el alquiler por horas tiene total libertad para añadir paradas o modificar el trayecto."
+          },
+          "3": {
+            "q": "¿Puedo diseñar mi propio tour?",
+            "a": "Absolutamente. Nuestros tours son 100% flexibles y se adaptan totalmente a sus preferencias."
+          },
+          "4": {
+            "q": "¿El conductor espera durante mis reuniones?",
+            "a": "Sí, su chófer privado permanecerá a su disposición en un lugar cercano mientras usted realiza sus actividades."
+          }
+        }
+      },
+      "vehicles": {
+        "title": "Vehículos y Comodidades",
+        "questions": {
+          "1": {
+            "q": "¿Los vehículos son higiénicos?",
+            "a": "Sí, todos nuestros vehículos se limpian y desinfectan profundamente antes de cada servicio."
+          },
+          "2": {
+            "q": "¿Puedo pedir extras como sillas de bebé?",
+            "a": "Sí, ofrecemos sillas de bebé, Wi-Fi y refrigerios. Solo tiene que indicarlo al reservar."
+          },
+          "3": {
+            "q": "¿Es posible contratar un guía profesional?",
+            "a": "Sí, podemos organizar un guía titulado para acompañarle durante su tour por un cargo adicional."
+          }
+        }
+      },
+      "billing": {
+        "title": "Facturación y Precios",
+        "questions": {
+          "1": {
+            "q": "¿El precio es por persona?",
+            "a": "No, nuestras tarifas son fijas por vehículo, independientemente del número de pasajeros."
+          },
+          "2": {
+            "q": "¿Debo pagar el parking por separado?",
+            "a": "No, nosotros gestionamos toda la logística y las tarifas de espera para que usted no se preocupe por nada."
+          }
+        }
+      },
+      "medical": {
+        "title": "Servicios Médicos",
+        "questions": {
+          "1": {
+            "q": "¿Qué tratamientos coordinan?",
+            "a": "Coordinamos injertos capilares, estética dental y cirugía plástica con expertos de primer nivel."
+          },
+          "2": {
+            "q": "¿Se encargan de todo el viaje?",
+            "a": "Sí, gestionamos desde el traslado y el hotel hasta las citas en la clínica para su total tranquilidad."
+          }
+        }
+      }
+    }
   }
 }
