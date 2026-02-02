@@ -143,18 +143,19 @@ export default function NavigationBar() {
                 </div>
 
                 {/* --- SIGN IN --- */}
-                <div className="flex justify-end shrink-0">
-                    <Link
-                        href="/login"
-                        className="group flex font-lexend font-semibold text-xs items-center gap-2 px-3 md:px-5 py-2.5
-                        rounded-full transition-colors text-white hover:bg-white/10"
-                    >
-                        <span>{t("signIn")}</span>
-                        <div className="p-1.5 rounded-full transition-colors bg-white/20 group-hover:bg-white/30">
-                            <User className="h-4 w-4 text-white" />
-                        </div>
-                    </Link>
-                </div>
+                {/*<div className="flex justify-end shrink-0">*/}
+                {/*    <Link*/}
+                {/*        href="/login"*/}
+                {/*        className="group flex font-lexend font-semibold text-xs items-center gap-2 px-3 md:px-5 py-2.5*/}
+                {/*        rounded-full transition-colors text-white hover:bg-white/10"*/}
+                {/*    >*/}
+                {/*        <span>{t("signIn")}</span>*/}
+                {/*        <div className="p-1.5 rounded-full transition-colors bg-white/20 group-hover:bg-white/30">*/}
+                {/*            <User className="h-4 w-4 text-white" />*/}
+                {/*        </div>*/}
+                {/*    </Link>*/}
+                {/*</div>*/}
+
             </header>
         </nav>
     );
