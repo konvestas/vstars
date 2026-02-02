@@ -24,7 +24,7 @@ export default function NavigationBar() {
             <header
                 className={cn(
                     "relative flex w-full items-center justify-between px-2 md:px-6 " +
-                    "py-2 transition-colors bg-black/40 backdrop-blur-md"
+                    "py-4 transition-colors bg-black/40 backdrop-blur-md"
                 )}
             >
                 {/* --- LEFT MENU --- */}
