@@ -22,6 +22,7 @@
     "ourServices": "Our Services",
     "contact": "Contact Us",
     "ourAffiliates": "Affiliates",
+    "fleet": "Fleet",
     "faq": "FAQ",
     "languages": "Languages",
     "languagesOption": {
@@ -281,7 +282,7 @@
   },
   "AffiliatesPage": {
     "title": "Our Affiliates",
-    "desc": "Experience premium chauffeur services designed for comfort, safety, and efficiency.",
+    "desc": "Explore our affiliated partners to access premium services and expertise.",
     "items": {
       "medical": {
         "title": "Can Duman Medical Tourism",
@@ -306,6 +307,56 @@
       "akademi": {
         "title": "Can Duman Akademi",
         "desc": "Can Duman Akademi is our affiliated academy program partner, providing rich and high-quality educational content with a strong belief in continuous learning and personal development. Guided by the motto “Education for Everyone, Growth Together,” it prioritizes lifelong education and professional development. With diverse training fields and high service standards, the academy contributes to developing qualified human capital aligned with market needs. It aims to become a leading lifelong learning center supporting individual, regional, and national growth through education."
+      }
+    }
+  },
+  "FleetPage": {
+    "title": "Explore Our Fleet",
+    "description": "",
+    "secondTitle": "Mercedes-Benz Vito Maybach",
+    "secondDescription": "Each meticulously maintained vehicle, transforms into your private office and vehicle of choice. Set your own itinerary and move at your pace while your professional chauffeur remains on standby.",
+    "servicesTitle": "Service Standards",
+    "servicesDesc": "More than just a ride. Every journey is curated to provide the ultimate environment for productivity and relaxation.",
+    "items": {
+      "details": {
+        "capacityTitle": "Capacity",
+        "capacityDesc": "Up to 5 + 2",
+        "luggageTitle": "Luggage",
+        "luggageDesc": "6 baggage",
+        "AmbianceTitle": "Ambiance",
+        "AmbianceDesc": "Ambient lighting",
+        "ConnectivityTitle": "Connectivity",
+        "ConnectivityDesc": "Wifi & Smart TV",
+        "RefreshmentsTitle": "Refreshments",
+        "RefreshmentsDesc": "Mini-bar",
+        "PowerTitle": "Power",
+        "PowerDesc": "USB-C & wireless charging"
+      },
+      "services": {
+        "professionalChauffeurs": {
+          "title": "Professional Chauffeurs",
+          "description": "Driven by trained chauffeurs, ensuring discretion and professionalism at all times."
+        },
+        "privateConfidential": {
+          "title": "Private & Confidential",
+          "description": "Your vehicle transforms into a private office, allowing for confidential calls and uninterrupted work."
+        },
+        "stayConnected": {
+          "title": "Stay Connected",
+          "description": "Equipped with Lightning and USB-C chargers to keep your devices powered throughout your journey."
+        },
+        "onboardWifi": {
+          "title": "Onboard Wi-Fi",
+          "description": "High-speed connection ensures you never miss a beat, whether working or streaming entertainment."
+        },
+        "climateMedia": {
+          "title": "Climate & Media",
+          "description": "Full control over the cabin environment. Your chauffeur will adjust climate and music to your preference."
+        },
+        "thoughtfulAmenities": {
+          "title": "Thoughtful Amenities",
+          "description": "Complimentary water, tissues, and sanitizing towelettes to ensure you remain refreshed."
+        }
       }
     }
   },
