@@ -1,8 +1,8 @@
 import { motion, Variants } from "framer-motion";
 import {useTranslations} from "next-intl";
-import {getHomeChooseUsData} from "@/components/homepage/data/home-chooseUs-data";
+import {getHomeChooseUsData} from "@/components/homepage/data/homePage-chooseUs-section-data";
 
-export default function ChooseUs() {
+export default function HomeChooseUsSection() {
     const t = useTranslations("ChooseUs");
     const data = getHomeChooseUsData(t)
 

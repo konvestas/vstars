@@ -6,7 +6,7 @@ import { useTranslations } from "next-intl";
 import {Carousel, CarouselContent, CarouselItem, type CarouselApi, CarouselNext, CarouselPrevious} from "@/components/ui/carousel";
 import { Separator } from "@/components/ui/separator";
 import { cn } from "@/lib/utils";
-import {getFleetSectionData, getFleetImages,} from "@/components/homepage/data/home-fleet-section-data";
+import {getFleetSectionData, getFleetImages,} from "@/components/homepage/data/homePage-fleet-section-data";
 
 export default function FleetDetailsSection() {
     const t = useTranslations("Fleet");

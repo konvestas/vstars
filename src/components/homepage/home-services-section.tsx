@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 import { HomeServiceCard } from "./home-service-card";
 import {Carousel, CarouselContent, CarouselItem, type CarouselApi,} from "@/components/ui/carousel";
 import { motion } from "framer-motion";
-import {getHomeServicesData} from "@/components/homepage/data/home-services-data";
+import {getHomeServicesData} from "@/components/homepage/data/homePage-services-section-data";
 
 export default function HomeServicesSection() {
     const t = useTranslations("OurServices");

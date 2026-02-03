@@ -7,7 +7,7 @@ import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { ServiceCardProps } from "@/components/homepage/data/home-services-data";
+import { ServiceCardProps } from "@/components/homepage/data/homePage-services-section-data";
 
 export function HomeServiceCard({ title, description, image, toServicesId, index, className }: ServiceCardProps) {
     const t = useTranslations("OurServices");

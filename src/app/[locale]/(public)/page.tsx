@@ -6,7 +6,7 @@ import NavigationBar from "@/components/layout/navigation-bar";
 import BookingWidget from "@/features/booking/_components/booking-widget";
 import ScrollButton from "@/components/layout/scroll-button";
 import HomeServicesSection from "@/components/homepage/home-services-section";
-import ChooseUs from "@/components/homepage/choose-us";
+import HomeChooseUsSection from "@/components/homepage/home-choose-us-section";
 import FloatingWhatsApp from "@/components/layout/floating-whatsapp";
 import Footer from "@/components/layout/footer";
 import FleetDetailsSection from "@/components/homepage/FleetDetailsSection";
@@ -46,7 +46,7 @@ export default function App() {
             </section>
 
             <section className="min-h-1/2"><HomeServicesSection/></section>
-            <section className="min-h-1/2"><ChooseUs/></section>
+            <section className="min-h-1/2"><HomeChooseUsSection/></section>
             <section className="min-h-1/2"><FleetDetailsSection/></section>
 
             <footer><Footer/></footer>
