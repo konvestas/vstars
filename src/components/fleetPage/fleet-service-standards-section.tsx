@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import {getServiceStandards} from "@/components/fleetPage/data/fleetPage-service-standards-section-data";
 import {useTranslations} from "next-intl";
 
-export default function FleetServiceStandards() {
+export default function FleetServiceStandardsSection() {
     const t = useTranslations("FleetPage");
     const data = getServiceStandards(t);
     return (

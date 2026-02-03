@@ -5,8 +5,6 @@ import {NextRequest, NextResponse} from "next/server";
 const handleI18nRouting = createMiddleware(routing);
 
 export default function middleware(request: NextRequest) {
-    // 2. Define your "Target" domain (The one you want everyone to see)
-    // TODO: When you are ready to switch, change this to "www.vstarstransfer.com"
     const targetHost = "www.vstarstransfer.com";
     const host = request.headers.get('host');
 

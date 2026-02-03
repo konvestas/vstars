@@ -4,9 +4,9 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useTranslations } from "next-intl";
-import { Loader2, ArrowRight } from "lucide-react"; // Switched Send to ArrowRight for luxury feel
+import { Loader2, ArrowRight } from "lucide-react";
 
-import { contactSchema, ContactFormValues } from "@/app/[locale]/(public)/contact/schemas";
+import { contactSchema, ContactFormValues } from "@/components/contactPage/schemas";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
