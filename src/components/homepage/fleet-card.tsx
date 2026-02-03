@@ -121,7 +121,8 @@ export function FleetCard({ title, description, images, index, className }: Flee
                         )}
                     </div>
 
-                    {/* Content */}
+                {/* Content */}
+                <Link href="/fleet" >
                     <div className="flex flex-col flex-1 p-6">
                         {/* Title */}
                         <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white leading-tight">{title}</h3>
@@ -141,16 +142,17 @@ export function FleetCard({ title, description, images, index, className }: Flee
                         </ul>
 
                         {/* Footer / CTA */}
-                        <Link href="/fleet"
-                              aria-label="See more about our fleet"
+                        <div
+                            aria-label="See more about our fleet"
                             className="pt-4 border-t flex items-center justify-between text-xs font-bold uppercase
                              tracking-wider transition-colors border-gray-100 dark:border-zinc-800 text-gray-400
                               group-hover:text-black dark:text-gray-500 dark:group-hover:text-white"
                         >
                             <span>{t("seeMore")}</span>
                             <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                        </Link>
+                        </div>
                     </div>
+                </Link>
             </div>
         </motion.div>
     );

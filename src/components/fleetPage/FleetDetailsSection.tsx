@@ -4,15 +4,13 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import {Carousel, CarouselContent, CarouselItem, type CarouselApi, CarouselNext, CarouselPrevious} from "@/components/ui/carousel";
-import { Separator } from "@/components/ui/separator";
 import { cn } from "@/lib/utils";
 import {getFleetSectionData, getFleetImages,} from "@/components/homepage/data/homePage-fleet-section-data";
 
 export default function FleetDetailsSection() {
-    const t = useTranslations("Fleet");
+    const t = useTranslations("FleetPage");
     const specs = getFleetSectionData(t);
 
-    // 3. Carousel State
     const [api, setApi] = useState<CarouselApi>();
     const [current, setCurrent] = useState(0);
     const [count, setCount] = useState(0);
@@ -28,8 +26,8 @@ export default function FleetDetailsSection() {
     }, [api]);
 
     return (
-        <section className="w-full bg-white py-16 md:py-24 text-zinc-900 font-sans">
-            <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
+        <section className="w-full bg-white pb-16 md:pb-24 pt-7 text-zinc-900 font-sans">
+            <div className="max-w-[1400px] mx-auto lg:px-12">
 
                 {/* --- TOP SECTION: Carousel and Description Side-by-Side --- */}
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start">
@@ -39,7 +37,7 @@ export default function FleetDetailsSection() {
                             <CarouselContent>
                                 {getFleetImages.map((src, index) => (
                                     <CarouselItem key={index}>
-                                        <div className="relative w-full aspect-[4/3] md:aspect-[16/10]">
+                                        <div className="relative w-full aspect-4/3 md:aspect-16/10">
                                             <Image
                                                 src={src}
                                                 alt={`Fleet view ${index + 1}`}
@@ -83,29 +81,27 @@ export default function FleetDetailsSection() {
                     {/* RIGHT COLUMN: Title & Description */}
                     <div className="lg:col-span-5 flex flex-col pt-4 font-light">
                         <h2 className="text-3xl uppercase tracking-wide mb-10 text-zinc-900">
-                            {t("sectionTitle")}
+                            {t("secondTitle")}
                         </h2>
                         <div className="space-y-6 text-lg leading-relaxed text-gray-700 ">
                             <p>
-                                {t("sectionDesc")}
+                                {t("secondDescription")}
                             </p>
                         </div>
                     </div>
                 </div>
 
-                <Separator className="my-16 bg-gray-200" />
-
                 <div>
-                    <dl className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-16 gap-y-10 font-normal">
+                    <dl className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-16 gap-y-10 mt-15 font-normal">
                         {specs.map((item, index) => (
                             <div
                                 key={index}
-                                className="flex justify-between items-baseline border-b border-gray-100 pb-4 md:border-none md:pb-0"
+                                className="flex justify-between items-baseline border-b text-base border-gray-100 pb-4 md:border-none md:pb-0"
                             >
-                                <dt className="text-sm text-gray-500 min-w-[120px]">
+                                <dt className=" text-gray-500 min-w-[120px]">
                                     {item.title}
                                 </dt>
-                                <dd className="text-base text-zinc-900 text-right md:text-left pl-8">
+                                <dd className="text-zinc-900 text-right md:text-left pl-8">
                                     {item.description}
                                 </dd>
                             </div>

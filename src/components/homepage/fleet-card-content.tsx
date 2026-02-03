@@ -31,13 +31,14 @@ export default function FleetSection() {
             <div className="w-full mx-auto px-6 md:px-8">
 
                 {/* HEADER */}
-                <div className="text-center mb-12">
-                    <h2 className="text-4xl md:text-5xl font-semibold mb-4 leading-none text-gray-900 dark:text-white">
+                <div className="text-center mb-12 md:mb-20">
+                    <h2 className="text-3xl md:text-5xl font-light tracking-tight text-zinc-900 dark:text-white mb-4 md:mb-6">
                         {t("sectionTitle")}
                     </h2>
-                    <p className="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">
+                    <p className="text-base md:text-lg text-gray-500 dark:text-gray-400 max-w-2xl mx-auto font-light leading-relaxed">
                         {t("sectionDesc")}
                     </p>
+                    <div className="w-12 md:w-16 h-[1px] bg-zinc-200 dark:bg-zinc-800 mx-auto mt-6 md:mt-8"></div>
                 </div>
 
                 {/* --- MOBILE VIEW (Carousel) --- */}
