@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { Download } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
@@ -6,12 +8,17 @@ import { cn } from "@/lib/utils";
 
 export default function Footer() {
     const t = useTranslations("Footer");
+
+    // Unified Link Style: Bigger text, underline on hover, pointer cursor
     const linkStyle = cn(
-        "block w-fit text-base md:text-lg font-light text-muted-foreground",
+        "block w-fit text-base md:text-lg font-light text-muted-foreground", // Increased text size
         "hover:text-zinc-900 dark:hover:text-white hover:underline cursor-pointer transition-colors duration-200"
     );
+
+    // Section Header Style: Bigger, bold, uppercase
     const headerStyle = "text-base md:text-lg font-semibold uppercase tracking-wider text-zinc-900 dark:text-white mb-6";
 
+    // noinspection HtmlUnknownAnchorTarget
     return (
         <footer className="w-full bg-white dark:bg-zinc-950 border-t border-gray-100 dark:border-zinc-800 font-sans transition-colors">
             <div className="max-w-[1400px] mx-auto px-6 lg:px-12 py-12 md:py-16">
@@ -26,16 +33,16 @@ export default function Footer() {
                     </div>
 
                     {/* Download Button */}
-                    <Link
-                        href="/download"
-                        className="inline-flex items-center gap-2 rounded-xl px-6 py-3 text-sm font-medium
-                        bg-zinc-900 text-white hover:bg-zinc-700 hover:opacity-90
-                        dark:bg-white dark:text-black dark:hover:bg-gray-200
-                        transition-all shadow-sm cursor-pointer"
-                    >
-                        <Download className="h-4 w-4" />
-                        {t("downloadApp")}
-                    </Link>
+                    {/*<Link*/}
+                    {/*    href="/download"*/}
+                    {/*    className="inline-flex items-center gap-2 rounded-xl px-6 py-3 text-sm font-medium*/}
+                    {/*    bg-zinc-900 text-white hover:bg-zinc-700 hover:opacity-90*/}
+                    {/*    dark:bg-white dark:text-black dark:hover:bg-gray-200*/}
+                    {/*    transition-all shadow-sm cursor-pointer"*/}
+                    {/*>*/}
+                    {/*    <Download className="h-4 w-4" />*/}
+                    {/*    {t("downloadApp")}*/}
+                    {/*</Link>*/}
                 </div>
 
                 <Separator className="my-10 bg-gray-200 dark:bg-zinc-800" />
@@ -85,9 +92,7 @@ export default function Footer() {
                         </p>
                         <Link
                             href="/contact"
-                            className="inline-block text-base md:text-lg font-medium text-zinc-900 dark:text-white
-                             underline decoration-1 underline-offset-4 hover:text-gray-600 dark:hover:text-gray-300
-                              transition-colors mb-8 cursor-pointer"
+                            className="inline-block text-base md:text-lg font-medium text-zinc-900 dark:text-white underline decoration-1 underline-offset-4 hover:text-gray-600 dark:hover:text-gray-300 transition-colors mb-8 cursor-pointer"
                         >
                             {t("goToContactPage")}
                         </Link>
@@ -98,8 +103,9 @@ export default function Footer() {
                                 href="https://instagram.com"
                                 target="_blank"
                                 aria-label="Instagram"
-                                className=" cursor-pointer"
+                                className="hover:opacity-80 transition-opacity cursor-pointer"
                             >
+                                {/* eslint-disable-next-line @next/next/no-img-element */}
                                 <img
                                     src="/icons/Instagram.svg"
                                     alt="Instagram"
@@ -110,8 +116,9 @@ export default function Footer() {
                                 href="https://wa.me/+905326432234"
                                 target="_blank"
                                 aria-label="WhatsApp"
-                                className="cursor-pointer"
+                                className="hover:opacity-80 transition-opacity cursor-pointer"
                             >
+                                {/* eslint-disable-next-line @next/next/no-img-element */}
                                 <img
                                     src="/icons/WhatsApp.svg"
                                     alt="WhatsApp"
@@ -122,8 +129,9 @@ export default function Footer() {
                                 href="https://facebook.com"
                                 target="_blank"
                                 aria-label="Facebook"
-                                className="cursor-pointer"
+                                className="hover:opacity-80 transition-opacity cursor-pointer"
                             >
+                                {/* eslint-disable-next-line @next/next/no-img-element */}
                                 <img
                                     src="/icons/facebook.png"
                                     alt="Facebook"
