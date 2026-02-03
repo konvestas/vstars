@@ -9,7 +9,7 @@ import HomeServicesSection from "@/components/homepage/home-services-section";
 import ChooseUs from "@/components/homepage/choose-us";
 import FloatingWhatsApp from "@/components/layout/floating-whatsapp";
 import Footer from "@/components/layout/footer";
-import FleetSection from "@/components/homepage/fleet-card-content";
+import FleetDetailsSection from "@/components/homepage/FleetDetailsSection";
 
 
 export default function App() {
@@ -47,7 +47,7 @@ export default function App() {
 
             <section className="min-h-1/2"><HomeServicesSection/></section>
             <section className="min-h-1/2"><ChooseUs/></section>
-            <section className="min-h-1/2"><FleetSection/></section>
+            <section className="min-h-1/2"><FleetDetailsSection/></section>
 
             <footer><Footer/></footer>
             <FloatingWhatsApp/>
