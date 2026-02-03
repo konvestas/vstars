@@ -11,6 +11,7 @@ interface FAQItem {
 }
 
 export default function ServiceAccordion({ items }: { items: FAQItem[] }) {
+    // Track which item is open (null = all closed)
     const [openIndex, setOpenIndex] = useState<number | null>(null);
 
     const toggleItem = (index: number) => {
@@ -18,17 +19,12 @@ export default function ServiceAccordion({ items }: { items: FAQItem[] }) {
     };
 
     return (
-        // Main Container: subtle border, clean background
-        <div className="bg-white dark:bg-zinc-900 border border-border rounded-3xl p-8 md:p-10 shadow-sm relative overflow-hidden">
-
-            {/* Decorative colored blur using Primary brand color */}
-            <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl pointer-events-none" />
-
-            <h3 className="text-sm font-bold uppercase tracking-widest text-primary mb-8 relative z-10">
+        <div className="bg-gray-50 dark:bg-zinc-900/30 rounded-3xl p-8 md:p-10">
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-400 mb-8">
                 Frequently Asked Questions
             </h3>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-start relative z-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-start">
                 {items.map((faq, index) => {
                     const isOpen = openIndex === index;
 
@@ -38,28 +34,25 @@ export default function ServiceAccordion({ items }: { items: FAQItem[] }) {
                             onClick={() => toggleItem(index)}
                             className={cn(
                                 "group cursor-pointer rounded-2xl border p-6 transition-all duration-300",
+                                "hover:shadow-md",
                                 isOpen
-                                    ? "bg-primary/5 border-primary/30 shadow-md" // Active: Brand Tint
-                                    : "bg-white dark:bg-white/5 border-transparent dark:border-white/5 hover:border-primary/30" // Hover: Brand Border
+                                    ? "bg-white dark:bg-zinc-900 border-zinc-200 dark:border-zinc-700 shadow-md"
+                                    : "bg-transparent border-gray-200 dark:border-zinc-800"
                             )}
                         >
-                            <div className="flex items-start justify-between gap-4">
+                            <div className="flex items-center justify-between gap-4">
+                <span className={cn(
+                    "font-medium text-base transition-colors duration-300",
+                    isOpen ? "text-zinc-900 dark:text-white" : "text-zinc-700 dark:text-zinc-300"
+                )}>
+                  {faq.q}
+                </span>
                                 <span className={cn(
-                                    "font-medium text-base transition-colors duration-300",
-                                    isOpen ? "text-foreground" : "text-muted-foreground group-hover:text-foreground"
+                                    "shrink-0 transition-colors duration-300",
+                                    isOpen ? "text-zinc-900 dark:text-white" : "text-gray-400"
                                 )}>
-                                  {faq.q}
-                                </span>
-
-                                {/* Toggle Icon */}
-                                <span className={cn(
-                                    "shrink-0 transition-all duration-300 p-1 rounded-full",
-                                    isOpen
-                                        ? "bg-primary text-white rotate-0 shadow-sm" // Active: Solid Orange
-                                        : "text-muted-foreground group-hover:text-primary rotate-90"
-                                )}>
-                                  {isOpen ? <Minus className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
-                                </span>
+                  {isOpen ? <Minus className="w-5 h-5" /> : <Plus className="w-5 h-5" />}
+                </span>
                             </div>
 
                             <AnimatePresence>
@@ -71,7 +64,7 @@ export default function ServiceAccordion({ items }: { items: FAQItem[] }) {
                                         transition={{ duration: 0.3, ease: "easeInOut" }}
                                         className="overflow-hidden"
                                     >
-                                        <p className="pt-4 text-sm text-muted-foreground leading-relaxed font-light">
+                                        <p className="pt-4 text-sm text-gray-500 dark:text-gray-400 leading-relaxed font-light">
                                             {faq.a}
                                         </p>
                                     </motion.div>

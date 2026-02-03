@@ -1,25 +1,29 @@
+import React from "react";
+import Image from "next/image";
+import { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
+import { useTranslations } from "next-intl";
+
 import NavigationBar from "@/components/layout/navigation-bar";
 import Footer from "@/components/layout/footer";
 import FloatingWhatsApp from "@/components/layout/floating-whatsapp";
-import Image from "next/image";
 import ReadyToBookSection from "@/components/layout/ready-to-book";
-import {useTranslations} from "next-intl";
-import {getServices} from "@/components/servicesPage/data/services-page-data";
-import {Metadata} from "next";
-import {getTranslations} from "next-intl/server";
+import { getServices } from "@/components/servicesPage/data/services-page-data";
+import ServiceAccordion from "@/app/[locale]/(public)/services/services-questions";
 
-export async function generateMetadata({params,}: {
+export async function generateMetadata({
+                                           params,
+                                       }: {
     params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
     const { locale } = await params;
-    const t = await getTranslations({locale, namespace: "ServicesMetadata"});
+    const t = await getTranslations({ locale, namespace: "ServicesMetadata" });
     return {
         title: t("title"),
         description: t("description"),
         alternates: {
             canonical: `/${locale}/services`,
         },
-
         openGraph: {
             title: t("title"),
             description: t("description"),
@@ -32,112 +36,99 @@ export async function generateMetadata({params,}: {
                     height: 1059,
                     alt: "Vstars Transfer luxury fleet in Istanbul",
                     type: "image/webp",
-                }
+                },
             ],
         },
-
         twitter: {
             card: "summary_large_image",
             title: t("title"),
             description: t("description"),
-            images:
-                {
-                    url: "https://www.vstarstransfer.com/images/vstars-fleet.webp",
-                    alt: "Vstars Transfers luxury fleet in Istanbul",
-                    type: "image/webp",
-                }
-
+            images: {
+                url: "https://www.vstarstransfer.com/images/vstars-fleet.webp",
+                alt: "Vstars Transfers luxury fleet in Istanbul",
+                type: "image/webp",
+            },
         },
     };
 }
 
 export default function ServicesPage() {
-    const t = useTranslations('ServicesPage');
+    const t = useTranslations("ServicesPage");
     const services = getServices(t);
 
     return (
-        <main className="min-h-screen pt-20 bg-white ">
-            <nav className="fixed top-0 left-0 w-full z-50"><NavigationBar /></nav>
+        <main className="min-h-screen bg-white dark:bg-zinc-950 font-sans transition-colors">
+            <nav className="fixed top-0 left-0 w-full z-50">
+                <NavigationBar />
+            </nav>
 
-            <section className="w-full px-6 md:px-8">
-                {/* Header Section */}
-                <div className="max-w-5xl mx-auto text-center pt-2 pb-12 md:pt-10 md:pb-20">
-                    <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-gray-900 dark:text-white">
-                        {t("title")}
-                    </h1>
-                    <p className="mt-6 text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
-                        {t("desc")}
-                    </p>
-                    <div className="w-24 h-1 bg-amber-500 mx-auto mt-8 rounded-full opacity-80"></div>
-                </div>
+            <section className="pt-32 pb-20 px-6 lg:px-8">
+                <div className="max-w-[1400px] mx-auto">
 
-                {/* Services Section */}
-                <div className="max-w-7xl mx-auto space-y-24 md:space-y-32 mb-32">
-                    {services.map((item, index) => {
-                        const isEven = index % 2 === 0;
-                        return (
-                            <div key={item.title} className="space-y-8 scroll-mt-25" id={item.id}>
-                                {/* Image and Text Section */}
-                                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-start">
-                                    <div className={`relative ${isEven ? "lg:order-1" : "lg:order-2"} w-full`}>
-                                        <div className="aspect-4/3 relative overflow-hidden rounded-lg bg-gray-200
-                                        dark:bg-gray-800 shadow-2xl shadow-stone-200 dark:shadow-none ring-1 ring-black/5">
-                                            <Image
-                                                src={item.image}
-                                                alt={item.alt}
-                                                fill
-                                                loading="eager"
-                                                className="object-cover transition-transform duration-700 "
-                                                sizes="(max-width: 1024px) 100vw, 50vw"
-                                            />
+                    {/* --- HEADER --- */}
+                    <div className="text-center mb-24 md:mb-32">
+                        <h1 className="text-4xl md:text-5xl font-light tracking-tight text-zinc-900 dark:text-white mb-6">
+                            {t("title")}
+                        </h1>
+                        <p className="text-lg text-gray-500 dark:text-gray-400 max-w-2xl mx-auto font-light leading-relaxed">
+                            {t("desc")}
+                        </p>
+                        <div className="w-16 h-[1px] bg-zinc-200 dark:bg-zinc-800 mx-auto mt-8"></div>
+                    </div>
+
+                    {/* --- SERVICES LIST --- */}
+                    <div className="space-y-32 mb-32">
+                        {services.map((item, index) => {
+                            const isEven = index % 2 === 0;
+                            return (
+                                <div
+                                    key={item.title}
+                                    id={item.id}
+                                    className="scroll-mt-32 border-b border-gray-100 dark:border-zinc-900 pb-24 last:border-none last:pb-0"
+                                >
+                                    {/* Service Content Grid */}
+                                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-start mb-16">
+
+                                        {/* Image Side */}
+                                        <div className={`relative w-full ${isEven ? "lg:order-1" : "lg:order-2"}`}>
+                                            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl
+                                    bg-gray-100 dark:bg-zinc-900 shadow-sm border border-gray-100 dark:border-zinc-800 group">
+                                                <Image
+                                                    src={item.image}
+                                                    alt={item.alt}
+                                                    fill
+                                                    loading="eager"
+                                                    className="object-cover transition-transform duration-1000 group-hover:scale-105"
+                                                    sizes="(max-width: 1024px) 100vw, 50vw"
+                                                />
+                                            </div>
+                                        </div>
+
+                                        {/* Text Side */}
+                                        <div className={`flex flex-col justify-center ${isEven ? "lg:order-2" : "lg:order-1"}`}>
+                                            <h2 className="text-3xl font-light text-zinc-900 dark:text-white mb-6">
+                                                {item.title}
+                                            </h2>
+                                            <p className="text-lg font-light text-gray-600 dark:text-gray-300 leading-relaxed">
+                                                {item.description}
+                                            </p>
                                         </div>
                                     </div>
 
-                                    {/* Text Side */}
-                                    <div className={`flex flex-col justify-center ${isEven ? "lg:order-2" : "lg:order-1"}`}>
-                                        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
-                                            {item.title}
-                                        </h2>
-                                        <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
-                                            {item.description}
-                                        </p>
-                                    </div>
-                                </div>
+                                    {/* 2. Use the new Animated FAQ Component here */}
+                                    <ServiceAccordion items={item.faqs} />
 
-                                {/* FAQs Section */}
-                                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                                    {item.faqs.map((faq) => (
-                                        <details
-                                            key={faq.q}
-                                            className="group rounded-xl border bg-white border-gray-200
-                                                    dark:border-white/10 dark:bg-white/5 p-6 min-h-35 open:shadow-lg
-                                                    open:shadow-stone-200/50 dark:open:shadow-none transition-all duration-300"
-                                        >
-                                            <summary className="flex cursor-pointer items-center justify-between font-semibold
-                                                    text-lg text-gray-900 dark:text-white list-none select-none">
-                                                {faq.q}
-                                                <span className="ml-4 text-amber-600 transition-transform duration-300 group-open:rotate-180">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2}
-                                                             stroke="currentColor" className="w-5 h-5">
-                                                            <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-                                                        </svg>
-                                                    </span>
-                                            </summary>
-                                            <p className="mt-4 text-gray-600 dark:text-gray-400 leading-relaxed animate-in
-                                                    slide-in-from-top-2 fade-in duration-300">
-                                                {faq.a}
-                                            </p>
-                                        </details>
-                                    ))}
                                 </div>
-                            </div>
-                        );
-                    })}
+                            );
+                        })}
+                    </div>
+
+                    <ReadyToBookSection />
+                    <FloatingWhatsApp />
+                    <footer>
+                        <Footer />
+                    </footer>
                 </div>
-
-                <ReadyToBookSection/>
-                <FloatingWhatsApp />
-                <footer><Footer /></footer>
             </section>
         </main>
     );
