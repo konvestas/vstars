@@ -1,8 +1,8 @@
 {
   "Metadata": {
     "title": "İstanbul'un Transfer Tercihi | Vstars",
-    "description": "İstanbul'da lüks yolculuk deneyimi. VIP Havalimanı transferleri (IST & SAW), saatlik şoförlü araç kiralama ve Mercedes-Benz araçlarla özel turlar.",
-    "keywords": "İstanbul havalimanı transfer, VIP transfer İstanbul, Sabiha Gökçen transfer, İST havalimanı servisi, Mercedes Vito VIP, Özel şoför İstanbul, Lüks araç kiralama İstanbul, İstanbul otel transferi, Galataport transfer, Güvenli seyahat İstanbul, 24/7 havalimanı transferi, Yönetici araç hizmeti, İstanbul şehir turları"
+    "description": "İstanbul'da lüks yolculuğu deneyimleyin. VIP Havalimanı transferleri (IST & SAW), saatlik şoförlü kiralama ve Mercedes-Benz araçlarla özel turlar.",
+    "keywords": "İstanbul havalimanı transfer, VIP transfer İstanbul, Sabiha Gökçen transfer, IST havalimanı ulaşım, Mercedes Vito VIP, Özel şoför İstanbul, Lüks araç servisi İstanbul, İstanbul otel transferi, Galataport transfer, Güvenli seyahat İstanbul, 24/7 havalimanı transferi, Executive araç servisi, İstanbul şehir turları"
   },
   "ServicesMetadata": {
     "title": "Hizmetlerimiz | Vstars",
@@ -22,6 +22,7 @@
     "ourServices": "Hizmetlerimiz",
     "contact": "İletişim",
     "ourAffiliates": "İş Ortaklarımız",
+    "fleet": "Filo",
     "faq": "SSS",
     "languages": "Diller",
     "languagesOption": {
@@ -42,38 +43,38 @@
       },
       "hourlyHire": {
         "title": "Saatlik Şoförlü Kiralama",
-        "desc": "Tam gün veya saatlik kiralama. Kişisel programınıza göre uyarlanmış, isteğe bağlı lüks ulaşımın keyfini çıkarın."
+        "desc": "Tam gün veya saatlik kiralama. Kişisel programınıza göre uyarlanmış lüks ulaşımın keyfini çıkarın."
       },
       "medicalTourism": {
         "title": "Sağlık Turizmi",
-        "desc": "Sağlık odaklı misafirler için özel, hijyenik ve konforlu ulaşım. Hastanelere ve otellere direkt transferler."
+        "desc": "Sağlık turizmi misafirleri için özel, hijyenik ve konforlu ulaşım. Hastane ve otellere direkt transferler."
       },
       "cityTour": {
         "title": "Şehir Turu",
-        "desc": "Özel şoför eşliğinde İstanbul'u keşfedin. Tarihi simge yapıları ve popüler turistik yerleri kendi temponuzda ziyaret edin."
+        "desc": "İstanbul'u özel bir şoförle keşfedin. Tarihi yerleri ve popüler mekanları kendi hızınızda ziyaret edin."
       }
     },
-    "see_more": "Daha Fazla Gör"
+    "see_more": "Daha Fazla"
   },
   "ChooseUs": {
     "section_title": "Neden Biz?",
-    "section_desc": "Güvenilir, seçkin ve siz ne zaman isterseniz hazır.",
+    "section_desc": "Güvenilir, seçkin ve siz ne zaman isterseniz yanınızda.",
     "highlights": [
       {
         "title": "Önce Güvenlik",
-        "desc": "Huzurlu bir yolculuk için lisanslı şoförler, sigortalı araçlar ve sıkı hijyen standartları."
+        "desc": "Huzurlu bir yolculuk için lisanslı sürücüler, sigortalı araçlar ve sıkı hijyen standartları."
       },
       {
         "title": "Daima Zamanında",
-        "desc": "Uçuş takibi ve akıllı rota planlama, hiçbir karşılama veya bırakma anını kaçırmamanızı sağlar."
+        "desc": "Uçuş takibi ve akıllı rota planlama ile hiçbir buluşmayı veya uçuşu kaçırmazsınız."
       },
       {
-        "title": "Üstün Konfor",
-        "desc": "Geniş oturma alanı, iklim kontrolü ve sarsıntısız sürüş özelliklerine sahip lüks araçlar."
+        "title": "Premium Konfor",
+        "desc": "Geniş koltuklar, iklimlendirme ve sarsıntısız sürüş özelliklerine sahip üst segment araçlar."
       },
       {
         "title": "24/7 Destek",
-        "desc": "Değişiklikler veya özel talepleriniz için her an yardımcı olmaya hazır gerçek danışmanlar."
+        "desc": "Değişiklikler veya özel talepleriniz için her an yardıma hazır gerçek muhataplar."
       }
     ]
   },
@@ -83,14 +84,10 @@
     "items": {
       "Vito": {
         "title": "Mercedes-Benz Vito",
-        "desc": "5 + 2 kişiye kadar kapasite\n6 bagaj kapasitesi\nAmbians aydınlatma\nWifi & Smart TV\nMini-bar\nUSB-C & kablosuz şarj"
-      },
-      "Sprinter": {
-        "title": "Mercedes-Benz Sprinter",
-        "desc": "15 + 1 kişiye kadar kapasite\n6 bagaj kapasitesi\nAmbians aydınlatma\nWifi & Smart TV\nUSB-C & kablosuz şarj"
+        "desc": "5 + 2 kişiye kadar kapasite\n6 valiz kapasitesi\nAmbiyans aydınlatma\nWifi & Smart TV\nMini bar\nUSB-C & kablosuz şarj"
       }
     },
-    "seeMore": "Daha Fazla Gör"
+    "seeMore": "Daha Fazla"
   },
   "BookingWidget": {
     "Tabs": {
@@ -99,74 +96,68 @@
     },
     "Form": {
       "pickUpLocation": "Alış Noktası",
-      "pickUpLocationPlaceHolder": "Alış konumunu girin",
+      "pickUpLocationPlaceHolder": "Alış noktası girin",
       "dropOffLocation": "Varış Noktası",
-      "dropOffLocationPlaceHolder": "Varış konumunu girin",
-
+      "dropOffLocationPlaceHolder": "Varış noktası girin",
       "duration": "Süre",
       "durationPlaceHolder": "Süre Seçin",
       "date": "Tarih",
-      "datePlaceHolder": "Tarih ve Saat Seçin",
-      "insideTitle": "Tarih ve Saat Seçin",
+      "datePlaceHolder": "Tarih & Saat Seçin",
+      "insideTitle": "Tarih & Saat Seçin",
       "availableTime": "Müsait Saatler",
-
-      "PassLugTitle": "Yolcu ve Bagaj Seçin",
+      "PassLugTitle": "Yolcu & Bagaj Seçin",
       "selected": "Seçilen:",
       "passengers": "Yolcu",
       "luggage": "Bagaj",
       "SelectedConfiguration": "Seçilen Yapılandırma:",
-
       "PassengerLuggage": "Yolcu & Bagaj",
       "addressPlaceholder": "Havalimanı, Otel veya Adres girin...",
       "SelectDateHours": "Tarih & Saat Seçin",
       "selectHours": "Süre Seçin",
       "hour": "Saat",
-
       "passengersAndLuggage": "Yolcu & Bagaj",
       "guestInfo": "Misafir Bilgileri",
-      "driverNeeds": "Şoför Notları",
+      "driverNeeds": "Sürücü Notları",
       "fullName": "Ad Soyad",
       "phoneNumber": "Telefon Numarası",
       "email": "E-posta Adresi",
       "flightNumber": "Uçuş Numarası (Opsiyonel)",
-      "signboardName": "Karşılama Levhası (Opsiyonel)",
-      "signboardPlaceholder": "Karşılama levhasında yazacak isim",
+      "signboardName": "Karşılama Panosu İsmi (Opsiyonel)",
+      "signboardPlaceholder": "Karşılama tabelasındaki isim",
       "specialRequests": "Özel Talepler",
-      "notesPlaceholder": "Bebek koltuğu, ekstra bagaj vb...",
+      "notesPlaceholder": "Çocuk koltuğu, ekstra bagaj vb...",
       "passport": {
         "title": "Pasaport Fotoğrafı (Opsiyonel)",
-        "formats": "JPG, PNG, WebP yükleyin (Maks {size}MB)",
+        "formats": "JPG, PNG, WebP Yükleyin (Maks {size}MB)",
         "chooseFile": "Dosya Seç",
         "processing": "İşleniyor...",
         "uploaded": "✓ Yüklendi"
       }
     },
-
     "PackageDetail": {
       "title": "Paket Detayları",
-      "waitTime": "30 dakikalık ücretsiz bekleme süresi dahil",
-      "greet": "Karşılama (Meet & Greet) hizmeti dahil",
-      "alert": "Misafir/bagaj kapasitelerine uyulmalıdır. Emin değilseniz, hizmetin reddedilmemesi için daha büyük bir sınıf seçiniz."
+      "waitTime": "30 dakika ücretsiz bekleme süresi",
+      "greet": "Karşılama hizmeti dahildir",
+      "alert": "Yolcu/bagaj kapasitelerine uyulmalıdır. Emin değilseniz, hizmetin reddedilmemesi için daha büyük bir sınıf seçiniz."
     },
-
     "GuestInfo": {
       "title": "Son Detaylar",
-      "desc": "Lütfen iletişim bilgilerinizi sağlayın",
+      "desc": "Lütfen iletişim bilgilerinizi belirtin",
       "fullname": "Ad Soyad",
       "phone": "Telefon numarası",
       "email": "E-posta Adresi",
       "flightNumber": "Uçuş numarası",
       "optional": "(Opsiyonel)",
-      "driverNote": "Şoföre not:",
-      "driverNotePlaceHolder": "Bebek koltuğu gerekli, ekstra bagaj vb...",
+      "driverNote": "Sürücüye not:",
+      "driverNotePlaceHolder": "Çocuk koltuğu gerekli, ekstra bagaj vb...",
       "passportPhoto": "Pasaport Fotoğrafı",
       "click": "Pasaport fotoğrafı yüklemek için tıklayın",
       "summaryEstimated": "Tahmini Toplam Tutar:",
       "reserve": "Rezervasyon Yap"
     },
     "Summary": {
-      "title": "Rezervasyonunuzu Gözden Geçirin",
-      "desc": "Rezervasyonunuzu tamamlayın",
+      "title": "Rezervasyonunuzu İnceleyin",
+      "desc": "Rezervasyonunuzu sonlandırın",
       "bookingSummary": "Rezervasyon Özeti",
       "serviceType": "Hizmet Türü:",
       "guest": "Misafir:",
@@ -179,40 +170,37 @@
       "pax": "{count} Kişi",
       "bag": "Bagaj:",
       "total": "Toplam Tutar",
-      "terms": "Şartlar ve Koşulları Görüntüle"
+      "terms": "Şartlar & Koşulları Görüntüle"
     },
     "Shared": {
       "continue": "Devam Et",
       "back": "Geri",
       "submit": "Gönder",
       "confirm": "Onayla",
-      "cancel": "İptal Et"
+      "cancel": "iptal"
     }
   },
   "ReadyToBook": {
-    "title": "Yolculuğunuzu rezerve etmeye hazır mısınız?",
-    "desc": "Transferinizi veya turunuzu size özel planlayalım — hızlı yanıtlar, gerçek kişiler, 24/7 destek.",
+    "title": "Yolculuğunuz için rezervasyon yapmaya hazır mısınız?",
+    "desc": "Transferinizi veya turunuzu size göre tasarlayalım — hızlı yanıtlar, gerçek kişiler, 24/7 destek.",
     "contactUs": "Bize Ulaşın",
-    "bookNow": "Hemen Rezerve Et"
+    "bookNow": "Hemen Rezervasyon Yap"
   },
   "Footer": {
     "downloadApp": "Uygulamayı İndir",
-    "services": "Hizmetler",
+    "services": "Hizmetlerimiz",
     "airportTransfer": "Havalimanı Transferi",
     "hourlyChauffeurRide": "Saatlik Şoförlü Yolculuk",
     "medicalTourism": "Sağlık Turizmi",
     "cityTours": "Şehir Turu",
-
-    "Affiliates": "İş Ortakları",
-
+    "Affiliates": "İş Ortaklarımız",
     "Support": "Destek",
     "contactUs": "Bize Ulaşın",
     "helpFaq": "Yardım & SSS",
-
     "getInTouch": "Bize Ulaşın:",
-    "questions": "Sorularınız, iş ortaklıkları veya rezervasyonlar için buradayız.",
+    "questions": "Sorular, iş ortaklıkları veya rezervasyonlar için buradayız.",
     "goToContactPage": "İletişim Sayfasına Git",
-    "premium": "Premium şoförlü araç & seyahat hizmetleri"
+    "premium": "Premium şoförlü ulaşım & seyahat hizmetleri"
   },
   "ServicesPage": {
     "title": "Dünya Standartlarında Hizmetler",
@@ -220,104 +208,140 @@
     "items": {
       "airportTransfers": {
         "title": "Havalimanı Transferleri",
-        "desc": "İstanbul Havalimanı (IST) ve Sabiha Gökçen Havalimanı (SAW) seçenekleriyle, havalimanına ulaşımınızı veya dönüşünüzü konforla gerçekleştirin. Toplu taşıma stresinden ve güvenilmeyen taksilerden kurtulun; şoförünüz sizi zamanında karşılayacak ve doğrudan varış noktanıza ulaştıracaktır. Uçuşunuzu gerçek zamanlı olarak takip ediyor, rötarlara göre programımızı güncelliyoruz. Deneyimli ve yerel bilgiye sahip şoförlerimiz bagajlarınızla ilgilenirken size sadece yolculuğun tadını çıkarmak kalır. Aileler ve gruplar için lüks sedan veya geniş minibüs seçeneklerimiz arasından tercihinizi yapın. Şeffaf fiyatlandırma ve kolay çevrimiçi rezervasyon ile her yolculuk sorunsuz başlar ve biter."
+        "desc": "İstanbul Havalimanı (IST) ve Sabiha Gökçen Havalimanı'nda (SAW) sunulan transfer hizmetimizle konforlu bir şekilde varış yapın veya ayrılın. Toplu taşıma stresini ve güvenilmez taksileri geride bırakın; şoförünüz sizi zamanında karşılayacak ve doğrudan gideceğiniz yere ulaştıracaktır. Uçuşunuzu gerçek zamanlı olarak takip ediyor, rötarlara göre programımızı güncelliyoruz. Deneyimli ve yerel bilgiye sahip sürücülerimiz bagajlarınızla ilgilenerek sarsıntısız bir yolculuk sunar. Aileler ve gruplar için lüks sedanlar veya geniş vanlar arasından seçim yapın. Şeffaf fiyatlandırma ve zahmetsiz online rezervasyon ile her yolculuk kusursuz başlar ve biter."
       },
       "hourlyHire": {
         "title": "Saatlik Şoförlü Kiralama",
-        "desc": "Şehir içindeki çok duraklı seyahatleriniz için tasarlanmış saatlik şoför hizmetimizle tam esnekliğin tadını çıkarın. Kendi rotanızı belirleyin ve profesyonel şoförünüz beklemedeyken kendi temponuzda hareket edin. Taksilerle, park yeriyle veya toplu taşımayla uğraşmayın, premium bir araçta konforla seyahat edin. Her durakta kapının önünden alınmanın ve bırakılmanın rahatlığını yaşayın. Siz dışarıdayken kişisel eşyalarınızı araçta güvenle bırakabilirsiniz. Şeffaf saatlik fiyatlandırmamıza mesafe, vergiler ve otoyol ücretleri dahildir. İş toplantıları, etkinlikler veya geziler için ideal olan bu hizmet, biz sürüşle ilgilenirken sizin gününüze odaklanmanızı sağlar."
+        "desc": "Şehir içindeki çok duraklı seyahatler için tasarlanmış saatlik şoförlü hizmetimizle tam esnekliğin tadını çıkarın. Profesyonel şoförünüz hazırda beklerken rotanızı kendiniz belirleyin. Taksilerle, park yeriyle veya toplu taşımayla uğraşmayın. Her durakta kapıdan kapıya hizmet alın. Araçtayken kişisel eşyalarınızı güvenle bırakabilirsiniz. Şeffaf saatlik fiyatlandırmaya mesafe, vergiler ve otoyol ücretleri dahildir. İş toplantıları, etkinlikler, turistik geziler veya boş vakitleriniz için idealdir."
       },
       "medicalTourism": {
         "title": "Sağlık Turizmi",
-        "desc": "Güvenilir ortağımız Can Duman Sağlık Turizmi aracılığıyla, geniş bir yelpazedeki yüksek kaliteli sağlık ve zindelik hizmetlerine erişimi kolaylaştırıyoruz. Estetik cerrahi, diş bakımı ve saç ekiminden ileri düzey tıbbi prosedürlere kadar tüm hizmetler deneyimli sağlık kurumlarıyla koordine edilmektedir. Rolümüz, hastaları güvenilir sağlık sağlayıcılarıyla buluşturarak, yolculuk boyunca konfor, şeffaflık ve profesyonel koordinasyona öncelik veren sorunsuz bir deneyim sağlamaktır."
+        "desc": "Güvenilir iş ortağımız Can Duman Sağlık Turizmi aracılığıyla estetik cerrahiden diş bakımına, saç ekiminden ileri tıbbi prosedürlere kadar geniş bir yelpazede yüksek kaliteli hizmetlere erişim sağlıyoruz. Tüm hizmetler deneyimli sağlık kuruluşlarıyla koordine edilir. Rolümüz, hastaları güvenilir sağlayıcılarla buluşturarak konfor ve şeffaflık önceliğinde organize bir deneyim sunmaktır."
       },
       "cityTour": {
         "title": "Şehir Turu",
-        "desc": "Özel bir şoför ve size özel esnek bir rota ile İstanbul'u konfor içinde keşfedin. Trafik, park yeri veya toplu taşıma endişesi duymadan ikonik simge yapıları ve gizli kalmış güzellikleri kendi temponuzda ziyaret edin. Şoförünüz gün boyu hazır beklerken premium bir araçla kapıdan kapıya hizmetin keyfini çıkarın. Gezi, alışveriş veya kültürel deneyimler için ideal olan şehir turlarımız, şehri keşfetmenin rahat ve kişiselleştirilmiş bir yolunu sunar. Siz anı yaşamaya odaklanın, sürüşü bize bırakın."
+        "desc": "Özel bir sürücü ve size özel esnek bir programla İstanbul'u konfor içinde keşfedin. Trafik, park yeri veya ulaşım endişesi taşımadan ikonik yapıları ve gizli kalmış güzellikleri kendi hızınızda ziyaret edin. Şoförünüz gün boyu hazır beklerken birinci sınıf bir araçta kapıdan kapıya hizmetin keyfini sürün. Alışveriş veya kültürel deneyimler için ideal olan şehir turlarımız, şehri keşfetmenin en rahat yoludur."
       }
     },
     "FAQS": {
       "title": "Sıkça Sorulan Sorular",
       "items": {
         "q1": "Havalimanında karşılama hizmeti veriyor musunuz?",
-        "a1": "Evet, şoförlerimiz sizi İstanbul Havalimanı (IST) veya Sabiha Gökçen (SAW) gelen yolcu terminalinde, isminizin yazılı olduğu kişiye özel bir levha ile bekleyecektir.",
-
+        "a1": "Evet, şoförlerimiz İstanbul Havalimanı (IST) veya Sabiha Gökçen (SAW) gelen yolcu terminalinde sizi isminizin yazılı olduğu bir pano ile bekleyecektir.",
         "q2": "Uçuş takibi dahil mi?",
-        "a2": "Kesinlikle, şoförünüzün siz indiğinizde orada olması için alış saatinizi otomatik olarak uçuş verilerinize göre güncelliyoruz.",
-
+        "a2": "Kesinlikle. Uçuşunuzu takip ediyor ve iniş yaptığınızda şoförünüzün orada olması için karşılama zamanını otomatik olarak güncelliyoruz.",
         "q3": "Hem IST hem de Sabiha Gökçen'den transfer yapıyor musunuz?",
-        "a3": "Evet, hem İstanbul Havalimanı (IST) hem de Sabiha Gökçen Havalimanı'ndan (SAW) şehir merkezindeki ve çevre bölgelerdeki tüm otellere veya adreslere 24/7 premium transfer hizmeti sunuyoruz.",
-
+        "a3": "Evet, her iki havalimanından şehir içindeki otellere, konutlara veya istenilen herhangi bir noktaya 24/7 premium transfer hizmeti sunuyoruz.",
         "q4": "Kişi başı mı yoksa araç başı mı ücret alıyorsunuz?",
-        "a4": "Ücretlendirmemiz kişi başı değil, araç başı sabit bir oran üzerindendir. İster tek başınıza ister bir grupla seyahat edin, tek bir sabit ücret ödersiniz; gizli maliyet yoktur.",
-
-        "q5": "Günün her saatinde karşılama yapıyor musunuz?",
-        "a5": "Evet, operasyonlarımız yılın 365 günü, haftanın 7 günü 24 saat kesintisiz devam etmektedir. Gece geç saatte veya sabahın erken saatlerinde, ekibimiz her zaman hizmetinizdedir.",
-
+        "a4": "Ücretlendirmemiz kişi başı değil, araç başı sabit fiyattır. İster tek başınıza ister bir grupla seyahat edin, gizli maliyet olmadan tek bir sabit ücret ödersiniz.",
+        "q5": "Bizi günün her saatinde karşılayabilir misiniz?",
+        "a5": "Evet, operasyonlarımız yılın 365 günü, 24 saat kesintisiz devam etmektedir.",
         "q6": "Transfer araçları ne kadar önceden rezerve edilmeli?",
-        "a6": "Müsaitliği garanti altına almak için en az 48 saat öncesinden rezervasyon yapmanızı öneririz. Ancak, mümkün olan her durumda son dakika taleplerini karşılamak için elimizden geleni yapıyoruz.",
-
-        "q7": "Birden fazla durak yapabilir miyim veya rotayı değiştirebilir miyim?",
-        "a7": "Evet. Saatlik kiralama hizmetimizde araç tamamen size özeldir. Dilediğiniz kadar durak yapma, rotanızı değiştirme veya İstanbul genelindeki ardışık toplantılarınıza katılma konusunda tam esnekliğe sahipsiniz.",
-
-        "q8": "Ben toplantıdayken veya alışveriş yaparken şoför beni bekliyor mu?",
-        "a8": "Kesinlikle. Siz işlerinizi hallederken özel şoförünüz yakındaki uygun bir noktada hazır bekler ve siz hazır olduğunuz anda sizi almak üzere kapıya gelir.",
-
-        "q9": "Tur rehberi veya araç içi özel ikram gibi ek hizmetler talep edebilir miyim?",
-        "a9": "Elbette, lisanslı tur rehberleri, bebek koltukları ve Wi-Fi gibi özel araç içi imkanlar ayarlayabiliriz. Lütfen ihtiyaçlarınızı rezervasyon sırasında belirtin.",
-
-        "q10": "Hangi tür tıbbi tedavileri organize ediyorsunuz?",
-        "a10": "Saç Ekimi, Diş Estetiği ve Plastik Cerrahi koordinasyonunda uzmanız. Ortağımız Can Duman Sağlık Turizmi aracılığıyla sizi her prosedür için alanında uzman isimlerle buluşturuyoruz.",
-
-        "q11": "Araçlar dezenfekte ediliyor mu ve hijyenik mi?",
-        "a11": "Evet, araçlarımız güvenli bir ortam sağlamak için her yolculuktan önce titizlikle temizlenmekte ve dezenfekte edilmektedir.",
-
-        "q12": "Tüm seyahat programını siz mi yönetiyorsunuz?",
-        "a12": "Evet. VIP havalimanı transferlerinden otel koordinasyonuna ve klinik randevularına kadar tüm sürecinizi biz yönetiyoruz, böylece siz tamamen tedavinize odaklanabilirsiniz.",
-
-        "q13": "Kendi gezi rotamı oluşturabilir miyim?",
-        "a13": "Kesinlikle. Şehir turu %100 esnektir. Kendi rotanızı oluşturabilir, hangi simge yapıları ziyaret edeceğinizi seçebilir ve her durakta ne kadar kalacağınıza kendiniz karar verebilirsiniz.",
-
+        "a6": "Müsaitliği garanti altına almak için en az 48 saat öncesinden rezervasyon yapmanızı öneririz. Ancak son dakika taleplerini de imkanlarımız dahilinde karşılamaya çalışıyoruz.",
+        "q7": "Birden fazla durak yapabilir miyim ve rotayı değiştirebilir miyim?",
+        "a7": "Evet. Saatlik kiralama hizmetimizde araç tamamen size özeldir. İstediğiniz kadar durak yapabilir veya rotanızı değiştirebilirsiniz.",
+        "q8": "Şoför ben toplantıdayken, alışveriş yaparken veya gezerken beni bekler mi?",
+        "a8": "Kesinlikle. Özel şoförünüz siz hazır olana kadar uygun bir noktada bekler ve istediğiniz an sizi kapıdan alır.",
+        "q9": "Tur rehberi veya özel araç içi ikramlar talep edebilir miyim?",
+        "a9": "Evet, lisanslı tur rehberleri, bebek koltukları, özel ikramlar veya Wi-Fi gibi taleplerinizi karşılayabiliriz. Lütfen rezervasyon sırasında belirtin.",
+        "q10": "Hangi tür tıbbi tedavileri koordine ediyorsunuz?",
+        "a10": "Can Duman Sağlık Turizmi ortaklığımızla Saç Ekimi, Diş Estetiği ve Estetik Cerrahi alanlarında uzman ekiplerle koordinasyon sağlıyoruz.",
+        "q11": "Araçlar hijyenik mi?",
+        "a11": "Evet, araçlarımız güvenli bir ortam sunmak için her yolculuktan önce titizlikle temizlenir ve dezenfekte edilir.",
+        "q12": "Tüm seyahat planını yönetiyor musunuz?",
+        "a12": "Evet. VIP transferlerden otel koordinasyonuna ve klinik randevularına kadar tüm sürecinizi yönetiyoruz.",
+        "q13": "Kendi rotamı oluşturabilir miyim?",
+        "a13": "Kesinlikle. Şehir turlarımız %100 esnektir. Hangi durağı ne kadar süreyle ziyaret edeceğinize siz karar verirsiniz.",
         "q14": "Profesyonel bir tur rehberi talep edebilir miyiz?",
-        "a14": "Evet. Şoförlerimiz güvenli ulaşıma odaklanırken, talep üzerine (müsaitlik durumuna ve ek ücrete tabi olarak) size eşlik edecek lisanslı bir profesyonel tur rehberi ayarlayabiliriz.",
-
+        "a14": "Evet. Müsaitlik durumuna ve ek ücrete tabi olarak lisanslı bir profesyonel tur rehberi ayarlayabiliriz.",
         "q15": "Otopark veya bekleme ücretleri konusunda endişelenmeli miyim?",
-        "a15": "Hayır. Tüm lojistiği biz hallediyoruz. Şoförünüz sizi tam giriş kapısında bırakır ve yakınlarda bekler. Otopark yeri arama veya taksi çağırma stresi olmadan gezinin tadını çıkarabilirsiniz."
+        "a15": "Hayır. Tüm lojistik süreçle biz ilgileniyoruz. Siz sadece seyahatinize odaklanın."
       }
     }
   },
   "AffiliatesPage": {
     "title": "İş Ortaklarımız",
-    "desc": "Konfor, güvenlik ve verimlilik için tasarlanmış birinci sınıf şoförlü hizmetleri deneyimleyin.",
+    "desc": "Premium hizmetlere ve uzmanlığa erişmek için çözüm ortaklarımızı keşfedin.",
     "items": {
       "medical": {
         "title": "Can Duman Sağlık Turizmi",
-        "desc": "Can Duman Sağlık Turizmi, estetik cerrahiden diş bakımına kadar geniş bir yelpazedeki tıbbi hizmetlere erişimi kolaylaştırır. Tüm süreç, hastanın konforu ön planda tutularak deneyimli kurumlarla koordine edilir."
+        "desc": "Estetik cerrahiden diş bakımına ve saç ekimine kadar geniş bir yelpazede yüksek kaliteli sağlık hizmetlerine erişimi kolaylaştırır."
       },
       "travelAgency": {
         "title": "Can Duman Seyahat Acentası",
-        "desc": "Bireysel ve kurumsal ihtiyaçlar için özelleştirilmiş seyahat çözümleri sunar. Müşteri odaklı hizmet anlayışıyla seyahat planlama ve lojistik desteği sağlar."
+        "desc": "Bireysel ve kurumsal ihtiyaçlar için özelleştirilmiş seyahat çözümleri, planlama ve ulaşım lojistiği sunar."
       },
       "visitoria": {
         "title": "Visitoria Grup Sigorta",
-        "desc": "Finans ve sigorta hizmetlerinde 25 yılı aşkın deneyimiyle sağlık, seyahat ve kurumsal sigorta dallarında esnek çözümler sunar."
+        "desc": "Finans ve sigorta sektöründe 25 yılı aşkın tecrübesiyle kasko, sağlık, seyahat ve konut gibi pek çok branşta esnek çözümler sunar."
       },
       "danismanlik": {
         "title": "Can Duman Danışmanlık",
-        "desc": "Planlama, koordinasyon ve süreç yönetimi konularında profesyonel rehberlik sağlar. Karmaşık prosedürleri basitleştirerek verimli sonuçlar hedefler."
+        "desc": "Planlama, koordinasyon ve süreç yönetimi konularında bireylere ve kuruluşlara profesyonel rehberlik sağlar."
       },
       "agon": {
         "title": "Agon",
-        "desc": "Tekstil, özel etkinlikler ve e-ticaret gibi alanlarda faaliyet gösteren çok boyutlu bir markadır. Estetik ve kaliteye odaklanan vizyonuyla fark yaratır."
+        "desc": "Tekstil, etkinlik yönetimi, organik ürünler ve e-ticaret alanlarında faaliyet gösteren, estetik ve kalite odaklı çok boyutlu bir markadır."
       },
       "akademi": {
         "title": "Can Duman Akademi",
-        "desc": "Sürekli öğrenme ve kişisel gelişim inancıyla yüksek kaliteli eğitim içerikleri sunan akademi program ortağımızdır."
+        "desc": "“Herkes için eğitim, birlikte gelişim” ilkesiyle kişisel ve mesleki gelişim içerikleri sunan eğitim platformudur."
+      }
+    }
+  },
+  "FleetPage": {
+    "title": "Filomuzu Keşfedin",
+    "description": "",
+    "secondTitle": "Mercedes-Benz Vito Maybach",
+    "secondDescription": "Titizlikle bakımı yapılan her aracımız, özel ofisinize dönüşür. Kendi programınızı belirleyin ve şoförünüz hazırda beklerken rotanızın tadını çıkarın.",
+    "servicesTitle": "Hizmet Standartları",
+    "servicesDesc": "Sadece bir yolculuktan fazlası. Her seyahat, verimlilik ve rahatlama için en iyi ortamı sunmak üzere tasarlanmıştır.",
+    "items": {
+      "details": {
+        "capacityTitle": "Kapasite",
+        "capacityDesc": "5 + 2 kişiye kadar",
+        "luggageTitle": "Bagaj",
+        "luggageDesc": "6 valiz",
+        "AmbianceTitle": "Ambiyans",
+        "AmbianceDesc": "Ambiyans aydınlatma",
+        "ConnectivityTitle": "Bağlantı",
+        "ConnectivityDesc": "Wifi & Smart TV",
+        "RefreshmentsTitle": "İkramlar",
+        "RefreshmentsDesc": "Mini bar",
+        "PowerTitle": "Güç",
+        "PowerDesc": "USB-C & kablosuz şarj"
+      },
+      "services": {
+        "professionalChauffeurs": {
+          "title": "Profesyonel Şoförler",
+          "description": "Eğitimli şoförler tarafından sürülür, her zaman gizlilik ve profesyonellik garanti edilir."
+        },
+        "privateConfidential": {
+          "title": "Özel & Gizli",
+          "description": "Aracınız özel bir ofise dönüşerek gizli görüşmeler yapmanıza ve kesintisiz çalışmanıza olanak tanır."
+        },
+        "stayConnected": {
+          "title": "Bağlantıda Kalın",
+          "description": "Cihazlarınızı yolculuk boyunca şarjda tutmak için Lightning ve USB-C şarj üniteleri mevcuttur."
+        },
+        "onboardWifi": {
+          "title": "Araç İçi Wi-Fi",
+          "description": "Yüksek hızlı internet bağlantısı ile işlerinizi takip edebilir veya eğlence içerikleri izleyebilirsiniz."
+        },
+        "climateMedia": {
+          "title": "Klima & Medya",
+          "description": "Kabin ortamı tamamen sizin kontrolünüzde. Şoförünüz iklimi ve müziği tercihinize göre ayarlar."
+        },
+        "thoughtfulAmenities": {
+          "title": "İnce Detaylar",
+          "description": "Tazelenmeniz için ücretsiz su, kağıt mendil ve dezenfektan havlular mevcuttur."
+        }
       }
     }
   },
   "ContactPage": {
-    "title": "İletişime Geçin",
-    "description": "Transferinizle ilgili sorularınız mı var veya özel bir teklif mi istiyorsunuz? Ekibimiz 24/7 size yardımcı olmaya hazır.",
+    "title": "Bize Ulaşın",
+    "description": "Transferinizle ilgili sorularınız mı var veya özel bir teklif mi istiyorsunuz? Ekibimiz 24/7 size yardıma hazır.",
     "infoTitle": "İletişim Bilgileri",
     "infoDesc": "İstanbul seyahatinizin sorunsuz geçmesi için telefon, e-posta ve WhatsApp üzerinden bize ulaşabilirsiniz.",
     "phone": "Telefon & WhatsApp",
@@ -335,8 +359,8 @@
       "messagePlaceholder": "Size nasıl yardımcı olabiliriz?",
       "submit": "Mesaj Gönder"
     },
-    "successMessage": "Mesajınız başarıyla gönderildi! Sizinle en kısa sürede iletişime geçeceğiz.",
-    "errorMessage": "Bir şeyler ters gitti. Lütfen tekrar deneyin."
+    "successMessage": "Mesaj başarıyla gönderildi! Sizinle en kısa sürede iletişime geçeceğiz.",
+    "errorMessage": "Bir hata oluştu. Lütfen tekrar deneyin."
   },
   "FAQPage": {
     "title": "Sıkça Sorulan Sorular",
@@ -348,19 +372,11 @@
         "questions": {
           "1": {
             "q": "Havalimanında karşılama hizmeti veriyor musunuz?",
-            "a": "Evet, şoförlerimiz sizi gelen yolcu terminalinde (IST veya SAW) isminizin yazılı olduğu bir levha ile karşılayacaktır."
+            "a": "Evet, şoförlerimiz İstanbul Havalimanı (IST) veya Sabiha Gökçen (SAW) gelen yolcu terminalinde sizi isminizin yazılı olduğu bir pano ile karşılar."
           },
           "2": {
             "q": "Uçuş takibi dahil mi?",
-            "a": "Evet, uçuşunuzu gerçek zamanlı izleyerek alış saatinizi iniş vaktinize göre güncelliyoruz."
-          },
-          "3": {
-            "q": "Her iki havalimanından da transfer yapıyor musunuz?",
-            "a": "Evet, İstanbul (IST) ve Sabiha Gökçen'den (SAW) tüm şehre 24/7 hizmet veriyoruz."
-          },
-          "4": {
-            "q": "Günün her saatinde karşılama yapıyor musunuz?",
-            "a": "Evet, ekibimiz yılın her günü 24 saat kesintisiz hizmet vermektedir."
+            "a": "Kesinlikle. Şoförünüzün tam zamanında orada olması için uçuşunuzu takip ediyoruz."
           }
         }
       },
@@ -368,63 +384,8 @@
         "title": "Rezervasyon & Süreç",
         "questions": {
           "1": {
-            "q": "Ne kadar önceden rezervasyon yapmalıyım?",
-            "a": "En az 48 saat öncesini öneririz, ancak son dakika taleplerine de imkanlar dahilinde yanıt veriyoruz."
-          },
-          "2": {
-            "q": "Rotayı yolculuk sırasında değiştirebilir miyim?",
-            "a": "Evet, saatlik kiralama hizmetimizde durak ekleme veya rota değiştirme konusunda özgürsünüz."
-          },
-          "3": {
-            "q": "Kendi tur programımı oluşturabilir miyim?",
-            "a": "Kesinlikle. Şehir turlarımız tamamen esnektir ve sizin tercihlerinize göre şekillenir."
-          },
-          "4": {
-            "q": "Şoför toplantım bitene kadar bekler mi?",
-            "a": "Evet, özel şoförünüz siz hazır olana kadar yakındaki bir noktada beklemede kalacaktır."
-          }
-        }
-      },
-      "vehicles": {
-        "title": "Araçlar & İmkanlar",
-        "questions": {
-          "1": {
-            "q": "Araçlar hijyenik mi?",
-            "a": "Evet, tüm araçlarımız her yolculuktan önce detaylı şekilde temizlenip dezenfekte edilmektedir."
-          },
-          "2": {
-            "q": "Bebek koltuğu gibi ekstralar var mı?",
-            "a": "Evet, bebek koltuğu ve Wi-Fi gibi hizmetlerimiz mevcuttur; rezervasyon sırasında belirtmeniz yeterlidir."
-          },
-          "3": {
-            "q": "Rehber hizmeti alabilir miyiz?",
-            "a": "Evet, talep üzerine profesyonel bir tur rehberi organizasyonunu ek ücretle yapabiliriz."
-          }
-        }
-      },
-      "billing": {
-        "title": "Fiyatlandırma",
-        "questions": {
-          "1": {
-            "q": "Fiyatlar kişi başı mı?",
-            "a": "Hayır, fiyatlarımız kişi sayısından bağımsız olarak araç başına sabittir."
-          },
-          "2": {
-            "q": "Otopark ücreti ödüyor muyuz?",
-            "a": "Hayır, lojistik ve bekleme ücretlerini biz üstleniyoruz; size yansıyan ekstra bir masraf olmaz."
-          }
-        }
-      },
-      "medical": {
-        "title": "Tıbbi Hizmetler",
-        "questions": {
-          "1": {
-            "q": "Hangi tedaviler için koordinasyon yapıyorsunuz?",
-            "a": "Saç ekimi, diş estetiği ve plastik cerrahi alanlarında uzman kliniklerle çalışıyoruz."
-          },
-          "2": {
-            "q": "Seyahatimin tamamını planlıyor musunuz?",
-            "a": "Evet, transferden konaklamaya ve randevu takibine kadar tüm süreci sizin için yönetiyoruz."
+            "q": "Transfer aracı ne kadar önceden rezerve edilmeli?",
+            "a": "Müsaitliği garanti etmek adına en az 48 saat önceden rezervasyon yapmanızı öneririz."
           }
         }
       }

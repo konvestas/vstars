@@ -6,15 +6,23 @@
   },
   "ServicesMetadata": {
     "title": "Services | Vstars",
-    "description": "Experience premium chauffeur services designed for comfort, safety, and efficiency."
+    "description": "VIP Airport transfers, Hourly Chauffeur Hire, and Medical Tourism transport in Istanbul. Professional drivers and luxury vehicles."
+  },
+  "FleetMetadata": {
+    "title": "Fleet | Vstars",
+    "description": "Explore our Mercedes-Benz Vito Maybach fleet. Features include privacy partitions, Wi-Fi, Smart TV, and minibar for your comfort."
   },
   "AffiliatesMetadata": {
     "title": "Affiliates | Vstars",
-    "description": "Experience premium chauffeur services designed for comfort, safety, and efficiency."
+    "description": "Our trusted partners in Medical Tourism, Travel, and Insurance. Facilitating your complete Istanbul experience with Can Duman."
   },
   "ContactPageMetadata": {
     "title": "Contact Us | Vstars",
-    "description": "Experience premium chauffeur services designed for comfort, safety, and efficiency."
+    "description": "Get in touch for 24/7 VIP transfer support in Istanbul. Call, WhatsApp, or email us for bookings and custom itineraries."
+  },
+  "FAQPageMetadata": {
+    "title": "Help & FAQ | Vstars",
+    "description": "Answers to common questions about booking, airport meeting points, payment methods, and vehicle amenities."
   },
   "Navbar": {
     "menu": "Menu",
