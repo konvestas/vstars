@@ -1,10 +1,10 @@
 'use client';
 
-import React, { useState, useMemo } from 'react';
+import { useState, useMemo } from 'react';
 import { useTranslations, useMessages } from 'next-intl';
 import NavigationBar from "@/components/layout/navigation-bar";
 import Footer from "@/components/layout/footer";
-import ReadyToBookSection from "@/components/layout/ready-to-book";
+import ReadyToBook from "@/components/layout/ready-to-book";
 
 // --- Types ---
 type QuestionItem = {
@@ -217,7 +217,7 @@ export default function FAQPage() {
                 </div>
             </section>
 
-            <ReadyToBookSection />
+            <ReadyToBook />
             <footer className="border-t border-gray-200 dark:border-white/10">
                 <Footer />
             </footer>
