@@ -14,9 +14,9 @@ export default function NavigationBar() {
     const [isServicesOpen, setIsServicesOpen] = useState(false);
     const [isLanguageOpen, setIsLanguageOpen] = useState(false);
 
-    const menuLinkStyle = cn("font-lexend font-semibold  block rounded-md p-3 outline-none transition-colors hover:bg-slate-100" +
+    const menuLinkStyle = cn("font-sans block rounded-md p-3 outline-none transition-colors hover:bg-slate-100" +
         " hover:text-black focus:bg-slate-100  focus:text-black cursor-pointer text-black");
-    const dropdownToggleStyle = "font-lexend font-semibold  text-sm flex items-center justify-between w-full px-3 py-2 " +
+    const dropdownToggleStyle = "font-sans font-semibold flex items-center justify-between w-full px-3 py-2 " +
         "rounded-md transition-colors text-black hover:bg-slate-100 hover:text-black focus:bg-slate-100 cursor-pointer";
 
     return (
