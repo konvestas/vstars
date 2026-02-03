@@ -1,5 +1,4 @@
 import React from 'react';
-import { getTranslations } from 'next-intl/server';
 import { Metadata } from "next";
 import { useTranslations } from 'next-intl';
 import { Mail, MapPin, Phone } from 'lucide-react';
@@ -7,40 +6,21 @@ import NavigationBar from "@/components/layout/navigation-bar";
 import Footer from "@/components/layout/footer";
 import FloatingWhatsApp from "@/components/layout/floating-whatsapp";
 import ContactForm from "@/components/contactPage/contact-form";
+import {createPageMetadata} from "@/lib/metadata";
 
-export async function generateMetadata({ params, }: {
-    params: Promise<{ locale: string }>;
-}): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
     const { locale } = await params;
-    const t = await getTranslations({ locale, namespace: "ContactPageMetadata" });
-    return {
-        title: t("title"),
-        description: t("description"),
-        alternates: {
-            canonical: `/${locale}/contact`,
-        },
-        openGraph: {
-            title: t("title"),
-            description: t("description"),
-            url: `https://www.vstarstransfer.com/${locale}/contact`,
-            type: "website",
-        },
-        twitter: {
-            card: "summary_large_image",
-            title: t("title"),
-            description: t("description"),
-            images: {
-                url: "https://www.vstarstransfer.com/images/vstars-fleet.webp",
-                alt: "Vstars Transfers luxury fleet in Istanbul",
-                type: "image/webp",
-            }
-        },
-    };
+    return createPageMetadata({
+        locale,
+        namespace: "ContactPageMetadata",
+        path: "contact",
+        image: "/vstars/vstars-fleet.webp",
+    });
 }
 
 export default function ContactPage() {
     const t = useTranslations('ContactPage');
-    const mapSrc = `https://maps.google.com/maps?q=40.884600538194476,29.20526621261032&t=&z=15&ie=UTF8&iwloc=&output=embed`; // Ensure this is your valid map link
+    const mapSrc = `https://maps.google.com/maps?q=40.884600538194476,29.20526621261032&t=&z=15&ie=UTF8&iwloc=&output=embed`;
 
     return (
         <main className="min-h-screen bg-white dark:bg-zinc-950 font-sans">
@@ -119,7 +99,7 @@ export default function ContactPage() {
                             </div>
 
                             {/* Map Container */}
-                            <div className="w-full h-[350px] rounded-3xl overflow-hidden border border-gray-100 dark:border-zinc-800 shadow-sm relative">
+                            <div className="w-full h-87.5 rounded-3xl overflow-hidden border border-gray-100 dark:border-zinc-800 shadow-sm relative">
                                 <iframe
                                     width="100%"
                                     height="100%"

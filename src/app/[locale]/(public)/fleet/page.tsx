@@ -1,10 +1,22 @@
 import Footer from "@/components/layout/footer";
-import ReadyToBookSection from "@/components/layout/ready-to-book";
+import ReadyToBook from "@/components/layout/ready-to-book";
 import FloatingWhatsApp from "@/components/layout/floating-whatsapp";
 import FleetDetailsSection from "@/components/fleetPage/FleetDetailsSection";
-import FleetServiceStandards from "@/components/fleetPage/fleet-service-standards-section";
+import FleetServiceStandardsSection from "@/components/fleetPage/fleet-service-standards-section";
 import NavigationBar from "@/components/layout/navigation-bar";
 import {useTranslations} from "next-intl";
+import {createPageMetadata} from "@/lib/metadata";
+import type { Metadata } from "next";
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+    const { locale } = await params;
+    return createPageMetadata({
+        locale,
+        namespace: "FleetMetadata",
+        path: "fleet",
+        image: "/vstars/vstars-fleet.webp",
+    });
+}
 
 export default function FleetPage() {
     const t = useTranslations('FleetPage');
@@ -21,13 +33,13 @@ export default function FleetPage() {
                     <p className="text-lg text-gray-500 dark:text-gray-400 max-w-2xl mx-auto font-light leading-relaxed">
                         {t("description")}
                     </p>
-                    <div className="w-16 h-[1px] bg-zinc-200 dark:bg-zinc-800 mx-auto mt-8"></div>
+                    <div className="w-16 h-px bg-zinc-200 dark:bg-zinc-800 mx-auto mt-8"></div>
                 </div>
-
-                <section className="min-h-1/2"><FleetDetailsSection/></section>
-                <section className="min-h-1/2"><FleetServiceStandards/></section>
-                <section className="min-h-1/2"><ReadyToBookSection/></section>
             </section>
+
+            <FleetDetailsSection/>
+            <FleetServiceStandardsSection/>
+            <section className="min-h-1/2"><ReadyToBook/></section>
 
             <FloatingWhatsApp />
             <footer><Footer/></footer>

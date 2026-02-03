@@ -45,9 +45,9 @@ export default function App() {
                 <div className="z-10 mt-auto md:mt-8"><ScrollButton title="View our services" scrollTo="our-services"/></div>
             </section>
 
-            <section className="min-h-1/2"><HomeServicesSection/></section>
-            <section className="min-h-1/2"><HomeChooseUsSection/></section>
-            <section className="min-h-1/2"><FleetSection/></section>
+            <HomeServicesSection/>
+            <HomeChooseUsSection/>
+            <FleetSection/>
             <footer><Footer/></footer>
             <FloatingWhatsApp/>
         </main>
