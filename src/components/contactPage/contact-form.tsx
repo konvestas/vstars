@@ -4,15 +4,15 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useTranslations } from "next-intl";
-import { Loader2, Send } from "lucide-react";
+import { Loader2, ArrowRight } from "lucide-react"; // Switched Send to ArrowRight for luxury feel
 
-import { contactSchema, ContactFormValues } from "@/app/[locale]/(public)/contact/schemas"
+import { contactSchema, ContactFormValues } from "@/app/[locale]/(public)/contact/schemas";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
-import { Card } from "@/components/ui/card";
 import { toast } from "sonner";
+import { cn } from "@/lib/utils";
 
 export default function ContactForm() {
     const t = useTranslations("ContactPage");
@@ -48,21 +48,30 @@ export default function ContactForm() {
         }
     }
 
+    const inputStyles = "h-12 bg-gray-50 dark:bg-zinc-900 border-gray-100 dark:border-zinc-800 focus:ring-1 focus:ring-zinc-900 dark:focus:ring-white transition-all duration-300";
+
     return (
-        <Card className="p-6 md:p-8 border-gray-200 dark:border-white/10 bg-white/50
-        dark:bg-white/5 backdrop-blur-sm shadow-xl">
+        <div className="w-full bg-white dark:bg-black/5 p-6 md:p-10 rounded-3xl border border-gray-100 dark:border-zinc-800 shadow-sm">
+            <div className="mb-8">
+                <h3 className="text-2xl font-light text-zinc-900 dark:text-white mb-2">
+                    {t("title")}
+                </h3>
+                <p className="text-gray-500 dark:text-gray-400 font-light text-sm">
+                    {t("description")}
+                </p>
+            </div>
+
             <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <FormField
                             control={form.control}
                             name="name"
                             render={({ field }) => (
                                 <FormItem>
-                                    <FormLabel>{t("form.name")}</FormLabel>
+                                    <FormLabel className="text-xs uppercase tracking-wider font-semibold text-gray-500">{t("form.name")}</FormLabel>
                                     <FormControl>
-                                        <Input placeholder={t("form.namePlaceholder")} {...field}
-                                               className="bg-white/80 dark:bg-black/20" />
+                                        <Input placeholder={t("form.namePlaceholder")} {...field} className={inputStyles} />
                                     </FormControl>
                                     <FormMessage />
                                 </FormItem>
@@ -73,10 +82,9 @@ export default function ContactForm() {
                             name="email"
                             render={({ field }) => (
                                 <FormItem>
-                                    <FormLabel>{t("form.email")}</FormLabel>
+                                    <FormLabel className="text-xs uppercase tracking-wider font-semibold text-gray-500">{t("form.email")}</FormLabel>
                                     <FormControl>
-                                        <Input placeholder={t("form.emailPlaceholder")} {...field}
-                                               className="bg-white/80 dark:bg-black/20" />
+                                        <Input placeholder={t("form.emailPlaceholder")} {...field} className={inputStyles} />
                                     </FormControl>
                                     <FormMessage />
                                 </FormItem>
@@ -89,10 +97,9 @@ export default function ContactForm() {
                         name="subject"
                         render={({ field }) => (
                             <FormItem>
-                                <FormLabel>{t("form.subject")}</FormLabel>
+                                <FormLabel className="text-xs uppercase tracking-wider font-semibold text-gray-500">{t("form.subject")}</FormLabel>
                                 <FormControl>
-                                    <Input placeholder={t("form.subjectPlaceholder")} {...field}
-                                           className="bg-white/80 dark:bg-black/20" />
+                                    <Input placeholder={t("form.subjectPlaceholder")} {...field} className={inputStyles} />
                                 </FormControl>
                                 <FormMessage />
                             </FormItem>
@@ -104,11 +111,11 @@ export default function ContactForm() {
                         name="message"
                         render={({ field }) => (
                             <FormItem>
-                                <FormLabel>{t("form.message")}</FormLabel>
+                                <FormLabel className="text-xs uppercase tracking-wider font-semibold text-gray-500">{t("form.message")}</FormLabel>
                                 <FormControl>
                                     <Textarea
                                         placeholder={t("form.messagePlaceholder")}
-                                        className="min-h-37.5 bg-white/80 dark:bg-black/20"
+                                        className={cn(inputStyles, "min-h-[160px] py-4 resize-none")}
                                         {...field}
                                     />
                                 </FormControl>
@@ -117,13 +124,22 @@ export default function ContactForm() {
                         )}
                     />
 
-                    <Button type="submit" disabled={isSubmitting} className="w-full bg-gray-900
-                    dark:bg-white dark:text-black hover:bg-gray-800">
-                        {isSubmitting ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : <Send className="mr-2 h-4 w-4" />}
-                        {t("form.submit")}
+                    <Button
+                        type="submit"
+                        disabled={isSubmitting}
+                        className="w-full h-12 rounded-full bg-zinc-900 dark:bg-white text-white dark:text-black
+                                   hover:bg-zinc-700 dark:hover:bg-gray-200 transition-all uppercase tracking-widest text-xs font-bold"
+                    >
+                        {isSubmitting ? (
+                            <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                        ) : (
+                            <span className="flex items-center gap-2">
+                                {t("form.submit")} <ArrowRight className="h-4 w-4" />
+                            </span>
+                        )}
                     </Button>
                 </form>
             </Form>
-        </Card>
+        </div>
     );
 }

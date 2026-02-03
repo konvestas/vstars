@@ -1,6 +1,6 @@
 import React from 'react';
 import { getTranslations } from 'next-intl/server';
-import {Metadata} from "next";
+import { Metadata } from "next";
 import { useTranslations } from 'next-intl';
 import { Mail, MapPin, Phone } from 'lucide-react';
 import NavigationBar from "@/components/layout/navigation-bar";
@@ -8,144 +8,142 @@ import Footer from "@/components/layout/footer";
 import FloatingWhatsApp from "@/components/layout/floating-whatsapp";
 import ContactForm from "@/components/contactPage/contact-form";
 
-// 1. Generate Metadata for SEO
-export async function generateMetadata({params,}: {
+export async function generateMetadata({ params, }: {
     params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
     const { locale } = await params;
-    const t = await getTranslations({locale, namespace: "ContactPageMetadata"});
+    const t = await getTranslations({ locale, namespace: "ContactPageMetadata" });
     return {
         title: t("title"),
         description: t("description"),
         alternates: {
             canonical: `/${locale}/contact`,
         },
-
         openGraph: {
             title: t("title"),
             description: t("description"),
             url: `https://www.vstarstransfer.com/${locale}/contact`,
             type: "website",
         },
-
         twitter: {
             card: "summary_large_image",
             title: t("title"),
             description: t("description"),
-            images:
-                {
-                    url: "https://www.vstarstransfer.com/images/vstars-fleet.webp",
-                    alt: "Vstars Transfers luxury fleet in Istanbul",
-                    type: "image/webp",
-                }
-
+            images: {
+                url: "https://www.vstarstransfer.com/images/vstars-fleet.webp",
+                alt: "Vstars Transfers luxury fleet in Istanbul",
+                type: "image/webp",
+            }
         },
     };
 }
 
-
 export default function ContactPage() {
     const t = useTranslations('ContactPage');
-    const mapSrc = `https://maps.google.com/maps?q=40.884600538194476,29.20526621261032&t=&z=15&ie=UTF8&iwloc=&output=embed`;
+    const mapSrc = `https://maps.google.com/maps?q=40.884600538194476,29.20526621261032&t=&z=15&ie=UTF8&iwloc=&output=embed`; // Ensure this is your valid map link
 
     return (
-        <main className="min-h-screen bg-gray-50 dark:bg-black">
+        <main className="min-h-screen bg-white dark:bg-zinc-950 font-sans">
             <nav className="fixed top-0 left-0 w-full z-50"><NavigationBar /></nav>
 
-            <section className="pt-32 pb-20 px-6">
-                <div className="max-w-7xl mx-auto">
-                    {/* Header */}
-                    <div className="text-center mb-16">
-                        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900 dark:text-white">
+            <section className="pt-32 pb-20 px-6 lg:px-8">
+                <div className="max-w-[1400px] mx-auto">
+
+                    {/* --- HEADER (Luxury Style) --- */}
+                    <div className="text-center mb-20">
+                        <h1 className="text-4xl md:text-5xl font-light tracking-tight text-zinc-900 dark:text-white mb-6">
                             {t("title")}
                         </h1>
-                        <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto text-lg">
+                        <p className="text-lg text-gray-500 dark:text-gray-400 max-w-2xl mx-auto font-light leading-relaxed">
                             {t("description")}
                         </p>
-                        <div className="w-24 h-1 bg-amber-500 mx-auto mt-8 rounded-full opacity-80"></div>
+                        {/* Decorative Separator Line */}
+                        <div className="w-16 h-[1px] bg-zinc-200 dark:bg-zinc-800 mx-auto mt-8"></div>
                     </div>
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-start">
-                        {/* Left Side: Contact Info */}
-                        <div className="space-y-10">
+
+                        {/* --- LEFT SIDE: Contact Info --- */}
+                        <div className="space-y-12">
                             <div>
-                                <h3 className="text-2xl font-semibold mb-6 text-gray-900 dark:text-white">{t("infoTitle")}</h3>
-                                <p className="text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
+                                <h3 className="text-2xl font-light text-zinc-900 dark:text-white mb-6">
+                                    {t("infoTitle")}
+                                </h3>
+                                <p className="text-gray-600 dark:text-gray-400 leading-relaxed font-light text-lg">
                                     {t("infoDesc")}
                                 </p>
                             </div>
 
-                            <div className="space-y-6">
-                                <div className="flex items-start gap-4">
-                                    <div className="p-3 bg-gray-100 dark:bg-white/10 rounded-lg">
-                                        <Phone className="w-6 h-6 text-gray-900 dark:text-white" />
+                            <div className="space-y-8">
+                                {/* Phone Item */}
+                                <div className="flex items-start gap-5 group">
+                                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gray-50 dark:bg-zinc-900
+                                                  group-hover:bg-zinc-900 group-hover:text-white transition-colors duration-300 shrink-0">
+                                        <Phone className="w-5 h-5" strokeWidth={1.5} />
                                     </div>
                                     <div>
-                                        <h4 className="font-semibold text-gray-900 dark:text-white">{t("phone")}</h4>
-                                        <a href="tel:+905326432234" className="text-gray-600 dark:text-gray-400
-                                         hover:text-green-600 transition-colors">
+                                        <h4 className="text-sm font-semibold uppercase tracking-wider text-gray-500 mb-1">{t("phone")}</h4>
+                                        <a href="tel:+905326432234" className="text-xl font-light text-zinc-900 dark:text-white hover:underline decoration-1 underline-offset-4">
                                             +90 532 643 22 34
                                         </a>
                                     </div>
                                 </div>
 
-                                <div className="flex items-start gap-4">
-                                    <div className="p-3 bg-gray-100 dark:bg-white/10 rounded-lg">
-                                        <Mail className="w-6 h-6 text-gray-900 dark:text-white" />
+                                {/* Email Item */}
+                                <div className="flex items-start gap-5 group">
+                                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gray-50 dark:bg-zinc-900
+                                                  group-hover:bg-zinc-900 group-hover:text-white transition-colors duration-300 shrink-0">
+                                        <Mail className="w-5 h-5" strokeWidth={1.5} />
                                     </div>
                                     <div>
-                                        <h4 className="font-semibold text-gray-900 dark:text-white">{t("email")}</h4>
-                                        <a href="mailto:info@candumandanismanlik.com" className="text-gray-600
-                                        dark:text-gray-400 hover:text-blue-600 transition-colors">
+                                        <h4 className="text-sm font-semibold uppercase tracking-wider text-gray-500 mb-1">{t("email")}</h4>
+                                        <a href="mailto:info@candumandanismanlik.com" className="text-xl font-light text-zinc-900 dark:text-white hover:underline decoration-1 underline-offset-4 break-all">
                                             info@candumandanismanlik.com
                                         </a>
                                     </div>
                                 </div>
 
-                                <div className="flex items-start gap-4">
-                                    <div className="p-3 bg-gray-100 dark:bg-white/10 rounded-lg">
-                                        <MapPin className="w-6 h-6 text-gray-900 dark:text-white" />
+                                {/* Address Item */}
+                                <div className="flex items-start gap-5 group">
+                                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gray-50 dark:bg-zinc-900
+                                                  group-hover:bg-zinc-900 group-hover:text-white transition-colors duration-300 shrink-0">
+                                        <MapPin className="w-5 h-5" strokeWidth={1.5} />
                                     </div>
                                     <div>
-                                        <h4 className="font-semibold text-gray-900 dark:text-white">{t("address")}</h4>
-                                        <p className="text-gray-600 dark:text-gray-400">
+                                        <h4 className="text-sm font-semibold uppercase tracking-wider text-gray-500 mb-1">{t("address")}</h4>
+                                        <p className="text-lg font-light text-zinc-900 dark:text-white leading-relaxed">
                                             Kordonboyu Mh Ankara cad İSTMARİNA S2 kule B blok kat:24 no 147/B-300
                                         </p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div>
-                                <div className="w-full h-87.5 rounded-2xl overflow-hidden border border-gray-200
-                                 dark:border-white/10 shadow-lg relative bg-gray-100 dark:bg-zinc-800">
-                                    <iframe
-                                        width="100%"
-                                        height="100%"
-                                        src={mapSrc}
-                                        title="Vstars Transfer Location"
-                                        className="border-0 w-full h-full grayscale-20 hover:grayscale-0
-                                        transition-all duration-500"
-                                        loading="lazy"
-                                        referrerPolicy="no-referrer-when-downgrade"
-                                    />
-
-                                    {/* "Open in Maps" Button Overlay */}
-                                    <a
-                                        href={`https://www.google.com/maps/search/?api=1&query=40.884600538194476,29.20526621261032`}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="absolute bottom-4 left-4 bg-white dark:bg-zinc-900 text-xs
-                                        font-bold px-4 py-2 rounded-full shadow-md hover:scale-105 transition-transform
-                                         text-black dark:text-white z-10"
-                                    >
-                                        {t("maps")}
-                                    </a>
-                                </div>
+                            {/* Map Container */}
+                            <div className="w-full h-[350px] rounded-3xl overflow-hidden border border-gray-100 dark:border-zinc-800 shadow-sm relative">
+                                <iframe
+                                    width="100%"
+                                    height="100%"
+                                    src={mapSrc}
+                                    title="Vstars Transfer Location"
+                                    className="border-0 w-full h-full "
+                                    loading="lazy"
+                                    referrerPolicy="no-referrer-when-downgrade"
+                                />
+                                <a
+                                    href={`https://www.google.com/maps/search/?api=1&query=40.884600538194476,29.20526621261032`}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="absolute bottom-5 left-5 bg-white/90 dark:bg-black/90 backdrop-blur-md
+                                             text-xs font-bold uppercase tracking-wider px-5 py-3 rounded-full
+                                             shadow-lg hover:scale-105 transition-transform text-blue-700 dark:text-white z-10"
+                                >
+                                    {t("maps")}
+                                </a>
                             </div>
                         </div>
-
-                        {/* Right Side: Form */}
-                        <div><ContactForm /></div>
+                        <div className="mt-8 lg:mt-0">
+                            <ContactForm />
+                        </div>
                     </div>
                 </div>
             </section>
