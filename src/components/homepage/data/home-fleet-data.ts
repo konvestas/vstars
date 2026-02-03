@@ -17,9 +17,9 @@ export const getHomeFleetData = (t:any) : FleetItem[] => [
         title: t("items.Vito.title"),
         description: t("items.Vito.desc"),
         images: [
-            "/images/vstars-transfer-vehicle-vip-interior.webp",
-            "/images/vstars-transfer-vehicle-inside-reverse-view.webp",
-            "/images/vstars-transfer-vehicle-outside-view.webp",
+            "/vstars/vstars-transfer-vehicle-vip-interior.webp",
+            "/vstars/vstars-transfer-vehicle-inside-reverse-view.webp",
+            "/vstars/vstars-transfer-vehicle-outside-view.webp",
         ],
     }
 ];
