@@ -13,14 +13,15 @@ export default function FleetPage() {
             <nav className="fixed top-0 left-0 w-full z-50"><NavigationBar/></nav>
 
             <section className="w-full px-6 md:px-8">
-                <div className="max-w-5xl mx-auto text-center pt-2 pb-6 md:pt-10 md:pb-8 font-sans">
-                    <h1 className="text-4xl md:text-6xl font-semibold tracking-tight text-gray-900 dark:text-white">
+                {/* --- HEADER --- */}
+                <div className="text-center mb-24 md:mb-32">
+                    <h1 className="text-4xl md:text-5xl font-light tracking-tight text-zinc-900 dark:text-white mb-6">
                         {t("title")}
                     </h1>
-                    <p className="mt-6 text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
+                    <p className="text-lg text-gray-500 dark:text-gray-400 max-w-2xl mx-auto font-light leading-relaxed">
                         {t("description")}
                     </p>
-                    <div className="w-24 h-1 bg-amber-500 mx-auto mt-8 rounded-full opacity-80"></div>
+                    <div className="w-16 h-[1px] bg-zinc-200 dark:bg-zinc-800 mx-auto mt-8"></div>
                 </div>
 
                 <section className="min-h-1/2"><FleetDetailsSection/></section>

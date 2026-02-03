@@ -14,7 +14,7 @@ export default function NavigationBar() {
     const [isServicesOpen, setIsServicesOpen] = useState(false);
     const [isLanguageOpen, setIsLanguageOpen] = useState(false);
 
-    const menuLinkStyle = cn("font-sans block rounded-md p-3 outline-none transition-colors hover:bg-slate-100" +
+    const menuLinkStyle = cn("font-sans font-semibold block rounded-md p-3 outline-none transition-colors hover:bg-slate-100" +
         " hover:text-black focus:bg-slate-100  focus:text-black cursor-pointer text-black");
     const dropdownToggleStyle = "font-sans font-semibold flex items-center justify-between w-full px-3 py-2 " +
         "rounded-md transition-colors text-black hover:bg-slate-100 hover:text-black focus:bg-slate-100 cursor-pointer";
@@ -36,7 +36,7 @@ export default function NavigationBar() {
                                     className={cn(
                                         "bg-transparent cursor-pointer " +
                                         "px-3 md:px-14 py-2 rounded-md transition-colors",
-                                        "text-white hover:bg-white/10 data-[state=open]:bg-white/10"
+                                        "text-white"
                                     )}
                                 >
                                     <span className="flex items-center gap-2">
@@ -90,9 +90,7 @@ export default function NavigationBar() {
                                         <Link href="/fleet" className={menuLinkStyle}>
                                             <span>{t("fleet")}</span>
                                         </Link>
-                                        <Link href="/contact" className={menuLinkStyle}>
-                                            <span>{t("contact")}</span>
-                                        </Link>
+
                                         <Link href="/FAQ" className={menuLinkStyle}>
                                             <span>{t("faq")}</span>
                                         </Link>
