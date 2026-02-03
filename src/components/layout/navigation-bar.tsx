@@ -84,11 +84,14 @@ export default function NavigationBar() {
                                         </div>
 
                                         {/* 2. STATIC LINKS */}
-                                        <Link href="/contact" className={menuLinkStyle}>
-                                            <span>{t("contact")}</span>
-                                        </Link>
                                         <Link href="/affiliates" className={menuLinkStyle}>
                                             <span>{t("ourAffiliates")}</span>
+                                        </Link>
+                                        <Link href="/fleet" className={menuLinkStyle}>
+                                            <span>{t("fleet")}</span>
+                                        </Link>
+                                        <Link href="/contact" className={menuLinkStyle}>
+                                            <span>{t("contact")}</span>
                                         </Link>
                                         <Link href="/FAQ" className={menuLinkStyle}>
                                             <span>{t("faq")}</span>
