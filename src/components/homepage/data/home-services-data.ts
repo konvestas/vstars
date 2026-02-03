@@ -28,7 +28,7 @@ export const getHomeServicesData = (t: any): ServiceItem[] => [
     {
         title: t("items.medicalTourism.title"),
         description: t("items.medicalTourism.desc"),
-        image: "/images/can-duman-medical-tourism.webp",
+        image: "/affiliates/can-duman-medical-tourism.webp",
         toServicesId:"medical-tourism"
     },
     {
