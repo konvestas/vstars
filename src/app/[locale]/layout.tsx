@@ -118,7 +118,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
                     type: "image/webp"
                 },
                 {
-                    url: "https://www.vstarstransfer.com/images/can-duman-medical-tourism.webp",
+                    url: "https://www.vstarstransfer.com/affiliates/can-duman-medical-tourism.webp",
                     width: 800,
                     height: 600,
                     alt: "One of the affiliates of Vstars Transfer for medical tourism in Istanbul",
@@ -132,28 +132,28 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
                     type: "image/webp"
                 },
                 {
-                    url: "https://www.vstarstransfer.com/images/vstars-fleet.webp",
+                    url: "https://www.vstarstransfer.com/vstars/vstars-fleet.webp",
                     width: 1920,
                     height: 1059,
                     alt: "Vstars transfers fleet with a view to the Bosporus",
                     type: "image/webp"
                 },
                 {
-                    url: "https://www.vstarstransfer.com/images/vstars-transfer-vehicle-vip-interior.webp",
+                    url: "https://www.vstarstransfer.com/vstars/vstars-transfer-vehicle-vip-interior.webp",
                     width: 800,
                     height: 450,
                     alt: "Inside view for the Mercedes-Benz Maybach van",
                     type: "image/webp"
                 },
                 {
-                    url: "https://www.vstarstransfer.com/images/vstars-transfer-vehicle-inside-reverse-view.webp",
+                    url: "https://www.vstarstransfer.com/vstars/vstars-transfer-vehicle-inside-reverse-view.webp",
                     width: 800,
                     height: 450,
                     alt: "Inside view for the Mercedes-Benz Maybach van",
                     type: "image/webp"
                 },
                 {
-                    url: "https://www.vstarstransfer.com/images/vstars-transfer-vehicle-outside-view.webp",
+                    url: "https://www.vstarstransfer.com/vstars/vstars-transfer-vehicle-outside-view.webp",
                     width: 600,
                     height: 600,
                     alt: "Mercedes-Benz Maybach van outside view",
@@ -170,14 +170,19 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
             title: t("title"),
             description: t("description"),
             images: {
-                url: "https://www.vstarstransfer.com/images/vstars-fleet.webp",
+                url: "https://www.vstarstransfer.com/vstars/vstars-fleet.webp",
                 width: 1920,
                 height: 1059,
                 alt: "Vstars transfers fleet with a view to the Bosporus",
                 type: "image/webp"
             },
         },
-        assets: 'https://www.vstarstransfer.com/public/images',
+        assets: [
+            "https://www.vstarstransfer.com/vstars",
+            "https://www.vstarstransfer.com/affiliates",
+            "https://www.vstarstransfer.com/images",
+
+        ]
     };
 }
 
@@ -200,7 +205,7 @@ export default async function RootLayout({
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "name": "Vstars Transfer",
-        "image": "https://www.vstarstransfer.com/images/vstars-fleet.webp",
+        "image": "https://www.vstarstransfer.com/vstars/vstars-fleet.webp",
         "url": "https://www.vstarstransfer.com",
         "telephone": "+905326432234",
         "email": "info@candumandanismanlik.com",
