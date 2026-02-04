@@ -1,226 +1,176 @@
-'use client';
+import { Metadata } from "next";
+import { createPageMetadata } from "@/lib/metadata";
+import FAQClientPage from "@/app/[locale]/(public)/FAQ/client";
+// import FAQClientPage from "./faq-client";
 
-import { useState, useMemo } from 'react';
-import { useTranslations, useMessages } from 'next-intl';
-import NavigationBar from "@/components/layout/navigation-bar";
-import Footer from "@/components/layout/footer";
-import ReadyToBook from "@/components/layout/ready-to-book";
+export async function generateMetadata({
+                                           params
+                                       }: {
+    params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+    const { locale } = await params;
+    const baseMetadata = await createPageMetadata({
+        locale,
+        namespace: "FAQPageMetadata",
+        path: "faq",
+        image: "/vstars/vstars-fleet.webp",
+    });
+    return {
+        ...baseMetadata,
+        openGraph: {
+            ...baseMetadata.openGraph,
+            type: "article",
+        },
+    };
+}
 
-// --- Types ---
-type QuestionItem = {
-    q: string;
-    a: string;
-};
+export default async function FAQPage({
+                                          params
+                                      }: {
+    params: Promise<{ locale: string }>
+}) {
+    const { locale } = await params;
 
-type CategoryData = {
-    title: string;
-    questions: Record<string, QuestionItem>;
-};
-
-// --- Components ---
-
-const FAQItem = ({ question, answer }: { question: string; answer: string }) => {
-    return (
-        <details className="group border-b border-gray-200 dark:border-white/10 last:border-0">
-            <summary className="flex cursor-pointer items-center justify-between py-6 text-lg font-medium text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors list-none">
-                {question}
-                <span className="ml-6 flex h-7 w-7 items-center justify-center rounded-full border border-gray-400/30 bg-transparent transition-all group-open:rotate-180">
-                    <svg className="h-4 w-4 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                    </svg>
-                </span>
-            </summary>
-            <div className="pb-6 text-base leading-relaxed text-gray-600 dark:text-gray-300 animate-in slide-in-from-top-2 fade-in duration-200">
-                {answer}
-            </div>
-        </details>
-    );
-};
-
-export default function FAQPage() {
-    const t = useTranslations('FAQPage');
-
-    const messages = useMessages() as any;
-    const faqData = messages.FAQPage?.items as Record<string, CategoryData>;
-
-    const [searchQuery, setSearchQuery] = useState('');
-    // State to track the active category (default to the first one)
-    const [activeCategory, setActiveCategory] = useState<string>('general');
-
-    // --- Search Logic ---
-    const searchResults = useMemo(() => {
-        if (!searchQuery) return null;
-
-        const results: { category: string; q: string; a: string }[] = [];
-
-        Object.keys(faqData).forEach((catKey) => {
-            const category = faqData[catKey];
-            Object.values(category.questions).forEach((item) => {
-                if (
-                    item.q.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                    item.a.toLowerCase().includes(searchQuery.toLowerCase())
-                ) {
-                    results.push({ category: category.title, ...item });
+    // Build FAQ Schema for structured data with your actual questions
+    const faqSchema = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            // Airport Transfers
+            {
+                "@type": "Question",
+                "name": "Do you provide meet & greet at the airport?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, our chauffeurs will be waiting for you at the arrivals terminal at Istanbul Airport (IST) or Sabiha Gökçen (SAW) holding a personalized sign with your name."
                 }
-            });
-        });
-
-        return results;
-    }, [searchQuery, faqData]);
-
-    // --- Scroll & Select Logic ---
-    const handleCategoryClick = (catKey: string) => {
-        setActiveCategory(catKey); // Set active state immediately
-
-        const element = document.getElementById(`category-${catKey}`);
-        if (element) {
-            const offset = 120; // Slightly larger offset for better visibility
-            const bodyRect = document.body.getBoundingClientRect().top;
-            const elementRect = element.getBoundingClientRect().top;
-            const elementPosition = elementRect - bodyRect;
-            const offsetPosition = elementPosition - offset;
-
-            window.scrollTo({
-                top: offsetPosition,
-                behavior: 'smooth'
-            });
-        }
+            },
+            {
+                "@type": "Question",
+                "name": "Is flight tracking included?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Absolutely, we automatically adjust your pickup time so your driver is always there when you land."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Do you transfer from both IST and Sabiha Gökçen?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, we provide 24/7 premium transfer services from both Istanbul Airport (IST) and Sabiha Gökçen Airport (SAW) to any hotel, residence, or location within the city center and surrounding areas."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Will you meet us at any time of day?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, our operations run 24/7, 365 days a year. Whether you have a late-night arrival or an early morning departure, our professional team is ready to serve you at any hour."
+                }
+            },
+            // Booking & Itinerary
+            {
+                "@type": "Question",
+                "name": "How far in advance should transfer vehicles be reserved?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "We recommend booking at least 48 hours in advance to guarantee availability. However, we do our best to accommodate last-minute requests whenever possible."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I make multiple stops and change the route?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. With our hourly hire service, the vehicle is exclusively yours. You have total flexibility to make unlimited stops, change your route, or attend back-to-back meetings across Istanbul as you wish."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I customize my own itinerary?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Absolutely. The tour is 100% flexible. You can create your own route, choose exactly which landmarks to visit, and decide how long to stay at each stop. Our driver follows your lead."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does the driver wait for me while I am in a meeting, shopping or exploring?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Absolutely. Your private chauffeur remains on standby at a convenient nearby location while you shop, dine, or attend meetings, ensuring you are picked up immediately when you are ready."
+                }
+            },
+            // Vehicles & Amenities
+            {
+                "@type": "Question",
+                "name": "Are the vehicles sanitized and hygienic?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, our vehicles are thoroughly cleaned and sanitized before every trip to ensure safe environment."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I request additional services, such as a tour guide or special amenities?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Absolutely, we can arrange licensed tour guides, baby seats, and specific in-car amenities like refreshments or Wi-Fi. Please specify your needs during booking so we can prepare everything for you."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can we request a professional tour guide?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. While our chauffeurs focus on safe transportation, we can arrange a licensed professional tour guide to accompany you for a detailed historical experience upon request (subject to availability and extra fee)."
+                }
+            },
+            // Billing & Pricing
+            {
+                "@type": "Question",
+                "name": "Do you charge per person or per vehicle?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "We charge a fixed rate per vehicle, not per person. Whether you are traveling alone or with a group, you pay one flat fee, no hidden costs."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Do I need to worry about parking or waiting fees?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Not at all. We handle all logistics. Your chauffeur drops you off right at the entrance and waits nearby. You can focus entirely on sightseeing without the stress of finding parking or hailing a taxi."
+                }
+            },
+            // Medical Services
+            {
+                "@type": "Question",
+                "name": "What types of treatments do you arrange?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "We specialize in coordinating Hair Transplants, Dental Aesthetics and Plastic Surgery. Through our partner, Can Duman Medical Tourism, we connect you with specific experts for each procedure."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Do you handle the entire travel itinerary?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. We manage your entire medical journey. From VIP airport transfers and hotel coordination to clinic appointments, we ensure a seamless, stress-free experience so you can focus entirely on your treatment."
+                }
+            }
+        ]
     };
 
     return (
-        <main className="min-h-screen bg-white dark:bg-black font-sans selection:bg-blue-100 selection:text-blue-900">
-            <nav className="fixed top-0 left-0 w-full z-50">
-                <NavigationBar />
-            </nav>
-
-            {/* Header Section */}
-            <section className="pt-30 pb-16 px-6 bg-gray-50 dark:bg-zinc-900 border-b border-gray-200 dark:border-white/5">
-                <div className="max-w-3xl mx-auto text-center space-y-6">
-                    <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white tracking-tight">
-                        {t('title')}
-                    </h1>
-                    <p className="text-lg text-gray-600 dark:text-gray-400">
-                        {t('desc')}
-                    </p>
-
-                    {/* Search Bar */}
-                    <div className="relative max-w-xl mx-auto mt-8 group">
-                        <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                            <svg className="h-5 w-5 text-gray-400 group-focus-within:text-blue-600 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                            </svg>
-                        </div>
-                        <input
-                            type="text"
-                            placeholder="Search for answers..."
-                            value={searchQuery}
-                            onChange={(e) => setSearchQuery(e.target.value)}
-                            className="block w-full pl-11 pr-4 py-4 bg-white dark:bg-black border border-gray-200 dark:border-white/20 rounded-xl
-                            text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500
-                            transition-all shadow-sm"
-                        />
-                    </div>
-                </div>
-            </section>
-
-            {/* Main Content */}
-            <section className="py-20 px-6">
-                <div className="max-w-7xl mx-auto">
-                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-
-                        {/* Sidebar: Categories */}
-                        {!searchQuery && (
-                            <div className="hidden lg:block lg:col-span-3 space-y-2 sticky top-32 h-fit">
-                                <h3 className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-4 px-3">
-                                    Categories
-                                </h3>
-                                {Object.entries(faqData).map(([key, data]) => (
-                                    <button
-                                        key={key}
-                                        onClick={() => handleCategoryClick(key)}
-                                        className={`w-full text-left px-4 py-3 rounded-lg transition-all font-medium cursor-pointer
-                                            ${activeCategory === key
-                                            // SELECTED STATE: Blue background, Blue Text
-                                            ? 'bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 shadow-sm'
-                                            // DEFAULT STATE: Gray Text, Hover turns Blue
-                                            : 'text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-white/5 hover:text-blue-600 dark:hover:text-blue-400'
-                                        }
-                                        `}
-                                    >
-                                        {data.title}
-                                    </button>
-                                ))}
-                            </div>
-                        )}
-
-                        {/* FAQ List Area */}
-                        <div className={searchQuery ? "col-span-12 max-w-3xl mx-auto" : "lg:col-span-9"}>
-
-                            {/* VIEW 1: SEARCH RESULTS */}
-                            {searchQuery && (
-                                <div className="space-y-8">
-                                    <div className="flex items-center justify-between pb-4 border-b border-gray-200 dark:border-white/10">
-                                        <h2 className="text-xl font-semibold">Search Results</h2>
-                                        <button
-                                            onClick={() => setSearchQuery('')}
-                                            className="text-sm text-blue-600 hover:underline"
-                                        >
-                                            Clear Search
-                                        </button>
-                                    </div>
-
-                                    {searchResults && searchResults.length > 0 ? (
-                                        <div className="bg-white dark:bg-black rounded-3xl">
-                                            {searchResults.map((item, idx) => (
-                                                <div key={idx} className="mb-2">
-                                                     <span className="text-xs font-bold text-blue-600 uppercase tracking-wider mb-1 block">
-                                                        {item.category}
-                                                     </span>
-                                                    <FAQItem question={item.q} answer={item.a} />
-                                                </div>
-                                            ))}
-                                        </div>
-                                    ) : (
-                                        <div className="text-center py-12 text-gray-500">
-                                            {t('noResults')} "{searchQuery}"
-                                        </div>
-                                    )}
-                                </div>
-                            )}
-
-                            {/* VIEW 2: CATEGORY LIST */}
-                            {!searchQuery && Object.entries(faqData).map(([key, category]) => (
-                                <div
-                                    key={key}
-                                    id={`category-${key}`}
-                                    className="mb-16 scroll-mt-32"
-                                >
-                                    <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-                                        {category.title}
-                                    </h2>
-                                    <div className="bg-white dark:bg-black rounded-3xl">
-                                        <div className="space-y-1">
-                                            {Object.values(category.questions).map((item, idx) => (
-                                                <FAQItem
-                                                    key={idx}
-                                                    question={item.q}
-                                                    answer={item.a}
-                                                />
-                                            ))}
-                                        </div>
-                                    </div>
-                                </div>
-                            ))}
-
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <ReadyToBook />
-            <footer className="border-t border-gray-200 dark:border-white/10">
-                <Footer />
-            </footer>
-        </main>
+        <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+            />
+            <FAQClientPage />
+        </>
     );
 }

@@ -19,9 +19,50 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 }
 
 export default function FleetPage() {
+    const vehicleSchemas = [
+        {
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "name": "Mercedes-Benz Vito Maybach",
+            "description": "Luxury sedan for executive transfers and VIP transportation",
+            "image": "https://www.vstarstransfer.com/vstars/vstars-fleet.webp",
+            "brand": {
+                "@type": "Brand",
+                "name": "Mercedes-Benz"
+            },
+            "offers": {
+                "@type": "Offer",
+                "availability": "https://schema.org/InStock",
+                "priceCurrency": "TL"
+            }
+        },
+        {
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "name": "Mercedes Sprinter",
+            "description": "VIP minibus for large group transportation and events",
+            "image": "https://www.vstarstransfer.com/vstars/vstars-fleet.webp",
+            "brand": {
+                "@type": "Brand",
+                "name": "Mercedes-Benz"
+            },
+            "offers": {
+                "@type": "Offer",
+                "availability": "https://schema.org/InStock",
+                "priceCurrency": "EUR"
+            }
+        }
+    ];
     const t = useTranslations('FleetPage');
     return (
         <main className="min-h-screen pt-20 bg-white ">
+            {vehicleSchemas.map((schema, idx) => (
+                <script
+                    key={idx}
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+                />
+            ))}
             <nav className="fixed top-0 left-0 w-full z-50"><NavigationBar/></nav>
 
             <section className="w-full px-6 md:px-8">

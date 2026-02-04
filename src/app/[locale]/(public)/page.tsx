@@ -22,7 +22,7 @@ export default function App() {
                 {/* Background Image */}
                 <div className="absolute inset-0 -z-20">
                     <Image
-                        src="/images/vstars-fleet.webp"
+                        src="/vstars/vstars-fleet.webp"
                         alt="Vstars transfer fleet"
                         fill
                         className="object-cover object-center"
