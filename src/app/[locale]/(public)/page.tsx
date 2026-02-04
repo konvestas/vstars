@@ -19,7 +19,6 @@ export default function App() {
         <main className="relative w-full">
             <nav className="fixed top-0 left-0 w-full z-50"><NavigationBar/></nav>
             <section className="relative min-h-screen flex flex-col items-center justify-center pt-30 pb-40 gap-8">
-                {/* Background Image */}
                 <div className="absolute inset-0 -z-20">
                     <Image
                         src="/vstars/vstars-fleet.webp"

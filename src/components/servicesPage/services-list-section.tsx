@@ -8,7 +8,7 @@ export default function ServicesListSection() {
     const services = getServices(t);
     return (
         <section id="services-list" className="w-full py-16 md:py-24 bg-white dark:bg-zinc-950 font-sans transition-colors">
-            <div className="space-y-32 mb-32">
+            <div className="space-y-32">
                 {services.map((item, index) => {
                     const isEven = index % 2 === 0;
                     return (
@@ -22,7 +22,7 @@ export default function ServicesListSection() {
 
                                 {/* Image Side */}
                                 <div className={`relative w-full ${isEven ? "lg:order-1" : "lg:order-2"}`}>
-                                    <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl
+                                    <div className="relative aspect-4/3 w-full overflow-hidden rounded-2xl
                                     bg-gray-100 dark:bg-zinc-900 shadow-sm border border-gray-100 dark:border-zinc-800 group">
                                         <Image
                                             src={item.image}
@@ -45,10 +45,7 @@ export default function ServicesListSection() {
                                     </p>
                                 </div>
                             </div>
-
-                            {/* 2. Use the new Animated FAQ Component here */}
                             <ServiceAccordion items={item.faqs} />
-
                         </div>
                     );
                 })}

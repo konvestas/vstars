@@ -55,7 +55,7 @@ export default function FleetPage() {
     ];
     const t = useTranslations('FleetPage');
     return (
-        <main className="min-h-screen pt-20 bg-white ">
+        <main className="min-h-screen pt-25 bg-white ">
             {vehicleSchemas.map((schema, idx) => (
                 <script
                     key={idx}
@@ -65,9 +65,9 @@ export default function FleetPage() {
             ))}
             <nav className="fixed top-0 left-0 w-full z-50"><NavigationBar/></nav>
 
-            <section className="w-full px-6 md:px-8">
+            <section className="w-full px-6 md:px-8 ">
                 {/* --- HEADER --- */}
-                <div className="text-center mb-24 md:mb-32">
+                <div className="text-center mb-15 md:mb-20">
                     <h1 className="text-4xl md:text-5xl font-light tracking-tight text-zinc-900 dark:text-white mb-6">
                         {t("title")}
                     </h1>
@@ -76,12 +76,10 @@ export default function FleetPage() {
                     </p>
                     <div className="w-16 h-px bg-zinc-200 dark:bg-zinc-800 mx-auto mt-8"></div>
                 </div>
+                <FleetDetailsSection/>
+                <FleetServiceStandardsSection/>
+                <section className="min-h-1/2"><ReadyToBook/></section>
             </section>
-
-            <FleetDetailsSection/>
-            <FleetServiceStandardsSection/>
-            <section className="min-h-1/2"><ReadyToBook/></section>
-
             <FloatingWhatsApp />
             <footer><Footer/></footer>
         </main>

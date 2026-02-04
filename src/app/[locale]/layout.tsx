@@ -68,7 +68,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
                 { url: "/apple-icon-152x152.png", sizes: "152x152" },
                 { url: "/apple-icon-180x180.png", sizes: "180x180" },
             ],
-            shortcut: "/public/favicon.ico",
+            shortcut: "favicon.ico",
         },
         manifest: "/manifest.webmanifest",
         openGraph: {

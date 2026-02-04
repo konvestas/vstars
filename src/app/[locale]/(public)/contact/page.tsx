@@ -82,7 +82,7 @@ export default function ContactPage() {
                 <div className="max-w-[1400px] mx-auto">
 
                     {/* --- HEADER (Luxury Style) --- */}
-                    <div className="text-center mb-20">
+                    <div className="text-center mb-15 md:mb-20">
                         <h1 className="text-4xl md:text-5xl font-light tracking-tight text-zinc-900 dark:text-white mb-6">
                             {t("title")}
                         </h1>
