@@ -36,7 +36,7 @@ export const getServices = (t: any) => [
     {
         title: t("items.medicalTourism.title"),
         description: t("items.medicalTourism.desc"),
-        image: "/images/can-duman-medical-tourism.webp",
+        image: "/affiliates/can-duman-medical-tourism.webp",
         alt: "One of the affiliates of Vstars Transfer for medical tourism in Istanbul",
         width: 800,
         height: 600,
