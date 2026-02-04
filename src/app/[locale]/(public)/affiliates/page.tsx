@@ -17,10 +17,32 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     });
 }
 export default function AffiliatesPage() {
+    const orgSchema = {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Vstars Transfer",
+        "url": "https://www.vstarstransfer.com",
+        "logo": "https://www.vstarstransfer.com/favicon-96x96.png",
+        "description": "Vstars Transfer's partnerships",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "Partnership Inquiries",
+            "email": "info@candumandanismanlik.com",
+            "telephone": "+905326432234"
+        },
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Istanbul",
+            "addressCountry": "TR"
+        }
+    };
     const t = useTranslations('AffiliatesPage');
-
     return (
         <main className="min-h-screen bg-white dark:bg-zinc-950 font-sans transition-colors">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
+            />
             <nav className="fixed top-0 left-0 w-full z-50"><NavigationBar /></nav>
 
             <section className="pt-32 pb-10 px-6 lg:px-8">
