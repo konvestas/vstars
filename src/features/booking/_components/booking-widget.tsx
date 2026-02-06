@@ -3,7 +3,7 @@ import {motion, AnimatePresence, LazyMotion, domAnimation} from "framer-motion";
 import { FormProvider } from "react-hook-form";
 import { useTranslations } from "next-intl";
 import { format } from "date-fns";
-import {ArrowRight, CheckCircle2, User, Phone, Mail, UploadCloud, X, ChevronLeft, Calendar, Info, Check, AlertCircle, Plane} from "lucide-react";
+import {ArrowRight, CheckCircle2, User, Phone, Mail, UploadCloud, X, ChevronLeft, Calendar, Info, Check, AlertCircle, Plane, Hourglass, MapPinned} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card } from "@/components/ui/card";
@@ -22,13 +22,13 @@ import {cn} from "@/lib/utils";
 import { toast } from "sonner";
 
 const styles = {
+    tabTrigger:    "rounded-full text-m font-semibold data-[state=active]:bg-white data-[state=active]:text-black " +
+        "data-[state=active]:shadow-lg transition-all duration-300 h-11",
     glassInput:    "pl-10 text-white bg-white/10 hover:bg-white/30 focus:bg-white/20 border-white/20 " +
         "placeholder:text-white/30 transition-all duration-300",
     glassTextArea: "pl-10 pt-3 text-white bg-white/10 hover:bg-white/30 focus:bg-white/20 border-white/20 " +
         "placeholder:text-white/30 transition-all duration-300 min-h-[80px]",
     glassLabel:    "text-white/70 text-sm font-medium mb-1.5 block",
-    tabTrigger:    "rounded-full text-m font-semibold data-[state=active]:bg-white data-[state=active]:text-black " +
-        "data-[state=active]:shadow-lg transition-all duration-300 h-11",
     actionBtn:     "w-full flex-1 h-10 cursor-pointer text-lg font-medium text-white rounded-xl bg-green-700 hover:bg-green-600 " +
         "shadow-xl shadow-green-900/30 transition-all duration-300 focus-visible:ring-2 focus-visible:ring-green-400",
     backBtn:       "h-10 mt-2 px-4 rounded-xl text-white bg-white/5 hover:bg-white/10 shrink-0",
@@ -149,14 +149,17 @@ export default function BookingWidget() {
 
                     {/* --- HEADER  TABS ) --- */}
                     {step === 1 && (
-                        <div className="pt-6 px-6 pb-2">
+                        <div className="pt-6 px-6">
                             <Tabs value={serviceType} onValueChange={onTabChange} className="w-full">
-                                <TabsList className="grid w-full grid-cols-2 h-11 bg-black/35 rounded-full">
+                                <TabsList className="grid w-full grid-cols-3 h-13 bg-black/35 rounded-full">
                                     <TabsTrigger value={SERVICE_TYPES.TRANSFER} className={styles.tabTrigger}>
-                                        {t("Tabs.oneWay")}
+                                      <MapPinned/>  {t("Tabs.oneWay")}
                                     </TabsTrigger>
                                     <TabsTrigger value={SERVICE_TYPES.HOURLY} className={styles.tabTrigger}>
-                                        {t("Tabs.hourly")}
+                                       <Hourglass/> {t("Tabs.hourly")}
+                                    </TabsTrigger>
+                                    <TabsTrigger value={SERVICE_TYPES.AIRPORT} className={styles.tabTrigger}>
+                                        <Plane/> Airport Transfer
                                     </TabsTrigger>
                                 </TabsList>
                             </Tabs>
@@ -190,7 +193,8 @@ export default function BookingWidget() {
                                             />
                                         )}
                                     />
-                                    {serviceType === SERVICE_TYPES.TRANSFER ? (
+
+                                    {serviceType !== SERVICE_TYPES.HOURLY ? (
                                         <FormField
                                             control={form.control}
                                             name="dropoffAddress"

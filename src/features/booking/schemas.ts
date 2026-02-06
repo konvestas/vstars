@@ -4,6 +4,7 @@ import { z } from "zod";
 export const SERVICE_TYPES = {
     TRANSFER: "Transfer",
     HOURLY: "Hourly Hire",
+    AIRPORT: "Airport Transfer"
 } as const;
 
 export const bookingSchema = z.object({
