@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 import { MapPin, Loader2 } from "lucide-react";
@@ -33,6 +33,7 @@ export function LocationInput({
     const { predictions, fetchPredictions, onPlaceSelect, clearSuggestions, isReady } = usePlacesAutocomplete();
 
     useEffect(() => {
+        // eslint-disable-next-line react-hooks/set-state-in-effect
         if (value !== undefined) setInputValue(value);
     }, [value]);
 
