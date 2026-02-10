@@ -70,6 +70,32 @@ export default function BookingWidget() {
                 };
             }
 
+            // Helper to get airport label
+            const getAirportLabel = (airportValue: string | undefined) => {
+                if (!airportValue) return "";
+                const airports = [
+                    { value: "istanbul-airport", label: "Istanbul Airport (IST)" },
+                    { value: "sabiha-gokcen", label: "Sabiha Gökçen Airport (SAW)" }
+                ];
+                return airports.find(a => a.value === airportValue)?.label || airportValue;
+            };
+
+            // Determine correct from/to locations based on service type and direction
+            let fromLocation = formValues.pickupAddress;
+            let toLocation = formValues.dropoffAddress || "";
+
+            // For airport transfers, use the airport field
+            if (formValues.serviceType === SERVICE_TYPES.AIRPORT) {
+                const airportLabel = getAirportLabel(formValues.airport);
+                if (formValues.direction === "from-airport") {
+                    fromLocation = airportLabel;              // Airport is pickup
+                    toLocation = formValues.pickupAddress;    // Destination is dropoff
+                } else if (formValues.direction === "to-airport") {
+                    fromLocation = formValues.pickupAddress;  // Origin is pickup
+                    toLocation = airportLabel;                // Airport is dropoff
+                }
+            }
+
             const payload = {
                 fullName: formValues.fullName,
                 phone: formValues.phone,
@@ -77,9 +103,10 @@ export default function BookingWidget() {
                 flightNumber: formValues.flightNo || "",
                 notes: formValues.notes || "",
                 bookingType: formValues.serviceType,
+                direction: formValues.direction || "",
                 duration: formValues.hours || "",
-                fromLocation: formValues.pickupAddress,
-                toLocation: formValues.dropoffAddress || "",
+                fromLocation: fromLocation,
+                toLocation: toLocation,
                 dateInfo: {
                     date: formValues.date.toISOString(),
                     time: formValues.time
@@ -113,9 +140,32 @@ export default function BookingWidget() {
     };
 
     const serviceType = watch("serviceType");
-    const [watchedDate, watchedTime, watchedPassengers, watchedLuggage, pickupAddr, dropoffAddr, watchedDirection] = watch([
-        "date", "time", "passengers", "luggage", "pickupAddress", "dropoffAddress", "direction"
+    const [watchedDate, watchedTime, watchedPassengers, watchedLuggage, pickupAddr, dropoffAddr, watchedDirection, watchedAirport] = watch([
+        "date", "time", "passengers", "luggage", "pickupAddress", "dropoffAddress", "direction", "airport"
     ]);
+
+    // Compute display addresses based on airport transfer direction
+    // For airport transfers, we need to get the airport name from the separate airport field
+    const getAirportLabel = (airportValue: string | undefined) => {
+        if (!airportValue) return "";
+        const airports = [
+            { value: "istanbul-airport", label: "Istanbul Airport (IST)" },
+            { value: "sabiha-gokcen", label: "Sabiha Gökçen Airport (SAW)" }
+        ];
+        return airports.find(a => a.value === airportValue)?.label || airportValue;
+    };
+
+    const displayPickupAddr = serviceType === SERVICE_TYPES.AIRPORT && watchedDirection === "from-airport"
+        ? getAirportLabel(watchedAirport)  // Airport is pickup when coming FROM airport
+        : serviceType === SERVICE_TYPES.AIRPORT && watchedDirection === "to-airport"
+            ? pickupAddr  // User's location is pickup when going TO airport
+            : pickupAddr;
+
+    const displayDropoffAddr = serviceType === SERVICE_TYPES.AIRPORT && watchedDirection === "from-airport"
+        ? pickupAddr   // User's destination is dropoff when coming FROM airport
+        : serviceType === SERVICE_TYPES.AIRPORT && watchedDirection === "to-airport"
+            ? getAirportLabel(watchedAirport)  // Airport is dropoff when going TO airport
+            : dropoffAddr;
 
     useEffect(() => {
         if (serviceType === SERVICE_TYPES.AIRPORT && !watchedDirection) {
@@ -156,10 +206,10 @@ export default function BookingWidget() {
                             <Tabs value={serviceType} onValueChange={onTabChange} className="w-full">
                                 <TabsList className="grid w-full grid-cols-3 h-13 bg-black/35 rounded-full">
                                     <TabsTrigger value={SERVICE_TYPES.TRANSFER} className={styles.tabTrigger}>
-                                      <MapPinned/>  {t("Tabs.oneWay")}
+                                        <MapPinned/>  {t("Tabs.oneWay")}
                                     </TabsTrigger>
                                     <TabsTrigger value={SERVICE_TYPES.HOURLY} className={styles.tabTrigger}>
-                                       <Hourglass/> {t("Tabs.hourly")}
+                                        <Hourglass/> {t("Tabs.hourly")}
                                     </TabsTrigger>
                                     <TabsTrigger value={SERVICE_TYPES.AIRPORT} className={styles.tabTrigger}>
                                         <Plane/> Airport Transfer
@@ -409,15 +459,15 @@ export default function BookingWidget() {
                                                 <div className="w-4 h-4 rounded-full bg-green-500 border-2 border-black/50 shrink-0 mt-0.5" />
                                                 <div className="flex flex-col">
                                                     <span className="text-xs text-white/50 uppercase">{t("Form.pickUpLocation")}</span>
-                                                    <span className="text-sm text-white font-medium line-clamp-1">{pickupAddr}</span>
+                                                    <span className="text-sm text-white font-medium line-clamp-1">{displayPickupAddr}</span>
                                                 </div>
                                             </div>
-                                            {dropoffAddr && (
+                                            {displayDropoffAddr && (
                                                 <div className="flex items-start gap-3 z-10">
                                                     <div className="w-4 h-4 rounded-full bg-red-400 border-2 border-black/50 shrink-0 mt-0.5" />
                                                     <div className="flex flex-col">
                                                         <span className="text-xs text-white/50 uppercase">{t("Form.dropOffLocation")}</span>
-                                                        <span className="text-sm text-white font-medium line-clamp-1">{dropoffAddr}</span>
+                                                        <span className="text-sm text-white font-medium line-clamp-1">{displayDropoffAddr}</span>
                                                     </div>
                                                 </div>
                                             )}
@@ -442,27 +492,27 @@ export default function BookingWidget() {
                                         </div>
                                     </div>
 
-                                {/* 3. PACKAGE PERKS & TERMS */}
-                                <div className="bg-white/5 rounded-2xl p-5 border border-white/10 space-y-4">
-                                    <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb- flex items-center gap-2">
-                                        <Info className="h-4 w-4 text-green-400"/> {t("PackageDetail.title")}
-                                    </h4>
-                                    <ul className="space-y-4">
-                                        <li className="flex items-start gap-3 text-sm text-white/80">
-                                            <Check className="h-4 w-4 text-green-400 mt-0.5 shrink-0" />
-                                            <span>{t("PackageDetail.waitTime")}</span>
-                                            <Check className="h-4 w-4 text-green-400 mt-0.5 shrink-0" />
-                                            <span>{t("PackageDetail.greet")}</span>
-                                        </li>
-                                        <li className="flex items-start gap-3 text-xs text-yellow-200/90
+                                    {/* 3. PACKAGE PERKS & TERMS */}
+                                    <div className="bg-white/5 rounded-2xl p-5 border border-white/10 space-y-4">
+                                        <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb- flex items-center gap-2">
+                                            <Info className="h-4 w-4 text-green-400"/> {t("PackageDetail.title")}
+                                        </h4>
+                                        <ul className="space-y-4">
+                                            <li className="flex items-start gap-3 text-sm text-white/80">
+                                                <Check className="h-4 w-4 text-green-400 mt-0.5 shrink-0" />
+                                                <span>{t("PackageDetail.waitTime")}</span>
+                                                <Check className="h-4 w-4 text-green-400 mt-0.5 shrink-0" />
+                                                <span>{t("PackageDetail.greet")}</span>
+                                            </li>
+                                            <li className="flex items-start gap-3 text-xs text-yellow-200/90
                                         bg-yellow-500/10 p-2 rounded-lg border border-yellow-500/20">
-                                            <AlertCircle className="h-4 w-4 shrink-0 mt-0.5" />
-                                            <span>{t("PackageDetail.alert")}</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </motion.div>
-                        )}
+                                                <AlertCircle className="h-4 w-4 shrink-0 mt-0.5" />
+                                                <span>{t("PackageDetail.alert")}</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </motion.div>
+                            )}
 
                             {/* --- STEP 3: GUEST Info & CHECKOUT --- */}
                             {step === 3 && (
@@ -660,12 +710,16 @@ export default function BookingWidget() {
 
                                                     <div>
                                                         {t("Summary.pickUpAddress")}
-                                                        <span className="text-white font-medium pl-1 block">{watch("pickupAddress")}</span>
+                                                        <span className="text-white font-medium pl-1 block">
+                                                            {displayPickupAddr}
+                                                        </span>
                                                     </div>
 
                                                     <div>
                                                         {t("Summary.dropOffAddress")}
-                                                        <span className="text-white font-medium pl-1 block">{watch("dropoffAddress")}</span>
+                                                        <span className="text-white font-medium pl-1 block">
+                                                            {displayDropoffAddr}
+                                                        </span>
                                                     </div>
                                                 </div>
 
