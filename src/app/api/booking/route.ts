@@ -4,7 +4,7 @@ import nodemailer from "nodemailer";
 export async function POST(req: Request) {
     try {
         const body = await req.json();
-        const {fullName, phone, email, flightNumber, notes, bookingType, duration, fromLocation, toLocation, dateInfo,
+        const {fullName, phone, email, flightNumber, notes, bookingType, direction, duration, fromLocation, toLocation, dateInfo,
             passengers, luggage, passportPhoto, calculatedPrice,
         } = body;
 
@@ -29,17 +29,42 @@ export async function POST(req: Request) {
             },
         });
 
-        // Determine Rows
-        const routeRow = bookingType === "Transfer"
-            ? `<tr>
+        // Determine Rows based on booking type
+        let routeRow = '';
+
+        if (bookingType === "Transfer") {
+            // Regular Transfer: Show pickup and dropoff
+            routeRow = `<tr>
                 <td style="padding: 8px 0; width: 80px; font-size: 14px; color: #6b7280;">Alış noktası:</td>
                 <td style="padding: 8px 0; font-size: 15px; font-weight: 500;">${fromLocation}</td>
                </tr>
                <tr>
                 <td style="padding: 8px 0; width: 80px; font-size: 14px; color: #6b7280;">Bırakış noktası:</td>
                 <td style="padding: 8px 0; font-size: 15px; font-weight: 500;">${toLocation}</td>
-               </tr>`
-            : `<tr>
+               </tr>`;
+        } else if (bookingType === "Airport Transfer") {
+            // Airport Transfer: Show direction, pickup and dropoff
+            const directionLabel = direction === "from-airport"
+                ? "Havalimanından"
+                : direction === "to-airport"
+                    ? "Havalimanına"
+                    : "";
+
+            routeRow = `${directionLabel ? `<tr>
+                <td style="padding: 8px 0; width: 80px; font-size: 14px; color: #6b7280;">Yön:</td>
+                <td style="padding: 8px 0; font-size: 15px; font-weight: 500;">${directionLabel}</td>
+               </tr>` : ''}
+               <tr>
+                <td style="padding: 8px 0; width: 80px; font-size: 14px; color: #6b7280;">Alış noktası:</td>
+                <td style="padding: 8px 0; font-size: 15px; font-weight: 500;">${fromLocation}</td>
+               </tr>
+               <tr>
+                <td style="padding: 8px 0; width: 80px; font-size: 14px; color: #6b7280;">Bırakış noktası:</td>
+                <td style="padding: 8px 0; font-size: 15px; font-weight: 500;">${toLocation}</td>
+               </tr>`;
+        } else if (bookingType === "Hourly Hire") {
+            // Hourly: Show pickup and duration
+            routeRow = `<tr>
                 <td style="padding: 8px 0; width: 80px; font-size: 14px; color: #6b7280;">Alış noktası:</td>
                 <td style="padding: 8px 0; font-size: 15px; font-weight: 500;">${fromLocation}</td>
                </tr>
@@ -47,6 +72,7 @@ export async function POST(req: Request) {
                 <td style="padding: 8px 0; width: 80px; font-size: 14px; color: #6b7280;">Süre:</td>
                 <td style="padding: 8px 0; font-size: 15px; font-weight: 500;">${duration} Saat</td>
                </tr>`;
+        }
 
         // Handle Attachments
         const attachments = [];
@@ -80,6 +106,10 @@ export async function POST(req: Request) {
                     <h2 style="margin: 0; font-size: 20px; font-weight: 600; color: #111827;">Yeni rezervasyon isteği tipi</h2>
                     <div style="margin-top:8px;">
                         <span style="background-color: #111827; color: #fff; padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: 600; text-transform: uppercase;">${bookingType}</span>
+                        ${bookingType === "Airport Transfer" && direction ? `
+                        <span style="background-color: #2563eb; color: #fff; padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: 600; text-transform: uppercase; margin-left: 8px;">
+                            ${direction === "from-airport" ? "Havalimanından" : "Havalimanına"}
+                        </span>` : ''}
                     </div>
                 </div>
 
@@ -157,7 +187,7 @@ export async function POST(req: Request) {
         await transporter.sendMail({
             from: process.env.EMAIL,
             to: process.env.EMAIL,
-            subject: `🚖 New Booking: ${fullName} - ${formattedDate}`,
+            subject: `🚖 Yeni transfer: ${fullName} - ${formattedDate}`,
             html: htmlContent,
             attachments,
         });
