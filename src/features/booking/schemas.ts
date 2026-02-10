@@ -9,11 +9,15 @@ export const SERVICE_TYPES = {
 
 export const bookingSchema = z.object({
     // Type
-    serviceType: z.enum([SERVICE_TYPES.TRANSFER, SERVICE_TYPES.HOURLY]),
+    serviceType: z.enum([SERVICE_TYPES.TRANSFER, SERVICE_TYPES.HOURLY, SERVICE_TYPES.AIRPORT]),
 
     // Locations
     pickupAddress: z.string().min(5, "Pickup address is required"),
     dropoffAddress: z.string().optional(),
+
+    // Add to your form schema
+    airport: z.string().optional(),
+    direction: z.string().optional(),
 
     // Timing
     date: z.date(),
