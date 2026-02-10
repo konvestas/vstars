@@ -1,4 +1,4 @@
-import { useState } from "react";
+import {useEffect, useState} from "react";
 import {motion, AnimatePresence, LazyMotion, domAnimation} from "framer-motion";
 import { FormProvider } from "react-hook-form";
 import { useTranslations } from "next-intl";
@@ -20,11 +20,12 @@ import { SERVICE_TYPES } from "../schemas";
 import {Textarea} from "@/components/ui/textarea";
 import {cn} from "@/lib/utils";
 import { toast } from "sonner";
+import {AirportInput} from "@/features/booking/_components/airport-input";
 
 const styles = {
     tabTrigger:    "rounded-full text-m font-semibold data-[state=active]:bg-white data-[state=active]:text-black " +
         "data-[state=active]:shadow-lg transition-all duration-300 h-11",
-    glassInput:    "pl-10 text-white bg-white/10 hover:bg-white/30 focus:bg-white/20 border-white/20 " +
+    glassInput:    "pl-10 text-white w-full bg-white/10 hover:bg-white/30 focus:bg-white/20 border-white/20 " +
         "placeholder:text-white/30 transition-all duration-300",
     glassLabel:    "text-white/70 text-sm font-medium mb-1.5 block",
     actionBtn:     "w-full flex-1 h-10 cursor-pointer text-lg font-medium text-white rounded-xl bg-green-700 hover:bg-green-600 " +
@@ -112,9 +113,15 @@ export default function BookingWidget() {
     };
 
     const serviceType = watch("serviceType");
-    const [watchedDate, watchedTime, watchedPassengers, watchedLuggage, pickupAddr, dropoffAddr] = watch([
-        "date", "time", "passengers", "luggage", "pickupAddress", "dropoffAddress"
+    const [watchedDate, watchedTime, watchedPassengers, watchedLuggage, pickupAddr, dropoffAddr, watchedDirection] = watch([
+        "date", "time", "passengers", "luggage", "pickupAddress", "dropoffAddress", "direction"
     ]);
+
+    useEffect(() => {
+        if (serviceType === SERVICE_TYPES.AIRPORT && !watchedDirection) {
+            setValue("direction", "from-airport", { shouldValidate: false });
+        }
+    }, [serviceType, watchedDirection, setValue]);
 
     // Local state for file preview
     const [previewUrl, setPreviewUrl] = useState<string | null>(null);
@@ -129,7 +136,6 @@ export default function BookingWidget() {
             setValue("passport", e.target.files, { shouldValidate: true });
         }
     };
-
     const clearFile = () => {
         setPreviewUrl(null);
         setFileName(null);
@@ -176,54 +182,180 @@ export default function BookingWidget() {
                                     exit={{ opacity: 0, y: -10 }}
                                     className="space-y-4"
                                 >
-                                    <FormField
-                                        control={form.control}
-                                        name="pickupAddress"
-                                        render={({ field }) => (
-                                            <LocationInput
-                                                label={t("Form.pickUpLocation")}
-                                                placeholder={t("Form.pickUpLocationPlaceHolder")}
-                                                value={field.value}
-                                                onChange={field.onChange}
-                                                error={form.formState.errors.pickupAddress?.message}
-                                                className={styles.glassInput}
-                                            />
-                                        )}
-                                    />
-
-                                    {serviceType !== SERVICE_TYPES.HOURLY ? (
+                                    {/* AIRPORT TAB - Direction selector */}
+                                    {serviceType === SERVICE_TYPES.AIRPORT && (
                                         <FormField
                                             control={form.control}
-                                            name="dropoffAddress"
+                                            name="direction"
                                             render={({ field }) => (
-                                                <LocationInput
-                                                    label={t("Form.dropOffLocation")}
-                                                    placeholder={t("Form.dropOffLocationPlaceHolder")}
-                                                    value={field.value}
-                                                    onChange={field.onChange}
-                                                    error={form.formState.errors.dropoffAddress?.message}
-                                                    className={styles.glassInput}
-                                                />
-                                            )}
-                                        />
-                                    ) : (
-                                        // HOURLY TAB DURATION
-                                        <FormField
-                                            control={form.control}
-                                            name="hours"
-                                            render={({ field }) => (
-                                                <DurationInput
-                                                    label={t("Form.duration")}
-                                                    placeholder={t("Form.durationPlaceHolder")}
-                                                    value={field.value || ""}
-                                                    onChange={field.onChange}
-                                                    error={form.formState.errors.hours?.message}
-                                                    className={styles.glassInput}
-                                                />
+                                                <div className="grid grid-cols-2 gap-2">
+                                                    <button
+                                                        type="button"
+                                                        onClick={() => field.onChange("to-airport")}
+                                                        className={cn(
+                                                            "h-12 rounded-xl font-medium transition-all",
+                                                            field.value === "to-airport"
+                                                                ? "bg-white text-black shadow-lg"
+                                                                : "bg-white/10 text-white hover:bg-white/20"
+                                                        )}
+                                                    >
+                                                        To Airport
+                                                    </button>
+                                                    <button
+                                                        type="button"
+                                                        onClick={() => field.onChange("from-airport")}
+                                                        className={cn(
+                                                            "h-12 rounded-xl font-medium transition-all",
+                                                            field.value === "from-airport"
+                                                                ? "bg-white text-black shadow-lg"
+                                                                : "bg-white/10 text-white hover:bg-white/20"
+                                                        )}
+                                                    >
+                                                        From Airport
+                                                    </button>
+                                                </div>
                                             )}
                                         />
                                     )}
-                                    <div className="grid grid-cols-2 gap-2 ">
+
+                                    {/* AIRPORT TAB - To Airport Mode */}
+                                    {serviceType === SERVICE_TYPES.AIRPORT && watchedDirection === "to-airport" && (
+                                        <>
+                                            <FormField
+                                                control={form.control}
+                                                name="pickupAddress"
+                                                render={({ field }) => (
+                                                    <LocationInput
+                                                        label={t("Form.pickUpLocation")}
+                                                        placeholder={t("Form.pickUpLocationPlaceHolder")}
+                                                        value={field.value}
+                                                        onChange={field.onChange}
+                                                        error={form.formState.errors.pickupAddress?.message}
+                                                        className={styles.glassInput}
+                                                    />
+                                                )}
+                                            />
+                                            <FormField
+                                                control={form.control}
+                                                name="airport"
+                                                render={({ field }) => (
+                                                    <AirportInput
+                                                        label={t("Form.dropOffLocation")}
+                                                        placeholder="Select Airport"
+                                                        value={field.value}
+                                                        onChange={field.onChange}
+                                                        error={form.formState.errors.airport?.message}
+                                                        className={styles.glassInput}
+                                                    />
+                                                )}
+                                            />
+                                        </>
+                                    )}
+
+                                    {/* AIRPORT TAB - From Airport Mode */}
+                                    {serviceType === SERVICE_TYPES.AIRPORT && watchedDirection === "from-airport" && (
+                                        <>
+                                            <FormField
+                                                control={form.control}
+                                                name="airport"
+                                                render={({ field }) => (
+                                                    <AirportInput
+                                                        label={t("Form.pickUpLocation")}
+                                                        placeholder="Select Airport"
+                                                        value={field.value}
+                                                        onChange={field.onChange}
+                                                        error={form.formState.errors.airport?.message}
+                                                        className={styles.glassInput}
+                                                    />
+                                                )}
+                                            />
+                                            <FormField
+                                                control={form.control}
+                                                name="pickupAddress"
+                                                render={({ field }) => (
+                                                    <LocationInput
+                                                        label={t("Form.dropOffLocation")}
+                                                        placeholder={t("Form.dropOffLocationPlaceHolder")}
+                                                        value={field.value}
+                                                        onChange={field.onChange}
+                                                        error={form.formState.errors.pickupAddress?.message}
+                                                        className={styles.glassInput}
+                                                    />
+                                                )}
+                                            />
+                                        </>
+                                    )}
+
+                                    {/* TRANSFER TAB - Regular pickup and dropoff */}
+                                    {serviceType === SERVICE_TYPES.TRANSFER && (
+                                        <>
+                                            <FormField
+                                                control={form.control}
+                                                name="pickupAddress"
+                                                render={({ field }) => (
+                                                    <LocationInput
+                                                        label={t("Form.pickUpLocation")}
+                                                        placeholder={t("Form.pickUpLocationPlaceHolder")}
+                                                        value={field.value}
+                                                        onChange={field.onChange}
+                                                        error={form.formState.errors.pickupAddress?.message}
+                                                        className={styles.glassInput}
+                                                    />
+                                                )}
+                                            />
+                                            <FormField
+                                                control={form.control}
+                                                name="dropoffAddress"
+                                                render={({ field }) => (
+                                                    <LocationInput
+                                                        label={t("Form.dropOffLocation")}
+                                                        placeholder={t("Form.dropOffLocationPlaceHolder")}
+                                                        value={field.value}
+                                                        onChange={field.onChange}
+                                                        error={form.formState.errors.dropoffAddress?.message}
+                                                        className={styles.glassInput}
+                                                    />
+                                                )}
+                                            />
+                                        </>
+                                    )}
+
+                                    {/* HOURLY TAB - Pickup and Duration */}
+                                    {serviceType === SERVICE_TYPES.HOURLY && (
+                                        <>
+                                            <FormField
+                                                control={form.control}
+                                                name="pickupAddress"
+                                                render={({ field }) => (
+                                                    <LocationInput
+                                                        label={t("Form.pickUpLocation")}
+                                                        placeholder={t("Form.pickUpLocationPlaceHolder")}
+                                                        value={field.value}
+                                                        onChange={field.onChange}
+                                                        error={form.formState.errors.pickupAddress?.message}
+                                                        className={styles.glassInput}
+                                                    />
+                                                )}
+                                            />
+                                            <FormField
+                                                control={form.control}
+                                                name="hours"
+                                                render={({ field }) => (
+                                                    <DurationInput
+                                                        label={t("Form.duration")}
+                                                        placeholder={t("Form.durationPlaceHolder")}
+                                                        value={field.value || ""}
+                                                        onChange={field.onChange}
+                                                        error={form.formState.errors.hours?.message}
+                                                        className={styles.glassInput}
+                                                    />
+                                                )}
+                                            />
+                                        </>
+                                    )}
+
+                                    {/* Date/Time and Passenger/Luggage - Common for all tabs */}
+                                    <div className="grid grid-cols-2 gap-2">
                                         <DateTimeInput
                                             label={t("Form.date")}
                                             placeholder={t("Form.datePlaceHolder")}
