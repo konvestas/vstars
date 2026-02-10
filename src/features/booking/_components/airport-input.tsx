@@ -27,6 +27,9 @@ export function AirportInput({
                                  error,
                                  className
                              }: AirportInputProps) {
+    // Find the selected airport to display its label
+    const selectedAirport = AIRPORTS.find(airport => airport.value === value);
+
     return (
         <div className="relative group w-full">
             {/* Icon */}
@@ -40,7 +43,7 @@ export function AirportInput({
             </div>
 
             {/* Select */}
-            <Select value={value} onValueChange={onChange}>
+            <Select value={value || ""} onValueChange={onChange}>
                 <SelectTrigger
                     className={cn(
                         "pt-8 pb-8 h-16 pl-10 cursor-pointer",
@@ -49,7 +52,9 @@ export function AirportInput({
                     )}
                 >
                     <div className="pt-4">
-                        <SelectValue placeholder={placeholder} />
+                        <SelectValue placeholder={placeholder}>
+                            {selectedAirport ? `${selectedAirport.label} (${selectedAirport.code})` : placeholder}
+                        </SelectValue>
                     </div>
                 </SelectTrigger>
                 <SelectContent className="bg-white/95 backdrop-blur-xl border border-white/30 rounded-2xl shadow-2xl p-2">
