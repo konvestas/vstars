@@ -31,17 +31,19 @@ export function useBookingForm() {
 
     const { watch, trigger, setValue, formState: { errors } } = form;
 
-    const [serviceType, pickup, dropoff, hours] = watch([
+    const [serviceType, pickup, dropoff, hours, airport, direction] = watch([
         "serviceType",
         "pickupAddress",
         "dropoffAddress",
-        "hours"
+        "hours",
+        "airport",
+        "direction"
     ]);
 
     // Memoized Price Calculation
     const price = useMemo(() => {
-        return calculateTripPrice(serviceType, pickup, dropoff, hours);
-    }, [serviceType, pickup, dropoff, hours]);
+        return calculateTripPrice(serviceType, pickup, dropoff, hours, airport, direction);
+    }, [serviceType, pickup, dropoff, hours, airport, direction]);
 
     // --- Handlers ---
     const onTabChange = (val: string) => {
