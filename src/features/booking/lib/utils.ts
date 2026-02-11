@@ -3,13 +3,34 @@ import { SERVICE_TYPES } from "../schemas";
 
 // --- PRICING LOGIC ---
 
-// Helper: Converts "Maltepe, Istanbul" -> "MALTEPE/ISTANBUL" for better matching
+// Helper: Normalizes Turkish characters for matching
+const normalizeTurkish = (str: string): string => {
+    if (!str) return "";
+    return str
+        .toUpperCase()
+        .replace(/İ/g, "I")
+        .replace(/I/g, "I")
+        .replace(/Ş/g, "S")
+        .replace(/Ğ/g, "G")
+        .replace(/Ü/g, "U")
+        .replace(/Ö/g, "O")
+        .replace(/Ç/g, "C");
+};
+
+// Helper: Converts address to normalized format for matching
 const normalizeAddress = (address: string): string => {
     if (!address) return "";
-    return address
-        .toUpperCase()
-        .replace(/,\s*/g, "/") // Replace comma+space with slash
+
+    // First normalize Turkish characters
+    let normalized = normalizeTurkish(address);
+
+    // Replace various separators with slash
+    normalized = normalized
+        .replace(/,\s*/g, "/")
+        .replace(/\s+/g, " ")
         .trim();
+
+    return normalized;
 };
 
 export const calculateTripPrice = (
@@ -36,9 +57,13 @@ export const calculateTripPrice = (
 
         // Find matching zone based on destination
         const matchedZone = PRICING_ZONES.find(zone =>
-            zone.regions.some(region =>
-                destinationAddress.includes(region.toUpperCase())
-            )
+            zone.regions.some(region => {
+                const normalizedRegion = normalizeTurkish(region);
+                // Check if the destination contains the region district name
+                // e.g., "MALTEPE/ISTANBUL" matches "MALTEPE/ISTANBUL" or just "MALTEPE"
+                return destinationAddress.includes(normalizedRegion) ||
+                    normalizedRegion.split("/")[0] === destinationAddress.split("/")[0];
+            })
         );
 
         if (matchedZone) {
@@ -56,9 +81,11 @@ export const calculateTripPrice = (
 
         // Find matching zone
         const matchedZone = PRICING_ZONES.find(zone =>
-            zone.regions.some(region =>
-                combinedAddress.includes(region.toUpperCase())
-            )
+            zone.regions.some(region => {
+                const normalizedRegion = normalizeTurkish(region);
+                return combinedAddress.includes(normalizedRegion) ||
+                    normalizedRegion.split("/")[0] === combinedAddress.split("/")[0];
+            })
         );
 
         if (matchedZone) {

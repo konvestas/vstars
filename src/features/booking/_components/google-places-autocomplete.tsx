@@ -48,7 +48,7 @@ export function usePlacesAutocomplete() {
                     .map((s) => ({
                         placeId: s.placePrediction!.placeId,
                         text: s.placePrediction!.text.toString(),
-                        place: s.placePrediction!.toPlace(), // Crucial: Convert to Place object
+                        place: s.placePrediction!.toPlace(),
                     }));
 
                 setPredictions(formatted);
@@ -64,20 +64,46 @@ export function usePlacesAutocomplete() {
     const onPlaceSelect = useCallback(
         async (place: google.maps.places.Place) => {
             try {
-                // Fetch only the fields we need
+                // Fetch address components to extract district and province
                 await place.fetchFields({
-                    fields: ["displayName", "formattedAddress", "location"],
+                    fields: ["displayName", "formattedAddress", "location", "addressComponents"],
                 });
 
-                // REFRESH TOKEN: As per Google Docs, start a new session after selection
-                if (placesLib) {
-                    setSessionToken(new placesLib.AutocompleteSessionToken());
+                let district = "";
+                let province = "";
+
+                if (place.addressComponents) {
+                    for (const component of place.addressComponents) {
+                        const types = component.types;
+
+                        // Get district (administrative_area_level_2 or sublocality_level_1)
+                        if (types.includes("administrative_area_level_2") ||
+                            types.includes("sublocality_level_1") ||
+                            types.includes("sublocality")) {
+                            district = component.longText || component.shortText || "";
+                        }
+                        // Get province (administrative_area_level_1)
+                        if (types.includes("administrative_area_level_1")) {
+                            province = component.longText || component.shortText || "";
+                        }
+                    }
                 }
 
+                // Format address as "DISTRICT/PROVINCE" for pricing "MALTEPE/ISTANBUL" or "KADIKÖY/ISTANBUL"
+                let structuredAddress = "";
+                if (district && province) {
+                    structuredAddress = `${district}/${province}`;
+                } else if (district) {
+                    structuredAddress = district;
+                } else if (province) {
+                    structuredAddress = province;
+                }
+
+                if (placesLib) {setSessionToken(new placesLib.AutocompleteSessionToken());}
+
                 return {
-                    address: place.formattedAddress, // The clean address string
-                    lat: place.location?.lat(),
-                    lng: place.location?.lng(),
+                    address: structuredAddress || place.formattedAddress,
+                    formattedAddress: place.formattedAddress,
                 };
             } catch (e) {
                 console.error("Place details error:", e);
