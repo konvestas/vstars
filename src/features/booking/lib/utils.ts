@@ -14,9 +14,11 @@ const normalizeAddress = (address: string): string => {
 
 export const calculateTripPrice = (
     bookingType: string,
-    from: string,            // Reverted to simple string
-    to: string | undefined,  // Reverted to simple string
-    duration: string | undefined
+    from: string,
+    to: string | undefined,
+    duration: string | undefined,
+    airport?: string,
+    direction?: string
 ): number => {
 
     // 1. Hourly Calculation
@@ -25,15 +27,34 @@ export const calculateTripPrice = (
         return (hours * HOURLY_RATE) + GREETING_FEE;
     }
 
-    // 2. Transfer (One Way) Calculation
+    // 2. Airport Transfer Calculation
+    if (bookingType === SERVICE_TYPES.AIRPORT) {
+        // For airport transfers, we need to look at the destination/origin (not the airport)
+        // - from-airport: "from" contains the destination address
+        // - to-airport: "from" contains the origin address
+        const destinationAddress = normalizeAddress(from);
+
+        // Find matching zone based on destination
+        const matchedZone = PRICING_ZONES.find(zone =>
+            zone.regions.some(region =>
+                destinationAddress.includes(region.toUpperCase())
+            )
+        );
+
+        if (matchedZone) {
+            return matchedZone.price + GREETING_FEE;
+        }
+
+        // Default Fallback for airport transfers
+        return 2500 + GREETING_FEE;
+    }
+
+    // 3. Transfer (One Way) Calculation
     if (bookingType === SERVICE_TYPES.TRANSFER) {
         // We look at both Pickup and Dropoff
-        // e.g., "KARTAL SK., BEYOGLU/ISTANBUL" and "ATASEHIR/ISTANBUL"
         const combinedAddress = normalizeAddress(from + " " + (to || ""));
 
         // Find matching zone
-        // We iterate your PRICING_ZONES. If your data has "MALTEPE/ISTANBUL",
-        // and the input is "Maltepe, Istanbul", our normalize function makes them match.
         const matchedZone = PRICING_ZONES.find(zone =>
             zone.regions.some(region =>
                 combinedAddress.includes(region.toUpperCase())
