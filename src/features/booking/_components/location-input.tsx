@@ -5,18 +5,8 @@ import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 import { MapPin, Loader2 } from "lucide-react";
 import { usePlacesAutocomplete } from "./google-places-autocomplete";
+import {LocationInputProps} from "@/features/booking/_components/data/location-input-data";
 
-interface LocationInputProps {
-    value?: string;
-    onChange: (val: string) => void;
-    // NEW: Callback to return both formats
-    onLocationSelect?: (details: { display: string; pricing: string }) => void;
-    label: string;
-    placeholder: string;
-    error?: string;
-    className?: string;
-    icon?: React.ReactNode;
-}
 
 export function LocationInput({
                                   value,

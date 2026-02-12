@@ -7,25 +7,8 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useTranslations } from "next-intl";
-
-// Define the shape of the value object
-export interface PassengerValue {
-    passengers: string;
-    luggage: string;
-}
-
-interface PassengerLuggageInputProps {
-    value?: PassengerValue;
-    onChange: (value: PassengerValue) => void;
-    label: string;
-    placeholder: string;
-    error?: string;
-    className: string;
-}
-
-// Pre-computed arrays to avoid recreation
-const PASSENGER_OPTIONS = [1, 2, 3, 4, 5];
-const LUGGAGE_OPTIONS = [0, 1, 2, 3, 4, 5, 6];
+import {LUGGAGE_OPTIONS, PASSENGER_OPTIONS, PassengerLuggageInputProps
+} from "@/features/booking/_components/data/passenger-luggage-input-data";
 
 const PassengerSelect = React.memo(({
                                         value,

@@ -1,6 +1,6 @@
 "use client";
 
-import * as React from "react";
+import React from "react";
 import { format } from "date-fns";
 import { CalendarIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -9,24 +9,7 @@ import { Calendar } from "@/components/ui/calendar";
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { useTranslations } from "next-intl";
-
-interface DateTimeInputProps {
-    date: Date | undefined;
-    time: string | undefined;
-    onConfirm: (date: Date, time: string) => void;
-    label: string;
-    placeholder: string;
-    className: string;
-    error?: string;
-}
-
-// Move timeSlots outside component - they never change
-const TIME_SLOTS = Array.from({ length: 48 }, (_, i) => {
-    const totalMinutes = i * 30;
-    const hour = Math.floor(totalMinutes / 60);
-    const minute = totalMinutes % 60;
-    return `${hour.toString().padStart(2, "0")}:${minute.toString().padStart(2, "0")}`;
-});
+import {DateTimeInputProps, TIME_SLOTS} from "@/features/booking/_components/data/date-time-input-data";
 
 // Memoized time slot button to prevent re-renders
 const TimeSlotButton = React.memo(({

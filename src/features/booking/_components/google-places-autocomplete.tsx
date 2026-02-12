@@ -2,21 +2,8 @@
 
 import { useState, useEffect, useCallback } from "react";
 import { useMapsLibrary } from "@vis.gl/react-google-maps";
-// IMPORT THE SHARED NORMALIZER
 import { normalizeToEnglish } from "@/features/booking/lib/utils";
-
-interface Suggestion {
-    placeId: string;
-    text: string;
-    place: google.maps.places.Place;
-}
-
-interface PlaceDetails {
-    displayAddress: string;
-    pricingAddress: string;
-    formattedAddress: string;
-    location?: google.maps.LatLng | null;
-}
+import {PlaceDetails, Suggestion} from "@/features/booking/_components/data/google-places-auto-data";
 
 export function usePlacesAutocomplete() {
     const placesLib = useMapsLibrary("places");

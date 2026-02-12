@@ -5,17 +5,7 @@ import { Clock } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Separator } from "@/components/ui/separator";
-
-interface DurationInputProps {
-    label: string;
-    placeholder: string;
-    value: string;
-    onChange: (val: string) => void;
-    className?: string;
-    error?: string;
-}
-
-const HOURS = ["4", "5", "6", "7", "8", "9", "10"];
+import {DurationInputProps, HOURS} from "@/features/booking/_components/data/duration-input-data";
 
 export function DurationInput({
                                   label,
