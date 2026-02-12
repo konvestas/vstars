@@ -1,38 +1,45 @@
-import { PRICING_ZONES, GREETING_FEE, HOURLY_RATE } from "./pricing-data";
+// utils.ts
+import {
+    IST_PRICING_ZONES,
+    SAW_PRICING_ZONES,
+    PRICING_ZONES,
+    GREETING_FEE,
+    HOURLY_RATE,
+    DEFAULT_AIRPORT_PRICE,
+    DEFAULT_GENERAL_PRICE
+} from "./pricing-data";
 import { SERVICE_TYPES } from "../schemas";
 
-// --- PRICING LOGIC ---
 
-// Helper: Normalizes Turkish characters for matching
-const normalizeTurkish = (str: string): string => {
-    if (!str) return "";
-    return str
-        .toUpperCase()
-        .replace(/İ/g, "I")
-        .replace(/I/g, "I")
-        .replace(/Ş/g, "S")
-        .replace(/Ğ/g, "G")
-        .replace(/Ü/g, "U")
-        .replace(/Ö/g, "O")
-        .replace(/Ç/g, "C");
+export const normalizeToEnglish = (text: string): string => {
+    if (!text) return "";
+
+    let normalized = text.toLowerCase();
+
+    const turkishMap: { [key: string]: string } = {
+        'ç': 'c', 'ğ': 'g', 'ı': 'i', 'i': 'i', 'ö': 'o', 'ş': 's', 'ü': 'u',
+        'Ç': 'c', 'Ğ': 'g', 'İ': 'i', 'I': 'i', 'Ö': 'o', 'Ş': 's', 'Ü': 'u'
+    };
+
+    // Replace special Turkish chars
+    normalized = normalized.replace(/[çğıiöşüÇĞİIÖŞÜ]/g, (match) => turkishMap[match] || match);
+
+    // Remove accents and trim
+    return normalized.normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim();
 };
 
-// Helper: Converts address to normalized format for matching
-const normalizeAddress = (address: string): string => {
-    if (!address) return "";
-
-    // First normalize Turkish characters
-    let normalized = normalizeTurkish(address);
-
-    // Replace various separators with slash
-    normalized = normalized
-        .replace(/,\s*/g, "/")
-        .replace(/\s+/g, " ")
-        .trim();
-
-    return normalized;
+const getPricingZones = (bookingType: string, airport?: string) => {
+    if (bookingType === SERVICE_TYPES.AIRPORT) {
+        if (airport === "istanbul-airport" || airport === "IST") {
+            return { zones: IST_PRICING_ZONES, defaultPrice: DEFAULT_AIRPORT_PRICE };
+        } else if (airport === "sabiha-gokcen" || airport === "SAW") {
+            return { zones: SAW_PRICING_ZONES, defaultPrice: DEFAULT_AIRPORT_PRICE };
+        }
+    }
+    return { zones: PRICING_ZONES, defaultPrice: DEFAULT_GENERAL_PRICE };
 };
 
+// Updated signature to accept 'direction' (Fixes TS2554)
 export const calculateTripPrice = (
     bookingType: string,
     from: string,
@@ -42,27 +49,29 @@ export const calculateTripPrice = (
     direction?: string
 ): number => {
 
-    // 1. Hourly Calculation
+    // 1. Hourly
     if (bookingType === SERVICE_TYPES.HOURLY && duration) {
         const hours = parseInt(duration, 10);
         return (hours * HOURLY_RATE) + GREETING_FEE;
     }
 
-    // 2. Airport Transfer Calculation
+    // 2. Airport Transfer
     if (bookingType === SERVICE_TYPES.AIRPORT) {
-        // For airport transfers, we need to look at the destination/origin (not the airport)
-        // - from-airport: "from" contains the destination address
-        // - to-airport: "from" contains the origin address
-        const destinationAddress = normalizeAddress(from);
+        const { zones, defaultPrice } = getPricingZones(bookingType, airport);
 
-        // Find matching zone based on destination
-        const matchedZone = PRICING_ZONES.find(zone =>
+        // NORMALIZE THE INPUT
+        // Note: In your booking widget, the 'pickupAddress' field (passed as 'from' here)
+        // always contains the District (e.g., Sisli), regardless of direction.
+        const normalizedTarget = normalizeToEnglish(from);
+
+        console.log("Checking price for:", normalizedTarget);
+
+        const matchedZone = zones.find(zone =>
             zone.regions.some(region => {
-                const normalizedRegion = normalizeTurkish(region);
-                // Check if the destination contains the region district name
-                // e.g., "MALTEPE/ISTANBUL" matches "MALTEPE/ISTANBUL" or just "MALTEPE"
-                return destinationAddress.includes(normalizedRegion) ||
-                    normalizedRegion.split("/")[0] === destinationAddress.split("/")[0];
+                const normalizedRegion = normalizeToEnglish(region);
+                // Match exact or startswith (e.g. "sisli/istanbul" matches "sisli/istanbul/merkez")
+                return normalizedTarget === normalizedRegion ||
+                    normalizedTarget.startsWith(normalizedRegion + "/");
             })
         );
 
@@ -70,30 +79,23 @@ export const calculateTripPrice = (
             return matchedZone.price + GREETING_FEE;
         }
 
-        // Default Fallback for airport transfers
-        return 2500 + GREETING_FEE;
+        console.warn(`No zone for ${normalizedTarget}. Using default.`);
+        return defaultPrice + GREETING_FEE;
     }
 
-    // 3. Transfer (One Way) Calculation
+    // 3. One Way Transfer
     if (bookingType === SERVICE_TYPES.TRANSFER) {
-        // We look at both Pickup and Dropoff
-        const combinedAddress = normalizeAddress(from + " " + (to || ""));
+        const { zones, defaultPrice } = getPricingZones(bookingType);
+        const combinedAddress = normalizeToEnglish(from + " " + (to || ""));
 
-        // Find matching zone
-        const matchedZone = PRICING_ZONES.find(zone =>
-            zone.regions.some(region => {
-                const normalizedRegion = normalizeTurkish(region);
-                return combinedAddress.includes(normalizedRegion) ||
-                    normalizedRegion.split("/")[0] === combinedAddress.split("/")[0];
-            })
+        const matchedZone = zones.find(zone =>
+            zone.regions.some(region => combinedAddress.includes(normalizeToEnglish(region)))
         );
 
         if (matchedZone) {
             return matchedZone.price + GREETING_FEE;
         }
-
-        // Default Fallback
-        return 2500 + GREETING_FEE;
+        return defaultPrice + GREETING_FEE;
     }
 
     return 0;

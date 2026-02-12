@@ -36,7 +36,9 @@ const styles = {
 
 export default function BookingWidget() {
     const t = useTranslations('BookingWidget');
-    const { form, step, price, onTabChange, next, back } = useBookingForm();
+
+    // 1. Destructure the new handlers here
+    const { form, step, price, onTabChange, next, back, handlePickupSelect, handleDropoffSelect } = useBookingForm();
     const { watch, setValue, register } = form;
 
     const [isSubmitting, setIsSubmitting] = useState(false);
@@ -144,8 +146,6 @@ export default function BookingWidget() {
         "date", "time", "passengers", "luggage", "pickupAddress", "dropoffAddress", "direction", "airport"
     ]);
 
-    // Compute display addresses based on airport transfer direction
-    // For airport transfers, we need to get the airport name from the separate airport field
     const getAirportLabel = (airportValue: string | undefined) => {
         if (!airportValue) return "";
         const airports = [
@@ -156,15 +156,15 @@ export default function BookingWidget() {
     };
 
     const displayPickupAddr = serviceType === SERVICE_TYPES.AIRPORT && watchedDirection === "from-airport"
-        ? getAirportLabel(watchedAirport)  // Airport is pickup when coming FROM airport
+        ? getAirportLabel(watchedAirport)
         : serviceType === SERVICE_TYPES.AIRPORT && watchedDirection === "to-airport"
-            ? pickupAddr  // User's location is pickup when going TO airport
+            ? pickupAddr
             : pickupAddr;
 
     const displayDropoffAddr = serviceType === SERVICE_TYPES.AIRPORT && watchedDirection === "from-airport"
-        ? pickupAddr   // User's destination is dropoff when coming FROM airport
+        ? pickupAddr
         : serviceType === SERVICE_TYPES.AIRPORT && watchedDirection === "to-airport"
-            ? getAirportLabel(watchedAirport)  // Airport is dropoff when going TO airport
+            ? getAirportLabel(watchedAirport)
             : dropoffAddr;
 
     useEffect(() => {
@@ -280,6 +280,8 @@ export default function BookingWidget() {
                                                         placeholder={t("Form.pickUpLocationPlaceHolder")}
                                                         value={field.value}
                                                         onChange={field.onChange}
+                                                        // 2. Add handlePickupSelect here
+                                                        onLocationSelect={handlePickupSelect}
                                                         error={form.formState.errors.pickupAddress?.message}
                                                         className={styles.glassInput}
                                                     />
@@ -323,11 +325,30 @@ export default function BookingWidget() {
                                                 control={form.control}
                                                 name="pickupAddress"
                                                 render={({ field }) => (
+                                                    // NOTE: Even though this is logically "dropoff",
+                                                    // if your state stores it in 'pickupAddress' due to form structure,
+                                                    // ensure you use the correct handler that matches the field name.
+                                                    // However, looking at your original code:
+                                                    // <LocationInput label="Dropoff" ... value={field.value} />
+                                                    // It was linked to name="pickupAddress".
+                                                    // **WAIT**: In your original code for "From Airport", you had:
+                                                    // name="pickupAddress" rendering "Dropoff Location".
+                                                    // This seems like you are reusing the pickupAddress field for the destination?
+                                                    // If so, use handlePickupSelect.
+                                                    // If you intended to use dropoffAddress, change name="dropoffAddress".
+                                                    // I will assume you want to map it to 'pickupAddress' as per your original code,
+                                                    // but conceptually this is the destination.
+
+                                                    // **CORRECTION**: The original code has:
+                                                    // name="pickupAddress" inside "From Airport" block.
+                                                    // This means the user types their Hotel/Home into 'pickupAddress' variable.
+                                                    // So we MUST use handlePickupSelect.
                                                     <LocationInput
                                                         label={t("Form.dropOffLocation")}
                                                         placeholder={t("Form.dropOffLocationPlaceHolder")}
                                                         value={field.value}
                                                         onChange={field.onChange}
+                                                        onLocationSelect={handlePickupSelect}
                                                         error={form.formState.errors.pickupAddress?.message}
                                                         className={styles.glassInput}
                                                     />
@@ -348,6 +369,7 @@ export default function BookingWidget() {
                                                         placeholder={t("Form.pickUpLocationPlaceHolder")}
                                                         value={field.value}
                                                         onChange={field.onChange}
+                                                        onLocationSelect={handlePickupSelect}
                                                         error={form.formState.errors.pickupAddress?.message}
                                                         className={styles.glassInput}
                                                     />
@@ -362,6 +384,7 @@ export default function BookingWidget() {
                                                         placeholder={t("Form.dropOffLocationPlaceHolder")}
                                                         value={field.value}
                                                         onChange={field.onChange}
+                                                        onLocationSelect={handleDropoffSelect}
                                                         error={form.formState.errors.dropoffAddress?.message}
                                                         className={styles.glassInput}
                                                     />
@@ -382,6 +405,7 @@ export default function BookingWidget() {
                                                         placeholder={t("Form.pickUpLocationPlaceHolder")}
                                                         value={field.value}
                                                         onChange={field.onChange}
+                                                        onLocationSelect={handlePickupSelect}
                                                         error={form.formState.errors.pickupAddress?.message}
                                                         className={styles.glassInput}
                                                     />

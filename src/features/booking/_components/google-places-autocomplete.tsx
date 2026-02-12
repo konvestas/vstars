@@ -8,6 +8,23 @@ interface Suggestion {
     text: string;
     place: google.maps.places.Place;
 }
+interface PlaceDetails {
+    displayAddress: string;
+    pricingAddress: string;
+    formattedAddress: string;
+    location?: google.maps.LatLng | null;
+}
+// Import the normalizer or copy it here to avoid circular deps if needed
+// For simplicity, I'll include the helper function here locally
+const normalizeToEnglish = (text: string): string => {
+    let normalized = text.toLowerCase();
+    const turkishMap: { [key: string]: string } = {
+        'ç': 'c', 'ğ': 'g', 'ı': 'i', 'i': 'i', 'ö': 'o', 'ş': 's', 'ü': 'u',
+        'Ç': 'c', 'Ğ': 'g', 'İ': 'i', 'I': 'i', 'Ö': 'o', 'Ş': 's', 'Ü': 'u'
+    };
+    normalized = normalized.replace(/[çğıiöşüÇĞİIÖŞÜ]/g, (match) => turkishMap[match] || match);
+    return normalized.normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim();
+};
 
 export function usePlacesAutocomplete() {
     const placesLib = useMapsLibrary("places");
@@ -29,9 +46,7 @@ export function usePlacesAutocomplete() {
                 setPredictions([]);
                 return;
             }
-
             const { AutocompleteSuggestion } = placesLib;
-
             try {
                 const request: google.maps.places.AutocompleteRequest = {
                     input: inputValue,
@@ -39,9 +54,7 @@ export function usePlacesAutocomplete() {
                     includedRegionCodes: ["tr"],
                     language: "tr"
                 };
-
                 const { suggestions } = await AutocompleteSuggestion.fetchAutocompleteSuggestions(request);
-
                 // Format suggestions for the UI
                 const formatted = suggestions
                     .filter((s) => s.placePrediction)
@@ -50,7 +63,6 @@ export function usePlacesAutocomplete() {
                         text: s.placePrediction!.text.toString(),
                         place: s.placePrediction!.toPlace(),
                     }));
-
                 setPredictions(formatted);
             } catch (e) {
                 console.error("Autocomplete fetch error:", e);
@@ -60,9 +72,8 @@ export function usePlacesAutocomplete() {
         [placesLib, sessionToken]
     );
 
-    // 3. Get Details & Refresh Token (Called when user clicks a suggestion)
     const onPlaceSelect = useCallback(
-        async (place: google.maps.places.Place) => {
+        async (place: google.maps.places.Place): Promise<PlaceDetails | null> => {
             try {
                 // Fetch address components to extract district and province
                 await place.fetchFields({
@@ -75,21 +86,25 @@ export function usePlacesAutocomplete() {
                 if (place.addressComponents) {
                     for (const component of place.addressComponents) {
                         const types = component.types;
+                        const text = component.longText || component.shortText || "";
 
-                        // Get district (administrative_area_level_2 or sublocality_level_1)
-                        if (types.includes("administrative_area_level_2") ||
-                            types.includes("sublocality_level_1") ||
-                            types.includes("sublocality")) {
-                            district = component.longText || component.shortText || "";
-                        }
-                        // Get province (administrative_area_level_1)
                         if (types.includes("administrative_area_level_1")) {
-                            province = component.longText || component.shortText || "";
+                            province = text;
+                        }
+                        if (types.includes("administrative_area_level_2")) {
+                            district = text;
+                        }
+                    }
+                    if (!district) {
+                        const locality = place.addressComponents.find(c =>
+                            c.types.includes("locality") || c.types.includes("sublocality_level_1")
+                        );
+                        if (locality) {
+                            district = locality.longText || locality.shortText || "";
                         }
                     }
                 }
 
-                // Format address as "DISTRICT/PROVINCE" for pricing "MALTEPE/ISTANBUL" or "KADIKÖY/ISTANBUL"
                 let structuredAddress = "";
                 if (district && province) {
                     structuredAddress = `${district}/${province}`;
@@ -97,13 +112,24 @@ export function usePlacesAutocomplete() {
                     structuredAddress = district;
                 } else if (province) {
                     structuredAddress = province;
+                } else {
+                    structuredAddress = place.formattedAddress || "";
                 }
 
-                if (placesLib) {setSessionToken(new placesLib.AutocompleteSessionToken());}
+                // NORMALIZE HERE: "Beyoğlu/İstanbul" -> "beyoglu/istanbul"
+                const finalPricingAddress = normalizeToEnglish(structuredAddress);
+
+                console.log("📍 Parsed & Normalized for Pricing:", finalPricingAddress);
+
+                if (placesLib) {
+                    setSessionToken(new placesLib.AutocompleteSessionToken());
+                }
 
                 return {
-                    address: structuredAddress || place.formattedAddress,
-                    formattedAddress: place.formattedAddress,
+                    displayAddress: place.formattedAddress || finalPricingAddress,
+                    pricingAddress: finalPricingAddress,
+                    formattedAddress: place.formattedAddress || "",
+                    location: place.location
                 };
             } catch (e) {
                 console.error("Place details error:", e);
