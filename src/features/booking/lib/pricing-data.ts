@@ -2,8 +2,7 @@ import { PricingRule } from "./types";
 export const GREETING_FEE = 200;
 export const HOURLY_RATE = 750;
 // Default fallback prices when no zone matches
-export const DEFAULT_IST_PRICE = 2800;
-export const DEFAULT_SAW_PRICE = 2800;
+export const DEFAULT_AIRPORT_PRICE = 2800;
 export const DEFAULT_GENERAL_PRICE = 2500;
 
 export const PRICING_ZONES: PricingRule[] = [
