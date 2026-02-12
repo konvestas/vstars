@@ -22,7 +22,7 @@ export function useBookingForm() {
     const [isSubmitting, setIsSubmitting] = useState(false);
 
     // State for the "Pricing" version of the address (e.g. "maltepe/istanbul")
-    const [pricingData, setPricingData] = useState({
+    const [pricingLocations, setPricingLocations] = useState({
         pickup: "",
         dropoff: ""
     });
@@ -48,27 +48,20 @@ export function useBookingForm() {
 
     const { watch, trigger, setValue, getValues, clearErrors } = form;
 
-    // Watch fields for reactive logic
-    const [serviceType, pickup, dropoff, hours, airport, direction, watchedDirection, watchedAirport] = watch([
-        "serviceType",
-        "pickupAddress",
-        "dropoffAddress",
-        "hours",
-        "airport",
-        "direction",
-        "direction",
-        "airport"
+    // Watch necessary fields for UI updates and Pricing
+    const [serviceType, pickup, dropoff, hours, airport, direction, watchedAirport] = watch([
+        "serviceType", "pickupAddress", "dropoffAddress", "hours", "airport", "direction", "airport"
     ]);
 
-    // 1. CALCULATE PRICE
+    // 1. Memoized Price Calculation
     const price = useMemo(() => {
-        const p = pricingData.pickup || pickup;
-        const d = pricingData.dropoff || dropoff;
+        // Use pricing-specific locations if available, fallback to form input
+        const p = pricingLocations.pickup || pickup;
+        const d = pricingLocations.dropoff || dropoff;
         return calculateTripPrice(serviceType, p, d, hours, airport, direction);
-    }, [serviceType, pickup, dropoff, hours, airport, direction, pricingData]);
+    }, [serviceType, pickup, dropoff, hours, airport, direction, pricingLocations]);
 
-    // 2. DISPLAY ADDRESS LOGIC
-    // Centralized logic for what text to show in the "Summary" or "Trip Info"
+    // 2. Computed Display Locations (Moved from Widget to Hook)
     const displayLocations = useMemo(() => {
         const getAirportLabel = (val?: string) => {
             if (val === "istanbul-airport") return "Istanbul Airport (IST)";
@@ -77,46 +70,47 @@ export function useBookingForm() {
         };
 
         const airportLabel = getAirportLabel(watchedAirport);
+        // Default logic
         let pickupDisplay = pickup;
         let dropoffDisplay = dropoff;
 
+        // Airport logic override
         if (serviceType === SERVICE_TYPES.AIRPORT) {
-            if (watchedDirection === "from-airport") {
+            if (direction === "from-airport") {
                 pickupDisplay = airportLabel;
-                dropoffDisplay = pickup; // User's destination is stored in pickupAddress field logic
-            } else if (watchedDirection === "to-airport") {
+                dropoffDisplay = pickup;
+            } else if (direction === "to-airport") {
                 pickupDisplay = pickup;
                 dropoffDisplay = airportLabel;
             }
         }
 
         return { pickup: pickupDisplay, dropoff: dropoffDisplay };
-    }, [serviceType, watchedDirection, watchedAirport, pickup, dropoff]);
+    }, [serviceType, direction, watchedAirport, pickup, dropoff]);
 
 
-    // 3. HANDLERS
+
     const handlePickupSelect = (data: { display: string, pricing: string }) => {
         setValue("pickupAddress", data.display, { shouldValidate: true });
-        setPricingData(prev => ({ ...prev, pickup: data.pricing }));
+        setPricingLocations(prev => ({ ...prev, pickup: data.pricing }));
     };
 
     const handleDropoffSelect = (data: { display: string, pricing: string }) => {
         setValue("dropoffAddress", data.display, { shouldValidate: true });
-        setPricingData(prev => ({ ...prev, dropoff: data.pricing }));
+        setPricingLocations(prev => ({ ...prev, dropoff: data.pricing }));
     };
 
     const onTabChange = (val: string) => {
         const newType = val as typeof SERVICE_TYPES[keyof typeof SERVICE_TYPES];
         setValue("serviceType", newType);
 
-        // Reset specific fields when switching tabs
+        // Reset logic when switching tabs
         if (newType === SERVICE_TYPES.HOURLY) {
             setValue("dropoffAddress", "");
-            setPricingData(prev => ({ ...prev, dropoff: "" }));
+            setPricingLocations(prev => ({ ...prev, dropoff: "" }));
             clearErrors("dropoffAddress");
         }
-
-        // Set default direction for Airport tab if missing
+        // Ensure direction is set for airport
         if (newType === SERVICE_TYPES.AIRPORT && !getValues("direction")) {
             setValue("direction", "from-airport");
         }
@@ -129,7 +123,7 @@ export function useBookingForm() {
         } else if (step === 2) {
             isValid = true;
         } else if (step === 3) {
-            isValid = await trigger(["fullName", "email", "phone", "flightNo", "passport"]);
+            isValid = await trigger(["fullName", "email", "phone","flightNo","passport"]);
         }
         if (isValid) setStep((prev) => prev + 1);
     };
@@ -138,16 +132,16 @@ export function useBookingForm() {
         setStep((prev) => Math.max(1, prev - 1));
     };
 
-    // 4. SUBMISSION LOGIC
+    // 3. Submit Logic (Moved from Widget to Hook)
     const submitBooking = async () => {
         try {
             setIsSubmitting(true);
-            const values = getValues();
+            const formValues = getValues();
 
-            // Prepare Passport Photo
+            // Handle Passport
             let passportPhoto = null;
-            if (values.passport && values.passport.length > 0) {
-                const file = values.passport[0];
+            if (formValues.passport && formValues.passport.length > 0) {
+                const file = formValues.passport[0];
                 const base64Data = await fileToBase64(file);
                 passportPhoto = {
                     data: base64Data,
@@ -156,20 +150,17 @@ export function useBookingForm() {
                 };
             }
 
-            // Prepare Payload using the Display Logic we calculated above
-            const { pickup: fromLocation, dropoff: toLocation } = displayLocations;
-
             const payload = {
-                ...values,
-                flightNumber: values.flightNo || "",
-                notes: values.notes || "",
-                direction: values.direction || "",
-                duration: values.hours || "",
-                fromLocation,
-                toLocation,
+                ...formValues,
+                flightNumber: formValues.flightNo || "",
+                notes: formValues.notes || "",
+                direction: formValues.direction || "",
+                duration: formValues.hours || "",
+                fromLocation: displayLocations.pickup,
+                toLocation: displayLocations.dropoff,
                 dateInfo: {
-                    date: values.date.toISOString(),
-                    time: values.time
+                    date: formValues.date.toISOString(),
+                    time: formValues.time
                 },
                 passportPhoto,
                 calculatedPrice: price
@@ -183,16 +174,13 @@ export function useBookingForm() {
 
             if (res.ok) {
                 toast.success("Booking request submitted successfully!");
-                return true;
             } else {
                 const error = await res.json();
                 toast.error(error.error || "Failed to send booking request");
-                return false;
             }
         } catch (err) {
             console.error("Booking submission error:", err);
             toast.error("Something went wrong. Please try again.");
-            return false;
         } finally {
             setIsSubmitting(false);
         }
@@ -203,12 +191,12 @@ export function useBookingForm() {
         step,
         price,
         isSubmitting,
-        displayLocations, // Expose the calculated display addresses
+        displayLocations, // Expose computed display values
         onTabChange,
-        handlePickupSelect,
-        handleDropoffSelect,
         next,
         back,
+        handlePickupSelect,
+        handleDropoffSelect,
         submitBooking
     };
 }
