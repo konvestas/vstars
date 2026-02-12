@@ -2,8 +2,9 @@ import {useTranslations} from "next-intl";
 import {motion} from "framer-motion";
 import {AlertCircle, Calendar, Check, Info} from "lucide-react";
 import {format} from "date-fns";
+import {StepVehicleProps} from "@/features/booking/_components/booking-widget-pages/data/vehicle-page-data";
 
-export const StepVehicle = ({ displayLocations, date, time }: { displayLocations: any, date: Date, time: string }) => {
+export const StepVehicle = ({ displayLocations, date, time }: StepVehicleProps) => {
     const t = useTranslations('BookingWidget');
     return (
         <motion.div key="step2" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="space-y-4">

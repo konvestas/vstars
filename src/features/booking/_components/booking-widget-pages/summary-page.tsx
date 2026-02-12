@@ -2,8 +2,9 @@ import {useFormContext} from "react-hook-form";
 import {useTranslations} from "next-intl";
 import {motion} from "framer-motion";
 import {format} from "date-fns";
+import {StepSummaryProps} from "@/features/booking/_components/booking-widget-pages/data/summary-page-data";
 
-export const StepSummary = ({ price, displayLocations }: { price: number, displayLocations: any }) => {
+export const StepSummary = ({ price, displayLocations }: StepSummaryProps) => {
     const { watch } = useFormContext();
     const t = useTranslations('BookingWidget');
     const [serviceType, fullName, phone, date, time, passengers, luggage] = watch(["serviceType", "fullName", "phone", "date", "time", "passengers", "luggage"]);

@@ -9,9 +9,9 @@ import {cn} from "@/lib/utils";
 import {Textarea} from "@/components/ui/textarea";
 import {Button} from "@/components/ui/button";
 import {BookingWidgetStyles} from "@/features/booking/_components/booking-widget-pages/styles";
+import {StepGuestInfoProps} from "@/features/booking/_components/booking-widget-pages/data/guest-info-page-data";
 
-
-export const StepGuestInfo = ({ price }: { price: number }) => {
+export const StepGuestInfo = ({ price }: StepGuestInfoProps) => {
     const { register, formState: { errors }, setValue } = useFormContext();
     const t = useTranslations('BookingWidget');
     const [previewUrl, setPreviewUrl] = useState<string | null>(null);

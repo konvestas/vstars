@@ -7,15 +7,30 @@ import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card } from "@/components/ui/card";
 import { useBookingForm } from "@/features/booking/hooks/use-booking";
 import { SERVICE_TYPES } from "../schemas";
-import {StepSearch} from "@/features/booking/_components/booking-widget-pages/search-page";
-import {StepVehicle} from "@/features/booking/_components/booking-widget-pages/vehicle-page";
-import {StepGuestInfo} from "@/features/booking/_components/booking-widget-pages/guest-info-page";
-import {StepSummary} from "@/features/booking/_components/booking-widget-pages/summary-page";
-import {BookingWidgetStyles} from "@/features/booking/_components/booking-widget-pages/styles";
+import { StepSearch } from "@/features/booking/_components/booking-widget-pages/search-page";
+import { StepVehicle } from "@/features/booking/_components/booking-widget-pages/vehicle-page";
+import { StepGuestInfo } from "@/features/booking/_components/booking-widget-pages/guest-info-page";
+import { StepSummary } from "@/features/booking/_components/booking-widget-pages/summary-page";
+import { BookingWidgetStyles } from "@/features/booking/_components/booking-widget-pages/styles";
 
 export default function BookingWidget() {
     const t = useTranslations('BookingWidget');
-    const { form, step, price, onTabChange, next, back, handlePickupSelect, handleDropoffSelect, displayLocations, submitBooking, isSubmitting } = useBookingForm();
+
+    // Everything comes from the hook. No logic here.
+    const {
+        form,
+        step,
+        price,
+        onTabChange,
+        next,
+        back,
+        handlePickupSelect,
+        handleDropoffSelect,
+        displayLocations,
+        submitBooking,
+        isSubmitting
+    } = useBookingForm();
+
     const { watch } = form;
 
     return (
@@ -40,20 +55,42 @@ export default function BookingWidget() {
                     {/* STEPS CONTENT */}
                     <div className="p-6 md:p-8 space-y-6">
                         <AnimatePresence mode="wait">
-                            {step === 1 && <StepSearch handlePickupSelect={handlePickupSelect} handleDropoffSelect={handleDropoffSelect} />}
-                            {step === 2 && <StepVehicle displayLocations={displayLocations} date={watch("date")} time={watch("time")} />}
-                            {step === 3 && <StepGuestInfo price={price} />}
-                            {step === 4 && <StepSummary price={price} displayLocations={displayLocations} />}
+                            {step === 1 && (
+                                <StepSearch
+                                    handlePickupSelect={handlePickupSelect}
+                                    handleDropoffSelect={handleDropoffSelect}
+                                />
+                            )}
+                            {step === 2 && (
+                                <StepVehicle
+                                    displayLocations={displayLocations}
+                                    date={watch("date")}
+                                    time={watch("time")}
+                                />
+                            )}
+                            {step === 3 && (
+                                <StepGuestInfo price={price} />
+                            )}
+                            {step === 4 && (
+                                <StepSummary
+                                    price={price}
+                                    displayLocations={displayLocations}
+                                />
+                            )}
                         </AnimatePresence>
                     </div>
 
                     {/* FOOTER ACTIONS */}
                     <div className="p-6 pt-1">
                         {step === 1 ? (
-                            <Button onClick={next} className={BookingWidgetStyles.actionBtn}>{t("Shared.continue")}</Button>
+                            <Button onClick={next} className={BookingWidgetStyles.actionBtn}>
+                                {t("Shared.continue")}
+                            </Button>
                         ) : step === 4 ? (
                             <div className="flex gap-3 w-full">
-                                <Button onClick={back} className={BookingWidgetStyles.backBtn} disabled={isSubmitting}><ChevronLeft className="h-6 w-6 text-white"/></Button>
+                                <Button onClick={back} className={BookingWidgetStyles.backBtn} disabled={isSubmitting}>
+                                    <ChevronLeft className="h-6 w-6 text-white"/>
+                                </Button>
                                 <Button onClick={submitBooking} disabled={isSubmitting} className={BookingWidgetStyles.actionBtn}>
                                     {isSubmitting ? "Sending..." : t("GuestInfo.reserve")}
                                     {!isSubmitting && <ArrowRight className="ml-2 h-5 w-5"/>}
@@ -61,8 +98,12 @@ export default function BookingWidget() {
                             </div>
                         ) : (
                             <div className="flex gap-3 w-full">
-                                <Button onClick={back} className={BookingWidgetStyles.backBtn}><ChevronLeft className="h-6 w-6 text-white"/></Button>
-                                <Button onClick={next} className={BookingWidgetStyles.actionBtn}>{t("Shared.continue")}</Button>
+                                <Button onClick={back} className={BookingWidgetStyles.backBtn}>
+                                    <ChevronLeft className="h-6 w-6 text-white"/>
+                                </Button>
+                                <Button onClick={next} className={BookingWidgetStyles.actionBtn}>
+                                    {t("Shared.continue")}
+                                </Button>
                             </div>
                         )}
                     </div>

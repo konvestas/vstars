@@ -10,8 +10,10 @@ import {DurationInput} from "@/features/booking/_components/duration-input";
 import DateTimeInput from "@/features/booking/_components/date-time-input";
 import {PassengerLuggageInput} from "@/features/booking/_components/passenger-luggage-input";
 import {BookingWidgetStyles} from "@/features/booking/_components/booking-widget-pages/styles";
+import {StepSearchProps} from "@/features/booking/_components/booking-widget-pages/data/search-page-data";
 
-export  const StepSearch = ({ handlePickupSelect, handleDropoffSelect }: { handlePickupSelect: any, handleDropoffSelect: any }) => {
+
+export const StepSearch = ({ handlePickupSelect, handleDropoffSelect }: StepSearchProps) => {
     const { control, watch, setValue, formState: { errors } } = useFormContext();
     const t = useTranslations('BookingWidget');
 
