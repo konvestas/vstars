@@ -2,44 +2,33 @@
 
 import { useState, useEffect, useCallback } from "react";
 import { useMapsLibrary } from "@vis.gl/react-google-maps";
+// IMPORT THE SHARED NORMALIZER
+import { normalizeToEnglish } from "@/features/booking/lib/utils";
 
 interface Suggestion {
     placeId: string;
     text: string;
     place: google.maps.places.Place;
 }
+
 interface PlaceDetails {
     displayAddress: string;
     pricingAddress: string;
     formattedAddress: string;
     location?: google.maps.LatLng | null;
 }
-// Import the normalizer or copy it here to avoid circular deps if needed
-// For simplicity, I'll include the helper function here locally
-const normalizeToEnglish = (text: string): string => {
-    let normalized = text.toLowerCase();
-    const turkishMap: { [key: string]: string } = {
-        'ç': 'c', 'ğ': 'g', 'ı': 'i', 'i': 'i', 'ö': 'o', 'ş': 's', 'ü': 'u',
-        'Ç': 'c', 'Ğ': 'g', 'İ': 'i', 'I': 'i', 'Ö': 'o', 'Ş': 's', 'Ü': 'u'
-    };
-    normalized = normalized.replace(/[çğıiöşüÇĞİIÖŞÜ]/g, (match) => turkishMap[match] || match);
-    return normalized.normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim();
-};
 
 export function usePlacesAutocomplete() {
     const placesLib = useMapsLibrary("places");
     const [sessionToken, setSessionToken] = useState<google.maps.places.AutocompleteSessionToken | null>(null);
     const [predictions, setPredictions] = useState<Suggestion[]>([]);
 
-    // 1. Initialize Session Token when library loads
     useEffect(() => {
         if (placesLib && !sessionToken) {
-            // eslint-disable-next-line react-hooks/set-state-in-effect
             setSessionToken(new placesLib.AutocompleteSessionToken());
         }
     }, [placesLib, sessionToken]);
 
-    // 2. Fetch Predictions (Debouncing should be handled in the UI component)
     const fetchPredictions = useCallback(
         async (inputValue: string) => {
             if (!placesLib || !sessionToken || !inputValue) {
@@ -55,7 +44,7 @@ export function usePlacesAutocomplete() {
                     language: "tr"
                 };
                 const { suggestions } = await AutocompleteSuggestion.fetchAutocompleteSuggestions(request);
-                // Format suggestions for the UI
+
                 const formatted = suggestions
                     .filter((s) => s.placePrediction)
                     .map((s) => ({
@@ -75,7 +64,6 @@ export function usePlacesAutocomplete() {
     const onPlaceSelect = useCallback(
         async (place: google.maps.places.Place): Promise<PlaceDetails | null> => {
             try {
-                // Fetch address components to extract district and province
                 await place.fetchFields({
                     fields: ["displayName", "formattedAddress", "location", "addressComponents"],
                 });
@@ -116,7 +104,7 @@ export function usePlacesAutocomplete() {
                     structuredAddress = place.formattedAddress || "";
                 }
 
-                // NORMALIZE HERE: "Beyoğlu/İstanbul" -> "beyoglu/istanbul"
+                // USE SHARED NORMALIZER
                 const finalPricingAddress = normalizeToEnglish(structuredAddress);
 
                 console.log("📍 Parsed & Normalized for Pricing:", finalPricingAddress);
