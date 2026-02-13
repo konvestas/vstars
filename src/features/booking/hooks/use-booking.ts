@@ -152,6 +152,7 @@ export function useBookingForm() {
 
             const payload = {
                 ...formValues,
+                bookingType: formValues.serviceType,
                 flightNumber: formValues.flightNo || "",
                 notes: formValues.notes || "",
                 direction: formValues.direction || "",

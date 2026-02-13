@@ -36,11 +36,11 @@ export async function POST(req: Request) {
             // Regular Transfer: Show pickup and dropoff
             routeRow = `<tr>
                 <td style="padding: 8px 0; width: 80px; font-size: 14px; color: #6b7280;">Alış noktası:</td>
-                <td style="padding: 8px 0; font-size: 15px; font-weight: 500;">${fromLocation}</td>
+                <td style="padding: 8px 0; font-size: 15px; font-weight: 500;">${fromLocation || 'Not specified'}</td>
                </tr>
                <tr>
                 <td style="padding: 8px 0; width: 80px; font-size: 14px; color: #6b7280;">Bırakış noktası:</td>
-                <td style="padding: 8px 0; font-size: 15px; font-weight: 500;">${toLocation}</td>
+                <td style="padding: 8px 0; font-size: 15px; font-weight: 500;">${toLocation || 'Not specified'}</td>
                </tr>`;
         } else if (bookingType === "Airport Transfer") {
             // Airport Transfer: Show direction, pickup and dropoff
@@ -48,29 +48,29 @@ export async function POST(req: Request) {
                 ? "Havalimanından"
                 : direction === "to-airport"
                     ? "Havalimanına"
-                    : "";
+                    : "Belirtilmemiş";
 
-            routeRow = `${directionLabel ? `<tr>
+            routeRow = `<tr>
                 <td style="padding: 8px 0; width: 80px; font-size: 14px; color: #6b7280;">Yön:</td>
                 <td style="padding: 8px 0; font-size: 15px; font-weight: 500;">${directionLabel}</td>
-               </tr>` : ''}
+               </tr>
                <tr>
                 <td style="padding: 8px 0; width: 80px; font-size: 14px; color: #6b7280;">Alış noktası:</td>
-                <td style="padding: 8px 0; font-size: 15px; font-weight: 500;">${fromLocation}</td>
+                <td style="padding: 8px 0; font-size: 15px; font-weight: 500;">${fromLocation || 'Not specified'}</td>
                </tr>
                <tr>
                 <td style="padding: 8px 0; width: 80px; font-size: 14px; color: #6b7280;">Bırakış noktası:</td>
-                <td style="padding: 8px 0; font-size: 15px; font-weight: 500;">${toLocation}</td>
+                <td style="padding: 8px 0; font-size: 15px; font-weight: 500;">${toLocation || 'Not specified'}</td>
                </tr>`;
         } else if (bookingType === "Hourly Hire") {
             // Hourly: Show pickup and duration
             routeRow = `<tr>
                 <td style="padding: 8px 0; width: 80px; font-size: 14px; color: #6b7280;">Alış noktası:</td>
-                <td style="padding: 8px 0; font-size: 15px; font-weight: 500;">${fromLocation}</td>
+                <td style="padding: 8px 0; font-size: 15px; font-weight: 500;">${fromLocation || 'Not specified'}</td>
                </tr>
                <tr>
                 <td style="padding: 8px 0; width: 80px; font-size: 14px; color: #6b7280;">Süre:</td>
-                <td style="padding: 8px 0; font-size: 15px; font-weight: 500;">${duration} Saat</td>
+                <td style="padding: 8px 0; font-size: 15px; font-weight: 500;">${duration || '0'} Saat</td>
                </tr>`;
         }
 
