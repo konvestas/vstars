@@ -56,7 +56,7 @@ export const IST_PRICING_ZONES: PricingRule[] = [
     },
     {
         regions: ["sile/istanbul"],
-        price: 3100
+        price: 2800
     },
     {
         regions: ["sisli/istanbul", "kagithane/istanbul", "taksim/istanbul"],
