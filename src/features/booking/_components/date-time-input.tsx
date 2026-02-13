@@ -8,17 +8,27 @@ import { Button } from "@/components/ui/button";
 import { Calendar } from "@/components/ui/calendar";
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import {DateTimeInputProps, TIME_SLOTS} from "@/features/booking/_components/data/date-time-input-data";
 
-import { tr } from "react-day-picker/locale";
+// Import all the locales you support
+import { tr, de, ru, enUS } from "react-day-picker/locale";
+import type { Locale } from "react-day-picker";
+
+// Locale mapping for react-day-picker
+const localeMap: Record<string, Locale> = {
+    tr: tr,
+    de: de,
+    ru: ru,
+    en: enUS,
+};
 
 // Memoized time slot button to prevent re-renders
 const TimeSlotButton = memo(({
-                                       slot,
-                                       isSelected,
-                                       onClick
-                                   }: {
+                                 slot,
+                                 isSelected,
+                                 onClick
+                             }: {
     slot: string;
     isSelected: boolean;
     onClick: (slot: string) => void;
@@ -59,7 +69,11 @@ export default function DateTimeInput({
     const [isOpen, setIsOpen] = useState(false);
     const [tempDate, setTempDate] =useState<Date | undefined>(date);
     const [tempTime, setTempTime] =useState<string | undefined>(time);
+
     const t = useTranslations('BookingWidget');
+    const locale = useLocale();
+    // Get the correct locale object based on current language
+    const calendarLocale = localeMap[locale] || enUS;
 
     useEffect(() => {
         if (isOpen) {
@@ -147,7 +161,7 @@ export default function DateTimeInput({
                                 onSelect={setTempDate}
                                 captionLayout="dropdown-months"
                                 disabled={(date) => date < new Date(new Date().setHours(0, 0, 0, 0))}
-                                locale={tr}
+                                locale={calendarLocale}
                             />
                         </div>
                         <div className="flex-1 min-h-50 md:h-auto bg-gray-50/50">
