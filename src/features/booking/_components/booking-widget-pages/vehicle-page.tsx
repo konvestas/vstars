@@ -1,17 +1,31 @@
-import {useTranslations} from "next-intl";
+import {useLocale, useTranslations} from "next-intl";
 import {motion} from "framer-motion";
 import {AlertCircle, Calendar, Check, Info} from "lucide-react";
 import {format} from "date-fns";
 import {StepVehicleProps} from "@/features/booking/_components/booking-widget-pages/data/vehicle-page-data";
+// Import all the locales you support for react-day-picker
+import type { Locale } from "react-day-picker";
+// Import date-fns locales for formatting
+import { tr as trDateFns, de as deDateFns, ru as ruDateFns, enUS as enUSDateFns } from "date-fns/locale";
+
 
 export const StepVehicle = ({ displayLocations, date, time }: StepVehicleProps) => {
     const t = useTranslations('BookingWidget');
+    const locale = useLocale();
+    // Locale mapping for date-fns
+    const dateFnsLocaleMap: Record<string, Locale> = {
+        tr: trDateFns,
+        de: deDateFns,
+        ru: ruDateFns,
+        en: enUSDateFns,
+    };
+    const dateFnsLocale = dateFnsLocaleMap[locale] || enUSDateFns;
     return (
         <motion.div key="step2" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="space-y-4">
             <div className="bg-white/10 border border-white/10 rounded-2xl p-4 space-y-3">
                 <div className="flex items-center gap-3 text-white/90">
                     <Calendar className="h-4 w-4 text-green-400 shrink-0" />
-                    <span className="text-sm font-medium">{date ? format(date, "EEEE, dd MMMM yyyy") : "Date"} • {time}</span>
+                    <span className="text-sm font-medium">{date ? format(date, "EEEE, dd MMMM yyyy", { locale: dateFnsLocale }) : "Date"} • {time}</span>
                 </div>
                 <div className="flex flex-col gap-3 relative">
                     <div className="absolute left-1.75 top-2 bottom-5 w-0.5 bg-white/20" />

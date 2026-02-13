@@ -11,9 +11,12 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { useLocale, useTranslations } from "next-intl";
 import {DateTimeInputProps, TIME_SLOTS} from "@/features/booking/_components/data/date-time-input-data";
 
-// Import all the locales you support
+// Import all the locales you support for react-day-picker
 import { tr, de, ru, enUS } from "react-day-picker/locale";
 import type { Locale } from "react-day-picker";
+
+// Import date-fns locales for formatting
+import { tr as trDateFns, de as deDateFns, ru as ruDateFns, enUS as enUSDateFns } from "date-fns/locale";
 
 // Locale mapping for react-day-picker
 const localeMap: Record<string, Locale> = {
@@ -21,6 +24,14 @@ const localeMap: Record<string, Locale> = {
     de: de,
     ru: ru,
     en: enUS,
+};
+
+// Locale mapping for date-fns
+const dateFnsLocaleMap: Record<string, Locale> = {
+    tr: trDateFns,
+    de: deDateFns,
+    ru: ruDateFns,
+    en: enUSDateFns,
 };
 
 // Memoized time slot button to prevent re-renders
@@ -46,7 +57,7 @@ const TimeSlotButton = memo(({
             className={cn(
                 "w-full transition-all border-gray-300",
                 isSelected
-                    ? "bg-gray-500 text-white"
+                    ? "bg-blue-700 text-white hover:bg-blue-800"
                     : "hover:bg-gray-100 bg-white"
             )}
         >
@@ -72,8 +83,10 @@ export default function DateTimeInput({
 
     const t = useTranslations('BookingWidget');
     const locale = useLocale();
-    // Get the correct locale object based on current language
+
+    // Get the correct locale objects based on current language
     const calendarLocale = localeMap[locale] || enUS;
+    const dateFnsLocale = dateFnsLocaleMap[locale] || enUSDateFns;
 
     useEffect(() => {
         if (isOpen) {
@@ -100,17 +113,17 @@ export default function DateTimeInput({
         if (!date || !time) return null;
         return (
             <div className="flex items-center gap-2 text-white/80">
-                <span className="font-semibold">{format(date, "dd MMM")}</span>
+                <span className="font-semibold">{format(date, "dd MMM", { locale: dateFnsLocale })}</span>
                 <span>•</span>
                 <span className="font-semibold">{time}</span>
             </div>
         );
-    }, [date, time]);
+    }, [date, time, dateFnsLocale]);
 
     const footerText = useMemo(() => {
         if (!tempDate || !tempTime) return "";
-        return `${format(tempDate, "EEE, MMM dd")} at ${tempTime}`;
-    }, [tempDate, tempTime]);
+        return `${format(tempDate, "EEE, MMM dd", { locale: dateFnsLocale })} at ${tempTime}`;
+    }, [tempDate, tempTime, dateFnsLocale]);
 
     return (
         <div className="relative w-full">
