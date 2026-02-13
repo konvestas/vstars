@@ -152,7 +152,13 @@
         "uploaded": "✓ Uploaded"
       }
     },
-
+    "Confirmation": {
+      "title": "Booking Confirmed!",
+      "message": "Your transfer request has been successfully submitted.",
+      "details": "We will contact you shortly via email or phone to confirm your booking details.",
+      "newBooking": "New Booking",
+      "sending": "Sending..."
+    },
     "PackageDetail": {
       "title": "Package Details",
       "waitTime": "Free 30 minutes of wait time",

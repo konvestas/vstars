@@ -160,6 +160,14 @@
       "alert": "Las capacidades de pasajeros y equipaje deben respetarse estrictamente. Si no está seguro, seleccione una clase de vehículo superior, de lo contrario se le podría denegar el servicio."
     },
 
+    "Confirmation": {
+      "title": "¡Reserva confirmada!",
+      "message": "Su solicitud de transferencia ha sido enviada exitosamente.",
+      "details": "Nos pondremos en contacto con usted en breve por correo electrónico o teléfono para confirmar los detalles de su reserva.",
+      "newBooking": "Nueva reserva",
+      "sending": "Envíando..."
+    },
+
     "GuestInfo": {
       "title": "Últimos Detalles",
       "desc": "Por favor, proporcione su información de contacto",

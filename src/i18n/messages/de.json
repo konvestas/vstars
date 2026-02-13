@@ -159,7 +159,13 @@
       "greet": "Inklusive Meet & Greet-Service",
       "alert": "Fahrgast- und Gepäckkapazitäten müssen strikt eingehalten werden. Bei Unsicherheit wählen Sie bitte eine größere Fahrzeugklasse, da der Service sonst verweigert werden kann."
     },
-
+    "Confirmation": {
+      "title": "Buchung Bestätigt!",
+      "message": "Ihre Transferanfrage wurde erfolgreich übermittelt.",
+      "details": "Wir werden Sie in Kürze per E-Mail oder Telefon kontaktieren, um Ihre Buchungsdetails zu bestätigen.",
+      "newBooking": "Neue Buchung",
+      "sending": "Wird gesendet..."
+    },
     "GuestInfo": {
       "title": "Letzte Details",
       "desc": "Bitte geben Sie Ihre Kontaktinformationen an",

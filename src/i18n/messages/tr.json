@@ -152,7 +152,13 @@
         "uploaded": "✓ Yüklendi"
       }
     },
-
+    "Confirmation": {
+      "title": "Rezervasyon Onaylandı!",
+      "message": "Transfer talebiniz başarıyla gönderildi.",
+      "details": "Rezervasyon detaylarınızı onaylamak için kısa süre içinde e-posta veya telefon ile sizinle iletişime geçeceğiz.",
+      "newBooking": "Yeni Rezervasyon",
+      "sending": "Gönderiliyor..."
+    },
     "PackageDetail": {
       "title": "Paket Detayları",
       "waitTime": "30 dakika ücretsiz bekleme süresi",
