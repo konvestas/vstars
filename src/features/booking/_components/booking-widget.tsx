@@ -77,6 +77,38 @@ export default function BookingWidget() {
                                     displayLocations={displayLocations}
                                 />
                             )}
+                            {step === 5 && (
+                                <div className="text-center py-12 space-y-6">
+                                    <div className=" mx-auto flex items-center justify-center">
+                                        <svg
+                                            className="w-10 h-10"
+                                            fill="none"
+                                            stroke="#22c55e"
+                                            strokeWidth="3"
+                                            viewBox="0 0 24 24"
+                                        >
+                                            <path
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                                d="M5 13l4 4L19 7"
+                                            />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">
+                                            {t("Confirmation.title")}
+                                        </h2>
+                                        <p className="text-white/70 text-sm md:text-base">
+                                            {t("Confirmation.message")}
+                                        </p>
+                                    </div>
+                                    <div className="bg-white/10 rounded-xl p-4 max-w-md mx-auto">
+                                        <p className="text-white/80 text-sm">
+                                            {t("Confirmation.details")}
+                                        </p>
+                                    </div>
+                                </div>
+                            )}
                         </AnimatePresence>
                     </div>
 
@@ -92,10 +124,14 @@ export default function BookingWidget() {
                                     <ChevronLeft className="h-6 w-6 text-white"/>
                                 </Button>
                                 <Button onClick={submitBooking} disabled={isSubmitting} className={BookingWidgetStyles.actionBtn}>
-                                    {isSubmitting ? "Sending..." : t("GuestInfo.reserve")}
+                                    {isSubmitting ? t("Confirmation.sending") : t("GuestInfo.reserve")}
                                     {!isSubmitting && <ArrowRight className="ml-2 h-5 w-5"/>}
                                 </Button>
                             </div>
+                        ) : step === 5 ? (
+                            <Button onClick={() => window.location.reload()} className={BookingWidgetStyles.actionBtn}>
+                                {t("Confirmation.newBooking")}
+                            </Button>
                         ) : (
                             <div className="flex gap-3 w-full">
                                 <Button onClick={back} className={BookingWidgetStyles.backBtn}>

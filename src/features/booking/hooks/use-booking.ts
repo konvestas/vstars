@@ -175,6 +175,7 @@ export function useBookingForm() {
 
             if (res.ok) {
                 toast.success("Booking request submitted successfully!");
+                setStep(5);
             } else {
                 const error = await res.json();
                 toast.error(error.error || "Failed to send booking request");
