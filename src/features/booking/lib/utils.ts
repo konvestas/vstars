@@ -1,4 +1,3 @@
-// utils.ts
 import {
     IST_PRICING_ZONES,
     SAW_PRICING_ZONES,
@@ -23,7 +22,6 @@ export const normalizeToEnglish = (text: string): string => {
 
     // Replace special Turkish chars
     normalized = normalized.replace(/[çğıiöşüÇĞİIÖŞÜ]/g, (match) => turkishMap[match] || match);
-
     // Remove accents and trim
     return normalized.normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim();
 };
@@ -39,7 +37,7 @@ const getPricingZones = (bookingType: string, airport?: string) => {
     return { zones: PRICING_ZONES, defaultPrice: DEFAULT_GENERAL_PRICE };
 };
 
-// Updated signature to accept 'direction' (Fixes TS2554)
+
 export const calculateTripPrice = (
     bookingType: string,
     from: string,
@@ -60,16 +58,11 @@ export const calculateTripPrice = (
         const { zones, defaultPrice } = getPricingZones(bookingType, airport);
 
         // NORMALIZE THE INPUT
-        // Note: In your booking widget, the 'pickupAddress' field (passed as 'from' here)
-        // always contains the District (e.g., Sisli), regardless of direction.
         const normalizedTarget = normalizeToEnglish(from);
-
-        console.log("Checking price for:", normalizedTarget);
 
         const matchedZone = zones.find(zone =>
             zone.regions.some(region => {
                 const normalizedRegion = normalizeToEnglish(region);
-                // Match exact or startswith (e.g. "sisli/istanbul" matches "sisli/istanbul/merkez")
                 return normalizedTarget === normalizedRegion ||
                     normalizedTarget.startsWith(normalizedRegion + "/");
             })
@@ -79,7 +72,6 @@ export const calculateTripPrice = (
             return matchedZone.price + GREETING_FEE;
         }
 
-        console.warn(`No zone for ${normalizedTarget}. Using default.`);
         return defaultPrice + GREETING_FEE;
     }
 

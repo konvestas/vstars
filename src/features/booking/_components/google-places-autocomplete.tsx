@@ -94,8 +94,6 @@ export function usePlacesAutocomplete() {
                 // USE SHARED NORMALIZER
                 const finalPricingAddress = normalizeToEnglish(structuredAddress);
 
-                console.log("📍 Parsed & Normalized for Pricing:", finalPricingAddress);
-
                 if (placesLib) {
                     setSessionToken(new placesLib.AutocompleteSessionToken());
                 }
