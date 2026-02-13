@@ -46,7 +46,7 @@ export default function BookingWidget() {
                                 <TabsList className="grid w-full grid-cols-3 h-13 bg-black/35 rounded-full">
                                     <TabsTrigger value={SERVICE_TYPES.TRANSFER} className={BookingWidgetStyles.tabTrigger}><MapPinned/> {t("Tabs.oneWay")}</TabsTrigger>
                                     <TabsTrigger value={SERVICE_TYPES.HOURLY} className={BookingWidgetStyles.tabTrigger}><Hourglass/> {t("Tabs.hourly")}</TabsTrigger>
-                                    <TabsTrigger value={SERVICE_TYPES.AIRPORT} className={BookingWidgetStyles.tabTrigger}><Plane/> Airport</TabsTrigger>
+                                    <TabsTrigger value={SERVICE_TYPES.AIRPORT} className={BookingWidgetStyles.tabTrigger}><Plane/>{t("Tabs.airport")}</TabsTrigger>
                                 </TabsList>
                             </Tabs>
                         </div>

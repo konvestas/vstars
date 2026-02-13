@@ -44,7 +44,7 @@ export const StepSearch = ({ handlePickupSelect, handleDropoffSelect }: StepSear
                                 className={cn("h-12 rounded-xl font-medium transition-all",
                                     field.value === dir ? "bg-white text-black shadow-lg" : "bg-white/10 text-white hover:bg-white/20")}
                             >
-                                {dir === "to-airport" ? "To Airport" : "From Airport"}
+                                {dir === "to-airport" ? t("Form.toAirport") : t("Form.fromAirport")}
                             </button>
                         ))}
                     </div>
@@ -73,7 +73,7 @@ export const StepSearch = ({ handlePickupSelect, handleDropoffSelect }: StepSear
                         render={({ field }) => (
                         <AirportInput
                             label={t("Form.dropOffLocation")}
-                            placeholder="Select Airport"
+                            placeholder={t("Form.selectAirport")}
                             value={field.value}
                             onChange={field.onChange}
                             error={errors.airport?.message as string}
@@ -90,7 +90,7 @@ export const StepSearch = ({ handlePickupSelect, handleDropoffSelect }: StepSear
                         render={({ field }) => (
                         <AirportInput
                             label={t("Form.pickUpLocation")}
-                            placeholder="Select Airport"
+                            placeholder={t("Form.selectAirport")}
                             value={field.value}
                             onChange={field.onChange}
                             error={errors.airport?.message as string}
