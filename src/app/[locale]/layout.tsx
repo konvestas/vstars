@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import {Geist, Geist_Mono, Lexend_Peta} from "next/font/google";
+import { Geist, Geist_Mono, Lexend_Peta } from "next/font/google";
 import { NextIntlClientProvider } from 'next-intl';
 import { notFound } from 'next/navigation';
 import { getMessages, getTranslations } from 'next-intl/server';
@@ -7,6 +7,7 @@ import "../globals.css";
 import React from "react";
 import { routing } from "@/i18n/routing";
 import { Toaster } from "@/components/ui/sonner";
+import Script from "next/script";
 
 const geistSans = Geist({
     variable: "--font-sans",
@@ -51,6 +52,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
         },
         icons: {
             icon: [
+                { url: "/favicon.ico", sizes: "any" },
                 { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
                 { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
                 { url: "/favicon-96x96.png", sizes: "96x96", type: "image/png" },
@@ -68,16 +70,16 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
                 { url: "/apple-icon-152x152.png", sizes: "152x152" },
                 { url: "/apple-icon-180x180.png", sizes: "180x180" },
             ],
-            shortcut: "favicon.ico",
+            shortcut: "/favicon.ico",
         },
         manifest: "/manifest.webmanifest",
         openGraph: {
             type: "website",
             url: `https://www.vstarstransfer.com/${locale}`,
             emails: "info@candumandanismanlik.com",
-            phoneNumbers:"+90 5326432234",
+            phoneNumbers: "+90 5326432234",
             locale: locale,
-            countryName:"Türkiye",
+            countryName: "Türkiye",
             title: t('title'),
             description: t('description'),
             siteName: "Vstars Transfer",
@@ -162,10 +164,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
             ]
         },
         twitter: {
-            site:`https://www.vstarstransfer.com/${locale}/services`,
-            // siteId?: string | undefined;
-            creator:"Vstars Transfer & Onur Akgülay",
-            // creatorId?: string | undefined;
+            site: `https://www.vstarstransfer.com/${locale}/services`,
+            creator: "Vstars Transfer & Onur Akgülay",
             card: "summary_large_image",
             title: t("title"),
             description: t("description"),
@@ -181,7 +181,6 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
             "https://www.vstarstransfer.com/vstars",
             "https://www.vstarstransfer.com/affiliates",
             "https://www.vstarstransfer.com/images",
-
         ]
     };
 }
@@ -200,10 +199,11 @@ export default async function RootLayout({
     }
     const messages = await getMessages();
 
-    // Your Existing Schema Code
+    // Organization Schema for Root Layout
     const jsonLd = {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
+        "@id": "https://www.vstarstransfer.com/#localbusiness",
         "name": "Vstars Transfer",
         "image": "https://www.vstarstransfer.com/vstars/vstars-fleet.webp",
         "url": "https://www.vstarstransfer.com",
@@ -211,19 +211,48 @@ export default async function RootLayout({
         "email": "info@candumandanismanlik.com",
         "address": {
             "@type": "PostalAddress",
+            "streetAddress": "Kordonboyu Mh Ankara cad İSTMARİNA S2 kule B blok kat:24 no 147/B-300",
             "addressLocality": "Istanbul",
             "addressCountry": "TR"
         },
         "geo": {
             "@type": "GeoCoordinates",
-            "latitude": 40.88461295159555,
-            "longitude": 29.205337482484815
+            "latitude": "40.88461295159555",
+            "longitude": "29.205337482484815"
         },
         "priceRange": "$$$",
-        "areaServed": {
-            "@type": "City",
-            "name": "Istanbul"
+        "currenciesAccepted": "TRY, USD, EUR",
+        "paymentAccepted": "Cash, Credit Card, Bank Transfer",
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday",
+                "Sunday"
+            ],
+            "opens": "00:00",
+            "closes": "23:59"
         },
+        "areaServed": [
+            {
+                "@type": "City",
+                "name": "Istanbul"
+            },
+            {
+                "@type": "Airport",
+                "name": "Istanbul Airport",
+                "iataCode": "IST"
+            },
+            {
+                "@type": "Airport",
+                "name": "Sabiha Gökçen International Airport",
+                "iataCode": "SAW"
+            }
+        ],
         "sameAs": [
             "https://www.instagram.com/vstarstransfer/",
             "https://www.facebook.com/vstarstransfer/"
@@ -237,7 +266,10 @@ export default async function RootLayout({
                     "itemOffered": {
                         "@type": "Service",
                         "name": "Hourly and full day hire services",
-                        "description": "Choose hourly or full-day service and enjoy comfortable, on-demand transportation tailored to your schedule."
+                        "description": "Choose hourly or full-day service and enjoy comfortable, on-demand transportation tailored to your schedule.",
+                        "provider": {
+                            "@id": "https://www.vstarstransfer.com/#localbusiness"
+                        }
                     }
                 },
                 {
@@ -245,7 +277,22 @@ export default async function RootLayout({
                     "itemOffered": {
                         "@type": "Service",
                         "name": "Airport transfer services",
-                        "description": "Reliable transfer service with on-time pick-ups, flight-tracking, and professional driver."
+                        "description": "Reliable transfer service with on-time pick-ups, flight-tracking, and professional driver.",
+                        "provider": {
+                            "@id": "https://www.vstarstransfer.com/#localbusiness"
+                        },
+                        "areaServed": [
+                            {
+                                "@type": "Airport",
+                                "name": "Istanbul Airport",
+                                "iataCode": "IST"
+                            },
+                            {
+                                "@type": "Airport",
+                                "name": "Sabiha Gökçen International Airport",
+                                "iataCode": "SAW"
+                            }
+                        ]
                     }
                 },
                 {
@@ -253,7 +300,10 @@ export default async function RootLayout({
                     "itemOffered": {
                         "@type": "Service",
                         "name": "Medical tourism services",
-                        "description": "Private, safe, and comfortable transport for medical tourism. Hospital visits and hotel transfers."
+                        "description": "Private, safe, and comfortable transport for medical tourism. Hospital visits and hotel transfers.",
+                        "provider": {
+                            "@id": "https://www.vstarstransfer.com/#localbusiness"
+                        }
                     }
                 },
                 {
@@ -261,22 +311,56 @@ export default async function RootLayout({
                     "itemOffered": {
                         "@type": "Service",
                         "name": "City tour services",
-                        "description": "Explore the city with a guide and customize your tour. Visit top attractions and historic landmarks."
+                        "description": "Explore the city with a guide and customize your tour. Visit top attractions and historic landmarks.",
+                        "provider": {
+                            "@id": "https://www.vstarstransfer.com/#localbusiness"
+                        }
                     }
-                },
+                }
             ]
         }
     };
 
     return (
         <html lang={locale} data-scroll-behavior="smooth" suppressHydrationWarning>
+        <head>
+            <link rel="icon" href="/favicon.ico" sizes="any" />
+            <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+            <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+            <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png" />
+            <link rel="preconnect" href="https://maps.googleapis.com" />
+        </head>
         <body className={`${geistSans.variable} ${geistMono.variable} ${lexendPeta.variable} antialiased`}>
-        <link rel="preconnect" href="https://maps.googleapis.com" />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}/>
+        <Script id="passive-events" strategy="beforeInteractive">
+            {`
+                        (function() {
+                            const o = EventTarget.prototype.addEventListener;
+                            EventTarget.prototype.addEventListener = function(t, l, opt) {
+                                const touch = ['touchstart','touchmove','touchend','wheel','mousewheel'].includes(t);
+                                if (touch && typeof opt !== 'object') opt = { passive: true, capture: typeof opt === 'boolean' ? opt : false };
+                                else if (touch && typeof opt === 'object' && opt.passive === undefined) opt.passive = true;
+                                return o.call(this, t, l, opt);
+                            };
+                        })();
+                    `}
+        </Script>
+
+        <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+
         <NextIntlClientProvider messages={messages}>
             {children}
         </NextIntlClientProvider>
-        <Toaster theme={"light"} richColors={true} duration={5000} position="top-center" closeButton />
+
+        <Toaster
+            theme="light"
+            richColors={true}
+            duration={5000}
+            position="top-center"
+            closeButton
+        />
         </body>
         </html>
     );
