@@ -22,16 +22,27 @@ export const StepSearch = ({ handlePickupSelect, handleDropoffSelect }: StepSear
     ]);
 
     return (
-        <motion.div key="step1" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} className="space-y-4">
+        <motion.div
+            key="step1"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            className="space-y-4">
 
             {/* Airport Direction Toggle */}
             {serviceType === SERVICE_TYPES.AIRPORT && (
-                <FormField control={control} name="direction" render={({ field }) => (
+                <FormField
+                    control={control}
+                    name="direction"
+                    render={({ field }) => (
                     <div className="grid grid-cols-2 gap-2">
                         {["to-airport", "from-airport"].map((dir) => (
                             <button
-                                key={dir} type="button" onClick={() => field.onChange(dir)}
-                                className={cn("h-12 rounded-xl font-medium transition-all", field.value === dir ? "bg-white text-black shadow-lg" : "bg-white/10 text-white hover:bg-white/20")}
+                                key={dir}
+                                type="button"
+                                onClick={() => field.onChange(dir)}
+                                className={cn("h-12 rounded-xl font-medium transition-all",
+                                    field.value === dir ? "bg-white text-black shadow-lg" : "bg-white/10 text-white hover:bg-white/20")}
                             >
                                 {dir === "to-airport" ? "To Airport" : "From Airport"}
                             </button>
@@ -43,44 +54,120 @@ export const StepSearch = ({ handlePickupSelect, handleDropoffSelect }: StepSear
             {/* Fields based on Service Type */}
             {serviceType === SERVICE_TYPES.AIRPORT && direction === "to-airport" && (
                 <>
-                    <FormField control={control} name="pickupAddress" render={({ field }) => (
-                        <LocationInput label={t("Form.pickUpLocation")} placeholder={t("Form.pickUpLocationPlaceHolder")} value={field.value} onChange={field.onChange} onLocationSelect={handlePickupSelect} error={errors.pickupAddress?.message as string} className={BookingWidgetStyles.glassInput} />
+                    <FormField
+                        control={control}
+                        name="pickupAddress"
+                        render={({ field }) => (
+                        <LocationInput
+                            label={t("Form.pickUpLocation")}
+                            placeholder={t("Form.pickUpLocationPlaceHolder")}
+                            value={field.value}
+                            onChange={field.onChange}
+                            onLocationSelect={handlePickupSelect}
+                            error={errors.pickupAddress?.message as string}
+                            className={BookingWidgetStyles.glassInput} />
                     )} />
-                    <FormField control={control} name="airport" render={({ field }) => (
-                        <AirportInput label={t("Form.dropOffLocation")} placeholder="Select Airport" value={field.value} onChange={field.onChange} error={errors.airport?.message as string} className={BookingWidgetStyles.glassInput} />
+                    <FormField
+                        control={control}
+                        name="airport"
+                        render={({ field }) => (
+                        <AirportInput
+                            label={t("Form.dropOffLocation")}
+                            placeholder="Select Airport"
+                            value={field.value}
+                            onChange={field.onChange}
+                            error={errors.airport?.message as string}
+                            className={BookingWidgetStyles.glassInput} />
                     )} />
                 </>
             )}
 
             {serviceType === SERVICE_TYPES.AIRPORT && direction === "from-airport" && (
                 <>
-                    <FormField control={control} name="airport" render={({ field }) => (
-                        <AirportInput label={t("Form.pickUpLocation")} placeholder="Select Airport" value={field.value} onChange={field.onChange} error={errors.airport?.message as string} className={BookingWidgetStyles.glassInput} />
+                    <FormField
+                        control={control}
+                        name="airport"
+                        render={({ field }) => (
+                        <AirportInput
+                            label={t("Form.pickUpLocation")}
+                            placeholder="Select Airport"
+                            value={field.value}
+                            onChange={field.onChange}
+                            error={errors.airport?.message as string}
+                            className={BookingWidgetStyles.glassInput} />
                     )} />
-                    <FormField control={control} name="pickupAddress" render={({ field }) => (
-                        <LocationInput label={t("Form.dropOffLocation")} placeholder={t("Form.dropOffLocationPlaceHolder")} value={field.value} onChange={field.onChange} onLocationSelect={handlePickupSelect} error={errors.pickupAddress?.message as string} className={BookingWidgetStyles.glassInput} />
+                    <FormField
+                        control={control}
+                        name="pickupAddress"
+                        render={({ field }) => (
+                        <LocationInput
+                            label={t("Form.dropOffLocation")}
+                            placeholder={t("Form.dropOffLocationPlaceHolder")}
+                            value={field.value}
+                            onChange={field.onChange}
+                            onLocationSelect={handlePickupSelect}
+                            error={errors.pickupAddress?.message as string}
+                            className={BookingWidgetStyles.glassInput} />
                     )} />
                 </>
             )}
 
             {serviceType === SERVICE_TYPES.TRANSFER && (
                 <>
-                    <FormField control={control} name="pickupAddress" render={({ field }) => (
-                        <LocationInput label={t("Form.pickUpLocation")} placeholder={t("Form.pickUpLocationPlaceHolder")} value={field.value} onChange={field.onChange} onLocationSelect={handlePickupSelect} error={errors.pickupAddress?.message as string} className={BookingWidgetStyles.glassInput} />
+                    <FormField
+                        control={control}
+                        name="pickupAddress"
+                        render={({ field }) => (
+                        <LocationInput
+                            label={t("Form.pickUpLocation")}
+                            placeholder={t("Form.pickUpLocationPlaceHolder")}
+                            value={field.value}
+                            onChange={field.onChange}
+                            onLocationSelect={handlePickupSelect}
+                            error={errors.pickupAddress?.message as string}
+                            className={BookingWidgetStyles.glassInput} />
                     )} />
-                    <FormField control={control} name="dropoffAddress" render={({ field }) => (
-                        <LocationInput label={t("Form.dropOffLocation")} placeholder={t("Form.dropOffLocationPlaceHolder")} value={field.value} onChange={field.onChange} onLocationSelect={handleDropoffSelect} error={errors.dropoffAddress?.message as string} className={BookingWidgetStyles.glassInput} />
+                    <FormField
+                        control={control}
+                        name="dropoffAddress"
+                        render={({ field }) => (
+                        <LocationInput
+                            label={t("Form.dropOffLocation")}
+                            placeholder={t("Form.dropOffLocationPlaceHolder")}
+                            value={field.value}
+                            onChange={field.onChange}
+                            onLocationSelect={handleDropoffSelect}
+                            error={errors.dropoffAddress?.message as string}
+                            className={BookingWidgetStyles.glassInput} />
                     )} />
                 </>
             )}
 
             {serviceType === SERVICE_TYPES.HOURLY && (
                 <>
-                    <FormField control={control} name="pickupAddress" render={({ field }) => (
-                        <LocationInput label={t("Form.pickUpLocation")} placeholder={t("Form.pickUpLocationPlaceHolder")} value={field.value} onChange={field.onChange} onLocationSelect={handlePickupSelect} error={errors.pickupAddress?.message as string} className={BookingWidgetStyles.glassInput} />
+                    <FormField
+                        control={control}
+                        name="pickupAddress"
+                        render={({ field }) => (
+                        <LocationInput
+                            label={t("Form.pickUpLocation")}
+                            placeholder={t("Form.pickUpLocationPlaceHolder")}
+                            value={field.value} onChange={field.onChange}
+                            onLocationSelect={handlePickupSelect}
+                            error={errors.pickupAddress?.message as string}
+                            className={BookingWidgetStyles.glassInput} />
                     )} />
-                    <FormField control={control} name="hours" render={({ field }) => (
-                        <DurationInput label={t("Form.duration")} placeholder={t("Form.durationPlaceHolder")} value={field.value || ""} onChange={field.onChange} error={errors.hours?.message as string} className={BookingWidgetStyles.glassInput} />
+                    <FormField
+                        control={control}
+                        name="hours"
+                        render={({ field }) => (
+                        <DurationInput
+                            label={t("Form.duration")}
+                            placeholder={t("Form.durationPlaceHolder")}
+                            value={field.value || ""}
+                            onChange={field.onChange}
+                            error={errors.hours?.message as string}
+                            className={BookingWidgetStyles.glassInput} />
                     )} />
                 </>
             )}
@@ -88,14 +175,22 @@ export const StepSearch = ({ handlePickupSelect, handleDropoffSelect }: StepSear
             {/* Common Fields */}
             <div className="grid grid-cols-2 gap-2">
                 <DateTimeInput
-                    label={t("Form.date")} placeholder={t("Form.datePlaceHolder")} date={date} time={time}
-                    onConfirm={(d, t) => { setValue("date", d, { shouldValidate: true }); setValue("time", t, { shouldValidate: true }); }}
-                    className={BookingWidgetStyles.glassInput} error={(errors.date?.message || errors.time?.message) as string}
+                    label={t("Form.date")}
+                    placeholder={t("Form.datePlaceHolder")}
+                    date={date}
+                    time={time}
+                    onConfirm={(d, t) => { setValue("date", d, { shouldValidate: true });
+                        setValue("time", t, { shouldValidate: true }); }}
+                    className={BookingWidgetStyles.glassInput}
+                    error={(errors.date?.message || errors.time?.message) as string}
                 />
                 <PassengerLuggageInput
-                    label={t("Form.PassengerLuggage")} placeholder={t("Form.selected")}
+                    label={t("Form.PassengerLuggage")}
+                    placeholder={t("Form.selected")}
                     value={{ passengers: passengers?.toString() || "1", luggage: luggage?.toString() || "0" }}
-                    onChange={(val) => { setValue("passengers", parseInt(val.passengers), { shouldValidate: true }); setValue("luggage", parseInt(val.luggage), { shouldValidate: true }); }}
+                    onChange={(val) => { setValue("passengers",
+                        parseInt(val.passengers), { shouldValidate: true });
+                        setValue("luggage", parseInt(val.luggage), { shouldValidate: true }); }}
                     className={BookingWidgetStyles.glassInput} error={errors.passengers?.message as string}
                 />
             </div>

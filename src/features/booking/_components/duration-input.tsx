@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Separator } from "@/components/ui/separator";
 import {DurationInputProps, HOURS} from "@/features/booking/_components/data/duration-input-data";
+import {useTranslations} from "next-intl";
 
 export function DurationInput({
                                   label,
@@ -15,6 +16,7 @@ export function DurationInput({
                                   className,
                                   error,
                               }: DurationInputProps) {
+    const t = useTranslations('BookingWidget');
     return (
         <div className="relative group w-full">
             {/* Icon */}
@@ -38,7 +40,7 @@ export function DurationInput({
                 >
                     <div className="pt-4">
                         <SelectValue placeholder={placeholder}>
-                            {value ? `${value} Hours` : placeholder}
+                            {value ? `${value} ${t("Form.durationHours")}` : placeholder}
                         </SelectValue>
                     </div>
                 </SelectTrigger>
@@ -46,7 +48,7 @@ export function DurationInput({
                     {/* Title */}
                     <div className="px-2 pb-3">
                         <h3 className="text-base font-semibold text-gray-900 dark:text-gray-100">
-                            Select Duration:
+                            {t("Form.durationPlaceHolder")}
                         </h3>
                     </div>
 
