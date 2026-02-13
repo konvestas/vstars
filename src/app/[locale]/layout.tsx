@@ -7,7 +7,6 @@ import "../globals.css";
 import React from "react";
 import { routing } from "@/i18n/routing";
 import { Toaster } from "@/components/ui/sonner";
-import Script from "next/script";
 
 const geistSans = Geist({
     variable: "--font-sans",
@@ -331,20 +330,6 @@ export default async function RootLayout({
             <link rel="preconnect" href="https://maps.googleapis.com" />
         </head>
         <body className={`${geistSans.variable} ${geistMono.variable} ${lexendPeta.variable} antialiased`}>
-        <Script id="passive-events" strategy="beforeInteractive">
-            {`
-                        (function() {
-                            const o = EventTarget.prototype.addEventListener;
-                            EventTarget.prototype.addEventListener = function(t, l, opt) {
-                                const touch = ['touchstart','touchmove','touchend','wheel','mousewheel'].includes(t);
-                                if (touch && typeof opt !== 'object') opt = { passive: true, capture: typeof opt === 'boolean' ? opt : false };
-                                else if (touch && typeof opt === 'object' && opt.passive === undefined) opt.passive = true;
-                                return o.call(this, t, l, opt);
-                            };
-                        })();
-                    `}
-        </Script>
-
         <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
