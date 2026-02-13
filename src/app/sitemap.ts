@@ -7,6 +7,7 @@ const paths = [
     '',
     '/services',
     '/affiliates',
+    '/fleet',
     '/contact',
     '/FAQ',
 ];
@@ -16,8 +17,8 @@ const imagesByPath: Record<string, string[]> = {
         '/vstars/vstars-fleet.webp',
         '/images/istanbul-hourly-hire-private-driver.webp',
         '/images/istanbul-airport-vip-transfer-mercedes.webp',
-        '/affiliates/can-duman-medical-tourism.webp',
         '/images/istanbul-15-Temmuz-bridge-view-scenery.webp',
+        '/affiliates/can-duman-medical-tourism.webp',
         '/vstars/vstars-transfer-vehicle-inside-reverse-view.webp',
         '/vstars/vstars-transfer-vehicle-outside-view.webp',
         '/vstars/vstars-transfer-vehicle-vip-interior.webp'
@@ -30,10 +31,17 @@ const imagesByPath: Record<string, string[]> = {
     ],
     '/fleet': [
         '/vstars/vstars-fleet.webp',
+        '/vstars/vstars-transfer-vehicle-inside-reverse-view.webp',
+        '/vstars/vstars-transfer-vehicle-outside-view.webp',
         '/vstars/vstars-transfer-vehicle-vip-interior.webp',
     ],
     '/affiliates': [
-        '/affiliates/vstars-transfer-affiliates.webp',
+        '/affiliates/agon.webp',
+        '/affiliates/can-duman-akademi.webp',
+        '/affiliates/can-duman-danismanlik.webp',
+        '/affiliates/can-duman-medical-tourism.webp',
+        '/affiliates/can-duman-travel-agency.webp',
+        '/affiliates/visitoria-sigorta.webp',
     ],
 };
 
