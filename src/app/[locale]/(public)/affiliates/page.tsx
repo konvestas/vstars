@@ -6,6 +6,7 @@ import ReadyToBook from "@/components/layout/ready-to-book";
 import AffiliatesListSection from "@/components/affiliatesPage/affiliates-list-section";
 import {createPageMetadata} from "@/lib/metadata";
 import type {Metadata} from "next";
+import {getAffiliatesInfoSchema} from "@/components/affiliatesPage/data/affiliates-page-data";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
     const { locale } = await params;
@@ -17,31 +18,13 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     });
 }
 export default function AffiliatesPage() {
-    const orgSchema = {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Vstars Transfer",
-        "url": "https://www.vstarstransfer.com",
-        "logo": "https://www.vstarstransfer.com/favicon-96x96.png",
-        "description": "Vstars Transfer's partnerships",
-        "contactPoint": {
-            "@type": "ContactPoint",
-            "contactType": "Partnership Inquiries",
-            "email": "info@candumandanismanlik.com",
-            "telephone": "+905326432234"
-        },
-        "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Istanbul",
-            "addressCountry": "TR"
-        }
-    };
+
     const t = useTranslations('AffiliatesPage');
     return (
         <main className="min-h-screen bg-white dark:bg-zinc-950 font-sans transition-colors">
             <script
                 type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(getAffiliatesInfoSchema) }}
             />
             <nav className="fixed top-0 left-0 w-full z-50"><NavigationBar /></nav>
 

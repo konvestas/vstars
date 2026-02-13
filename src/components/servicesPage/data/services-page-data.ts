@@ -64,3 +64,106 @@ export const getServices = (t: any) => [
         ],
     },
 ];
+export const getServicesSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "Organization",
+            "@id": "https://www.vstarstransfer.com/#organization",
+            "name": "Vstars Transfer",
+            "url": "https://www.vstarstransfer.com",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.vstarstransfer.com/favicon.ico"
+            },
+            "image": "https://www.vstarstransfer.com/vstars/vstars-fleet.webp",
+            "description": "Premium chauffeur and transfer services in Istanbul, offering airport transfers, hourly hire, city tours, and medical tourism coordination.",
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "contactType": "Customer Service",
+                "email": "info@candumandanismanlik.com",
+                "telephone": "+905326432234",
+                "availableLanguage": ["en", "tr"]
+            },
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Istanbul",
+                "addressCountry": "TR"
+            },
+            "areaServed": {
+                "@type": "City",
+                "name": "Istanbul"
+            },
+            "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "Transfer Services",
+                "itemListElement": [
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "@id": "https://www.vstarstransfer.com/services#airport-transfers",
+                            "name": "Airport Transfers",
+                            "description": "Professional airport transfer service between Istanbul Airport (IST), Sabiha Gökçen Airport (SAW), and your destination. Flight tracking, luxury vehicles, and door-to-door service.",
+                            "provider": {
+                                "@id": "https://www.vstarstransfer.com/#organization"
+                            },
+                            "areaServed": [
+                                {
+                                    "@type": "Airport",
+                                    "name": "Istanbul Airport",
+                                    "iataCode": "IST"
+                                },
+                                {
+                                    "@type": "Airport",
+                                    "name": "Sabiha Gökçen International Airport",
+                                    "iataCode": "SAW"
+                                }
+                            ],
+                            "serviceType": "Airport Transfer"
+                        }
+                    },
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "@id": "https://www.vstarstransfer.com/services#hourly-hire",
+                            "name": "Hourly Chauffeur Hire",
+                            "description": "Flexible hourly chauffeur service for multi-stop travel within Istanbul. Professional driver, premium vehicle, and transparent pricing with no hidden fees.",
+                            "provider": {
+                                "@id": "https://www.vstarstransfer.com/#organization"
+                            },
+                            "serviceType": "Chauffeur Service"
+                        }
+                    },
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "@id": "https://www.vstarstransfer.com/services#city-tour",
+                            "name": "City Tour",
+                            "description": "Private city tours of Istanbul with professional driver. Explore iconic landmarks and hidden gems at your own pace with door-to-door service.",
+                            "provider": {
+                                "@id": "https://www.vstarstransfer.com/#organization"
+                            },
+                            "serviceType": "City Tour"
+                        }
+                    },
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "@id": "https://www.vstarstransfer.com/services#medical-tourism",
+                            "name": "Medical Tourism Coordination",
+                            "description": "Coordination of medical and wellness services through our affiliate Can Duman Medical Tourism, including aesthetic surgery, dental care, and hair transplants.",
+                            "provider": {
+                                "@id": "https://www.vstarstransfer.com/#organization"
+                            },
+                            "serviceType": "Medical Tourism"
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+};

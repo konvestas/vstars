@@ -15,8 +15,6 @@ import { BookingWidgetStyles } from "@/features/booking/_components/booking-widg
 
 export default function BookingWidget() {
     const t = useTranslations('BookingWidget');
-
-    // Everything comes from the hook. No logic here.
     const {
         form,
         step,

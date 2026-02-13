@@ -30,9 +30,28 @@ export const getServiceStandards = (t: any): ServiceStandards[] => [
         title: t("items.services.climateMedia.title"),
         description: t("items.services.climateMedia.description"),
     },
-    // {
-    //     icon: Coffee,
-    //     title: t("items.services.thoughtfulAmenities.title"),
-    //     description: t("items.services.thoughtfulAmenities.description"),
-    // },
+    {
+        icon: Coffee,
+        title: t("items.services.thoughtfulAmenities.title"),
+        description: t("items.services.thoughtfulAmenities.description"),
+    },
+];
+
+export const getVehicleSchemas = [
+    {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Mercedes-Benz Vito Maybach",
+        "description": "Luxury sedan for executive transfers and VIP transportation",
+        "image": "https://www.vstarstransfer.com/vstars/vstars-fleet.webp",
+        "brand": {
+            "@type": "Brand",
+            "name": "Mercedes-Benz"
+        },
+        "offers": {
+            "@type": "Offer",
+            "availability": "https://schema.org/InStock",
+            "priceCurrency": "TL"
+        }
+    },
 ];

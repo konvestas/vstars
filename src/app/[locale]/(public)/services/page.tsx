@@ -6,6 +6,7 @@ import Footer from "@/components/layout/footer";
 import FloatingWhatsApp from "@/components/layout/floating-whatsapp";
 import {createPageMetadata} from "@/lib/metadata";
 import type {Metadata} from "next";
+import {getServicesSchema} from "@/components/servicesPage/data/services-page-data";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
     const { locale } = await params;
@@ -22,6 +23,11 @@ export default function ServicesPage() {
 
     return (
         <main className="min-h-screen bg-white dark:bg-zinc-950 font-sans transition-colors">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(getServicesSchema) }}
+            />
+
             <nav className="fixed top-0 left-0 w-full z-50">
                 <NavigationBar />
             </nav>
