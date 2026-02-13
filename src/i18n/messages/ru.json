@@ -100,7 +100,8 @@
   "BookingWidget": {
     "Tabs": {
       "oneWay": "В одну сторону",
-      "hourly": "Почасовая аренда"
+      "hourly": "Почасовая аренда",
+      "airport": "Аэропорт"
     },
     "Form": {
       "pickUpLocation": "Место отправления",
@@ -109,9 +110,12 @@
       "dropOffLocationPlaceHolder": "Введите место назначения",
       "airport": "Аэропорт",
       "selectAirport": "Выберите аэропорт",
+      "toAirport": "В аэропорт",
+      "fromAirport": "Из аэропорта",
 
       "duration": "Продолжительность",
       "durationPlaceHolder": "Выберите продолжительность",
+      "durationHours": "Продолжительность (часы)",
       "date": "Дата",
       "datePlaceHolder": "Выберите дату и время",
       "insideTitle": "Выберите дату и время",

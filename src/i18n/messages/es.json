@@ -100,7 +100,8 @@
   "BookingWidget": {
     "Tabs": {
       "oneWay": "Solo Ida",
-      "hourly": "Por Horas"
+      "hourly": "Por Horas",
+      "airport": "Aeropuerto"
     },
     "Form": {
       "pickUpLocation": "Lugar de Recogida",
@@ -109,9 +110,12 @@
       "dropOffLocationPlaceHolder": "Ingrese el lugar de destino",
       "airport": "Aeropuerto",
       "selectAirport": "Seleccionar Aeropuerto",
+      "toAirport": "Al Aeropuerto",
+      "fromAirport": "Desde Aeropuerto",
 
       "duration": "Duración",
       "durationPlaceHolder": "Seleccionar Duración",
+      "durationHours": "Duración Horas",
       "date": "Fecha",
       "datePlaceHolder": "Seleccionar Fecha y Hora",
       "insideTitle": "Elegir Fecha y Hora",

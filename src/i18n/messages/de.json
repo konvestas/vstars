@@ -100,7 +100,8 @@
   "BookingWidget": {
     "Tabs": {
       "oneWay": "Einzelfahrt",
-      "hourly": "Stundenweise"
+      "hourly": "Stundenweise",
+      "airport": "Flughafen"
     },
     "Form": {
       "pickUpLocation": "Abholort",
@@ -109,9 +110,12 @@
       "dropOffLocationPlaceHolder": "Zielort eingeben",
       "airport": "Flughafen",
       "selectAirport": "Flughafen auswählen",
+      "toAirport": "Zum Flughafen",
+      "fromAirport": "Vom Flughafen",
 
       "duration": "Dauer",
       "durationPlaceHolder": "Dauer auswählen",
+      "durationHours": "Dauer Stunden",
       "date": "Datum",
       "datePlaceHolder": "Datum & Uhrzeit auswählen",
       "insideTitle": "Datum & Uhrzeit wählen",

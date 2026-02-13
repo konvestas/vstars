@@ -100,7 +100,8 @@
   "BookingWidget": {
     "Tabs": {
       "oneWay": "One Way",
-      "hourly": "Hourly Hire"
+      "hourly": "Hourly Hire",
+      "airport": "Airport"
     },
     "Form": {
       "pickUpLocation": "Pickup Location",
@@ -109,9 +110,12 @@
       "dropOffLocationPlaceHolder": "Enter drop-off location",
       "airport": "Airport Location",
       "selectAirport": "Select Airport",
+      "toAirport": "To Airport",
+      "fromAirport": "From Airport",
 
       "duration": "Duration",
       "durationPlaceHolder": "Select Duration",
+      "durationHours": "Hours",
       "date": "Date",
       "datePlaceHolder": "Select Date & Time",
       "insideTitle": "Pick Date & Time",
