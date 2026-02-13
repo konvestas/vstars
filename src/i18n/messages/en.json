@@ -1,8 +1,8 @@
 {
   "Metadata": {
-    "title": "Istanbul's Transfer Choice | Vstars",
+    "title": "Vstars",
     "description": "Experience luxurious rides in Istanbul. VIP Airport transfers (IST & SAW), hourly chauffeur hire, and private tours with Mercedes-Benz vehicles.",
-    "keywords": "Istanbul airport transfer, VIP transfer Istanbul, Sabiha Gokcen transfer, IST airport shuttle, Mercedes Vito VIP, Private chauffeur Istanbul, Luxury car service Istanbul, Istanbul hotel transfer, Galataport transfer, Safe travel Istanbul, 24/7 airport transfer, Executive car service, Istanbul city tours"
+    "keywords": "Istanbul airport transfer, VIP transfer Istanbul, Sabiha Gokcen transfer, IST airport shuttle, Mercedes-Benz Vito VIP, Private chauffeur Istanbul, Luxury car service Istanbul, Istanbul hotel transfer, Galataport transfer, Safe travel Istanbul, 24/7 airport transfer, Executive car service, Istanbul city tours"
   },
   "ServicesMetadata": {
     "title": "Services | Vstars",
@@ -70,29 +70,29 @@
     "highlights": [
       {
         "title": "Safety First",
-        "desc": "Licensed drivers, insured vehicles, and strict hygiene standards for peace of mind."
+        "desc": "Licensed drivers, insured vehicles, and strict hygiene standards for your peace of mind."
       },
       {
-        "title": "Always On‑Time",
-        "desc": "Flight tracking and smart routing ensure you never miss a pickup or drop‑off."
+        "title": "Always On Time",
+        "desc": "Flight tracking and smart routing ensure you never miss a pickup or drop-off."
       },
       {
         "title": "Premium Comfort",
-        "desc": "Executive vehicles with spacious seating, climate control, and smooth rides."
+        "desc": "Executive vehicles with spacious seating, climate control, and a smooth ride."
       },
       {
         "title": "24/7 Support",
-        "desc": "Real people available anytime to assist with changes or special requests."
+        "desc": "Dedicated agents available anytime to assist with changes or special requests."
       }
     ]
   },
   "Fleet": {
-    "sectionTitle": "Explore our fleet",
+    "sectionTitle": "Explore Our Fleet",
     "sectionDesc": "Experience the highest standard of luxury travel in Istanbul",
     "items": {
       "Vito": {
         "title": "Mercedes-Benz Vito",
-        "desc": "Fits up to 5 + 2 people\n6 baggage\nAmbient lighting\nWifi & Smart TV\nMini-bar\nUSB-C & wireless charging"
+        "desc": "Up to 5+2 passengers\n6 pieces of luggage\nAmbient lighting\nWi-Fi & Smart TV\nMini-bar\nUSB-C & wireless charging"
       }
     },
     "seeMore": "See More"
@@ -103,10 +103,12 @@
       "hourly": "Hourly Hire"
     },
     "Form": {
-      "pickUpLocation": "Pick-up Location",
-      "pickUpLocationPlaceHolder": "Enter pick-up location",
+      "pickUpLocation": "Pickup Location",
+      "pickUpLocationPlaceHolder": "Enter pickup location",
       "dropOffLocation": "Drop-off Location",
       "dropOffLocationPlaceHolder": "Enter drop-off location",
+      "airport": "Airport Location",
+      "selectAirport": "Select Airport",
 
       "duration": "Duration",
       "durationPlaceHolder": "Select Duration",
@@ -121,7 +123,7 @@
       "luggage": "Luggage",
       "SelectedConfiguration": "Selected Configuration:",
 
-      "PassengerLuggage": "Passenger & Luggage",
+      "PassengerLuggage": "Passengers & Luggage",
       "addressPlaceholder": "Enter Airport, Hotel, or Address...",
       "SelectDateHours": "Select Date & Time",
       "selectHours": "Select Duration",
@@ -151,18 +153,18 @@
       "title": "Package Details",
       "waitTime": "Free 30 minutes of wait time",
       "greet": "Includes Meet & Greet service",
-      "alert": "Guest/luggage capacities must be abided by. If unsure, select a larger class as service may be refused"
+      "alert": "Passenger and luggage capacities must be strictly followed. If unsure, select a larger class as service may otherwise be refused."
     },
 
     "GuestInfo": {
       "title": "Final Details",
       "desc": "Please provide your contact information",
-      "fullname": "Full name",
-      "phone": "Phone number",
+      "fullname": "Full Name",
+      "phone": "Phone Number",
       "email": "Email Address",
-      "flightNumber": "Flight number",
+      "flightNumber": "Flight Number",
       "optional": "(Optional)",
-      "driverNote": "Note to the driver:",
+      "driverNote": "Note to the Driver:",
       "driverNotePlaceHolder": "Child seat required, extra luggage, etc...",
       "passportPhoto": "Passport Photo",
       "click": "Click to upload passport photo",
@@ -174,14 +176,14 @@
       "desc": "Finalize your reservation",
       "bookingSummary": "Booking Summary",
       "serviceType": "Service Type:",
-      "guest": "Guest:",
+      "guest": "Guest Name:",
       "phone": "Phone:",
       "date": "Date:",
       "route": "Route:",
-      "pickUpAddress": "Pick up address:",
-      "dropOffAddress": "Drop off address:",
+      "pickUpAddress": "Pickup Address:",
+      "dropOffAddress": "Drop-off Address:",
       "passengers": "Passengers:",
-      "pax": "{count} Pax",
+      "pax": "{count} Passengers",
       "bag": "Luggage:",
       "total": "Total Amount",
       "terms": "View Terms & Conditions"
@@ -191,12 +193,12 @@
       "back": "Back",
       "submit": "Submit",
       "confirm": "Confirm",
-      "cancel": "cancel"
+      "cancel": "Cancel"
     }
   },
   "ReadyToBook": {
     "title": "Ready to book your ride?",
-    "desc": "Let us tailor your transfer or tour — fast replies, real people, 24/7 support.",
+    "desc": "Let us tailor your transfer or tour — fast replies, dedicated agents, and 24/7 support.",
     "contactUs": "Contact Us",
     "bookNow": "Book Now"
   },
@@ -218,12 +220,12 @@
     "premium": "Premium chauffeur & travel services"
   },
   "ServicesPage": {
-    "title": "World Class Services",
+    "title": "World-Class Services",
     "desc": "Experience premium chauffeur services designed for comfort, safety, and efficiency.",
     "items": {
       "airportTransfers": {
         "title": "Airport Transfers",
-        "desc": "Arrive or depart in comfort with our airport transfer service, available in Istanbul airport and Sabiha Gökçen airport.\n     Skip the stress of public transport and unreliable taxis — your chauffeur will meet you on time and take you directly to your destination. \n     We track your flight in real time, adjusting for delays so you never have to worry. Our experienced, locally knowledgeable drivers handle \n     your luggage and ensure a smooth, relaxed ride. Choose from luxury sedans or spacious vans for families and groups. Transparent pricing, no hidden fees, and effortless online booking make every journey seamless from start to finish."
+        "desc": "Arrive or depart in comfort with our airport transfer service, available at Istanbul Airport (IST) and Sabiha Gökçen Airport (SAW). Skip the stress of public transport and unreliable taxis — your chauffeur will meet you on time and take you directly to your destination. We track your flight in real time, adjusting for delays so you never have to worry. Our experienced, locally knowledgeable drivers handle your luggage and ensure a smooth, relaxed ride. Choose from luxury sedans or spacious vans for families and groups. Transparent pricing, no hidden fees, and effortless online booking make every journey seamless from start to finish."
       },
       "hourlyHire": {
         "title": "Hourly Chauffeur Hire",
@@ -231,7 +233,7 @@
       },
       "medicalTourism": {
         "title": "Medical Tourism",
-        "desc": "Through our trusted affiliate, Can Duman Medical Tourism, we facilitate access to a wide range of high-quality medical and wellness services. From aesthetic surgery, dental care, hair transplant to advanced procedures. All services are coordinated with experienced medical institutions. Our role is to ensure a smooth, well-organized experience by connecting patients with reliable healthcare providers, prioritizing comfort, transparency, and professional coordination throughout the journey."
+        "desc": "Through our trusted affiliate, Can Duman Medical Tourism, we facilitate access to a wide range of high-quality medical and wellness services. From aesthetic surgery, dental care, and hair transplants, to advanced procedures, all services are coordinated with experienced medical institutions. Our role is to ensure a smooth, well-organized experience by connecting patients with reliable healthcare providers, prioritizing comfort, transparency, and professional coordination throughout the journey."
       },
       "cityTour": {
         "title": "City Tour",
@@ -243,46 +245,32 @@
       "items": {
         "q1": "Do you provide meet & greet at the airport?",
         "a1": "Yes, our chauffeurs will be waiting for you at the arrivals terminal at Istanbul Airport (IST) or Sabiha Gökçen (SAW) holding a personalized sign with your name.",
-
         "q2": "Is flight tracking included?",
         "a2": "Absolutely, we automatically adjust your pickup time so your driver is always there when you land.",
-
         "q3": "Do you transfer from both IST and Sabiha Gökçen?",
         "a3": "Yes, we provide 24/7 premium transfer services from both Istanbul Airport (IST) and Sabiha Gökçen Airport (SAW) to any hotel, residence, or location within the city center and surrounding areas.",
-
         "q4": "Do you charge per person or per vehicle?",
         "a4": "We charge a fixed rate per vehicle, not per person. Whether you are traveling alone or with a group, you pay one flat fee, no hidden costs.",
-
         "q5": "Will you meet us at any time of day?",
         "a5": "Yes, our operations run 24/7, 365 days a year. Whether you have a late-night arrival or an early morning departure, our professional team is ready to serve you at any hour.",
-
         "q6": "How far in advance should transfer vehicles be reserved?",
         "a6": "We recommend booking at least 48 hours in advance to guarantee availability. However, we do our best to accommodate last-minute requests whenever possible.",
-
         "q7": "Can I make multiple stops and change the route?",
         "a7": "Yes. With our hourly hire service, the vehicle is exclusively yours. You have total flexibility to make unlimited stops, change your route, or attend back-to-back meetings across Istanbul as you wish.",
-
         "q8": "Does the driver wait for me while I am in a meeting, shopping or exploring?",
         "a8": "Absolutely. Your private chauffeur remains on standby at a convenient nearby location while you shop, dine, or attend meetings, ensuring you are picked up immediately when you are ready.",
-
         "q9": "Can I request additional services, such as a tour guide or special amenities in the vehicle?",
         "a9": "Absolutely, we can arrange licensed tour guides, baby seats, and specific in-car amenities like refreshments or Wi-Fi. Please specify your needs during booking so we can prepare everything for you.",
-
         "q10": "What types of treatments do you arrange?",
-        "a10": "We specialize in coordinating Hair Transplants, Dental Aesthetics and Plastic Surgery. Through our partner, Can Duman Medical Tourism, we connect you with specific experts for each procedure.",
-
+        "a10": "We specialize in coordinating Hair Transplants, Dental Aesthetics, and Plastic Surgery. Through our partner, Can Duman Medical Tourism, we connect you with specific experts for each procedure.",
         "q11": "Are the vehicles sanitized and hygienic?",
-        "a11": "Yes, our vehicles are thoroughly cleaned and sanitized before every trip to ensure safe environment. ",
-
+        "a11": "Yes, our vehicles are thoroughly cleaned and sanitized before every trip to ensure a safe and spotless environment.",
         "q12": "Do you handle the entire travel itinerary?",
         "a12": "Yes. We manage your entire medical journey. From VIP airport transfers and hotel coordination to clinic appointments, we ensure a seamless, stress-free experience so you can focus entirely on your treatment.",
-
         "q13": "Can I customize my own itinerary?",
         "a13": "Absolutely. The tour is 100% flexible. You can create your own route, choose exactly which landmarks to visit, and decide how long to stay at each stop. Our driver follows your lead.",
-
         "q14": "Can we request a professional tour guide?",
         "a14": "Yes. While our chauffeurs focus on safe transportation, we can arrange a licensed professional tour guide to accompany you for a detailed historical experience upon request (subject to availability and extra fee).",
-
         "q15": "Do I need to worry about parking or waiting fees?",
         "a15": "Not at all. We handle all logistics. Your chauffeur drops you off right at the entrance and waits nearby. You can focus entirely on sightseeing without the stress of finding parking or hailing a taxi."
       }
@@ -294,27 +282,27 @@
     "items": {
       "medical": {
         "title": "Can Duman Medical Tourism",
-        "desc": "Can Duman Medical Tourism, facilitates access to a wide range of high-quality medical and wellness services. From aesthetic surgery, dental care, hair transplant to advanced procedures. All services are coordinated with experienced medical institutions. Our role is to ensure a smooth, well-organized experience by connecting patients with reliable healthcare providers, prioritizing comfort, transparency, and professional coordination throughout the journey."
+        "desc": "Can Duman Medical Tourism facilitates access to a wide range of high-quality medical and wellness services, from aesthetic surgery and dental care to hair transplants and advanced procedures. All services are coordinated with experienced medical institutions. Our role is to ensure a smooth, well-organized experience by connecting patients with reliable healthcare providers, prioritizing comfort, transparency, and professional coordination throughout the journey."
       },
       "travelAgency": {
         "title": "Can Duman Travel Agency",
-        "desc": "Can Duman Travel Agency, provides tailored travel solutions for individual and corporate needs. With a focus on organized, reliable, and customer-oriented service, they support travel planning, transportation, and destination-related arrangements. Their services are designed to simplify travel logistics while ensuring a smooth and comfortable experience. Through our collaboration, we aim to offer seamless coordination and trusted travel support for our clients."
+        "desc": "Can Duman Travel Agency provides tailored travel solutions for individual and corporate needs. With a focus on organized, reliable, and customer-oriented service, they support travel planning, transportation, and destination-related arrangements. Their services are designed to simplify travel logistics while ensuring a smooth and comfortable experience. Through our collaboration, we aim to offer seamless coordination and trusted travel support for our clients."
       },
       "visitoria": {
         "title": "Visitoria Grup Sigorta",
         "desc": "Visitoria Grup Sigorta brings over 25 years of experience in finance and insurance services. They provide a wide range of solutions across motor, health, travel, property, commercial, and financial insurance branches. Working with leading insurance companies in Türkiye and international partners, they offer flexible pricing and payment options tailored to individual and corporate needs. With a strong focus on customer satisfaction, reliability, and professional expertise, Visitoria Group Insurance acts as a trusted solution partner for comprehensive insurance needs."
       },
       "danismanlik": {
-        "title": "Can Duman Danismanlik",
+        "title": "Can Duman Danışmanlık",
         "desc": "Can Duman Consultancy provides professional guidance and support across various service areas. With a structured and solution-oriented approach, they assist individuals and organizations with planning, coordination, and process management. Their services are designed to simplify complex procedures and ensure efficient outcomes. By focusing on reliability, clarity, and client needs, they aim to deliver practical and effective consultancy solutions. Through our collaboration, we help clients access trusted expertise and well-organized support."
       },
       "agon": {
         "title": "Agon",
-        "desc": "Agon Group Company is a multi-dimensional brand operating across textiles, bespoke events, organic products, e-commerce, and exclusive fan club concepts. With a strong focus on aesthetics, quality, and sustainability, Agon Group creates refined experiences in every field it touches. Its strength lies in vision; its distinction is defined by attention to detail."
+        "desc": "Agon Group Company is a multi-dimensional brand operating across textiles, bespoke events, organic products, e-commerce, and exclusive fan club concepts. With a strong focus on aesthetics, quality, and sustainability, Agon Group creates refined experiences in every field it touches. Its strength lies in its vision; its distinction is defined by its attention to detail."
       },
       "akademi": {
         "title": "Can Duman Akademi",
-        "desc": "Can Duman Akademi is our affiliated academy program partner, providing rich and high-quality educational content with a strong belief in continuous learning and personal development. Guided by the motto “Education for Everyone, Growth Together,” it prioritizes lifelong education and professional development. With diverse training fields and high service standards, the academy contributes to developing qualified human capital aligned with market needs. It aims to become a leading lifelong learning center supporting individual, regional, and national growth through education."
+        "desc": "Can Duman Akademi is our affiliated academy program partner, providing rich and high-quality educational content with a strong belief in continuous learning and personal development. Guided by the motto 'Education for Everyone, Growth Together', it prioritizes lifelong education and professional development. With diverse training fields and high service standards, the academy contributes to developing qualified human capital aligned with market needs. It aims to become a leading lifelong learning center supporting individual, regional, and national growth through education."
       }
     }
   },
@@ -322,19 +310,19 @@
     "title": "Explore Our Fleet",
     "description": "",
     "secondTitle": "Mercedes-Benz Vito Maybach",
-    "secondDescription": "Each meticulously maintained vehicle, transforms into your private office and vehicle of choice. Set your own itinerary and move at your pace while your professional chauffeur remains on standby.",
+    "secondDescription": "Each meticulously maintained vehicle transforms into your private office and vehicle of choice. Set your own itinerary and move at your pace while your professional chauffeur remains on standby.",
     "servicesTitle": "Service Standards",
     "servicesDesc": "More than just a ride. Every journey is curated to provide the ultimate environment for productivity and relaxation.",
     "items": {
       "details": {
         "capacityTitle": "Capacity",
-        "capacityDesc": "Up to 5 + 2",
+        "capacityDesc": "Up to 5+2 passengers",
         "luggageTitle": "Luggage",
-        "luggageDesc": "6 baggage",
+        "luggageDesc": "6 pieces of luggage",
         "AmbianceTitle": "Ambiance",
         "AmbianceDesc": "Ambient lighting",
         "ConnectivityTitle": "Connectivity",
-        "ConnectivityDesc": "Wifi & Smart TV",
+        "ConnectivityDesc": "Wi-Fi & Smart TV",
         "RefreshmentsTitle": "Refreshments",
         "RefreshmentsDesc": "Mini-bar",
         "PowerTitle": "Power",
@@ -393,7 +381,7 @@
   },
   "FAQPage": {
     "title": "Frequently Asked Questions",
-    "desc": "Check out our frequently asked questions to find answers to your questions about our services.",
+    "desc": "Browse our frequently asked questions to find answers regarding our premium services.",
     "noResults": "No results found for",
     "items": {
       "general": {
@@ -443,7 +431,7 @@
         "questions": {
           "1": {
             "q": "Are the vehicles sanitized and hygienic?",
-            "a": "Yes, our vehicles are thoroughly cleaned and sanitized before every trip to ensure safe environment."
+            "a": "Yes, our vehicles are thoroughly cleaned and sanitized before every trip to ensure a safe environment."
           },
           "2": {
             "q": "Can I request additional services, such as a tour guide or special amenities?",
