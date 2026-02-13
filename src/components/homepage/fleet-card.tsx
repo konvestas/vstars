@@ -12,7 +12,6 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import {FleetCardProps} from "@/components/homepage/data/home-fleet-data";
 
-
 export function FleetCard({ title, description, images, index, className }: FleetCardProps) {
     const t = useTranslations("Fleet");
     const [api, setApi] = useState<CarouselApi>();
@@ -113,7 +112,7 @@ export function FleetCard({ title, description, images, index, className }: Flee
                                             "h-1.5 rounded-full transition-all duration-300",
                                             i === current
                                                 ? "w-6 bg-white"
-                                                : "w-1.5 bg-white/50"
+                                                : "w-2.5 bg-white/50"
                                         )}
                                     />
                                 ))}
