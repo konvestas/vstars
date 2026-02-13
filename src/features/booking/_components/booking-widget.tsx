@@ -3,7 +3,7 @@ import { FormProvider } from "react-hook-form";
 import { useTranslations } from "next-intl";
 import { ArrowRight, ChevronLeft, Plane, Hourglass, MapPinned } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 import { Card } from "@/components/ui/card";
 import { useBookingForm } from "@/features/booking/hooks/use-booking";
 import { SERVICE_TYPES } from "../schemas";
