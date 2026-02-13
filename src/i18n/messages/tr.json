@@ -100,7 +100,8 @@
   "BookingWidget": {
     "Tabs": {
       "oneWay": "Tek Yön",
-      "hourly": "Saatlik Kiralama"
+      "hourly": "Saatlik Kiralama",
+      "airport": "Havalimanı Transferi"
     },
     "Form": {
       "pickUpLocation": "Alış Noktası",
@@ -109,9 +110,12 @@
       "dropOffLocationPlaceHolder": "Varış noktasını girin",
       "airport": "Havalimanı",
       "selectAirport": "Havalimanı Seçin",
+      "toAirport": "Gidiş",
+      "fromAirport": "Dönüş",
 
       "duration": "Süre",
-      "durationPlaceHolder": "Süre Seçin",
+      "durationPlaceHolder": "Süre Seçin:",
+      "durationHours": "Saat",
       "date": "Tarih",
       "datePlaceHolder": "Tarih ve Saat Seçin",
       "insideTitle": "Tarih ve Saat Seçin",
