@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import {memo, useCallback, useState, useEffect, useMemo, startTransition} from "react";
 import { format } from "date-fns";
 import { CalendarIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -11,8 +11,10 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { useTranslations } from "next-intl";
 import {DateTimeInputProps, TIME_SLOTS} from "@/features/booking/_components/data/date-time-input-data";
 
+import { tr } from "react-day-picker/locale";
+
 // Memoized time slot button to prevent re-renders
-const TimeSlotButton = React.memo(({
+const TimeSlotButton = memo(({
                                        slot,
                                        isSelected,
                                        onClick
@@ -21,7 +23,7 @@ const TimeSlotButton = React.memo(({
     isSelected: boolean;
     onClick: (slot: string) => void;
 }) => {
-    const handleClick = React.useCallback(() => {
+    const handleClick = useCallback(() => {
         onClick(slot);
     }, [slot, onClick]);
 
@@ -54,19 +56,19 @@ export default function DateTimeInput({
                                           className,
                                           error
                                       }: DateTimeInputProps) {
-    const [isOpen, setIsOpen] = React.useState(false);
-    const [tempDate, setTempDate] = React.useState<Date | undefined>(date);
-    const [tempTime, setTempTime] = React.useState<string | undefined>(time);
+    const [isOpen, setIsOpen] = useState(false);
+    const [tempDate, setTempDate] =useState<Date | undefined>(date);
+    const [tempTime, setTempTime] =useState<string | undefined>(time);
     const t = useTranslations('BookingWidget');
 
-    React.useEffect(() => {
+    useEffect(() => {
         if (isOpen) {
             setTempDate(date);
             setTempTime(time);
         }
     }, [isOpen, date, time]);
 
-    const handleConfirm = React.useCallback(() => {
+    const handleConfirm = useCallback(() => {
         if (tempDate && tempTime) {
             onConfirm(tempDate, tempTime);
             setIsOpen(false);
@@ -74,13 +76,13 @@ export default function DateTimeInput({
     }, [tempDate, tempTime, onConfirm]);
 
     // Use transition for non-urgent updates
-    const handleTimeSelect = React.useCallback((slot: string) => {
-        React.startTransition(() => {
+    const handleTimeSelect = useCallback((slot: string) => {
+        startTransition(() => {
             setTempTime(slot);
         });
     }, []);
 
-    const displayValue = React.useMemo(() => {
+    const displayValue = useMemo(() => {
         if (!date || !time) return null;
         return (
             <div className="flex items-center gap-2 text-white/80">
@@ -91,7 +93,7 @@ export default function DateTimeInput({
         );
     }, [date, time]);
 
-    const footerText = React.useMemo(() => {
+    const footerText = useMemo(() => {
         if (!tempDate || !tempTime) return "";
         return `${format(tempDate, "EEE, MMM dd")} at ${tempTime}`;
     }, [tempDate, tempTime]);
@@ -139,12 +141,13 @@ export default function DateTimeInput({
                     <div className="flex flex-col md:flex-row">
                         <div className="p-4 flex justify-center border-b md:border-b-0 md:border-r border-gray-100">
                             <Calendar
+                                className="bg-transparent p-0"
                                 mode="single"
                                 selected={tempDate}
                                 onSelect={setTempDate}
                                 captionLayout="dropdown-months"
                                 disabled={(date) => date < new Date(new Date().setHours(0, 0, 0, 0))}
-                                className="bg-transparent p-0"
+                                locale={tr}
                             />
                         </div>
                         <div className="flex-1 min-h-50 md:h-auto bg-gray-50/50">
