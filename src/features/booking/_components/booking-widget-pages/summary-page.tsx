@@ -1,14 +1,25 @@
 import {useFormContext} from "react-hook-form";
-import {useTranslations} from "next-intl";
+import {useLocale, useTranslations} from "next-intl";
 import {motion} from "framer-motion";
 import {format} from "date-fns";
 import {StepSummaryProps} from "@/features/booking/_components/booking-widget-pages/data/summary-page-data";
+import type { Locale } from "react-day-picker";
+// Import date-fns locales for formatting
+import { tr as trDateFns, de as deDateFns, ru as ruDateFns, enUS as enUSDateFns } from "date-fns/locale";
 
 export const StepSummary = ({ price, displayLocations }: StepSummaryProps) => {
     const { watch } = useFormContext();
     const t = useTranslations('BookingWidget');
     const [serviceType, fullName, phone, date, time, passengers, luggage] = watch(["serviceType", "fullName", "phone", "date", "time", "passengers", "luggage"]);
-
+    const locale = useLocale();
+    // Locale mapping for date-fns
+    const dateFnsLocaleMap: Record<string, Locale> = {
+        tr: trDateFns,
+        de: deDateFns,
+        ru: ruDateFns,
+        en: enUSDateFns,
+    };
+    const dateFnsLocale = dateFnsLocaleMap[locale] || enUSDateFns;
     return (
         <motion.div key="step4" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="space-y-6">
             <div className="text-center">
@@ -23,7 +34,7 @@ export const StepSummary = ({ price, displayLocations }: StepSummaryProps) => {
                             <div>{t("Summary.serviceType")}<span className="text-white font-medium pl-1">{serviceType}</span></div>
                             <div>{t("Summary.guest")}<span className="text-white font-medium pl-1">{fullName}</span></div>
                             <div>{t("Summary.phone")}<span className="text-white font-medium pl-1">{phone}</span></div>
-                            <div>{t("Summary.date")}<span className="text-white pl-1 font-medium">{date ? format(date, "dd MMM yyyy") : "-"} • {time}</span></div>
+                            <div>{t("Summary.date")}<span className="text-white pl-1 font-medium">{date ? format(date, "dd MMM yyyy",{ locale: dateFnsLocale }) : "-"} • {time}</span></div>
                         </div>
                         <div className="space-y-2 text-white/50">
                             <div className="text-white/70 font-semibold">{t("Summary.route")}</div>
