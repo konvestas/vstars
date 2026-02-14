@@ -1,3 +1,4 @@
+
 # Vstars Transfer - Premium Transfer Booking Platform
 
 ![Project Status](https://img.shields.io/badge/Status-Production-success)
@@ -44,24 +45,39 @@ NEXT_PUBLIC_GOOGLE_MAPS_KEY=your_google_maps_api_key
 EMAIL=your_email_address
 PASS=your_app_password
 
-## 📦 Installation & Setup
-Clone the repository:
+```
 
+## 📦 Installation & Setup
+
+1. **Clone the repository:**
+```bash
 git clone [https://github.com/your-username/vstars-transfer.git](https://github.com/your-username/vstars-transfer.git)
 cd vstars-transfer
 
-Install dependencies:
+```
 
+
+2. **Install dependencies:**
+```bash
 npm install
 # or
 yarn install
 
-Run the development server:
-Bash
+```
+
+
+3. **Run the development server:**
+```bash
 npm run dev
-Open http://localhost:3000 with your browser to see the result.
+
+```
+
+
+4. Open [http://localhost:3000](https://www.google.com/search?q=http://localhost:3000) with your browser to see the result.
 
 ## 📂 Project Structure
+
+```
 ├── src/
 │   ├── app/                 # Next.js App Router pages and API routes
 │   │   ├── [locale]/        # Localized pages (e.g., /en/contact, /de/booking)
@@ -73,4 +89,12 @@ Open http://localhost:3000 with your browser to see the result.
 ├── public/                  # Static assets (images, icons)
 └── ...config files          # Tailwind, Next.js, ESLint configs
 
-Built by Onur Akgülay. This project is live in production.
+```
+
+## 🔒 Security & Performance
+
+* **Input Sanitization:** All user inputs in emails are treated to prevent injection attacks.
+* **Type Safety:** Strict TypeScript is enforced across the entire codebase to prevent runtime errors.
+* **SEO Optimized:** Uses Next.js Metadata API for dynamic SEO tags across different languages.
+
+*Built by Onur Akgülay. This project is live in production.*
