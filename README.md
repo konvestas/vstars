@@ -43,3 +43,34 @@ NEXT_PUBLIC_GOOGLE_MAPS_KEY=your_google_maps_api_key
 # Email Configuration (Gmail SMTP)
 EMAIL=your_email_address
 PASS=your_app_password
+
+## 📦 Installation & Setup
+Clone the repository:
+
+git clone [https://github.com/your-username/vstars-transfer.git](https://github.com/your-username/vstars-transfer.git)
+cd vstars-transfer
+
+Install dependencies:
+
+npm install
+# or
+yarn install
+
+Run the development server:
+Bash
+npm run dev
+Open http://localhost:3000 with your browser to see the result.
+
+## 📂 Project Structure
+├── src/
+│   ├── app/                 # Next.js App Router pages and API routes
+│   │   ├── [locale]/        # Localized pages (e.g., /en/contact, /de/booking)
+│   │   └── api/             # Serverless functions (Nodemailer logic)
+│   ├── components/          # Reusable UI components (Shadcn/UI)
+│   ├── features/            # Feature-based modules (Booking Widget logic)
+│   ├── i18n/                # Translation JSONs and configuration
+│   └── lib/                 # Utility functions and shared types
+├── public/                  # Static assets (images, icons)
+└── ...config files          # Tailwind, Next.js, ESLint configs
+
+Built by Onur Akgülay. This project is live in production.
