@@ -19,10 +19,7 @@ export const normalizeToEnglish = (text: string): string => {
         'ç': 'c', 'ğ': 'g', 'ı': 'i', 'i': 'i', 'ö': 'o', 'ş': 's', 'ü': 'u',
         'Ç': 'c', 'Ğ': 'g', 'İ': 'i', 'I': 'i', 'Ö': 'o', 'Ş': 's', 'Ü': 'u'
     };
-
-    // Replace special Turkish chars
     normalized = normalized.replace(/[çğıiöşüÇĞİIÖŞÜ]/g, (match) => turkishMap[match] || match);
-    // Remove accents and trim
     return normalized.normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim();
 };
 
@@ -47,17 +44,13 @@ export const calculateTripPrice = (
     direction?: string
 ): number => {
 
-    // 1. Hourly
     if (bookingType === SERVICE_TYPES.HOURLY && duration) {
         const hours = parseInt(duration, 10);
         return (hours * HOURLY_RATE) + GREETING_FEE;
     }
 
-    // 2. Airport Transfer
     if (bookingType === SERVICE_TYPES.AIRPORT) {
         const { zones, defaultPrice } = getPricingZones(bookingType, airport);
-
-        // NORMALIZE THE INPUT
         const normalizedTarget = normalizeToEnglish(from);
 
         const matchedZone = zones.find(zone =>
@@ -67,15 +60,12 @@ export const calculateTripPrice = (
                     normalizedTarget.startsWith(normalizedRegion + "/");
             })
         );
-
         if (matchedZone) {
             return matchedZone.price + GREETING_FEE;
         }
-
         return defaultPrice + GREETING_FEE;
     }
 
-    // 3. One Way Transfer
     if (bookingType === SERVICE_TYPES.TRANSFER) {
         const { zones, defaultPrice } = getPricingZones(bookingType);
         const combinedAddress = normalizeToEnglish(from + " " + (to || ""));
@@ -83,12 +73,10 @@ export const calculateTripPrice = (
         const matchedZone = zones.find(zone =>
             zone.regions.some(region => combinedAddress.includes(normalizeToEnglish(region)))
         );
-
         if (matchedZone) {
             return matchedZone.price + GREETING_FEE;
         }
         return defaultPrice + GREETING_FEE;
     }
-
     return 0;
 };

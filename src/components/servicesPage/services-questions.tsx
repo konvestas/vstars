@@ -11,7 +11,6 @@ interface FAQItem {
 }
 
 export default function ServiceAccordion({ items }: { items: FAQItem[] }) {
-    // Track which item is open (null = all closed)
     const [openIndex, setOpenIndex] = useState<number | null>(null);
 
     const toggleItem = (index: number) => {

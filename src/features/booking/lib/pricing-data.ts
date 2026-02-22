@@ -1,10 +1,11 @@
 // pricing-data.ts
 import { PricingRule } from "./types";
 
-export const GREETING_FEE = 200;
-export const HOURLY_RATE = 750;
+export const GREETING_FEE = 250;
+export const HOURLY_RATE = 900;
 export const DEFAULT_AIRPORT_PRICE = 2800;
 export const DEFAULT_GENERAL_PRICE = 2600;
+// kilometre basina 100 --- 10< en az bin
 
 export const PRICING_ZONES: PricingRule[] = [
     // {

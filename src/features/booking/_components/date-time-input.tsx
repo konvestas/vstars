@@ -6,27 +6,21 @@ import { CalendarIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Calendar } from "@/components/ui/calendar";
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { useLocale, useTranslations } from "next-intl";
 import {DateTimeInputProps, TIME_SLOTS} from "@/features/booking/_components/data/date-time-input-data";
 
-// Import all the locales you support for react-day-picker
 import { tr, de, ru, enUS } from "react-day-picker/locale";
 import type { Locale } from "react-day-picker";
-
-// Import date-fns locales for formatting
 import { tr as trDateFns, de as deDateFns, ru as ruDateFns, enUS as enUSDateFns } from "date-fns/locale";
 
-// Locale mapping for react-day-picker
 const localeMap: Record<string, Locale> = {
     tr: tr,
     de: de,
     ru: ru,
     en: enUS,
 };
-
-// Locale mapping for date-fns
 const dateFnsLocaleMap: Record<string, Locale> = {
     tr: trDateFns,
     de: deDateFns,
@@ -34,7 +28,6 @@ const dateFnsLocaleMap: Record<string, Locale> = {
     en: enUSDateFns,
 };
 
-// Memoized time slot button to prevent re-renders
 const TimeSlotButton = memo(({
                                  slot,
                                  isSelected,
@@ -102,7 +95,6 @@ export default function DateTimeInput({
         }
     }, [tempDate, tempTime, onConfirm]);
 
-    // Use transition for non-urgent updates
     const handleTimeSelect = useCallback((slot: string) => {
         startTransition(() => {
             setTempTime(slot);
@@ -160,9 +152,6 @@ export default function DateTimeInput({
                 <DialogContent className="w-[75vw] max-w-162.5 p-0 overflow-hidden bg-white border-none rounded-2xl">
                     <DialogHeader className="p-4 pb-0">
                         <DialogTitle className="text-xl font-bold">{t("Form.insideTitle")}</DialogTitle>
-                        <DialogDescription className="sr-only">
-                            Select your preferred date and time for the booking
-                        </DialogDescription>
                     </DialogHeader>
 
                     <div className="flex flex-col md:flex-row">

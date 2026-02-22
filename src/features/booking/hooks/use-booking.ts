@@ -7,7 +7,6 @@ import { bookingSchema, type BookingFormValues, SERVICE_TYPES } from "../schemas
 import { calculateTripPrice } from "@/features/booking/lib/utils";
 import { toast } from "sonner";
 
-// Helper to convert file to base64
 const fileToBase64 = (file: File): Promise<string> => {
     return new Promise((resolve, reject) => {
         const reader = new FileReader();
@@ -20,8 +19,6 @@ const fileToBase64 = (file: File): Promise<string> => {
 export function useBookingForm() {
     const [step, setStep] = useState(1);
     const [isSubmitting, setIsSubmitting] = useState(false);
-
-    // State for the "Pricing" version of the address (e.g. "maltepe/istanbul")
     const [pricingLocations, setPricingLocations] = useState({
         pickup: "",
         dropoff: ""
@@ -47,21 +44,16 @@ export function useBookingForm() {
     });
 
     const { watch, trigger, setValue, getValues, clearErrors } = form;
-
-    // Watch necessary fields for UI updates and Pricing
     const [serviceType, pickup, dropoff, hours, airport, direction, watchedAirport] = watch([
         "serviceType", "pickupAddress", "dropoffAddress", "hours", "airport", "direction", "airport"
     ]);
 
-    // 1. Memoized Price Calculation
     const price = useMemo(() => {
-        // Use pricing-specific locations if available, fallback to form input
         const p = pricingLocations.pickup || pickup;
         const d = pricingLocations.dropoff || dropoff;
         return calculateTripPrice(serviceType, p, d, hours, airport, direction);
     }, [serviceType, pickup, dropoff, hours, airport, direction, pricingLocations]);
 
-    // 2. Computed Display Locations (Moved from Widget to Hook)
     const displayLocations = useMemo(() => {
         const getAirportLabel = (val?: string) => {
             if (val === "istanbul-airport") return "Istanbul Airport (IST)";
@@ -70,11 +62,9 @@ export function useBookingForm() {
         };
 
         const airportLabel = getAirportLabel(watchedAirport);
-        // Default logic
         let pickupDisplay = pickup;
         let dropoffDisplay = dropoff;
 
-        // Airport logic override
         if (serviceType === SERVICE_TYPES.AIRPORT) {
             if (direction === "from-airport") {
                 pickupDisplay = airportLabel;
@@ -104,13 +94,11 @@ export function useBookingForm() {
         const newType = val as typeof SERVICE_TYPES[keyof typeof SERVICE_TYPES];
         setValue("serviceType", newType);
 
-        // Reset logic when switching tabs
         if (newType === SERVICE_TYPES.HOURLY) {
             setValue("dropoffAddress", "");
             setPricingLocations(prev => ({ ...prev, dropoff: "" }));
             clearErrors("dropoffAddress");
         }
-        // Ensure direction is set for airport
         if (newType === SERVICE_TYPES.AIRPORT && !getValues("direction")) {
             setValue("direction", "from-airport");
         }
@@ -132,13 +120,11 @@ export function useBookingForm() {
         setStep((prev) => Math.max(1, prev - 1));
     };
 
-    // 3. Submit Logic (Moved from Widget to Hook)
     const submitBooking = async () => {
         try {
             setIsSubmitting(true);
             const formValues = getValues();
 
-            // Handle Passport
             let passportPhoto = null;
             if (formValues.passport && formValues.passport.length > 0) {
                 const file = formValues.passport[0];
@@ -193,7 +179,7 @@ export function useBookingForm() {
         step,
         price,
         isSubmitting,
-        displayLocations, // Expose computed display values
+        displayLocations,
         onTabChange,
         next,
         back,

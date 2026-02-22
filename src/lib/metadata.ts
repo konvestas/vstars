@@ -1,4 +1,3 @@
-// lib/metadata.ts
 import {Metadata} from "next";
 import {getTranslations} from "next-intl/server";
 

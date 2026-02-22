@@ -9,7 +9,6 @@ export default function middleware(request: NextRequest) {
     const host = request.headers.get('host');
 
     const isDev = host?.includes('localhost');
-    // If we are NOT in dev mode, and the host is NOT the target...
     if (!isDev && host && host !== targetHost) {
         const url = new URL(request.url);
         url.host = targetHost;
