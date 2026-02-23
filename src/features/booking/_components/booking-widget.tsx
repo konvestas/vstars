@@ -39,7 +39,7 @@ export default function BookingWidget() {
                 <FormProvider {...form}>
                     {/* TABS */}
                     {step === 1 && (
-                        <div className="pt-6 px-6">
+                        <div className="pt-6 px-1">
                             <Tabs value={watch("serviceType")} onValueChange={onTabChange} className="w-full">
                                 <TabsList className="grid w-full grid-cols-3 h-13 bg-black/35 rounded-full">
                                     <TabsTrigger value={SERVICE_TYPES.TRANSFER} className={BookingWidgetStyles.tabTrigger}><MapPinned/> {t("Tabs.oneWay")}</TabsTrigger>
