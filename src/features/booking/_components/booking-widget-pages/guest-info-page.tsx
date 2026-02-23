@@ -36,40 +36,40 @@ export const StepGuestInfo = ({ price }: StepGuestInfoProps) => {
             <div className="space-y-4">
                 <div className="grid grid-cols-2 gap-4">
                     <div className="relative group">
-                        <Label className={BookingWidgetStyles.glassLabel}>{t("GuestInfo.fullname")}</Label>
+                        <Label htmlFor="fullName" className={BookingWidgetStyles.glassLabel}>{t("GuestInfo.fullname")}</Label>
                         <User className={BookingWidgetStyles.iconContainer} />
-                        <Input placeholder="John Doe" {...register("fullName")} className={cn(BookingWidgetStyles.glassInput, errors.fullName && "border-red-500 ring-1 ring-red-500")} />
+                        <Input placeholder="John Doe" {...register("fullName")} id="fullName" autoComplete="on" className={cn(BookingWidgetStyles.glassInput, errors.fullName && "border-red-500 ring-1 ring-red-500")} />
                     </div>
                     <div className="relative group">
-                        <Label className={BookingWidgetStyles.glassLabel}>{t("GuestInfo.phone")}</Label>
+                        <Label htmlFor="phone" className={BookingWidgetStyles.glassLabel}>{t("GuestInfo.phone")}</Label>
                         <Phone className={BookingWidgetStyles.iconContainer} />
-                        <Input placeholder="+1 234 567 890" {...register("phone")} className={cn(BookingWidgetStyles.glassInput, errors.phone && "border-red-500 ring-1 ring-red-500")} />
+                        <Input placeholder="+1 234 567 890" {...register("phone")} id="phone" autoComplete="tel" className={cn(BookingWidgetStyles.glassInput, errors.phone && "border-red-500 ring-1 ring-red-500")} />
                     </div>
                 </div>
                 <div className="grid grid-cols-2 gap-4">
                     <div className="relative group">
-                        <Label className={BookingWidgetStyles.glassLabel}>{t("GuestInfo.email")}</Label>
+                        <Label htmlFor="email" className={BookingWidgetStyles.glassLabel}>{t("GuestInfo.email")}</Label>
                         <Mail className={BookingWidgetStyles.iconContainer} />
-                        <Input placeholder="john@example.com" {...register("email")} className={cn(BookingWidgetStyles.glassInput, errors.email && "border-red-500 ring-1 ring-red-500")} />
+                        <Input placeholder="john@example.com" {...register("email")} id="email" autoComplete="email" className={cn(BookingWidgetStyles.glassInput, errors.email && "border-red-500 ring-1 ring-red-500")} />
                     </div>
                     <div className="relative group">
-                        <Label className={BookingWidgetStyles.glassLabel}>{t("GuestInfo.flightNumber")}</Label>
+                        <Label htmlFor="flightNo" className={BookingWidgetStyles.glassLabel}>{t("GuestInfo.flightNumber")}</Label>
                         <Plane className={BookingWidgetStyles.iconContainer} />
-                        <Input placeholder="TK 1234" {...register("flightNo")} className={BookingWidgetStyles.glassInput} />
+                        <Input placeholder="TK 1234" {...register("flightNo")} id="flightNo" className={BookingWidgetStyles.glassInput} />
                     </div>
                 </div>
                 <div className="relative group">
-                    <Label className={BookingWidgetStyles.glassLabel}>{t("GuestInfo.driverNote")}</Label>
-                    <Textarea placeholder={t("GuestInfo.driverNotePlaceHolder")} {...register("notes")} className={BookingWidgetStyles.glassInput} />
+                    <Label htmlFor="notes" className={BookingWidgetStyles.glassLabel}>{t("GuestInfo.driverNote")}</Label>
+                    <Textarea placeholder={t("GuestInfo.driverNotePlaceHolder")} {...register("notes")} id="notes" className={BookingWidgetStyles.glassInput} />
                 </div>
                 {/* File Upload */}
                 <div className="space-y-2">
                     <Label className={BookingWidgetStyles.glassLabel}>{t("GuestInfo.passportPhoto")}</Label>
                     {!previewUrl ? (
                         <div className="relative">
-                            <Input type="file" accept="image/*" className="hidden" id="passport-upload" onChange={handleFileChange} />
+                            <Input  type="file" accept="image/*" className="hidden" id="passport-upload" onChange={handleFileChange} />
                             <label htmlFor="passport-upload" className="flex flex-col items-center justify-center w-full h-20 border-2 border-dashed border-white/20 rounded-xl bg-white/5 hover:bg-white/10 cursor-pointer transition-all hover:border-white/40 group">
-                                <div className="flex items-center gap-2 text-white/60 group-hover:text-white transition-colors">
+                                <div className="flex items-center gap-2 text-white/60  group-hover:text-white transition-colors">
                                     <UploadCloud className="h-5 w-5" />
                                     <span className="text-sm font-medium">{t("GuestInfo.click")}</span>
                                 </div>
