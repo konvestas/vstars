@@ -1,6 +1,6 @@
 "use client";
 
-import {memo, useCallback, useState, useEffect, useMemo, startTransition} from "react";
+import {memo, useCallback, useState, useEffect, useMemo} from "react";
 import { format } from "date-fns";
 import { CalendarIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -42,20 +42,18 @@ const TimeSlotButton = memo(({
     }, [slot, onClick]);
 
     return (
-        <Button
-            key={slot}
-            variant={isSelected ? "default" : "outline"}
-            size="sm"
+        <button
+            type="button"
             onClick={handleClick}
-            className={cn(
-                "w-full transition-all border-gray-300",
-                isSelected
-                    ? "bg-blue-700 text-white hover:bg-blue-800"
-                    : "hover:bg-gray-100 bg-white"
-            )}
+            style={isSelected
+                ? { backgroundColor: "#000000", color: "#ffffff", borderColor: "#000000" }
+                : undefined
+            }
+            className="w-full h-9 px-3 rounded-md text-sm font-medium border transition-colors bg-white
+            text-gray-900 border-gray-300 hover:bg-gray-100"
         >
             {slot}
-        </Button>
+        </button>
     );
 });
 
@@ -71,8 +69,8 @@ export default function DateTimeInput({
                                           error
                                       }: DateTimeInputProps) {
     const [isOpen, setIsOpen] = useState(false);
-    const [tempDate, setTempDate] =useState<Date | undefined>(date);
-    const [tempTime, setTempTime] =useState<string | undefined>(time);
+    const [tempDate, setTempDate] = useState<Date | undefined>(date);
+    const [tempTime, setTempTime] = useState<string | undefined>(time);
 
     const t = useTranslations('BookingWidget');
     const locale = useLocale();
@@ -95,10 +93,10 @@ export default function DateTimeInput({
         }
     }, [tempDate, tempTime, onConfirm]);
 
+    // Fix: removed startTransition so the state update is synchronous and
+    // the button re-renders immediately with the correct selected background.
     const handleTimeSelect = useCallback((slot: string) => {
-        startTransition(() => {
-            setTempTime(slot);
-        });
+        setTempTime(slot);
     }, []);
 
     const displayValue = useMemo(() => {
@@ -157,21 +155,23 @@ export default function DateTimeInput({
                     <div className="flex flex-col md:flex-row">
                         <div className="p-4 flex justify-center border-b md:border-b-0 md:border-r border-gray-100">
                             <Calendar
-                                className="bg-transparent p-0"
                                 mode="single"
                                 selected={tempDate}
                                 onSelect={setTempDate}
                                 captionLayout="dropdown-months"
                                 disabled={(date) => date < new Date(new Date().setHours(0, 0, 0, 0))}
                                 locale={calendarLocale}
+
                             />
                         </div>
-                        <div className="flex-1 min-h-50 md:h-auto bg-gray-50/50">
+                        <div className="flex-1 min-h-50 md:h-auto
+
+                        bg-gray-50/50">
                             <div className="p-3 text-sm font-medium text-center text-muted-foreground border-b border-gray-100">
                                 {t("Form.availableTime")}
                             </div>
                             <ScrollArea className="h-62.5 md:h-80 p-3">
-                                <div className="grid grid-cols-2 md:grid-cols-2 gap-2">
+                                <div className="grid grid-cols-2 md:grid-cols-2 gap-2 ">
                                     {TIME_SLOTS.map((slot) => (
                                         <TimeSlotButton
                                             key={slot}
@@ -191,7 +191,7 @@ export default function DateTimeInput({
                         <Button
                             onClick={handleConfirm}
                             disabled={!tempDate || !tempTime}
-                            className="bg-green-600 text-white"
+                            className="bg-green-600 text-white hover:bg-green-700"
                         >
                             {t("Shared.confirm")}
                         </Button>
