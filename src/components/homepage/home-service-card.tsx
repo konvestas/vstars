@@ -23,14 +23,12 @@ export function HomeServiceCard({ title, description, image, toServicesId, index
             <Link href={`/services#${toServicesId}`} className="block h-full group">
                 <article
                     className={cn(
-                        "flex flex-col h-full overflow-hidden rounded-2xl border transition-all duration-300",
-                        "bg-white dark:bg-zinc-900",
-                        "border-gray-100 dark:border-zinc-800",
-                        "hover:shadow-xl hover:-translate-y-1 hover:border-gray-200 dark:hover:border-zinc-700"
+                        "flex flex-col h-full overflow-hidden rounded-2xl transition-all duration-300",
+                        "bg-white border border-gray-200 hover:-translate-y-1.5"
                     )}
                 >
                     {/* Image Container*/}
-                    <div className="relative aspect-4/3 w-full shrink-0 overflow-hidden bg-gray-100 dark:bg-zinc-800">
+                    <div className="relative aspect-video w-full shrink-0 overflow-hidden bg-gray-100 ">
                         <Image
                             src={image}
                             alt={title}
@@ -45,22 +43,23 @@ export function HomeServiceCard({ title, description, image, toServicesId, index
 
                     {/* Content */}
                     <div className="flex flex-col flex-1 p-6 md:p-8">
-                        <h3 className="text-xl md:text-2xl font-medium text-gray-900 dark:text-white mb-3">
+                        <h3 className="text-xl md:text-2xl font-semibold text-gray-900 mb-3">
                             {title}
                         </h3>
 
-                        <p className="text-base text-gray-500 dark:text-gray-400 font-light leading-relaxed flex-1 mb-8">
+                        <p className="text-base text-gray-500 font-light leading-relaxed flex-1 mb-6">
                             {description}
                         </p>
 
                         {/* Footer / CTA */}
-                        <div className="pt-6 border-t border-gray-100 dark:border-zinc-800">
+                        <div className="pt-6 border-t-2  border-gray-200">
                             <div className="inline-flex items-center text-sm font-semibold uppercase tracking-wider
-                                text-zinc-900 dark:text-white group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors">
+                                text-orange-500  transition-colors">
                                 <span>{t("see_more")}</span>
                                 <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
                             </div>
                         </div>
+
                     </div>
                 </article>
             </Link>

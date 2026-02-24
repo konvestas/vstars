@@ -64,7 +64,6 @@ export default function HomeServicesSection() {
                                     <HomeServiceCard
                                         {...service}
                                         index={index}
-                                        className="h-full"
                                     />
                                 </CarouselItem>
                             ))}
@@ -84,8 +83,8 @@ export default function HomeServicesSection() {
                                     className={cn(
                                         "rounded-full transition-all duration-500",
                                         index === current
-                                            ? "h-1.5 w-6 bg-zinc-900 dark:bg-white" // Active
-                                            : "h-1.5 w-1.5 bg-zinc-300 dark:bg-zinc-700 hover:bg-zinc-400" // Inactive
+                                            ? "h-1.5 w-6 bg-orange-300 cursor-pointer"
+                                            : "h-1.5 w-1.5 bg-zinc-300 hover:bg-zinc-400 cursor-pointer"
                                     )}
                                 />
                             </button>
