@@ -22,7 +22,7 @@ export default function ServicesPage() {
     const t = useTranslations("ServicesPage");
 
     return (
-        <main className="min-h-screen bg-white dark:bg-zinc-950 font-sans transition-colors">
+        <main className="min-h-screen bg-white font-sans transition-colors">
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(getServicesSchema) }}
@@ -31,17 +31,17 @@ export default function ServicesPage() {
             <nav className="fixed top-0 left-0 w-full z-50">
                 <NavigationBar />
             </nav>
-            <section className="pt-32 pb-20 px-6 lg:px-8">
+            <section className="pt-32 px-6 lg:px-8">
                 <div className="max-w-[1400px] mx-auto">
                     {/* --- HEADER --- */}
-                    <div className="text-center md:mb-20">
-                        <h1 className="text-4xl md:text-5xl font-light tracking-tight text-zinc-900 dark:text-white mb-6">
+                    <div className="text-center md:mb-5">
+                        <h1 className="text-4xl md:text-5xl font-light tracking-tight text-zinc-900  mb-6">
                             {t("title")}
                         </h1>
-                        <p className="text-lg text-gray-500 dark:text-gray-400 max-w-2xl mx-auto font-light leading-relaxed">
+                        <p className="text-lg text-gray-500  max-w-2xl mx-auto font-light leading-relaxed">
                             {t("desc")}
                         </p>
-                        <div className="w-16 h-px bg-zinc-200 dark:bg-zinc-800 mx-auto mt-8"></div>
+                        <div className="w-16 md:w-16 h-[3px] bg-linear-to-br from-orange-400 to-purple-700 mx-auto mt-6 md:mt-8"/>
                     </div>
                     <ServicesListSection/>
                     <ReadyToBook/>
