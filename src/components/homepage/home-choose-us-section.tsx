@@ -35,7 +35,7 @@ export default function HomeChooseUsSection() {
                     <p className="text-base md:text-lg text-gray-500  max-w-2xl mx-auto font-light leading-relaxed">
                         {t("section_desc")}
                     </p>
-                    <div className="w-12 md:w-16 h-[2px] bg-linear-to-br from-orange-400 to-purple-700 mx-auto mt-6 md:mt-8"></div>
+                    <div className="w-12 md:w-16 h-[3px] bg-linear-to-br from-orange-400 to-purple-700 mx-auto mt-6 md:mt-8"/>
                 </div>
 
                 {/* --- ADAPTIVE GRID --- */}

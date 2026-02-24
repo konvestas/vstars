@@ -45,7 +45,7 @@ export default function HomeServicesSection() {
                         {t("section_desc")}
                     </p>
                     {/* Decorative Separator Line */}
-                    <div className="w-12 md:w-16 h-[1px] bg-zinc-200 dark:bg-zinc-800 mx-auto mt-6 md:mt-8"></div>
+                    <div className="w-12 md:w-16 h-[3px] bg-linear-to-br from-orange-400 to-purple-700 mx-auto mt-6 md:mt-8"/>
                 </div>
 
                 {/* --- MOBILE VIEW (Carousel) --- */}
