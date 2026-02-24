@@ -11,23 +11,23 @@ export default function Footer() {
 
     // Unified Link Style: Bigger text, underline on hover, pointer cursor
     const linkStyle = cn(
-        "block w-fit text-base md:text-lg font-light text-muted-foreground", // Increased text size
-        "hover:text-zinc-900 dark:hover:text-white hover:underline cursor-pointer transition-colors duration-200"
+        "block w-fit text-base md:text-lg font-light text-muted-foreground",
+        "hover:text-zinc-900 hover:underline cursor-pointer transition-colors duration-200"
     );
 
     // Section Header Style: Bigger, bold, uppercase
-    const headerStyle = "text-base md:text-lg font-semibold uppercase tracking-wider text-zinc-900 dark:text-white mb-6";
+    const headerStyle = "text-base md:text-lg font-semibold uppercase tracking-wider text-zinc-900  mb-6";
 
     // noinspection HtmlUnknownAnchorTarget
     return (
-        <footer className="w-full bg-white dark:bg-zinc-950 border-t border-gray-100 dark:border-zinc-800 font-sans transition-colors">
+        <footer className="w-full bg-white border-t border-gray-100  font-sans transition-colors">
             <div className="max-w-[1400px] mx-auto px-6 lg:px-12 py-12 md:py-16">
 
                 {/* --- TOP SECTION: Brand & CTA --- */}
                 <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
                     {/* Brand - Restored font-lexend */}
                     <div className="flex items-center gap-3">
-                        <span className="font-lexend text-2xl md:text-3xl font-bold tracking-tight text-zinc-900 dark:text-white">
+                        <span className="font-lexend text-2xl md:text-3xl font-bold tracking-tight text-zinc-900 ">
                             Vstars
                         </span>
                     </div>
@@ -45,8 +45,12 @@ export default function Footer() {
                     {/*</Link>*/}
                 </div>
 
-                <Separator className="my-10 bg-gray-200 dark:bg-zinc-800" />
-
+                {/*<Separator className="my-10 bg-gray-200 dark:bg-zinc-800" />*/}
+                <Separator
+                    orientation="horizontal"
+                    decorative={true}
+                    className=" bg-linear-to-r from-orange-400 to-purple-700 my-10  "
+                />
                 {/* --- MAIN GRID --- */}
                 {/* Reduced gap from 12 to 8 to bring columns closer */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-6 lg:gap-8">
@@ -92,7 +96,8 @@ export default function Footer() {
                         </p>
                         <Link
                             href="/contact"
-                            className="inline-block text-base md:text-lg font-medium text-zinc-900 dark:text-white underline decoration-1 underline-offset-4 hover:text-gray-600 dark:hover:text-gray-300 transition-colors mb-8 cursor-pointer"
+                            className="inline-block text-base md:text-lg font-medium text-zinc-900
+                             underline decoration-1 underline-offset-4 hover:text-gray-600  transition-colors mb-8 cursor-pointer"
                         >
                             {t("goToContactPage")}
                         </Link>

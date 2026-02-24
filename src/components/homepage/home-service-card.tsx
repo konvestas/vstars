@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { ServiceCardProps } from "@/components/homepage/data/homePage-services-section-data";
+import {Separator} from "@/components/ui/separator";
 
 export function HomeServiceCard({ title, description, image, toServicesId, index, className }: ServiceCardProps) {
     const t = useTranslations("OurServices");
@@ -24,7 +25,7 @@ export function HomeServiceCard({ title, description, image, toServicesId, index
                 <article
                     className={cn(
                         "flex flex-col h-full overflow-hidden rounded-2xl transition-all duration-300",
-                        "bg-white border border-gray-200 hover:-translate-y-1.5"
+                        "bg-white border border-gray-300 hover:-translate-y-1.5"
                     )}
                 >
                     {/* Image Container*/}
@@ -47,17 +48,23 @@ export function HomeServiceCard({ title, description, image, toServicesId, index
                             {title}
                         </h3>
 
-                        <p className="text-base text-gray-500 font-light leading-relaxed flex-1 mb-6">
+                        <p className="text-base text-gray-800 font-light leading-relaxed flex-1 mb-6">
                             {description}
                         </p>
 
                         {/* Footer / CTA */}
-                        <div className="pt-6 border-t-2  border-gray-200">
+                        <div>
+                            <Separator
+                                orientation="horizontal"
+                                decorative={true}
+                                className=" bg-linear-to-r from-orange-400 to-purple-700 my-4 mb-6 "
+                            />
                             <div className="inline-flex items-center text-sm font-semibold uppercase tracking-wider
-                                text-orange-500  transition-colors">
+                                 text-orange-500 transition-colors">
                                 <span>{t("see_more")}</span>
                                 <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
                             </div>
+
                         </div>
 
                     </div>

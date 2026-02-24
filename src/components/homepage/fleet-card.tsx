@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
@@ -81,7 +81,7 @@ export function FleetCard({ title, description, images, index, className }: Flee
                                 variant="ghost"
                                 size="icon"
                                 className="md:hidden absolute left-2 top-1/2 -translate-y-1/2 h-8 w-8 rounded-full
-                                bg-white/90 dark:bg-zinc-800/90 border-0 shadow-lg hover:bg-white dark:hover:bg-zinc-800 z-10"
+                                bg-white/90 0 border-0 shadow-lg hover:bg-white  z-10"
                                 onClick={scrollPrev}
                             >
                                 <ChevronLeft className="h-4 w-4" />
@@ -89,7 +89,8 @@ export function FleetCard({ title, description, images, index, className }: Flee
                             <Button
                                 variant="ghost"
                                 size="icon"
-                                className="md:hidden absolute right-2 top-1/2 -translate-y-1/2 h-8 w-8 rounded-full bg-white/90 dark:bg-zinc-800/90 border-0 shadow-lg hover:bg-white dark:hover:bg-zinc-800 z-10"
+                                className="md:hidden absolute right-2 top-1/2 -translate-y-1/2 h-8 w-8
+                                rounded-full bg-white/90 border-0 shadow-lg hover:bg-white  z-10"
                                 onClick={scrollNext}
                             >
                                 <ChevronRight className="h-4 w-4" />
@@ -120,24 +121,17 @@ export function FleetCard({ title, description, images, index, className }: Flee
                 <Link href="/fleet" className="flex flex-col flex-1">
                     <div className="flex flex-col p-6">
                         {/* Title */}
-                        <h3 className="text-2xl font-semibold mb-4 text-purple-900">
+                        <h3 className="text-2xl font-semibold mb-4  text-gray-700">
                             {title}
                         </h3>
 
-                        {/* Separator */}
-                        <Separator
-                            orientation="horizontal"
-                            decorative={true}
-                            className=" bg-linear-to-r from-orange-400 to-purple-700 mb-5 "
-                        />
 
                         {/* Feature List */}
                         <ul className="space-y-3 mb-6 flex-1">
                             {features.map((feature, i) => (
                                 <li key={i} className="flex items-start gap-3">
                                     <div className="mt-1 flex items-center justify-center w-5 h-5
-                                    rounded-full bg-gradient-to-br from-orange-400 to-purple-600
-                                    text-white shadow-sm transition-all duration-300 group-hover:scale-105">
+                                    rounded-full text-purple-700 shadow-sm transition-all duration-300 group-hover:scale-105">
                                         <Check className="h-3 w-3" strokeWidth={3} />
                                     </div>
                                     <span className="text-sm font-medium text-gray-600">
@@ -150,7 +144,7 @@ export function FleetCard({ title, description, images, index, className }: Flee
                         <Separator
                             orientation="horizontal"
                             decorative={true}
-                            className=" bg-linear-to-r from-orange-400 to-purple-700 mb-5 "
+                            className=" bg-linear-to-r from-purple-700 to-orange-400 mb-5 "
                         />
                         {/* Footer / CTA */}
                         <div
