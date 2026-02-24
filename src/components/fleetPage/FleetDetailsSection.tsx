@@ -70,7 +70,9 @@ export default function FleetDetailsSection() {
                                         key={i}
                                         className={cn(
                                             "h-1.5 rounded-full transition-all duration-300 shadow-sm",
-                                            i === current ? "w-6 bg-white" : "w-1.5 bg-white/60"
+                                            i === current
+                                                ? "w-6 bg-white"
+                                                : "w-1.5 bg-white/60"
                                         )}
                                     />
                                 ))}
@@ -80,7 +82,7 @@ export default function FleetDetailsSection() {
 
                     {/* RIGHT COLUMN: Title & Description */}
                     <div className="lg:col-span-5 flex flex-col pt-4 font-light">
-                        <h2 className="text-3xl uppercase tracking-wide mb-10 text-zinc-900">
+                        <h2 className="text-3xl uppercase tracking-wide mb-5 text-zinc-900">
                             {t("secondTitle")}
                         </h2>
                         <div className="space-y-6 text-lg leading-relaxed text-gray-700 ">
@@ -92,12 +94,13 @@ export default function FleetDetailsSection() {
                 </div>
 
                 <div>
-                    <dl className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-16 gap-y-10 mt-15 font-normal">
+                    <dl className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-16 gap-y-10 mt-10 font-normal">
                         {specs.map((item, index) => (
                             <div
                                 key={index}
                                 className="flex justify-between items-baseline border-b text-base border-gray-100 pb-4 md:border-none md:pb-0"
                             >
+
                                 <dt className=" text-gray-500 min-w-[120px]">
                                     {item.title}
                                 </dt>

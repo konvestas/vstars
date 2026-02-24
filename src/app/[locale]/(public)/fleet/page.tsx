@@ -31,14 +31,14 @@ export default function FleetPage() {
 
             <section className="w-full px-6 md:px-8 ">
                 {/* --- HEADER --- */}
-                <div className="text-center mb-15 md:mb-20">
-                    <h1 className="text-4xl md:text-5xl font-light tracking-tight text-zinc-900 dark:text-white mb-6">
+                <div className="text-center mb-6 md:mb-6">
+                    <h1 className="text-4xl md:text-5xl font-light tracking-tight text-zinc-900  mb-6">
                         {t("title")}
                     </h1>
-                    <p className="text-lg text-gray-500 dark:text-gray-400 max-w-2xl mx-auto font-light leading-relaxed">
+                    <p className="text-lg text-gray-500 max-w-2xl mx-auto font-light leading-relaxed">
                         {t("description")}
                     </p>
-                    <div className="w-16 h-px bg-zinc-200 dark:bg-zinc-800 mx-auto mt-8"></div>
+                    <div className="w-12 md:w-16 h-[3px] bg-linear-to-br from-orange-400 to-purple-700 mx-auto mt-6 md:mt-8"/>
                 </div>
                 <FleetDetailsSection/>
                 <FleetServiceStandardsSection/>

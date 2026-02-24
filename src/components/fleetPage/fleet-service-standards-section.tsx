@@ -17,6 +17,7 @@ export default function FleetServiceStandardsSection() {
                     <p className="text-gray-500 max-w-2xl text-lg ">
                         {t("servicesDesc")}
                     </p>
+
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -29,10 +30,14 @@ export default function FleetServiceStandardsSection() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: index * 0.1, duration: 0.5 }}
-                                className="flex items-start gap-4 p-6 rounded-xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-shadow"
+                                className="flex items-start gap-4 p-6 rounded-xl bg-white border border-gray-100
+                                shadow-sm hover:shadow-md transition-shadow"
                             >
-                                <div className="p-3 rounded-full bg-zinc-900 text-white shrink-0">
-                                    <Icon size={20} strokeWidth={1.5} />
+                                <div className="shrink-0 mr-4 md:mr-0 md:mb-6
+                                inline-flex items-center justify-center w-12 h-12 md:w-16 md:h-16 rounded-full
+                                bg-linear-to-br from-orange-400 to-purple-700 text-white shadow-xl
+                                 transition-transform duration-300 group-hover:scale-110">
+                                    <Icon size={28} strokeWidth={1.5} />
                                 </div>
                                 <div>
                                     <h3 className="text-lg font-normal text-zinc-900 mb-2">
@@ -41,6 +46,7 @@ export default function FleetServiceStandardsSection() {
                                         <p className="text-sm text-gray-600  leading-relaxed">
                                         {feature.description}
                                     </p>
+
                                 </div>
                             </motion.div>
                         );
