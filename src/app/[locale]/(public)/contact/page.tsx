@@ -38,14 +38,13 @@ export default function ContactPage() {
 
                     {/* --- HEADER (Luxury Style) --- */}
                     <div className="text-center mb-15 md:mb-20">
-                        <h1 className="text-4xl md:text-5xl font-light tracking-tight text-zinc-900 dark:text-white mb-6">
+                        <h1 className="text-4xl md:text-5xl font-light tracking-tight text-zinc-900  mb-6">
                             {t("title")}
                         </h1>
-                        <p className="text-lg text-gray-500 dark:text-gray-400 max-w-2xl mx-auto font-light leading-relaxed">
+                        <p className="text-lg text-gray-500  max-w-2xl mx-auto font-light leading-relaxed">
                             {t("description")}
                         </p>
-                        {/* Decorative Separator Line */}
-                        <div className="w-16 h-[1px] bg-zinc-200 dark:bg-zinc-800 mx-auto mt-8"></div>
+                        <div className="w-16 h-[3px]  bg-linear-to-br from-orange-400 to-purple-700 mx-auto mt-8"></div>
                     </div>
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-start">
@@ -53,10 +52,10 @@ export default function ContactPage() {
                         {/* --- LEFT SIDE: Contact Info --- */}
                         <div className="space-y-12">
                             <div>
-                                <h3 className="text-2xl font-light text-zinc-900 dark:text-white mb-6">
+                                <h3 className="text-2xl font-light text-zinc-900  mb-6">
                                     {t("infoTitle")}
                                 </h3>
-                                <p className="text-gray-600 dark:text-gray-400 leading-relaxed font-light text-lg">
+                                <p className="text-gray-600  leading-relaxed font-light text-lg">
                                     {t("infoDesc")}
                                 </p>
                             </div>
@@ -64,8 +63,10 @@ export default function ContactPage() {
                             <div className="space-y-8">
                                 {/* Phone Item */}
                                 <div className="flex items-start gap-5 group">
-                                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gray-50 dark:bg-zinc-900
-                                                  group-hover:bg-zinc-900 group-hover:text-white transition-colors duration-300 shrink-0">
+                                    <div className="shrink-0 mr-4 md:mr-0 md:mb-6
+                                inline-flex items-center justify-center w-12 h-12 md:w-16 md:h-16 rounded-full
+                                bg-linear-to-br from-orange-400 to-purple-700 text-white shadow-xl
+                                 transition-transform duration-300 group-hover:scale-110">
                                         <Phone className="w-5 h-5" strokeWidth={1.5} />
                                     </div>
                                     <div>
@@ -78,13 +79,16 @@ export default function ContactPage() {
 
                                 {/* Email Item */}
                                 <div className="flex items-start gap-5 group">
-                                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gray-50 dark:bg-zinc-900
-                                                  group-hover:bg-zinc-900 group-hover:text-white transition-colors duration-300 shrink-0">
+                                    <div className="shrink-0 mr-4 md:mr-0 md:mb-6
+                                inline-flex items-center justify-center w-12 h-12 md:w-16 md:h-16 rounded-full
+                                bg-linear-to-br from-orange-400 to-purple-700 text-white shadow-xl
+                                 transition-transform duration-300 group-hover:scale-110">
                                         <Mail className="w-5 h-5" strokeWidth={1.5} />
                                     </div>
                                     <div>
                                         <h4 className="text-sm font-semibold uppercase tracking-wider text-gray-500 mb-1">{t("email")}</h4>
-                                        <a href="mailto:info@candumandanismanlik.com" className="text-xl font-light text-zinc-900 dark:text-white hover:underline decoration-1 underline-offset-4 break-all">
+                                        <a href="mailto:info@candumandanismanlik.com"
+                                           className="text-xl font-light text-zinc-900  hover:underline decoration-1 underline-offset-4 break-all">
                                             info@candumandanismanlik.com
                                         </a>
                                     </div>
@@ -92,10 +96,13 @@ export default function ContactPage() {
 
                                 {/* Address Item */}
                                 <div className="flex items-start gap-5 group">
-                                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gray-50 dark:bg-zinc-900
-                                                  group-hover:bg-zinc-900 group-hover:text-white transition-colors duration-300 shrink-0">
+                                    <a href={`https://www.google.com/maps/search/?api=1&query=40.884600538194476,29.20526621261032`}
+                                       className="shrink-0 mr-4 md:mr-0 md:mb-6
+                                       inline-flex items-center justify-center w-12 h-12 md:w-16 md:h-16 rounded-full
+                                       bg-linear-to-br from-orange-400 to-purple-700 text-white shadow-xl
+                                       transition-transform duration-300 group-hover:scale-110">
                                         <MapPin className="w-5 h-5" strokeWidth={1.5} />
-                                    </div>
+                                    </a>
                                     <div>
                                         <h4 className="text-sm font-semibold uppercase tracking-wider text-gray-500 mb-1">{t("address")}</h4>
                                         <p className="text-lg font-light text-zinc-900 dark:text-white leading-relaxed">
@@ -122,7 +129,7 @@ export default function ContactPage() {
                                     rel="noopener noreferrer"
                                     className="absolute bottom-5 left-5 bg-white/90 dark:bg-black/90 backdrop-blur-md
                                              text-xs font-bold uppercase tracking-wider px-5 py-3 rounded-full
-                                             shadow-lg hover:scale-105 transition-transform text-blue-700 dark:text-white z-10"
+                                             shadow-lg hover:scale-105 transition-transform text-blue-700/80 dark:text-white z-10"
                                 >
                                     {t("maps")}
                                 </a>

@@ -48,10 +48,10 @@ export default function ContactForm() {
         }
     }
 
-    const inputStyles = "h-12 bg-gray-50 dark:bg-zinc-900 border-gray-100 dark:border-zinc-800 focus:ring-1 focus:ring-zinc-900 dark:focus:ring-white transition-all duration-300";
+    const inputStyles = "h-12 bg-gray-50 border-gray-300 focus:ring-1 focus:ring-zinc-900 transition-all duration-300";
 
     return (
-        <div className="w-full bg-white dark:bg-black/5 p-6 md:p-10 rounded-3xl border border-gray-100 dark:border-zinc-800 shadow-sm">
+        <div className="w-full bg-white dark:bg-black/5 p-6 md:p-10 rounded-3xl border border-gray-300 shadow-sm">
             <div className="mb-8">
                 <h3 className="text-2xl font-light text-zinc-900 dark:text-white mb-2">
                     {t("title")}
@@ -111,11 +111,11 @@ export default function ContactForm() {
                         name="message"
                         render={({ field }) => (
                             <FormItem>
-                                <FormLabel className="text-xs uppercase tracking-wider font-semibold text-gray-500">{t("form.message")}</FormLabel>
+                                <FormLabel className="text-xs uppercase tracking-wider  font-semibold text-gray-500">{t("form.message")}</FormLabel>
                                 <FormControl>
                                     <Textarea
                                         placeholder={t("form.messagePlaceholder")}
-                                        className={cn(inputStyles, "min-h-[160px] py-4 resize-none")}
+                                        className={cn(inputStyles, "min-h-[160px] border border-gray-300 py-4 resize-none")}
                                         {...field}
                                     />
                                 </FormControl>
@@ -127,8 +127,8 @@ export default function ContactForm() {
                     <Button
                         type="submit"
                         disabled={isSubmitting}
-                        className="w-full h-12 rounded-full bg-zinc-900 dark:bg-white text-white dark:text-black
-                                   hover:bg-zinc-700 dark:hover:bg-gray-200 transition-all uppercase tracking-widest text-xs font-bold"
+                        className="w-full h-12 rounded-full bg-linear-to-br from-orange-400 to-purple-700  text-white
+                                   hover:bg-zinc-700 transition-all uppercase tracking-widest text-xs font-semibold cursor-pointer"
                     >
                         {isSubmitting ? (
                             <Loader2 className="mr-2 h-4 w-4 animate-spin" />

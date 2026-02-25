@@ -9,16 +9,12 @@ import { cn } from "@/lib/utils";
 export default function Footer() {
     const t = useTranslations("Footer");
 
-    // Unified Link Style: Bigger text, underline on hover, pointer cursor
     const linkStyle = cn(
         "block w-fit text-base md:text-lg font-light text-muted-foreground",
         "hover:text-zinc-900 hover:underline cursor-pointer transition-colors duration-200"
     );
-
-    // Section Header Style: Bigger, bold, uppercase
     const headerStyle = "text-base md:text-lg font-semibold uppercase tracking-wider text-zinc-900  mb-6";
 
-    // noinspection HtmlUnknownAnchorTarget
     return (
         <footer className="w-full bg-white border-t border-gray-100  font-sans transition-colors">
             <div className="max-w-[1400px] mx-auto px-6 lg:px-12 py-12 md:py-16">
@@ -49,10 +45,8 @@ export default function Footer() {
                 <Separator
                     orientation="horizontal"
                     decorative={true}
-                    className=" bg-linear-to-r from-orange-400 to-purple-700 my-10  "
+                    className=" bg-linear-to-r from-orange-400 to-purple-700 my-10"
                 />
-                {/* --- MAIN GRID --- */}
-                {/* Reduced gap from 12 to 8 to bring columns closer */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-6 lg:gap-8">
 
                     {/* Column 1: Services */}
@@ -148,7 +142,7 @@ export default function Footer() {
                     </div>
                 </div>
 
-                <Separator className="my-10 bg-gray-200 dark:bg-zinc-800" />
+                <Separator className="my-10 bg-linear-to-r from-orange-400 to-purple-700" />
 
                 {/* --- BOTTOM SECTION --- */}
                 <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
