@@ -13,15 +13,15 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     const { locale } = await params;
     return createPageMetadata({
         locale,
-        namespace: "ContactPageMetadata",
+        namespace: "contact-page-meta-data",
         path: "contact",
         image: "/vstars/vstars-fleet.webp",
     });
 }
 
 export default function ContactPage() {
-    const t = useTranslations('ContactPage');
-    const mapSrc = `https://maps.google.com/maps?q=40.884600538194476,29.20526621261032&t=&z=15&ie=UTF8&iwloc=&output=embed`;
+    const t = useTranslations('contact-page');
+    const mapSrc = `https://maps.google.com/maps?q=40.921630,29.157446&t=&z=16&ie=UTF8&iwloc=&output=embed`;
 
     return (
         <main className="min-h-screen bg-white dark:bg-zinc-950 font-sans">
@@ -106,7 +106,7 @@ export default function ContactPage() {
                                     <div>
                                         <h4 className="text-sm font-semibold uppercase tracking-wider text-gray-500 mb-1">{t("address")}</h4>
                                         <p className="text-lg font-light text-zinc-900 dark:text-white leading-relaxed">
-                                            Kordonboyu Mh Ankara cad İSTMARİNA S2 kule B blok kat:24 no 147/B-300
+                                            Cevizli Mah,Zuhal Cad.Ritim İstanbul A5 Blok No:46E Istanbul, Turkey
                                         </p>
                                     </div>
                                 </div>
@@ -124,7 +124,7 @@ export default function ContactPage() {
                                     referrerPolicy="no-referrer-when-downgrade"
                                 />
                                 <a
-                                    href={`https://www.google.com/maps/search/?api=1&query=40.884600538194476,29.20526621261032`}
+                                    href={`https://www.google.com/maps/search/?api=1&query=40.921630,29.157446`}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="absolute bottom-5 left-5 bg-white/90 dark:bg-black/90 backdrop-blur-md
