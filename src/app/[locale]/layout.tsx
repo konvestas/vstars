@@ -7,6 +7,8 @@ import "../globals.css";
 import React from "react";
 import { routing } from "@/i18n/routing";
 import { Toaster } from "@/components/ui/sonner";
+import {CookieConsentProvider} from "@/features/cookie-consent/cookie-consent-context";
+import CookieConsentBanner from "@/features/cookie-consent/cookie-consent-banner";
 
 const geistSans = Geist({
     variable: "--font-sans",
@@ -30,7 +32,7 @@ const lexendPeta = Lexend_Peta({
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
     const { locale } = await params;
-    const t = await getTranslations({ locale, namespace: 'Metadata' });
+    const t = await getTranslations({ locale, namespace: 'meta-data' });
 
     return {
         metadataBase: new URL('https://www.vstarstransfer.com'),
@@ -210,7 +212,7 @@ export default async function RootLayout({
         "email": "info@candumandanismanlik.com",
         "address": {
             "@type": "PostalAddress",
-            "streetAddress": "Kordonboyu Mh Ankara cad İSTMARİNA S2 kule B blok kat:24 no 147/B-300",
+            "streetAddress": "Cevizli Mah,Zuhal Cad.Ritim İstanbul A5 Blok No:46E Istanbul, Turkey",
             "addressLocality": "Istanbul",
             "addressCountry": "TR"
         },
@@ -334,10 +336,12 @@ export default async function RootLayout({
             type="application/ld+json"
             dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-
+        <CookieConsentProvider>
         <NextIntlClientProvider messages={messages}>
             {children}
+            <CookieConsentBanner />
         </NextIntlClientProvider>
+        </CookieConsentProvider>
 
         <Toaster
             theme="light"
