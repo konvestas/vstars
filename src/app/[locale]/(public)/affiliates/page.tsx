@@ -12,7 +12,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     const { locale } = await params;
     return createPageMetadata({
         locale,
-        namespace: "affiliates-meta-data",
+        namespace: "affiliates-page.metadata",
         path: "affiliates",
         image: "/vstars/vstars-fleet.webp",
     });

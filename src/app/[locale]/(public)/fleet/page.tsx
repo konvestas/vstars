@@ -13,7 +13,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     const { locale } = await params;
     return createPageMetadata({
         locale,
-        namespace: "fleet-meta-data",
+        namespace: "fleet-page.metadata",
         path: "fleet",
         image: "/vstars/vstars-fleet.webp",
     });
