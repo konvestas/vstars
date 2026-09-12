@@ -1,0 +1,92 @@
+{
+  "title": "Häufig gestellte Fragen",
+  "desc": "Durchsuchen Sie unsere häufig gestellten Fragen, um Antworten auf Ihre Fragen zu unseren Premium-Dienstleistungen zu finden.",
+  "noResults": "Keine Ergebnisse gefunden für",
+  "items": {
+    "general": {
+      "title": "Allgemeines & Dienstleistungen",
+      "questions": {
+        "1": {
+          "q": "Bieten Sie ein Meet & Greet am Flughafen an?",
+          "a": "Ja, unsere Chauffeure warten am Ankunftsterminal am Flughafen Istanbul (IST) oder Sabiha Gökçen (SAW) mit einem personalisierten Namensschild auf Sie."
+        },
+        "2": {
+          "q": "Ist eine Flugverfolgung inbegriffen?",
+          "a": "Absolut. Wir passen Ihre Abholzeit automatisch an, sodass Ihr Fahrer immer da ist, wenn Sie landen."
+        },
+        "3": {
+          "q": "Führen Sie Transfers von beiden Flughäfen (IST und Sabiha Gökçen) durch?",
+          "a": "Ja, wir bieten rund um die Uhr Premium-Transfers sowohl vom Flughafen Istanbul (IST) als auch vom Flughafen Sabiha Gökçen (SAW) zu jedem Hotel, jeder Residenz oder jedem Ort im Stadtzentrum und der Umgebung an."
+        },
+        "4": {
+          "q": "Holen Sie uns zu jeder Tageszeit ab?",
+          "a": "Ja, unser Betrieb läuft 24/7, 365 Tage im Jahr. Egal, ob Sie spät nachts ankommen oder früh morgens abreisen, unser professionelles Team steht Ihnen zu jeder Stunde zur Verfügung."
+        }
+      }
+    },
+    "booking": {
+      "title": "Buchung & Reiseplan",
+      "questions": {
+        "1": {
+          "q": "Wie weit im Voraus sollten Transferfahrzeuge reserviert werden?",
+          "a": "Wir empfehlen, mindestens 48 Stunden im Voraus zu buchen, um die Verfügbarkeit zu garantieren. Wir tun jedoch unser Bestes, um Last-Minute-Anfragen nach Möglichkeit zu erfüllen."
+        },
+        "2": {
+          "q": "Kann ich mehrere Stopps einlegen und die Route ändern?",
+          "a": "Ja. Bei unserer stundenweisen Miete steht das Fahrzeug exklusiv Ihnen zur Verfügung. Sie haben die absolute Freiheit, unbegrenzt Zwischenstopps einzulegen, Ihre Route zu ändern oder aufeinanderfolgende Meetings quer durch Istanbul zu besuchen."
+        },
+        "3": {
+          "q": "Kann ich meine eigene Reiseroute anpassen?",
+          "a": "Absolut. Die Tour ist 100% flexibel. Sie können Ihre eigene Route erstellen, genau wählen, welche Wahrzeichen Sie besuchen möchten, und entscheiden, wie lange Sie an jedem Halt bleiben. Unser Fahrer richtet sich nach Ihnen."
+        },
+        "4": {
+          "q": "Wartet der Fahrer auf mich, während ich in einem Meeting bin, einkaufe oder die Stadt erkunde?",
+          "a": "Absolut. Ihr privater Chauffeur bleibt an einem günstigen Ort in der Nähe in Bereitschaft, während Sie einkaufen, essen oder an Meetings teilnehmen, und stellt sicher, dass Sie sofort abgeholt werden, wenn Sie bereit sind."
+        }
+      }
+    },
+    "vehicles": {
+      "title": "Fahrzeuge & Annehmlichkeiten",
+      "questions": {
+        "1": {
+          "q": "Werden die Fahrzeuge desinfiziert und sind sie hygienisch?",
+          "a": "Ja, unsere Fahrzeuge werden vor jeder Fahrt gründlich gereinigt und desinfiziert, um eine sichere Umgebung zu gewährleisten."
+        },
+        "2": {
+          "q": "Kann ich zusätzliche Services wie einen Reiseleiter oder spezielle Annehmlichkeiten anfordern?",
+          "a": "Selbstverständlich. Wir können lizenzierte Reiseleiter, Kindersitze und spezifische Fahrzeugausstattungen wie Erfrischungen oder Wi-Fi organisieren. Bitte geben Sie Ihre Bedürfnisse bei der Buchung an, damit wir alles für Sie vorbereiten können."
+        },
+        "3": {
+          "q": "Können wir einen professionellen Reiseleiter anfragen?",
+          "a": "Ja. Während sich unsere Chauffeure auf den sicheren Transport konzentrieren, können wir auf Anfrage (je nach Verfügbarkeit und gegen Aufpreis) einen lizenzierten, professionellen Reiseleiter organisieren, der Sie für ein detailliertes historisches Erlebnis begleitet."
+        }
+      }
+    },
+    "billing": {
+      "title": "Abrechnung & Preisgestaltung",
+      "questions": {
+        "1": {
+          "q": "Berechnen Sie pro Person oder pro Fahrzeug?",
+          "a": "Wir berechnen einen Festpreis pro Fahrzeug, nicht pro Person. Ob Sie alleine oder mit einer Gruppe reisen, Sie zahlen einen Pauschalpreis — keine versteckten Kosten."
+        },
+        "2": {
+          "q": "Muss ich mir Sorgen um Park- oder Wartegebühren machen?",
+          "a": "Überhaupt nicht. Wir kümmern uns um die gesamte Logistik. Ihr Chauffeur setzt Sie direkt am Eingang ab und wartet in der Nähe. Sie können sich ganz auf die Besichtigung konzentrieren, ohne den Stress der Parkplatzsuche oder das Herbeirufen eines Taxis."
+        }
+      }
+    },
+    "medical": {
+      "title": "Medizinische Dienstleistungen",
+      "questions": {
+        "1": {
+          "q": "Welche Arten von Behandlungen organisieren Sie?",
+          "a": "Wir sind auf die Koordination von Haartransplantationen, Zahnästhetik und plastischer Chirurgie spezialisiert. Über unseren Partner Can Duman Medical Tourism bringen wir Sie mit spezifischen Experten für jeden Eingriff zusammen."
+        },
+        "2": {
+          "q": "Kümmern Sie sich um den gesamten Reiseablauf?",
+          "a": "Ja. Wir verwalten Ihre gesamte medizinische Reise. Von VIP-Flughafentransfers und der Hotelkoordination bis hin zu Klinikterminen sorgen wir für ein nahtloses, stressfreies Erlebnis, damit Sie sich ganz auf Ihre Behandlung konzentrieren können."
+        }
+      }
+    }
+  }
+}

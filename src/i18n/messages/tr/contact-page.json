@@ -1,0 +1,23 @@
+{
+  "title": "İletişime Geçin",
+  "description": "Transferinizle ilgili sorularınız mı var veya özel bir fiyat teklifine mi ihtiyacınız var? Ekibimiz 7/24 size yardımcı olmaya hazır.",
+  "infoTitle": "İletişim Bilgileri",
+  "infoDesc": "İstanbul'daki seyahatinizin sorunsuz ve rahat geçmesini sağlamak için telefon, e-posta ve WhatsApp üzerinden hizmetinizdeyiz.",
+  "phone": "Telefon & WhatsApp",
+  "email": "E-posta Adresi",
+  "address": "Konum",
+  "maps": "Google Haritalar'da Aç ↗",
+  "form": {
+    "name": "Ad Soyad",
+    "namePlaceholder": "John Doe",
+    "email": "E-posta Adresi",
+    "emailPlaceholder": "john@example.com",
+    "subject": "Konu",
+    "subjectPlaceholder": "Transfer Talebi / Özel Tur",
+    "message": "Mesaj",
+    "messagePlaceholder": "Size nasıl yardımcı olabiliriz?",
+    "submit": "Mesaj Gönder"
+  },
+  "successMessage": "Mesaj başarıyla gönderildi! Sizinle en kısa sürede iletişime geçeceğiz.",
+  "errorMessage": "Bir şeyler yanlış gitti. Lütfen tekrar deneyin."
+}

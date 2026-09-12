@@ -1,0 +1,30 @@
+{
+  "title": "İş Ortaklarımız",
+  "desc": "Premium hizmetlere ve uzmanlığa erişmek için iş ortaklarımızı keşfedin.",
+  "items": {
+    "medical": {
+      "title": "Can Duman Medical Tourism",
+      "desc": "Can Duman Medical Tourism; estetik cerrahi ve diş bakımından saç ekimi ve gelişmiş prosedürlere kadar geniş bir yelpazedeki yüksek kaliteli sağlık ve yaşam hizmetlerine erişimi kolaylaştırır. Tüm hizmetler deneyimli tıbbi kurumlarla koordine edilmektedir. Rolümüz, tüm süreç boyunca konfor, şeffaflık ve profesyonel koordinasyonu ön planda tutarak hastaları güvenilir sağlık hizmeti sunucularıyla buluşturmak ve sorunsuz, iyi organize edilmiş bir deneyim sağlamaktır."
+    },
+    "travelAgency": {
+      "title": "Can Duman Travel Agency",
+      "desc": "Can Duman Travel Agency, bireysel ve kurumsal ihtiyaçlara yönelik özel seyahat çözümleri sunar. Organize, güvenilir ve müşteri odaklı hizmete odaklanarak seyahat planlaması, ulaşım ve varış noktasıyla ilgili düzenlemeleri desteklerler. Hizmetleri, sorunsuz ve konforlu bir deneyim sağlarken seyahat lojistiğini basitleştirmek üzere tasarlanmıştır. İş birliğimiz sayesinde, müşterilerimize kusursuz bir koordinasyon ve güvenilir bir seyahat desteği sunmayı amaçlıyoruz."
+    },
+    "visitoria": {
+      "title": "Visitoria Grup Sigorta",
+      "desc": "Visitoria Grup Sigorta, finans ve sigorta hizmetlerinde 25 yılı aşkın deneyim sunmaktadır. Kasko, sağlık, seyahat, mülk, ticari ve finansal sigorta branşlarında geniş bir çözüm yelpazesi sağlarlar. Türkiye'deki önde gelen sigorta şirketleri ve uluslararası ortaklarla çalışarak, bireysel ve kurumsal ihtiyaçlara uygun esnek fiyatlandırma ve ödeme seçenekleri sunarlar. Müşteri memnuniyetine, güvenilirliğe ve profesyonel uzmanlığa güçlü bir şekilde odaklanan Visitoria Grup Sigorta, kapsamlı sigorta ihtiyaçları için güvenilir bir çözüm ortağı olarak hareket etmektedir."
+    },
+    "danismanlik": {
+      "title": "Can Duman Danışmanlık",
+      "desc": "Can Duman Danışmanlık, çeşitli hizmet alanlarında profesyonel rehberlik ve destek sağlar. Yapılandırılmış ve çözüm odaklı bir yaklaşımla, bireylere ve kuruluşlara planlama, koordinasyon ve süreç yönetimi konularında yardımcı olurlar. Hizmetleri, karmaşık prosedürleri basitleştirmek ve verimli sonuçlar sağlamak için tasarlanmıştır. Güvenilirliğe, netliğe ve müşteri ihtiyaçlarına odaklanarak pratik ve etkili danışmanlık çözümleri sunmayı hedeflerler. İş birliğimiz sayesinde müşterilerin güvenilir uzmanlığa ve iyi organize edilmiş desteğe erişmesine yardımcı oluyoruz."
+    },
+    "agon": {
+      "title": "Agon",
+      "desc": "Agon Group Company; tekstil, özel etkinlikler, organik ürünler, e-ticaret ve özel taraftar kulübü konseptleri genelinde faaliyet gösteren çok boyutlu bir markadır. Estetik, kalite ve sürdürülebilirliğe güçlü bir şekilde odaklanan Agon Group, dokunduğu her alanda rafine deneyimler yaratır. Gücü vizyonunda yatar; farkı ise detaylara verdiği önemle tanımlanır."
+    },
+    "akademi": {
+      "title": "Can Duman Akademi",
+      "desc": "Bağlı akademi programı ortağımız Can Duman Akademi, sürekli öğrenme ve kişisel gelişime güçlü bir inançla zengin ve kaliteli eğitim içerikleri sağlamaktadır. 'Herkes için Eğitim, Birlikte Büyüme' mottosu rehberliğinde hayat boyu eğitime ve mesleki gelişime öncelik verir. Çeşitli eğitim alanları ve yüksek hizmet standartları ile pazar ihtiyaçlarına uygun nitelikli insan sermayesinin geliştirilmesine katkıda bulunur. Eğitim yoluyla bireysel, bölgesel ve ulusal büyümeyi destekleyen lider bir hayat boyu öğrenme merkezi olmayı hedefler."
+    }
+  }
+}

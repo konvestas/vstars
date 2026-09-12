@@ -1,0 +1,59 @@
+{
+  "title": "Dünya Standartlarında Hizmetler",
+  "desc": "Konfor, güvenlik ve verimlilik için tasarlanmış premium şoför hizmetlerini deneyimleyin.",
+  "items": {
+    "airportTransfers": {
+      "title": "Havalimanı Transferleri",
+      "desc": "İstanbul Havalimanı (IST) ve Sabiha Gökçen Havalimanı'nda (SAW) sunulan transfer hizmetimizle konforlu bir şekilde varın veya ayrılın. Toplu taşımanın stresini ve güvenilmez taksileri atlayın; şoförünüz sizi zamanında karşılayacak ve doğrudan hedefinize götürecektir. Uçuşunuzu gerçek zamanlı olarak takip ediyor, gecikmelere göre ayarlama yapıyoruz, böylece asla endişelenmenize gerek kalmıyor. Deneyimli, bölgeyi iyi bilen sürücülerimiz bagajınızı taşır ve sorunsuz, rahat bir yolculuk geçirmenizi sağlar. Aileler ve gruplar için lüks sedanlar veya geniş vanlar arasından seçim yapın. Şeffaf fiyatlandırma, gizli ücretlerin olmaması ve zahmetsiz çevrimiçi rezervasyon, her yolculuğu baştan sona kusursuz hale getirir."
+    },
+    "hourlyHire": {
+      "title": "Saatlik Şoför Kiralama",
+      "desc": "Şehir içinde sorunsuz çok duraklı seyahatler için tasarlanmış saatlik şoför hizmetimizle tam esnekliğin tadını çıkarın. Kendi rotanızı belirleyin ve profesyonel şoförünüz beklemedeyken kendi hızınızda hareket edin. Taksileri, otopark sorunlarını ve toplu taşımayı es geçin; premium bir araçta konforla seyahat edin. Her durakta tam kapıdan alınıp kapıya bırakılarak zamandan ve emekten tasarruf edin. Dışarıdayken kişisel eşyalarınızı araçta güvenle bırakabilirsiniz. Şeffaf saatlik fiyatlandırmaya mesafe, vergiler ve otoyol geçiş ücretleri dahildir; gizli ücret yoktur. İş toplantıları, etkinlikler, gezi veya tatil için ideal olan bu hizmet, biz sürüşle ilgilenirken sizin gününüze odaklanmanızı sağlar."
+    },
+    "medicalTourism": {
+      "title": "Sağlık Turizmi",
+      "desc": "Güvenilir ortağımız Can Duman Medical Tourism aracılığıyla, estetik cerrahi, diş bakımı ve saç ekiminden gelişmiş prosedürlere kadar geniş bir yelpazedeki yüksek kaliteli sağlık ve yaşam hizmetlerine erişimi kolaylaştırıyoruz. Tüm hizmetler deneyimli sağlık kurumlarıyla koordine edilmektedir. Rolümüz, tüm süreç boyunca konfor, şeffaflık ve profesyonel koordinasyonu ön planda tutarak hastaları güvenilir sağlık hizmeti sunucularıyla buluşturmak ve sorunsuz, iyi organize edilmiş bir deneyim sağlamaktır."
+    },
+    "cityTour": {
+      "title": "Şehir Turu",
+      "desc": "Özel bir şoför ve size özel esnek bir seyahat programıyla İstanbul'u konfor içinde keşfedin. Trafik, otopark veya toplu taşıma endişesi olmadan, ikonik simge yapıları ve gizli kalmış güzellikleri kendi hızınızda gezin. Şoförünüz gün boyunca beklemedeyken premium bir araçta kapıdan kapıya hizmetin tadını çıkarın. Gezi, alışveriş veya kültürel deneyimler için ideal olan şehir turlarımız, şehri keşfetmenin rahat ve kişiselleştirilmiş bir yolunu sunar. Siz yolculuğa ve anlara odaklanın, biz sürüşle ilgilenelim."
+    }
+  },
+
+  "FAQS": {
+    "title": "Sıkça Sorulan Sorular",
+    "items": {
+      "q1": "Havalimanında karşılama hizmeti sunuyor musunuz?",
+      "a1": "Evet, şoförlerimiz İstanbul Havalimanı (IST) veya Sabiha Gökçen (SAW) geliş terminalinde üzerinde isminizin yazılı olduğu özel bir panoyla sizi bekliyor olacak.",
+      "q2": "Uçuş takibi dahil mi?",
+      "a2": "Kesinlikle, alış saatinizi otomatik olarak ayarlıyoruz, böylece iniş yaptığınızda şoförünüz her zaman orada olur.",
+      "q3": "Hem IST hem de Sabiha Gökçen'den transfer yapıyor musunuz?",
+      "a3": "Evet, hem İstanbul Havalimanı'ndan (IST) hem de Sabiha Gökçen Havalimanı'ndan (SAW) şehir merkezi ve çevresindeki herhangi bir otele, rezidansa veya konuma 7/24 premium transfer hizmeti sunuyoruz.",
+      "q4": "Kişi başı mı yoksa araç başı mı ücretlendiriyorsunuz?",
+      "a4": "Kişi başı değil, araç başı sabit bir ücret alıyoruz. İster yalnız ister bir grupla seyahat edin, gizli maliyetler olmadan tek bir sabit ücret ödersiniz.",
+      "q5": "Günün her saatinde bizi karşılayabilir misiniz?",
+      "a5": "Evet, operasyonlarımız yılın 365 günü, 7/24 devam etmektedir. İster gece geç saatte varış yapın ister sabah erken saatte ayrılın, profesyonel ekibimiz her saatte size hizmet etmeye hazırdır.",
+      "q6": "Transfer araçları ne kadar süre önceden rezerve edilmelidir?",
+      "a6": "Müsaitliği garanti altına almak için en az 48 saat önceden rezervasyon yapmanızı öneririz. Ancak mümkün olan her durumda son dakika taleplerini de karşılamak için elimizden geleni yapıyoruz.",
+      "q7": "Birden fazla durak yapabilir ve rotayı değiştirebilir miyim?",
+      "a7": "Evet. Saatlik kiralama hizmetimizde araç tamamen size aittir. Sınırsız durak yapma, rotanızı değiştirme veya İstanbul'un dört bir yanındaki arka arkaya toplantılara katılma konusunda tam esnekliğe sahipsiniz.",
+      "q8": "Ben toplantıdayken, alışveriş yaparken veya gezerken şoför beni bekler mi?",
+      "a8": "Kesinlikle. Siz alışveriş yaparken, yemek yerken veya toplantılara katılırken özel şoförünüz yakın ve uygun bir konumda beklemede kalır, böylece hazır olduğunuzda hemen alınırsınız.",
+      "q9": "Araçta tur rehberi veya özel olanaklar gibi ek hizmetler talep edebilir miyim?",
+      "a9": "Elbette, lisanslı tur rehberleri, bebek koltukları ve içecekler veya Wi-Fi gibi özel araç içi olanaklar ayarlayabiliriz. Lütfen her şeyi sizin için hazırlayabilmemiz adına rezervasyon sırasında ihtiyaçlarınızı belirtin.",
+      "q10": "Ne tür tedaviler ayarlıyorsunuz?",
+      "a10": "Saç Ekimi, Diş Estetiği ve Plastik Cerrahi koordinasyonunda uzmanız. İş ortağımız Can Duman Medical Tourism aracılığıyla her prosedür için sizi özel uzmanlarla buluşturuyoruz.",
+      "q11": "Araçlar sterilize ediliyor ve hijyenik mi?",
+      "a11": "Evet, araçlarımız güvenli ve tertemiz bir ortam sağlamak için her yolculuktan önce baştan aşağı temizlenmekte ve sterilize edilmektedir.",
+      "q12": "Tüm seyahat programını siz mi yönetiyorsunuz?",
+      "a12": "Evet. Tüm tıbbi yolculuğunuzu biz yönetiyoruz. VIP havalimanı transferlerinden ve otel koordinasyonundan klinik randevularına kadar tamamen tedavinize odaklanabilmeniz için kusursuz ve stressiz bir deneyim sağlıyoruz.",
+      "q13": "Kendi seyahat programımı özelleştirebilir miyim?",
+      "a13": "Kesinlikle. Tur %100 esnektir. Kendi rotanızı oluşturabilir, hangi simge yapıları ziyaret edeceğinizi tam olarak seçebilir ve her durakta ne kadar kalacağınıza karar verebilirsiniz. Şoförümüz sizin yönlendirmenizi takip eder.",
+      "q14": "Profesyonel bir tur rehberi talep edebilir miyiz?",
+      "a14": "Evet. Şoförlerimiz güvenli ulaşıma odaklansa da, talep üzerine (müsaitlik durumuna ve ek ücrete tabidir) detaylı bir tarihi deneyim için size eşlik edecek lisanslı ve profesyonel bir tur rehberi ayarlayabiliriz.",
+      "q15": "Otopark veya bekleme ücretleri konusunda endişelenmeli miyim?",
+      "a15": "Hiç de değil. Tüm lojistiği biz hallediyoruz. Şoförünüz sizi tam girişte bırakır ve yakında bekler. Otopark bulma veya taksi çağırma stresi olmadan tamamen gezmeye odaklanabilirsiniz."
+    }
+  }
+
+}

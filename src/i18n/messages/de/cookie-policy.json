@@ -1,0 +1,87 @@
+{
+  "cookieName": "Cookie-Name",
+  "cookieProvider": "Anbieter",
+  "cookieSide": "Partei",
+  "cookieExpires": "Dauer",
+  "cookiePurpose": "Zweck",
+
+  "firstParty": "Erstanbieter",
+  "thirdParty": "Drittanbieter",
+  "twoYears": "2 Jahre",
+  "6months": "6 Monate",
+  "24hours": "24 Stunden",
+  "1minute": "1 Minute",
+  "distinguishesGuest": "Unterscheidet Besucher voneinander.",
+  "distinguish24": "Unterscheidet Besucher innerhalb eines Zeitfensters von 24 Stunden.",
+  "storeSession": "Speichert den Sitzungsstatus.",
+  "mapPref": "Speichert Karteneinstellungen.",
+  "bot": "Führt eine Risikoanalyse durch, um zwischen Bots und Menschen zu unterscheiden.",
+  "limitRequests": "Begrenzt die Anzahl der Anfragen.",
+
+  "title": "Cookie-Richtlinie Datenschutzerklärung",
+  "desc": "Die von Ihnen besuchte Website („www.vstarstransfer.com“), die dem Unternehmen gehört, verwendet Cookies. Ein Cookie ist eine kleine Textdatei, die meist aus Buchstaben und Zahlen besteht, auf den verwendeten Endgeräten gespeichert wird und die Identifizierung des Geräts ermöglicht.\nDer Zweck dieser Cookie-Datenschutzerklärung besteht darin, Sie über die Arten der von uns verwendeten Cookies, die Zwecke, für die wir sie verwenden, und darüber zu informieren, wie Sie diese Cookies hinsichtlich der Verarbeitung Ihrer personenbezogenen Daten verwalten können, die automatisch durch das Setzen der auf unserer Website verwendeten Cookies auf Ihren Endgeräten erhoben werden.",
+
+  "1": "1. WELCHE ARTEN VON COOKIES WERDEN VERWENDET?",
+  "1Desc": "Es ist möglich, Cookie-Arten in drei Kategorien einzuteilen: Cookies nach ihrem Verwendungszweck, Cookies nach ihrer Dauer und Cookies nach ihren Parteien.",
+
+  "11": "1.1 Cookies nach Verwendungszweck",
+  "11Desc": "Wir verwenden vier Arten von Cookies entsprechend ihrem Verwendungszweck. Diese sind: Leistungs-/Analyse-Cookies, funktionale und unbedingt erforderliche Cookies.",
+
+  "111": "1.1.1 Leistungs-/Analyse-Cookies",
+  "111Desc":"Diese Cookies helfen uns, Besuche und Datenverkehr zu überwachen, zu erfahren, welche Seiten am beliebtesten und am wenigsten beliebt sind, und zu sehen, wie Kunden auf der Website navigieren, damit wir die Leistung unserer Website messen und verbessern können. Alle von diesen Cookies gesammelten Informationen sind anonymisiert. Wenn Sie diese Cookies nicht zulassen, wissen wir nicht, wann Sie unsere Website besucht haben, und können Ihre Leistung nicht überwachen.",
+
+  "googleAnalytics": "Google Analytics 4",
+  "googleAnalyticsDesc": "Es ist ein Statistikdienst, der misst, wie die Website genutzt wird. Es werden Daten wie die Anzahl der Besuche, Seitenaufrufe, Verkehrsquelle und ungefährer Standort gesammelt; die Website wird mit diesen Daten verbessert. Die Daten können auf den Servern von Google LLC (USA) verarbeitet werden. https://policies.google.com/privacy",
+
+  "112": "1.1.2 Funktionale Cookies",
+  "112Desc": "Diese Cookies ermöglichen es der Website, erweiterte Funktionalität und Personalisierung anzubieten. Funktionale Identifikations-Cookies können vom Unternehmen oder von Drittanbietern gesetzt werden, deren Dienste wir auf unseren Seiten hinzugefügt haben. Wenn Sie funktionale Identifikations-Cookies nicht zulassen, funktionieren einige oder alle dieser Dienste möglicherweise nicht ordnungsgemäß. Zum Beispiel: Ihre Sprachpräferenz.",
+
+  "googleMaps": "Google Maps (eingebettete Karte)",
+  "gooleMapsDesc": "Es ist eine auf der Seite eingebettete Karte; sie wird zur Standortanzeige von Google-Servern geladen und kann Präferenz-Cookies hinterlassen. Die Daten können auf den Servern von Google LLC (USA) verarbeitet werden. https://policies.google.com/privacy",
+
+  "113": "1.1.3 Unbedingt erforderliche Cookies",
+  "113Desc": "Diese Cookies sind für die Funktion der Website erforderlich und können in unseren Systemen nicht deaktiviert werden. Unbedingt erforderliche Identifikations-Cookies werden obligatorisch verwendet, um einen vom Benutzer angeforderten Dienst der Informationsgesellschaft zu erfüllen (z. B. Ausfüllen von Formularen, Speichern von Datenschutzeinstellungen). Sie können Ihren Browser so einstellen, dass er unbedingt erforderliche Identifikations-Cookies blockiert oder Sie davor warnt; in diesem Fall werden jedoch einige Teile unserer Website nicht wie vorgesehen funktionieren.",
+
+  "googleCaptcha": "Google reCAPTCHA",
+  "googleCaptchaDesc": "Es ist ein Sicherheitsdienst, der Formulare vor automatisierten Übermittlungen (Bots) schützt. Die Daten können auf den Servern von Google LLC (USA) verarbeitet werden. https://policies.google.com/privacy",
+
+  "12": "1.2 Cookies nach Dauer",
+  "12Desc": "Als Unternehmen verwenden wir dauerhafte Cookies basierend auf ihrer Dauer.",
+
+  "121": "1.2.1 Dauerhafte Cookies",
+  "121Desc": "Dauerhafte Cookies, die beim Schließen des Internetbrowsers nicht automatisch gelöscht werden, werden an einem bestimmten Datum oder nach einer bestimmten Zeitspanne automatisch gelöscht.",
+
+  "13": "1.3 Cookies nach Partei",
+
+  "131": "1.3.1 Erstanbieter-Cookies",
+  "131Desc": "Sie werden direkt von der besuchten Website oder dem Unternehmen auf dem Gerät platziert.",
+
+  "132": "1.3.2 Drittanbieter-Cookies",
+  "132Desc": "Dies sind Cookies, die von einem Dritten, wie z. B. einem Analysesystem, auf dem Gerät platziert werden. Zum Beispiel: Google Analytics.",
+
+  "2": "2. Ausdrückliche Einwilligung und Widerruf der Einwilligung",
+  "2Desc1": "Ihre ausdrückliche Einwilligung für andere als unbedingt erforderliche Cookies wird über das Cookie-Banner eingeholt, das bei Ihrem ersten Besuch unserer Website angezeigt wird. Das Banner präsentiert die Optionen zum Akzeptieren und Ablehnen gleichwertig; bis Sie eine Entscheidung treffen, werden diese Cookies nicht platziert und die entsprechenden Dienste nicht geladen.",
+  "2Desc2": "Sie können Ihre Einwilligung jederzeit widerrufen: Sie können den Link zu den Cookie-Einstellungen auf der Website verwenden oder die zu unserer Website gehörenden Cookies aus Ihrem Browser löschen. Der Widerruf der Einwilligung berührt nicht die Rechtmäßigkeit der aufgrund der Einwilligung bis zum Widerruf erfolgten Verarbeitung.",
+  "2Desc3": "Google-Dienste auf unserer Website sind abhängig von den Signalen des Google Consent Mode v2 (ad_storage, analytics_storage, ad_user_data, ad_personalization); bis Sie eine Entscheidung treffen, werden diese Signale im Status „denied“ (abgelehnt) gehalten und bei Zustimmung auf „granted“ (zugestimmt) aktualisiert.",
+
+  "3": "3. Übermittlung personenbezogener Daten ins Ausland",
+  "3Desc": "Die Server einiger von uns genutzter Dienstleister befinden sich im Ausland. In diesem Zusammenhang können Ihre personenbezogenen Daten gemäß Artikel 9 des KVKK (Datenschutzgesetz, in der Fassung des Gesetzes Nr. 7499) übermittelt werden; in Länder mit einem Angemessenheitsbeschluss oder sofern geeignete Garantien (Verpflichtung, Standardvertrag) vorgesehen sind. Die Dienste, die Daten ins Ausland übertragen können, sind:",
+  "d":"Google Maps (eingebettete Karte): Daten können auf Servern von Google LLC (USA) verarbeitet werden. Google reCAPTCHA: Daten können auf Servern von Google LLC (USA) verarbeitet werden. Google Analytics 4: Daten können auf Servern von Google LLC (USA) verarbeitet werden.",
+
+  "4": "Informationspflicht und Aufbewahrungsfristen",
+  "4Desc": "Diese Richtlinie wurde unter Berücksichtigung des Kommuniqués über die bei der Erfüllung der Informationspflicht zu beachtenden Verfahren und Grundsätze erstellt. Die Aufbewahrungsfrist für jeden Cookie ist in den obigen Tabellen angegeben; abgelaufene Cookies werden automatisch von Ihrem Browser gelöscht. Personenbezogene Daten, die durch Cookies erlangt werden, werden für einen Zeitraum gespeichert, der die für den Verarbeitungszweck erforderliche Zeit nicht überschreitet.",
+
+  "5": "Kontakt für Ihre Rechte und Anfragen",
+  "5Desc": "Sie können Ihre Fragen zu Ihren personenbezogenen Daten und Ihren Rechten sowie Anfragen gemäß Artikel 11 des KVKK mit einem Antrag einreichen, der gemäß den im Kommuniqué über die Verfahren und Grundsätze der Antragstellung beim Datenverantwortlichen festgelegten Bedingungen verfasst ist, oder über Ihre E-Mail-Adresse an die E-Mail-Adresse vstarstransfer34@gmail.com senden.",
+
+  "6": "Besucher aus anderen Ländern",
+  "6Desc": "Europäische Union: Für Besucher in der EU ist die vorherige Zustimmung für nicht zwingend erforderliche Cookies gemäß DSGVO (Artikel 6/1-a) und ePrivacy-Regeln unerlässlich; Rechte gemäß Artikel 15 bis 21 der DSGVO bleiben vorbehalten.",
+
+  "7": "Cookie-Verwaltung über den Browser",
+  "7Desc": "Sie können Cookies auch über Ihre Browsereinstellungen anzeigen, einzeln oder massenhaft löschen und blockieren. Wenn Sie unbedingt erforderliche Cookies blockieren, funktionieren einige Teile der Website möglicherweise nicht. Hilfeseiten für gängige Browser:\n https://support.google.com/chrome/answer/95647 \n https://support.mozilla.org/kb/clear-cookies-and-site-data-firefox \n https://support.apple.com/guide/safari/manage-cookies-sfri11471/mac \n https://support.microsoft.com/microsoft-edge/delete-cookies-in-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09 \n https://help.opera.com/en/latest/web-preferences/#cookies ",
+
+  "Hakkinda": "ÜBER DIE DATENSCHUTZERKLÄRUNG",
+  "HakkindaDesc": "Das Unternehmen behält sich das Recht vor, diese Cookie-Datenschutzerklärung jederzeit im Rahmen von Änderungen der geltenden Gesetzgebung zu aktualisieren.",
+
+  "lastUpdated": "Datum der letzten Aktualisierung: 27.08.2024"
+}

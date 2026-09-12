@@ -1,0 +1,93 @@
+{
+  "cookieName": "Çerez Adı",
+  "cookieProvider": "Sağlıyıcı",
+  "cookieSide": "Taraf",
+  "cookieExpires": "Süre",
+  "cookiePurpose": "Amaç",
+
+  "firstParty": "Birinci Taraf",
+  "thirdParty": "Üçüncü Taraf",
+  "twoYears": "2 yıl",
+  "6months": "6 ay",
+  "24hours": "24 saat",
+  "1minute": "1 dakika",
+  "distinguishesGuest": "Ziyaretçileri birbirinden ayırır.",
+  "distinguish24": "Ziyaretçileri 24 saatlik bir zaman dilimi içinde ayırır.",
+  "storeSession": "Oturum durumunu saklar.",
+  "mapPref": "Harita tercihlerini kaydeder.",
+  "bot": "Botlar ile insanları birbirinden ayırmak için risk analizi yapar.",
+  "limitRequests": "İstek sayısını sınırlar.",
+
+  "title": "Çerez Politikası Aydınlatma Metni",
+  "desc": "Şirket’e ait olan ziyaret ettiğiniz internet sitesi (“İnternet Sitesi”), çerez (cookie) kullanan bir sitedir. Çerez; kullanılmakta olan terminal cihazlara depolanmak suretiyle söz konusu cihazın tespit edilmesine olanak sağlayan, çoğunlukla harf ve sayı kombinasyonlarından oluşan düşük boyutlu küçük metin dosyasıdır.\nİşbu Çerezlere Yönelik Aydınlatma Metni’nin amacı, İnternet Sitemizde kullanılan çerezlerin terminal cihazlarınıza yerleştirilmesi aracılığıyla otomatik yolla elde edilen kişisel verilerinizin işlenmesine ilişkin olarak, hangi amaçlarla hangi tür çerezleri kullandığımız ve bu çerezleri nasıl yönetebileceğiniz hakkında sizlere bilgi vermektir.",
+
+  "1": "1. HANGİ TÜR ÇEREZLER KULLANILMAKTADIR?",
+  "1Desc": "Çerez türlerini, kullanım amaçlarına göre çerezler, sürelerine göre çerezler ve taraflarına göre çerezler olmak üzere üçlü bir tasnife tabi tutmak mümkündür.",
+
+  "11": "1.1 Kullanım Amaçlarına Göre Çerezler",
+  "11Desc": "kullanım amaçlarına göre dört tür çerez kullanmaktayız. Bunlar: Performans/Analitik, İşlevsel ve Zorunlu Çerezlerdir.",
+
+  "111": "1.1.1 Performans/Analitik Çerezler",
+  "111Desc":"Bu çerezler, İnternet Sitesi’nin performansını ölçebilmemiz ve geliştirebilmemiz için ziyaretleri ve trafiği izlememize; hangi sayfaların en çok ve en az popüler olduğunu öğrenmemize ve müşterilerin sitede nasıl gezindiğini görmemize yardımcı olmaktadır. Bu çerezlerin topladığı tüm bilgiler anonim hale getirilmektedir. Bu çerezlere izin vermemeniz halinde tarafınızca sitemizin ne zaman ziyaret edildiği bilinemez ve performansınız izlenemez.",
+
+  "googleAnalytics": "Google Analytics 4",
+  "googleAnalyticsDesc": "Sitenin nasıl kullanıldığını ölçen istatistik hizmetidir. Ziyaret sayısı, sayfa görüntüleme, trafik kaynağı ve yaklaşık konum gibi veriler toplanır; site bu verilerle iyileştirilir. Veriler Google LLC (ABD) sunucularında işlenebilir. https://policies.google.com/privacy",
+
+
+  "112": "1.1.2 İşlevsel Çerezler",
+  "112Desc": "Bu çerezler, İnternet Sitesi’nin gelişmiş bir işlevsellik ve kişiselleştirme sunulmasına olanak sağlar. İşlevsel tanımlama çerezleri, Şirket tarafından veya hizmetlerimizi sayfalarımıza eklediğimiz üçüncü taraf sağlayıcılar tarafından ayarlanabilir. İşlevsel tanımlama çerezlerine izin vermemeniz halinde bu hizmetlerin tamamı veya bir kısmı düzgün çalışmayabilir. Örneğin: Dil tercihiniz.",
+
+
+  "googleMaps": "Google Haritalar (gömülü harita)",
+  "gooleMapsDesc": "Sayfaya gömülü haritadır; konum gösterimi için Google sunucularından yüklenir ve tercih çerezleri bırakabilir. Veriler Google LLC (ABD) sunucularında işlenebilir. https://policies.google.com/privacy",
+
+
+  "113": "1.1.3 Zorunlu Çerezler",
+  "113Desc": "Bu çerezler İnternet Sitesi’nin çalışması için zorunlu olan ve sistemlerimizce kapatılması mümkün olmayan çerezlerdir. Zorunlu tanımlama çerezleri, kullanıcının talep etmiş olduğu bir bilgi toplumu hizmetinin (örneğin; form doldurma, gizlilik tercihlerinin hatırlanması gibi) yerine getirilebilmesi için zorunlu olarak kullanılmaktadırlar. Tarayıcınızı zorunlu tanımlama çerezlerini engelleyecek veya sizi uyaracak şekilde ayarlayabilirsiniz; ancak bu durumda web sitemizin bazı bölümleri gerektiği gibi çalışmayacaktır.",
+
+  "googleCaptcha": "Google reCAPTCHA",
+  "googleCaptchaDesc": "Formları otomatik gönderimlerden (bot) koruyan güvenlik hizmetidir. Veriler Google LLC (ABD) sunucularında işlenebilir. https://policies.google.com/privacy",
+
+
+  "12": "1.2 Sürelerine Göre Çerezler",
+  "12Desc": "Şirket olarak, sürelerine göre kalıcı tür çerez kullanmaktayız.",
+
+  "121": "1.2.1 Kalıcı Çerezleri",
+  "121Desc": "İnternet tarayıcısı kapatıldığı zaman kendiliğinden silinmeyen kalıcı çerezler, belirli bir tarihte veya belirli bir süre sonra kendiliğinden silinmektedir.",
+
+  "13": "1.3 Tarafarına göre",
+
+  "131": "1.3.1 Birinci Taraf Çerezler",
+  "131Desc": "Doğrudan ziyaret edilen İnternet Sitesi veya Şirket tarafından cihaza yerleştirilmektedir.",
+
+  "132": "1.3.2 Üçüncü Taraf Çerezler ",
+  "132Desc": "Analitik sistem gibi üçüncü bir tarafça cihaza yerleştirilen çerezlerdir. Örneğin: Google Analytics.",
+
+
+
+  "2": "2. Açık Rıza ve Rızanın Geri Alınması",
+  "2Desc1": "Zorunlu çerezler dışındaki çerezler için açık rızanız, sitemize ilk girişinizde gösterilen çerez bandı üzerinden alınır. Bantta kabul etme ve reddetme seçenekleri eşit biçimde sunulur; siz karar vermeden bu çerezler yerleştirilmez ve ilgili servisler yüklenmez.",
+  "2Desc2": "Rızanızı dilediğiniz an geri alabilirsiniz: sitedeki çerez tercihleri bağlantısını kullanabilir veya tarayıcınızdan sitemize ait çerezleri silebilirsiniz. Rızanın geri alınması, geri alınana kadar yapılan işlemenin hukuka uygunluğunu etkilemez.",
+  "2Desc3": "Sitemizdeki Google servisleri, Google Consent Mode v2 sinyallerine (ad_storage, analytics_storage, ad_user_data, ad_personalization) bağlıdır; siz karar verene kadar bu sinyaller \"denied\" durumunda tutulur, kabul etmeniz halinde \"granted\" olarak güncellenir.",
+
+  "3": "3. Kişisel Verilerin Yurt Dışına Aktarılması",
+  "3Desc": "Kullandığımız bazı servis sağlayıcıların sunucuları yurt dışındadır. Bu kapsamda kişisel verileriniz, KVKK'nın 9. maddesine (7499 sayılı Kanunla değişik) uygun olarak; yeterlilik kararı bulunan ülkelere veya uygun güvencelerin sağlanması (taahhütname, standart sözleşme) kaydıyla aktarılabilir. Yurt dışına veri aktarabilen servisler şunlardır:",
+  "d":"Google Haritalar (gömülü harita): Veriler Google LLC (ABD) sunucularında işlenebilir. Google reCAPTCHA: Veriler Google LLC (ABD) sunucularında işlenebilir.Google Analytics 4: Veriler Google LLC (ABD) sunucularında işlenebilir.",
+
+  "4": "Aydınlatma Yükümlülüğü ve Saklama Süreleri",
+  "4Desc": "Bu politika, Aydınlatma Yükümlülüğünün Yerine Getirilmesinde Uyulacak Usul ve Esaslar Hakkında Tebliğ gözetilerek hazırlanmıştır. Her çerezin saklama süresi yukarıdaki tablolarda belirtilmiştir; süresi dolan çerezler tarayıcınız tarafından otomatik olarak silinir. Çerezler yoluyla elde edilen kişisel veriler, işleme amacının gerektirdiği süreyi aşmayacak şekilde saklanır.",
+
+  "5": "Hak ve talepleriniz için iletişim",
+  "5Desc": "Kişisel verilerinizle ilgili sorularınızı ve KVKK’nın 11. maddesinde yer alan hak ve taleplerinizi, Veri Sorumlusuna Başvuru Usul ve Esasları Hakkında Tebliğ'de belirtilen şartlara uygun düzenlenmiş dilekçeyle ya da e-posta adresiniz vasıtasıyla vstarstransfer34@gmail.com uzantılı e-posta adresine iletebilirsiniz.",
+
+  "6": "Diğer Ülkelerdeki Ziyaretçiler",
+  "6Desc": "Avrupa Birliği: AB'de bulunan ziyaretçiler için zorunlu olmayan çerezlerde GDPR (Madde 6/1-a) ve ePrivacy kuralları uyarınca ön rıza esastır; GDPR'ın 15 ila 21. maddelerindeki haklar saklıdır.",
+
+  "7": "Tarayıcı üzerinden çerez Yönetimi",
+  "7Desc": "Çerezleri tarayıcı ayarlarınızdan da görüntüleyebilir, tek tek veya toplu silebilir ve engelleyebilirsiniz. Zorunlu çerezleri engellerseniz sitenin bazı bölümleri çalışmayabilir. Yaygın tarayıcılar için yardım sayfaları: \n https://support.google.com/chrome/answer/95647 \n https://support.mozilla.org/kb/clear-cookies-and-site-data-firefox \n https://support.apple.com/guide/safari/manage-cookies-sfri11471/mac \n https://support.microsoft.com/microsoft-edge/delete-cookies-in-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09 \n https://help.opera.com/en/latest/web-preferences/#cookies ",
+
+  "Hakkinda": "AYDINLATMA METNİ HAKKINDA",
+  "HakkindaDesc": "Şirket işbu Çerezlere Yönelik Aydınlatma Metni’ni yürürlükteki mevzuatta yapılabilecek değişiklikler çerçevesinde her zaman güncelleme hakkını saklı tutar.",
+
+  "lastUpdated": "Güncellenme Tarihi: 27/08/2024"
+}

@@ -1,0 +1,30 @@
+{
+  "title": "Unsere Partner",
+  "desc": "Entdecken Sie unsere angeschlossenen Partner, um Zugang zu erstklassigen Dienstleistungen und Fachwissen zu erhalten.",
+  "items": {
+    "medical": {
+      "title": "Can Duman Medical Tourism",
+      "desc": "Can Duman Medical Tourism erleichtert den Zugang zu einer breiten Palette hochwertiger medizinischer und Wellness-Dienstleistungen — von ästhetischer Chirurgie und Zahnpflege über Haartransplantationen bis hin zu fortschrittlichen Eingriffen. Alle Leistungen werden mit erfahrenen medizinischen Einrichtungen koordiniert. Unsere Aufgabe ist es, eine reibungslose, gut organisierte Erfahrung zu gewährleisten, indem wir Patienten mit zuverlässigen Gesundheitsdienstleistern verbinden und dabei Komfort, Transparenz und professionelle Koordination während der gesamten Reise priorisieren."
+    },
+    "travelAgency": {
+      "title": "Can Duman Travel Agency",
+      "desc": "Die Can Duman Travel Agency bietet maßgeschneiderte Reiselösungen für individuelle und geschäftliche Anforderungen. Mit dem Fokus auf organisierten, zuverlässigen und kundenorientierten Service unterstützen sie bei der Reiseplanung, beim Transport und bei der Organisation am Zielort. Ihre Dienstleistungen zielen darauf ab, die Reiselogistik zu vereinfachen und gleichzeitig ein reibungsloses und komfortables Erlebnis zu gewährleisten. Durch unsere Zusammenarbeit möchten wir unseren Kunden eine nahtlose Koordination und vertrauenswürdige Reiseunterstützung bieten."
+    },
+    "visitoria": {
+      "title": "Visitoria Grup Sigorta",
+      "desc": "Visitoria Grup Sigorta bringt über 25 Jahre Erfahrung im Finanz- und Versicherungsbereich mit. Sie bieten eine breite Palette von Lösungen in den Bereichen Kfz-, Kranken-, Reise-, Sach-, Gewerbe- und Finanzversicherungen an. In Zusammenarbeit mit führenden Versicherungsunternehmen in der Türkei und internationalen Partnern bieten sie flexible Preis- und Zahlungsoptionen, die auf individuelle und geschäftliche Bedürfnisse zugeschnitten sind. Mit einem starken Fokus auf Kundenzufriedenheit, Zuverlässigkeit und professioneller Expertise agiert Visitoria Group Insurance als vertrauenswürdiger Lösungspartner für umfassende Versicherungsanforderungen."
+    },
+    "danismanlik": {
+      "title": "Can Duman Danışmanlık",
+      "desc": "Can Duman Consultancy bietet professionelle Beratung und Unterstützung in verschiedenen Dienstleistungsbereichen. Mit einem strukturierten und lösungsorientierten Ansatz unterstützen sie Einzelpersonen und Organisationen bei der Planung, Koordination und beim Prozessmanagement. Ihre Dienstleistungen zielen darauf ab, komplexe Verfahren zu vereinfachen und effiziente Ergebnisse sicherzustellen. Durch den Fokus auf Zuverlässigkeit, Klarheit und Kundenbedürfnisse streben sie danach, praktische und effektive Beratungslösungen zu liefern. Durch unsere Zusammenarbeit helfen wir Kunden, auf vertrauenswürdiges Fachwissen und gut organisierte Unterstützung zuzugreifen."
+    },
+    "agon": {
+      "title": "Agon",
+      "desc": "Die Agon Group Company ist eine mehrdimensionale Marke, die in den Bereichen Textilien, maßgeschneiderte Veranstaltungen, Bio-Produkte, E-Commerce und exklusive Fanclub-Konzepte tätig ist. Mit einem starken Fokus auf Ästhetik, Qualität und Nachhaltigkeit kreiert die Agon Group raffinierte Erlebnisse in jedem Bereich, den sie berührt. Ihre Stärke liegt in ihrer Vision; ihre Besonderheit definiert sich durch ihre Liebe zum Detail."
+    },
+    "akademi": {
+      "title": "Can Duman Akademi",
+      "desc": "Die Can Duman Akademi ist unser verbundener Akademieprogramm-Partner, der reichhaltige und hochwertige Bildungsinhalte bereitstellt, basierend auf dem starken Glauben an kontinuierliches Lernen und persönliche Entwicklung. Unter dem Motto 'Bildung für alle, gemeinsam wachsen' priorisiert sie lebenslanges Lernen und berufliche Entwicklung. Mit vielfältigen Trainingsfeldern und hohen Servicestandards trägt die Akademie zur Entwicklung von qualifiziertem Humankapital bei, das auf die Bedürfnisse des Marktes abgestimmt ist. Sie strebt an, ein führendes Zentrum für lebenslanges Lernen zu werden, das das individuelle, regionale und nationale Wachstum durch Bildung unterstützt."
+    }
+  }
+}

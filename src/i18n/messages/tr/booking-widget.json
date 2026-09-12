@@ -1,0 +1,110 @@
+{
+  "Tabs": {
+    "oneWay": "Tek Yön",
+    "hourly": "Saatlik",
+    "airport": "Havalimanı"
+  },
+  "Form": {
+    "pickUpLocation": "Alış Noktası",
+    "pickUpLocationPlaceHolder": "Alış noktasını girin",
+    "dropOffLocation": "Varış Noktası",
+    "dropOffLocationPlaceHolder": "Varış noktasını girin",
+    "airport": "Havalimanı",
+    "selectAirport": "Havalimanı Seçin",
+    "toAirport": "Gidiş",
+    "fromAirport": "Dönüş",
+
+    "duration": "Süre",
+    "durationPlaceHolder": "Süre Seçin:",
+    "durationHours": "Saat",
+    "date": "Tarih",
+    "datePlaceHolder": "Tarih ve Saat",
+    "insideTitle": "Tarih ve Saat Seçin",
+    "availableTime": "Uygun Saatler",
+
+    "PassLugTitle": "Yolcu ve Bagaj Seçimi",
+    "selected": "",
+    "passengers": "Yolcu",
+    "luggage": "Bagaj",
+    "SelectedConfiguration": "Seçilen Yapılandırma:",
+
+    "PassengerLuggage": "Yolcu ve Bagaj",
+    "addressPlaceholder": "Havalimanı, Otel veya Adres girin...",
+    "SelectDateHours": "Tarih ve Saat Seçin",
+    "selectHours": "Süre Seçin",
+    "hour": "Saat",
+
+    "passengersAndLuggage": "Yolcu ve Bagaj",
+    "guestInfo": "Misafir Bilgileri",
+    "driverNeeds": "Şoför Notları",
+    "fullName": "Ad Soyad",
+    "phoneNumber": "Telefon Numarası",
+    "email": "E-posta Adresi",
+    "flightNumber": "Uçuş Numarası (İsteğe bağlı)",
+    "signboardName": "Karşılama Panosu İsmi (İsteğe bağlı)",
+    "signboardPlaceholder": "Karşılama panosunda yazacak isim",
+    "specialRequests": "Özel İstekler",
+    "notesPlaceholder": "Çocuk koltuğu, ekstra bagaj vb...",
+    "passport": {
+      "title": "Pasaport Fotoğrafı (İsteğe bağlı)",
+      "formats": "JPG, PNG, WebP yükleyin (Maks {size}MB)",
+      "chooseFile": "Dosya Seç",
+      "processing": "İşleniyor...",
+      "uploaded": "✓ Yüklendi"
+    }
+  },
+  "Confirmation": {
+    "title": "Rezervasyon Onaylandı!",
+    "message": "Transfer talebiniz başarıyla gönderildi.",
+    "details": "Rezervasyon detaylarınızı onaylamak için kısa süre içinde e-posta veya telefon ile sizinle iletişime geçeceğiz.",
+    "newBooking": "Yeni Rezervasyon",
+    "sending": "Gönderiliyor..."
+  },
+  "PackageDetail": {
+    "title": "Paket Detayları",
+    "waitTime": "30 dakika ücretsiz bekleme süresi",
+    "greet": "Karşılama (Meet & Greet) hizmeti dahildir",
+    "alert": "Yolcu ve bagaj kapasitelerine kesinlikle uyulmalıdır. Emin değilseniz, hizmetin reddedilmemesi için lütfen daha büyük bir araç sınıfı seçin."
+  },
+
+  "GuestInfo": {
+    "title": "Son Detaylar",
+    "desc": "Lütfen iletişim bilgilerinizi girin",
+    "fullname": "Ad Soyad",
+    "phone": "Telefon Numarası",
+    "email": "E-posta Adresi",
+    "flightNumber": "Uçuş Numarası",
+    "optional": "(İsteğe bağlı)",
+    "driverNote": "Şoföre Not:",
+    "driverNotePlaceHolder": "Çocuk koltuğu gereklidir, ekstra bagaj vb...",
+    "passportPhoto": "Pasaport Fotoğrafı",
+    "click": "Pasaport fotoğrafı yüklemek için tıklayın",
+    "summaryEstimated": "Tahmini Toplam Fiyat:",
+    "disclose": "Sistemimizde yer alan fiyatlar gösterge niteliğindedir. İşlem detaylarına göre fiyatlarımızda değişiklik olabilmektedir.",
+    "reserve": "Rezervasyon Yap"
+  },
+  "Summary": {
+    "title": "Rezervasyonunuzu İnceleyin",
+    "desc": "Rezervasyonunuzu tamamlayın",
+    "bookingSummary": "Rezervasyon Özeti",
+    "serviceType": "Hizmet Türü:",
+    "guest": "Misafir Adı:",
+    "phone": "Telefon:",
+    "date": "Tarih:",
+    "route": "Rota:",
+    "pickUpAddress": "Alış Adresi:",
+    "dropOffAddress": "Varış Adresi:",
+    "passengers": "Yolcu:",
+    "pax": "{count} Yolcu",
+    "bag": "Bagaj:",
+    "total": "Toplam Tutar",
+    "terms": "Şartlar ve Koşulları Görüntüle"
+  },
+  "Shared": {
+    "continue": "Devam Et",
+    "back": "Geri",
+    "submit": "Gönder",
+    "confirm": "Onayla",
+    "cancel": "İptal"
+  }
+}

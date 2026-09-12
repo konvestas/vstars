@@ -1,0 +1,17 @@
+{
+    "menu": "Menü",
+    "signIn": "Giriş Yap",
+    "ourServices": "Hizmetlerimiz",
+    "contact": "İletişim",
+    "ourAffiliates": "İş Ortakları",
+    "fleet": "Filo",
+    "faq": "SSS",
+    "languages": "Diller",
+    "languagesOption": {
+      "en": "English",
+      "de": "Deutsch",
+      "es": "Español",
+      "ru": "Русский",
+      "tr": "Türkçe"
+    }
+}

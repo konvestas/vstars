@@ -1,0 +1,23 @@
+{
+  "title": "Get in Touch",
+  "description": "Have questions about your transfer or need a custom quote? Our team is ready to help you 24/7.",
+  "infoTitle": "Contact Information",
+  "infoDesc": "We are available via phone, email, and WhatsApp to ensure your trip in Istanbul is smooth and comfortable.",
+  "phone": "Phone & WhatsApp",
+  "email": "Email Address",
+  "address": "Location",
+  "maps": "Open in Google Maps ↗",
+  "form": {
+    "name": "Full Name",
+    "namePlaceholder": "John Doe",
+    "email": "Email Address",
+    "emailPlaceholder": "john@example.com",
+    "subject": "Subject",
+    "subjectPlaceholder": "Transfer Inquiry / Custom Tour",
+    "message": "Message",
+    "messagePlaceholder": "How can we help you?",
+    "submit": "Send Message"
+  },
+  "successMessage": "Message sent successfully! We will contact you soon.",
+  "errorMessage": "Something went wrong. Please try again."
+}

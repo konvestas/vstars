@@ -1,0 +1,110 @@
+{
+  "Tabs": {
+    "oneWay": "Einzelfahrt",
+    "hourly": "Stundenweise",
+    "airport": "Flughafen"
+  },
+  "Form": {
+    "pickUpLocation": "Abholort",
+    "pickUpLocationPlaceHolder": "Abholort eingeben",
+    "dropOffLocation": "Zielort",
+    "dropOffLocationPlaceHolder": "Zielort eingeben",
+    "airport": "Flughafen",
+    "selectAirport": "Flughafen auswählen",
+    "toAirport": "Zum Flughafen",
+    "fromAirport": "Vom Flughafen",
+
+    "duration": "Dauer",
+    "durationPlaceHolder": "Dauer auswählen",
+    "durationHours": "Dauer Stunden",
+    "date": "Datum",
+    "datePlaceHolder": "Datum & Uhrzeit",
+    "insideTitle": "Datum & Uhrzeit wählen",
+    "availableTime": "Verfügbare Zeiten",
+
+    "PassLugTitle": "Fahrgäste & Gepäck auswählen",
+    "selected": "",
+    "passengers": "Fahrgäste",
+    "luggage": "Gepäck",
+    "SelectedConfiguration": "Ihre Auswahl:",
+
+    "PassengerLuggage": "Fahrgäste - Gepäck",
+    "addressPlaceholder": "Flughafen, Hotel oder Adresse eingeben...",
+    "SelectDateHours": "Datum & Uhrzeit auswählen",
+    "selectHours": "Dauer auswählen",
+    "hour": "Stunde",
+
+    "passengersAndLuggage": "Fahrgäste & Gepäck",
+    "guestInfo": "Gastinformationen",
+    "driverNeeds": "Hinweise für den Fahrer",
+    "fullName": "Vollständiger Name",
+    "phoneNumber": "Telefonnummer",
+    "email": "E-Mail-Adresse",
+    "flightNumber": "Flugnummer (Optional)",
+    "signboardName": "Name für das Abhol-Schild (Optional)",
+    "signboardPlaceholder": "Name auf dem Empfangsschild",
+    "specialRequests": "Besondere Wünsche",
+    "notesPlaceholder": "Kindersitz, zusätzliches Gepäck, etc...",
+    "passport": {
+      "title": "Passfoto (Optional)",
+      "formats": "JPG, PNG, WebP hochladen (Max {size}MB)",
+      "chooseFile": "Datei auswählen",
+      "processing": "Wird verarbeitet...",
+      "uploaded": "✓ Hochgeladen"
+    }
+  },
+
+  "PackageDetail": {
+    "title": "Paketdetails",
+    "waitTime": "30 Minuten kostenlose Wartezeit",
+    "greet": "Inklusive Meet & Greet-Service",
+    "alert": "Fahrgast- und Gepäckkapazitäten müssen strikt eingehalten werden. Bei Unsicherheit wählen Sie bitte eine größere Fahrzeugklasse, da der Service sonst verweigert werden kann."
+  },
+  "Confirmation": {
+    "title": "Buchung Bestätigt!",
+    "message": "Ihre Transferanfrage wurde erfolgreich übermittelt.",
+    "details": "Wir werden Sie in Kürze per E-Mail oder Telefon kontaktieren, um Ihre Buchungsdetails zu bestätigen.",
+    "newBooking": "Neue Buchung",
+    "sending": "Wird gesendet..."
+  },
+  "GuestInfo": {
+    "title": "Letzte Details",
+    "desc": "Bitte geben Sie Ihre Kontaktinformationen an",
+    "fullname": "Vollständiger Name",
+    "phone": "Telefonnummer",
+    "email": "E-Mail-Adresse",
+    "flightNumber": "Flugnummer",
+    "optional": "(Optional)",
+    "driverNote": "Hinweis an den Fahrer:",
+    "driverNotePlaceHolder": "Kindersitz erforderlich, zusätzliches Gepäck, etc...",
+    "passportPhoto": "Passfoto",
+    "click": "Klicken Sie, um das Passfoto hochzuladen",
+    "summaryEstimated": "Geschätzter Gesamtpreis:",
+    "disclose": "Die in unserem System angegebenen Preise sind unverbindliche Richtwerte. Je nach Auftragsdetails können unsere Preise abweichen.",
+    "reserve": "Buchen"
+  },
+  "Summary": {
+    "title": "Überprüfen Sie Ihre Buchung",
+    "desc": "Schließen Sie Ihre Reservierung ab",
+    "bookingSummary": "Buchungszusammenfassung",
+    "serviceType": "Leistungsart:",
+    "guest": "Gast:",
+    "phone": "Telefon:",
+    "date": "Datum:",
+    "route": "Route:",
+    "pickUpAddress": "Abholadresse:",
+    "dropOffAddress": "Zieladresse:",
+    "passengers": "Fahrgäste:",
+    "pax": "{count} Personen",
+    "bag": "Gepäck:",
+    "total": "Gesamtbetrag",
+    "terms": "Allgemeine Geschäftsbedingungen ansehen"
+  },
+  "Shared": {
+    "continue": "Weiter",
+    "back": "Zurück",
+    "submit": "Absenden",
+    "confirm": "Bestätigen",
+    "cancel": "Abbrechen"
+  }
+}

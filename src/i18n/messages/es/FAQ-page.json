@@ -1,0 +1,92 @@
+{
+  "title": "Preguntas Frecuentes",
+  "desc": "Consulte nuestras preguntas frecuentes para encontrar respuestas sobre nuestros servicios premium.",
+  "noResults": "No se encontraron resultados para",
+  "items": {
+    "general": {
+      "title": "General y Servicios",
+      "questions": {
+        "1": {
+          "q": "¿Ofrecen servicio de bienvenida (Meet & Greet) en el aeropuerto?",
+          "a": "Sí, nuestros chóferes le estarán esperando en la terminal de llegadas del Aeropuerto de Estambul (IST) o Sabiha Gökçen (SAW) sosteniendo un letrero personalizado con su nombre."
+        },
+        "2": {
+          "q": "¿Está incluido el seguimiento de vuelos?",
+          "a": "Por supuesto, ajustamos automáticamente su hora de recogida para que su conductor esté siempre allí cuando usted aterrice."
+        },
+        "3": {
+          "q": "¿Realizan traslados desde IST y Sabiha Gökçen?",
+          "a": "Sí, brindamos servicios de traslado premium 24/7 desde el Aeropuerto de Estambul (IST) y el Aeropuerto Sabiha Gökçen (SAW) a cualquier hotel, residencia o ubicación en el centro de la ciudad y áreas circundantes."
+        },
+        "4": {
+          "q": "¿Nos recogerán a cualquier hora del día?",
+          "a": "Sí, nuestras operaciones funcionan 24/7, los 365 días del año. Ya sea que tenga una llegada nocturna o una salida temprano por la mañana, nuestro equipo profesional está listo para atenderle a cualquier hora."
+        }
+      }
+    },
+    "booking": {
+      "title": "Reservas e Itinerario",
+      "questions": {
+        "1": {
+          "q": "¿Con cuánta antelación se deben reservar los traslados?",
+          "a": "Recomendamos reservar con al menos 48 horas de antelación para garantizar la disponibilidad. Sin embargo, hacemos todo lo posible para acomodar solicitudes de última hora siempre que sea posible."
+        },
+        "2": {
+          "q": "¿Puedo hacer múltiples paradas y cambiar la ruta?",
+          "a": "Sí. Con nuestro servicio de alquiler por horas, el vehículo es exclusivamente suyo. Tiene total flexibilidad para hacer paradas ilimitadas, cambiar su ruta o asistir a reuniones consecutivas por todo Estambul como usted desee."
+        },
+        "3": {
+          "q": "¿Puedo personalizar mi propio itinerario?",
+          "a": "Absolutamente. El tour es 100% flexible. Puede crear su propia ruta, elegir exactamente qué monumentos visitar y decidir cuánto tiempo permanecer en cada parada. Nuestro conductor sigue sus indicaciones."
+        },
+        "4": {
+          "q": "¿El conductor me espera mientras estoy en una reunión, comprando o explorando?",
+          "a": "Absolutamente. Su chófer privado permanece a su disposición en un lugar cercano conveniente mientras usted compra, cena o asiste a reuniones, asegurando que se le recoja de inmediato cuando esté listo."
+        }
+      }
+    },
+    "vehicles": {
+      "title": "Vehículos y Comodidades",
+      "questions": {
+        "1": {
+          "q": "¿Los vehículos están desinfectados y son higiénicos?",
+          "a": "Sí, nuestros vehículos se limpian y desinfectan minuciosamente antes de cada viaje para garantizar un entorno seguro."
+        },
+        "2": {
+          "q": "¿Puedo solicitar servicios adicionales, como un guía turístico o comodidades especiales?",
+          "a": "Por supuesto, podemos organizar guías turísticos con licencia, sillas para bebés y comodidades específicas en el automóvil, como refrescos o Wi-Fi. Por favor especifique sus necesidades durante la reserva para que podamos prepararlo todo para usted."
+        },
+        "3": {
+          "q": "¿Podemos solicitar un guía turístico profesional?",
+          "a": "Sí. Aunque nuestros chóferes se centran en el transporte seguro, podemos organizar que un guía turístico profesional con licencia le acompañe para una experiencia histórica detallada bajo petición (sujeto a disponibilidad y tarifa adicional)."
+        }
+      }
+    },
+    "billing": {
+      "title": "Facturación y Precios",
+      "questions": {
+        "1": {
+          "q": "¿Cobran por persona o por vehículo?",
+          "a": "Cobramos una tarifa fija por vehículo, no por persona. Ya sea que viaje solo o con un grupo, usted paga una tarifa plana, sin costos ocultos."
+        },
+        "2": {
+          "q": "¿Tengo que preocuparme por las tarifas de estacionamiento o espera?",
+          "a": "En absoluto. Nosotros nos encargamos de toda la logística. Su chófer le deja justo en la entrada y espera cerca. Puede concentrarse por completo en hacer turismo sin el estrés de buscar aparcamiento o llamar a un taxi."
+        }
+      }
+    },
+    "medical": {
+      "title": "Servicios Médicos",
+      "questions": {
+        "1": {
+          "q": "¿Qué tipos de tratamientos coordinan?",
+          "a": "Nos especializamos en coordinar Trasplantes Capilares, Estética Dental y Cirugía Plástica. A través de nuestro socio, Can Duman Medical Tourism, le conectamos con expertos específicos para cada procedimiento."
+        },
+        "2": {
+          "q": "¿Gestionan todo el itinerario de viaje?",
+          "a": "Sí. Gestionamos todo su viaje médico. Desde los traslados VIP al aeropuerto y la coordinación del hotel hasta las citas en la clínica, garantizamos una experiencia fluida y sin estrés para que pueda centrarse por completo en su tratamiento."
+        }
+      }
+    }
+  }
+}

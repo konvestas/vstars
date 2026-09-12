@@ -1,0 +1,22 @@
+{
+  "section_title": "¿Por Qué Elegirnos?",
+  "section_desc": "Confiables, refinados y listos cuando usted lo esté.",
+  "highlights": [
+    {
+      "title": "La Seguridad es lo Primero",
+      "desc": "Conductores con licencia, vehículos asegurados y estrictos estándares de higiene para su tranquilidad."
+    },
+    {
+      "title": "Siempre a Tiempo",
+      "desc": "El seguimiento de vuelos y las rutas inteligentes garantizan que nunca pierda una recogida o llegada."
+    },
+    {
+      "title": "Confort Premium",
+      "desc": "Vehículos ejecutivos con asientos espaciosos, control de clima y un viaje suave y silencioso."
+    },
+    {
+      "title": "Soporte 24/7",
+      "desc": "Agentes dedicados disponibles en cualquier momento para ayudarle con cambios o peticiones especiales."
+    }
+  ]
+}

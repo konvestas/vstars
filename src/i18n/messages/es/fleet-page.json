@@ -1,0 +1,50 @@
+{
+  "title": "Explore Nuestra Flota",
+  "description": "",
+  "secondTitle": "Mercedes-Benz Vito Maybach",
+  "secondDescription": "Cada vehículo, mantenido meticulosamente, se transforma en su oficina privada y transporte preferido. Establezca su propio itinerario y muévase a su ritmo mientras su chófer profesional permanece a su disposición.",
+  "servicesTitle": "Estándares de Servicio",
+  "servicesDesc": "Más que un simple viaje. Cada trayecto está diseñado para proporcionar el entorno definitivo para la productividad y la relajación.",
+  "items": {
+    "details": {
+      "capacityTitle": "Capacidad",
+      "capacityDesc": "Hasta 5+2 pasajeros",
+      "luggageTitle": "Equipaje",
+      "luggageDesc": "6 piezas de equipaje",
+      "AmbianceTitle": "Ambiente",
+      "AmbianceDesc": "Iluminación ambiental",
+      "ConnectivityTitle": "Conectividad",
+      "ConnectivityDesc": "Wi-Fi y Smart TV",
+      "RefreshmentsTitle": "Aperitivos",
+      "RefreshmentsDesc": "Minibar",
+      "PowerTitle": "Energía",
+      "PowerDesc": "USB-C y carga inalámbrica"
+    },
+    "services": {
+      "professionalChauffeurs": {
+        "title": "Chóferes Profesionales",
+        "description": "Conducidos por chóferes capacitados, asegurando discreción y profesionalismo en todo momento."
+      },
+      "privateConfidential": {
+        "title": "Privado y Confidencial",
+        "description": "Su vehículo se transforma en una oficina privada, permitiendo llamadas confidenciales y trabajo ininterrumpido."
+      },
+      "stayConnected": {
+        "title": "Manténgase Conectado",
+        "description": "Equipado con cargadores Lightning y USB-C para mantener sus dispositivos cargados durante todo su viaje."
+      },
+      "onboardWifi": {
+        "title": "Wi-Fi a Bordo",
+        "description": "La conexión de alta velocidad garantiza que nunca pierda el ritmo, ya sea trabajando o viendo contenido de entretenimiento."
+      },
+      "climateMedia": {
+        "title": "Clima y Multimedia",
+        "description": "Control total sobre el entorno de la cabina. Su chófer ajustará el clima y la música según sus preferencias."
+      },
+      "thoughtfulAmenities": {
+        "title": "Comodidades Cuidadosas",
+        "description": "Agua de cortesía, pañuelos y toallitas desinfectantes para asegurar que permanezca fresco en todo momento."
+      }
+    }
+  }
+}

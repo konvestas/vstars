@@ -1,0 +1,112 @@
+{
+  "Tabs": {
+    "oneWay": "Solo Ida",
+    "hourly": "Por Horas",
+    "airport": "Aeropuerto"
+  },
+  "Form": {
+    "pickUpLocation": "Lugar de Recogida",
+    "pickUpLocationPlaceHolder": "Ingrese el lugar de recogida",
+    "dropOffLocation": "Lugar de Destino",
+    "dropOffLocationPlaceHolder": "Ingrese el lugar de destino",
+    "airport": "Aeropuerto",
+    "selectAirport": "Seleccionar Aeropuerto",
+    "toAirport": "Al Aeropuerto",
+    "fromAirport": "Desde Aeropuerto",
+
+    "duration": "Duración",
+    "durationPlaceHolder": "Seleccionar Duración",
+    "durationHours": "Duración Horas",
+    "date": "Fecha",
+    "datePlaceHolder": "Fecha y Hora",
+    "insideTitle": "Elegir Fecha y Hora",
+    "availableTime": "Horarios Disponibles",
+
+    "PassLugTitle": "Seleccionar Pasajeros y Equipaje",
+    "selected": "",
+    "passengers": "Pasajeros",
+    "luggage": "Equipaje",
+    "SelectedConfiguration": "Configuración Seleccionada:",
+
+    "PassengerLuggage": "Pax y Maletas",
+    "addressPlaceholder": "Ingrese Aeropuerto, Hotel o Dirección...",
+    "SelectDateHours": "Seleccionar Fecha y Hora",
+    "selectHours": "Seleccionar Duración",
+    "hour": "Hora",
+
+    "passengersAndLuggage": "Pasajeros y Equipaje",
+    "guestInfo": "Información del Huésped",
+    "driverNeeds": "Notas para el Chófer",
+    "fullName": "Nombre Completo",
+    "phoneNumber": "Número de Teléfono",
+    "email": "Dirección de Correo Electrónico",
+    "flightNumber": "Número de Vuelo (Opcional)",
+    "signboardName": "Nombre en el Letrero (Opcional)",
+    "signboardPlaceholder": "Nombre para el letrero de bienvenida",
+    "specialRequests": "Peticiones Especiales",
+    "notesPlaceholder": "Silla para niños, equipaje extra, etc...",
+    "passport": {
+      "title": "Foto del Pasaporte (Opcional)",
+      "formats": "Suba JPG, PNG, WebP (Máx {size}MB)",
+      "chooseFile": "Elegir Archivo",
+      "processing": "Procesando...",
+      "uploaded": "✓ Subido"
+    }
+  },
+
+  "PackageDetail": {
+    "title": "Detalles del Paquete",
+    "waitTime": "30 minutos de tiempo de espera gratuito",
+    "greet": "Incluye servicio de bienvenida (Meet & Greet)",
+    "alert": "Las capacidades de pasajeros y equipaje deben respetarse estrictamente. Si no está seguro, seleccione una clase de vehículo superior, de lo contrario se le podría denegar el servicio."
+  },
+
+  "Confirmation": {
+    "title": "¡Reserva confirmada!",
+    "message": "Su solicitud de transferencia ha sido enviada exitosamente.",
+    "details": "Nos pondremos en contacto con usted en breve por correo electrónico o teléfono para confirmar los detalles de su reserva.",
+    "newBooking": "Nueva reserva",
+    "sending": "Envíando..."
+  },
+
+  "GuestInfo": {
+    "title": "Últimos Detalles",
+    "desc": "Por favor, proporcione su información de contacto",
+    "fullname": "Nombre Completo",
+    "phone": "Número de Teléfono",
+    "email": "Dirección de Correo Electrónico",
+    "flightNumber": "Número de Vuelo",
+    "optional": "(Opcional)",
+    "driverNote": "Nota para el Chófer:",
+    "driverNotePlaceHolder": "Se requiere silla para niños, equipaje extra, etc...",
+    "passportPhoto": "Foto del Pasaporte",
+    "click": "Haga clic para subir la foto del pasaporte",
+    "summaryEstimated": "Precio Total Estimado:",
+    "disclose": "Los precios en nuestro sistema son orientativos. Nuestros precios pueden variar dependiendo de los detalles del pedido.",
+    "reserve": "Reservar"
+  },
+  "Summary": {
+    "title": "Revise su Reserva",
+    "desc": "Finalice su reserva",
+    "bookingSummary": "Resumen de la Reserva",
+    "serviceType": "Tipo de Servicio:",
+    "guest": "Nombre del Huésped:",
+    "phone": "Teléfono:",
+    "date": "Fecha:",
+    "route": "Ruta:",
+    "pickUpAddress": "Dirección de Recogida:",
+    "dropOffAddress": "Dirección de Destino:",
+    "passengers": "Pasajeros:",
+    "pax": "{count} Pasajeros",
+    "bag": "Equipaje:",
+    "total": "Importe Total",
+    "terms": "Ver Términos y Condiciones"
+  },
+  "Shared": {
+    "continue": "Continuar",
+    "back": "Atrás",
+    "submit": "Enviar",
+    "confirm": "Confirmar",
+    "cancel": "Cancelar"
+  }
+}

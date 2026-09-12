@@ -1,0 +1,23 @@
+{
+  "title": "Kontaktieren Sie uns",
+  "description": "Haben Sie Fragen zu Ihrem Transfer oder benötigen Sie ein individuelles Angebot? Unser Team steht Ihnen 24/7 zur Verfügung.",
+  "infoTitle": "Kontaktinformationen",
+  "infoDesc": "Wir sind telefonisch, per E-Mail und WhatsApp erreichbar, um sicherzustellen, dass Ihre Reise in Istanbul reibungslos und komfortabel verläuft.",
+  "phone": "Telefon & WhatsApp",
+  "email": "E-Mail-Adresse",
+  "address": "Standort",
+  "maps": "In Google Maps öffnen ↗",
+  "form": {
+    "name": "Vollständiger Name",
+    "namePlaceholder": "Max Mustermann",
+    "email": "E-Mail-Adresse",
+    "emailPlaceholder": "max@beispiel.de",
+    "subject": "Betreff",
+    "subjectPlaceholder": "Transferanfrage / Individuelle Tour",
+    "message": "Nachricht",
+    "messagePlaceholder": "Wie können wir Ihnen helfen?",
+    "submit": "Nachricht senden"
+  },
+  "successMessage": "Nachricht erfolgreich gesendet! Wir werden uns in Kürze bei Ihnen melden.",
+  "errorMessage": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut."
+}

@@ -1,0 +1,57 @@
+{
+  "title": "Erstklassige Dienstleistungen",
+  "desc": "Erleben Sie Premium-Chauffeurdienste, die auf Komfort, Sicherheit und Effizienz ausgelegt sind.",
+  "items": {
+    "airportTransfers": {
+      "title": "Flughafentransfers",
+      "desc": "Kommen Sie entspannt an oder reisen Sie bequem ab mit unserem Flughafentransferservice, verfügbar am Flughafen Istanbul (IST) und Sabiha Gökçen (SAW). Sparen Sie sich den Stress öffentlicher Verkehrsmittel und unzuverlässiger Taxis — Ihr Chauffeur holt Sie pünktlich ab und bringt Sie direkt an Ihr Ziel. Wir verfolgen Ihren Flug in Echtzeit und passen uns an Verspätungen an, damit Sie sich keine Sorgen machen müssen. Unsere erfahrenen, ortskundigen Fahrer kümmern sich um Ihr Gepäck und sorgen für eine ruhige, entspannte Fahrt. Wählen Sie zwischen Luxuslimousinen oder geräumigen Vans für Familien und Gruppen. Transparente Preise, keine versteckten Gebühren und eine mühelose Online-Buchung machen jede Reise von Anfang bis Ende nahtlos."
+    },
+    "hourlyHire": {
+      "title": "Stundenweise Chauffeur-Miete",
+      "desc": "Genießen Sie absolute Flexibilität mit unserem stundenweisen Chauffeurservice, ideal für Fahrten mit mehreren Zwischenstopps innerhalb der Stadt. Bestimmen Sie Ihre eigene Reiseroute und bewegen Sie sich in Ihrem eigenen Tempo, während Ihr professioneller Chauffeur auf Abruf bereitsteht. Verzichten Sie auf Taxis, Parkplatzsuche und öffentliche Verkehrsmittel und reisen Sie komfortabel in einem Premiumfahrzeug. Lassen Sie sich bei jedem Halt direkt vor der Tür absetzen und sparen Sie Zeit und Mühe. Lassen Sie Ihre persönlichen Gegenstände sicher im Auto, während Sie unterwegs sind. Unsere transparente Stundenpreisgestaltung umfasst Strecke, Steuern und Mautgebühren — ohne versteckte Kosten. Ideal für Geschäftstreffen, Veranstaltungen, Sightseeing oder Freizeit."
+    },
+    "medicalTourism": {
+      "title": "Medizintourismus",
+      "desc": "Über unseren vertrauenswürdigen Partner Can Duman Medical Tourism erleichtern wir Ihnen den Zugang zu einer Vielzahl hochwertiger medizinischer und Wellness-Dienstleistungen. Von ästhetischer Chirurgie und Zahnpflege über Haartransplantationen bis hin zu fortschrittlichen Eingriffen werden alle Behandlungen mit erfahrenen medizinischen Einrichtungen koordiniert. Unsere Rolle besteht darin, eine reibungslose, gut organisierte Erfahrung zu gewährleisten, indem wir Patienten mit zuverlässigen Gesundheitsdienstleistern verbinden und dabei Komfort, Transparenz und professionelle Koordination während der gesamten Reise in den Vordergrund stellen."
+    },
+    "cityTour": {
+      "title": "Stadtrundfahrt",
+      "desc": "Entdecken Sie Istanbul komfortabel mit einem privaten Fahrer und einem flexiblen, auf Sie zugeschnittenen Reiseplan. Besuchen Sie ikonische Sehenswürdigkeiten und versteckte Juwelen in Ihrem eigenen Tempo, ohne sich über Verkehr, Parkplätze oder öffentliche Verkehrsmittel Gedanken machen zu müssen. Genießen Sie den Tür-zu-Tür-Service in einem Premium-Fahrzeug, während Ihr Chauffeur den ganzen Tag für Sie bereitsteht. Unsere Stadtrundfahrten sind ideal für Sightseeing, Shopping oder kulturelle Erlebnisse und bieten eine entspannte und personalisierte Möglichkeit, die Stadt zu entdecken. Konzentrieren Sie sich auf die Reise und den Moment — wir kümmern uns um die Fahrt."
+    }
+  },
+  "FAQS": {
+    "title": "Häufig gestellte Fragen",
+    "items": {
+      "q1": "Bieten Sie ein Meet & Greet am Flughafen an?",
+      "a1": "Ja, unsere Chauffeure warten am Ankunftsterminal am Flughafen Istanbul (IST) oder Sabiha Gökçen (SAW) mit einem personalisierten Namensschild auf Sie.",
+      "q2": "Ist eine Flugverfolgung inbegriffen?",
+      "a2": "Absolut. Wir passen Ihre Abholzeit automatisch an, sodass Ihr Fahrer immer da ist, wenn Sie landen.",
+      "q3": "Führen Sie Transfers von beiden Flughäfen (IST und Sabiha Gökçen) durch?",
+      "a3": "Ja, wir bieten rund um die Uhr Premium-Transfers sowohl vom Flughafen Istanbul (IST) als auch vom Flughafen Sabiha Gökçen (SAW) zu jedem Hotel, jeder Residenz oder jedem Ort im Stadtzentrum und der Umgebung an.",
+      "q4": "Berechnen Sie pro Person oder pro Fahrzeug?",
+      "a4": "Wir berechnen einen Festpreis pro Fahrzeug, nicht pro Person. Ob Sie alleine oder mit einer Gruppe reisen, Sie zahlen einen Pauschalpreis — keine versteckten Kosten.",
+      "q5": "Holen Sie uns zu jeder Tageszeit ab?",
+      "a5": "Ja, unser Betrieb läuft 24/7, 365 Tage im Jahr. Egal, ob Sie spät nachts ankommen oder früh morgens abreisen, unser professionelles Team steht Ihnen zu jeder Stunde zur Verfügung.",
+      "q6": "Wie weit im Voraus sollten Transferfahrzeuge reserviert werden?",
+      "a6": "Wir empfehlen, mindestens 48 Stunden im Voraus zu buchen, um die Verfügbarkeit zu garantieren. Wir tun jedoch unser Bestes, um Last-Minute-Anfragen nach Möglichkeit zu erfüllen.",
+      "q7": "Kann ich mehrere Stopps einlegen und die Route ändern?",
+      "a7": "Ja. Bei unserer stundenweisen Miete steht das Fahrzeug exklusiv Ihnen zur Verfügung. Sie haben die absolute Freiheit, unbegrenzt Zwischenstopps einzulegen, Ihre Route zu ändern oder aufeinanderfolgende Meetings quer durch Istanbul zu besuchen.",
+      "q8": "Wartet der Fahrer auf mich, während ich in einem Meeting bin, einkaufe oder die Stadt erkunde?",
+      "a8": "Absolut. Ihr privater Chauffeur bleibt an einem günstigen Ort in der Nähe in Bereitschaft, während Sie einkaufen, essen oder an Meetings teilnehmen, und stellt sicher, dass Sie sofort abgeholt werden, wenn Sie bereit sind.",
+      "q9": "Kann ich zusätzliche Services wie einen Reiseleiter oder spezielle Annehmlichkeiten im Fahrzeug anfordern?",
+      "a9": "Selbstverständlich. Wir können lizenzierte Reiseleiter, Kindersitze und spezifische Fahrzeugausstattungen wie Erfrischungen oder Wi-Fi organisieren. Bitte geben Sie Ihre Bedürfnisse bei der Buchung an, damit wir alles für Sie vorbereiten können.",
+      "q10": "Welche Arten von Behandlungen organisieren Sie?",
+      "a10": "Wir sind auf die Koordination von Haartransplantationen, Zahnästhetik und plastischer Chirurgie spezialisiert. Über unseren Partner Can Duman Medical Tourism bringen wir Sie mit spezifischen Experten für jeden Eingriff zusammen.",
+      "q11": "Werden die Fahrzeuge desinfiziert und sind sie hygienisch?",
+      "a11": "Ja, unsere Fahrzeuge werden vor jeder Fahrt gründlich gereinigt und desinfiziert, um eine sichere und makellose Umgebung zu gewährleisten.",
+      "q12": "Kümmern Sie sich um den gesamten Reiseablauf?",
+      "a12": "Ja. Wir verwalten Ihre gesamte medizinische Reise. Von VIP-Flughafentransfers und der Hotelkoordination bis hin zu Klinikterminen sorgen wir für ein nahtloses, stressfreies Erlebnis, damit Sie sich ganz auf Ihre Behandlung konzentrieren können.",
+      "q13": "Kann ich meine eigene Reiseroute anpassen?",
+      "a13": "Absolut. Die Tour ist 100% flexibel. Sie können Ihre eigene Route erstellen, genau wählen, welche Wahrzeichen Sie besuchen möchten, und entscheiden, wie lange Sie an jedem Halt bleiben. Unser Fahrer richtet sich nach Ihnen.",
+      "q14": "Können wir einen professionellen Reiseleiter anfragen?",
+      "a14": "Ja. Während sich unsere Chauffeure auf den sicheren Transport konzentrieren, können wir auf Anfrage (je nach Verfügbarkeit und gegen Aufpreis) einen lizenzierten, professionellen Reiseleiter organisieren, der Sie für ein detailliertes historisches Erlebnis begleitet.",
+      "q15": "Muss ich mir Sorgen um Park- oder Wartegebühren machen?",
+      "a15": "Überhaupt nicht. Wir kümmern uns um die gesamte Logistik. Ihr Chauffeur setzt Sie direkt am Eingang ab und wartet in der Nähe. Sie können sich ganz auf die Besichtigung konzentrieren, ohne den Stress der Parkplatzsuche oder das Herbeirufen eines Taxis."
+    }
+  }
+}

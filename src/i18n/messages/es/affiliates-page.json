@@ -1,0 +1,30 @@
+{
+  "title": "Nuestros Afiliados",
+  "desc": "Explore nuestros socios afiliados para acceder a servicios premium y experiencia experta.",
+  "items": {
+    "medical": {
+      "title": "Can Duman Medical Tourism",
+      "desc": "Can Duman Medical Tourism facilita el acceso a una amplia gama de servicios médicos y de bienestar de alta calidad, desde cirugía estética y cuidado dental hasta trasplantes capilares y procedimientos avanzados. Todos los servicios se coordinan con instituciones médicas experimentadas. Nuestra función es garantizar una experiencia fluida y bien organizada, conectando a los pacientes con proveedores de atención médica confiables, priorizando la comodidad, la transparencia y la coordinación profesional a lo largo del viaje."
+    },
+    "travelAgency": {
+      "title": "Can Duman Travel Agency",
+      "desc": "Can Duman Travel Agency ofrece soluciones de viaje a medida para necesidades individuales y corporativas. Con un enfoque en un servicio organizado, confiable y orientado al cliente, apoyan la planificación de viajes, el transporte y los arreglos relacionados con el destino. Sus servicios están diseñados para simplificar la logística del viaje mientras aseguran una experiencia fluida y cómoda. A través de nuestra colaboración, buscamos ofrecer una coordinación perfecta y un soporte de viaje de confianza para nuestros clientes."
+    },
+    "visitoria": {
+      "title": "Visitoria Grup Sigorta",
+      "desc": "Visitoria Grup Sigorta aporta más de 25 años de experiencia en servicios financieros y de seguros. Ofrecen una amplia gama de soluciones en las ramas de seguros de automóviles, salud, viajes, propiedad, comercial y financiero. Trabajando con compañías de seguros líderes en Turquía y socios internacionales, ofrecen opciones de precios y pagos flexibles adaptadas a las necesidades individuales y corporativas. Con un fuerte enfoque en la satisfacción del cliente, la confiabilidad y la experiencia profesional, Visitoria Group Insurance actúa como un socio de soluciones de confianza para necesidades integrales de seguros."
+    },
+    "danismanlik": {
+      "title": "Can Duman Danışmanlık",
+      "desc": "Can Duman Consultancy brinda orientación profesional y apoyo en diversas áreas de servicio. Con un enfoque estructurado y orientado a la solución, ayudan a personas y organizaciones en la planificación, coordinación y gestión de procesos. Sus servicios están diseñados para simplificar procedimientos complejos y asegurar resultados eficientes. Al centrarse en la confiabilidad, la claridad y las necesidades del cliente, apuntan a ofrecer soluciones de consultoría prácticas y efectivas. A través de nuestra colaboración, ayudamos a los clientes a acceder a experiencia de confianza y soporte bien organizado."
+    },
+    "agon": {
+      "title": "Agon",
+      "desc": "Agon Group Company es una marca multidimensional que opera en textiles, eventos a medida, productos orgánicos, comercio electrónico y conceptos exclusivos de clubes de fans. Con un fuerte enfoque en la estética, la calidad y la sostenibilidad, Agon Group crea experiencias refinadas en cada campo que toca. Su fortaleza radica en su visión; su distinción se define por su atención al detalle."
+    },
+    "akademi": {
+      "title": "Can Duman Akademi",
+      "desc": "Can Duman Akademi es nuestro socio de programa de academia afiliado, que proporciona contenido educativo rico y de alta calidad con una fuerte creencia en el aprendizaje continuo y el desarrollo personal. Guiados por el lema 'Educación para Todos, Creciendo Juntos', da prioridad a la educación a lo largo de toda la vida y al desarrollo profesional. Con diversos campos de capacitación y altos estándares de servicio, la academia contribuye a desarrollar capital humano calificado alineado con las necesidades del mercado. Aspira a convertirse en un centro líder de aprendizaje continuo que apoye el crecimiento individual, regional y nacional a través de la educación."
+    }
+  }
+}

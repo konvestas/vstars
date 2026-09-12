@@ -1,0 +1,63 @@
+{
+  "title": "GİZLİLİK VE VERİ GÜVENLİĞİ POLİTİKASI",
+
+  "desc1": "Can Duman Travel Agency https://www.vstarstransfer.com web sitesini ziyaret eden kullanıcıların (\"Ziyaretçi\") kişisel verilerinin gizliliğini ve güvenliğini sağlamayı en önemli önceliklerinden biri olarak kabul etmektedir.",
+  "desc2": "İşbu Gizlilik Politikası; kişisel verilerinizin hangi amaçlarla toplandığını, nasıl işlendiğini, kimlerle paylaşıldığını ve haklarınızı şeffaf bir şekilde açıklamak amacıyla, 6698 sayılı Kişisel Verilerin Korunması Kanunu (\"KVKK\"), Avrupa Genel Veri Koruma Tüzüğü (\"GDPR\") ve ilgili yasal mevzuata uyum gözetilerek hazırlanmıştır.",
+
+  "1": "1. TOPLANAN KİŞİSEL VERİLERİNİZ",
+  "1Desc": "Şirketimiz, web sitemizi kullanımınız sırasında aşağıdaki veri kategorilerini toplayabilir:",
+  "1sub1": "Kimlik Bilgileri: Ad, soyad, T.C. Kimlik Numarası (Yasal zorunluluk halinde).",
+  "1sub2": "İletişim Bilgileri: E-posta adresi, telefon numarası.",
+  "1sub3": "İşlem Güvenliği Bilgileri: IP adresi, port bilgileri, web sitesi giriş-çıkış bilgileri, parola ve şifre bilgileri.\n",
+  "1sub4": "Talep/Şikayet Yönetimi Bilgileri: Web sitemiz üzerinden ilettiğiniz mesajlar ve talepler.",
+
+  "2": "2. KİŞİSEL VERİLERİN TOPLANMA YÖNTEMLERİ",
+  "2Desc": "Kişisel verileriniz; web sitemizi ziyaretiniz sırasında çerezler ve sunucu kayıtları aracılığıyla otomatik yollarla ve iletişim formları aracılığıyla tarafınızca iletilmek suretiyle toplanmaktadır.",
+
+  "3": "3. KİŞİSEL VERİLERİN İŞLENME AMAÇLARI",
+  "3Desc": "Toplanan kişisel verileriniz, aşağıdaki amaçlarla işlenmektedir:",
+  "3sub1": "Mevzuattan kaynaklanan yükümlülüklerin yerine getirilmesi (Örn: 5651 sayılı Kanun gereği log kayıtlarının tutulması).",
+  "3sub2": "Müşteri memnuniyetine yönelik aktivitelerin yürütülmesi.",
+  "3sub3": "Talep ve şikayetlerin takibi ve sonuçlandırılması.",
+  "3sub4": "Yetkili kişi, kurum ve kuruluşlara bilgi verilmesi.",
+  "3sub5": "Bilgi güvenliği süreçlerinin yürütülmesi.",
+
+  "4": "4. KİŞİSEL VERİLERİN AKTARILMASI",
+  "4Desc": "Kişisel verileriniz; yasal yükümlülüklerin yerine getirilmesi amacıyla yetkili kamu kurum ve kuruluşlarına (Örn: Mahkemeler, BTK) ve ticari faaliyetlerimizin yürütülmesi amacıyla iş ortaklarımıza (Örn: Barındırma ve yazılım hizmeti sağlayıcıları) KVKK'nın 8. ve 9. maddelerinde belirtilen şartlar çerçevesinde aktarılabilir.",
+
+  "5": "ÇEREZ (COOKIE) KULLANIMI VE ÜÇÜNCÜ TARAF HİZMETLER",
+  "5Desc": "Web sitemizde, kullanıcı deneyimini iyileştirmek ve site trafiğini analiz etmek amacıyla çerezler kullanılmaktadır. Tarayıcı ayarlarınızdan çerezleri dilediğiniz zaman engelleyebilirsiniz.\nSitemizde kullanılan üçüncü taraf hizmetler şunlardır:",
+  "5sub1": "Google Analytics: Web sitemizin kullanımını analiz etmek amacıyla çerezler aracılığıyla anonimleştirilmiş istatistik verisi toplar.",
+  "5sub2": "Google Haritalar (gömülü harita): Sayfaya gömülü haritadır; şirketin konum gösterimi için Google sunucularından yüklenir ve tercih çerezleri bırakabilir.",
+  "5sub3": "Google reCAPTCHA: Formları otomatik gönderimlerden (bot) koruyan güvenlik hizmetidir.",
+
+  "6": "6. VERİ SAHİBİNİN HAKLARI (KVKK MADDE 11)",
+  "6Desc": "KVKK kapsamında, ilgili kişi olarak aşağıdaki haklara sahipsiniz:",
+  "6sub1": "Kişisel verilerinizin işlenip işlenmediğini öğrenme,",
+  "6sub2": "Kişisel verileriniz işlenmişse buna ilişkin bilgi talep etme,",
+  "6sub3": "Kişisel verilerin işlenme amacını ve bunların amacına uygun kullanılıp kullanılmadığını öğrenme,",
+  "6sub4": "Yurt içinde veya yurt dışında kişisel verilerin aktarıldığı üçüncü kişileri bilme,",
+  "6sub5": "Kişisel verilerin eksik veya yanlış işlenmiş olması hâlinde bunların düzeltilmesini isteme,",
+  "6sub6": "KVKK'nın 7. maddesinde öngörülen şartlar çerçevesinde kişisel verilerin silinmesini veya yok edilmesini isteme,",
+  "6sub7": "İşlenen verilerin münhasıran otomatik sistemler vasıtasıyla analiz edilmesi suretiyle aleyhinize bir sonucun ortaya çıkmasına itiraz etme,",
+  "6sub8": "Kişisel verilerin kanuna aykırı olarak işlenmesi sebebiyle zarara uğramanız hâlinde zararın giderilmesini talep etme.",
+
+  "7": "7. VERİ GÜVENLİĞİ TEDBİRLERİ",
+  "7Desc": "Şirketimiz, kişisel verilerinizin güvenliğini sağlamak amacıyla gerekli tüm teknik ve idari tedbirleri almaktadır. Sitemiz SSL (Secure Socket Layer) sertifikası ile korunmakta olup, verileriniz yetkisiz erişimlere karşı şifrelenerek saklanmaktadır.",
+
+  "8": "8. KİŞİSEL VERİLERİN SAKLANMA SÜRESİ",
+  "8Desc": "Kişisel verileriniz, işlenme amaçlarının gerektirdiği süre boyunca ve ilgili mevzuatta öngörülen saklama/zamanaşımı süreleri dikkate alınarak saklanır; bu sürelerin sonunda silinir, yok edilir veya anonim hâle getirilir.",
+
+  "9": "9. İLETİŞİM VE BAŞVURU",
+  "9Desc": "Yukarıda belirtilen haklarınızı kullanmak veya gizlilik politikamızla ilgili sorularınız için aşağıdaki iletişim kanallarından bize ulaşabilirsiniz.",
+  "9sub1": "Şirket Ünvanı: Can Duman Travel Agency",
+  "9sub2": "Adres: Cevizli Mah,Zuhal Cad.Ritim İstanbul A5 Blok No:46E Istanbul, Türkiye",
+  "9sub3": "Telefon: 0535 847 01 76",
+  "9sub4": "vstarstransfer34@gmail.com",
+
+  "10": "10 AYDINLATMA METNİ HAKKİNDA",
+  "10Desc": "Şirket işbu Kişisel Verilerin Korunmasına İlişkin Aydınlatma Metni’ni yürürlükteki mevzuatta yapılabilecek değişiklikler çerçevesinde her zaman güncelleme hakkını saklı tutar.",
+
+  "lastUpdate": "Son Güncelleme: 9.09.2026"
+
+}

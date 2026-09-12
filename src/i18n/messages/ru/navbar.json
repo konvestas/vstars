@@ -1,0 +1,17 @@
+{
+  "menu": "Меню",
+  "signIn": "Войти",
+  "ourServices": "Наши услуги",
+  "contact": "Контакты",
+  "ourAffiliates": "Партнеры",
+  "fleet": "Автопарк",
+  "faq": "Частые вопросы",
+  "languages": "Языки",
+  "languagesOption": {
+    "en": "English",
+    "de": "Deutsch",
+    "es": "Español",
+    "ru": "Русский",
+    "tr": "Türkçe"
+  }
+}

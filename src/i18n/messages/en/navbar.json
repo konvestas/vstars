@@ -1,0 +1,17 @@
+{
+  "menu": "Menu",
+  "signIn": "Sign in",
+  "ourServices": "Our Services",
+  "contact": "Contact Us",
+  "ourAffiliates": "Affiliates",
+  "fleet": "Fleet",
+  "faq": "FAQ",
+  "languages": "Languages",
+  "languagesOption": {
+    "en": "English",
+    "de": "Deutsch",
+    "es": "Español",
+    "ru": "Русский",
+    "tr": "Türkçe"
+  }
+}

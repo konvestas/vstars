@@ -1,0 +1,23 @@
+{
+  "section_title": "Unsere Dienstleistungen",
+  "section_desc": "Erleben Sie den höchsten Standard luxuriösen Reisens in Istanbul",
+  "items": {
+    "airportTransfers": {
+      "title": "Flughafentransfers",
+      "desc": "Zuverlässiger VIP-Transfer mit Flugverfolgung, Meet & Greet-Service und professionellen Chauffeuren."
+    },
+    "hourlyHire": {
+      "title": "Stundenweise Chauffeur-Miete",
+      "desc": "Ganz- oder stundenweise Miete. Genießen Sie maßgeschneiderte Luxustransporte ganz nach Ihrem persönlichen Zeitplan."
+    },
+    "medicalTourism": {
+      "title": "Medizintourismus",
+      "desc": "Privater, hygienischer und komfortabler Transport für medizinische Gäste. Direkte Transfers zu Krankenhäusern und Hotels."
+    },
+    "cityTour": {
+      "title": "Stadtrundfahrt",
+      "desc": "Entdecken Sie Istanbul mit einem privaten Fahrer. Besuchen Sie historische Wahrzeichen und Top-Attraktionen in Ihrem eigenen Tempo."
+    }
+  },
+  "see_more": "Mehr ansehen"
+}

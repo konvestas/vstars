@@ -1,0 +1,50 @@
+{
+  "title": "Entdecken Sie unsere Flotte",
+  "description": "",
+  "secondTitle": "Mercedes-Benz Vito Maybach",
+  "secondDescription": "Jedes akribisch gewartete Fahrzeug verwandelt sich in Ihr privates Büro und Ihr bevorzugtes Transportmittel. Bestimmen Sie Ihre eigene Reiseroute und bewegen Sie sich in Ihrem eigenen Tempo, während Ihr professioneller Chauffeur in Bereitschaft bleibt.",
+  "servicesTitle": "Servicestandards",
+  "servicesDesc": "Mehr als nur eine Fahrt. Jede Reise wird so kuratiert, dass sie das ultimative Umfeld für Produktivität und Entspannung bietet.",
+  "items": {
+    "details": {
+      "capacityTitle": "Kapazität",
+      "capacityDesc": "Bis zu 5+2 Fahrgäste",
+      "luggageTitle": "Gepäck",
+      "luggageDesc": "6 Gepäckstücke",
+      "AmbianceTitle": "Ambiente",
+      "AmbianceDesc": "Ambiente-Beleuchtung",
+      "ConnectivityTitle": "Konnektivität",
+      "ConnectivityDesc": "Wi-Fi & Smart TV",
+      "RefreshmentsTitle": "Erfrischungen",
+      "RefreshmentsDesc": "Minibar",
+      "PowerTitle": "Stromversorgung",
+      "PowerDesc": "USB-C & kabelloses Laden"
+    },
+    "services": {
+      "professionalChauffeurs": {
+        "title": "Professionelle Chauffeure",
+        "description": "Gefahren von geschulten Chauffeuren, die jederzeit Diskretion und Professionalität gewährleisten."
+      },
+      "privateConfidential": {
+        "title": "Privat & Diskret",
+        "description": "Ihr Fahrzeug verwandelt sich in ein privates Büro, was vertrauliche Anrufe und ungestörtes Arbeiten ermöglicht."
+      },
+      "stayConnected": {
+        "title": "Bleiben Sie verbunden",
+        "description": "Ausgestattet mit Lightning- und USB-C-Ladegeräten, um Ihre Geräte während der gesamten Reise mit Strom zu versorgen."
+      },
+      "onboardWifi": {
+        "title": "Bord-Wi-Fi",
+        "description": "Hochgeschwindigkeitsverbindungen sorgen dafür, dass Sie keinen Moment verpassen, egal ob Sie arbeiten oder Unterhaltung streamen."
+      },
+      "climateMedia": {
+        "title": "Klima & Medien",
+        "description": "Volle Kontrolle über das Kabinenklima. Ihr Chauffeur passt Temperatur und Musik ganz nach Ihren Wünschen an."
+      },
+      "thoughtfulAmenities": {
+        "title": "Durchdachte Annehmlichkeiten",
+        "description": "Kostenloses Wasser, Taschentücher und Erfrischungstücher, damit Sie sich stets erfrischt fühlen."
+      }
+    }
+  }
+}

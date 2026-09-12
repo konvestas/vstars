@@ -1,0 +1,50 @@
+{
+  "title": "Explore Our Fleet",
+  "description": "",
+  "secondTitle": "Mercedes-Benz Vito Maybach",
+  "secondDescription": "Each meticulously maintained vehicle transforms into your private office and vehicle of choice. Set your own itinerary and move at your pace while your professional chauffeur remains on standby.",
+  "servicesTitle": "Service Standards",
+  "servicesDesc": "More than just a ride. Every journey is curated to provide the ultimate environment for productivity and relaxation.",
+  "items": {
+    "details": {
+      "capacityTitle": "Capacity",
+      "capacityDesc": "Up to 5+2 passengers",
+      "luggageTitle": "Luggage",
+      "luggageDesc": "6 pieces of luggage",
+      "AmbianceTitle": "Ambiance",
+      "AmbianceDesc": "Ambient lighting",
+      "ConnectivityTitle": "Connectivity",
+      "ConnectivityDesc": "Wi-Fi & Smart TV",
+      "RefreshmentsTitle": "Refreshments",
+      "RefreshmentsDesc": "Mini-bar",
+      "PowerTitle": "Power",
+      "PowerDesc": "USB-C & wireless charging"
+    },
+    "services": {
+      "professionalChauffeurs": {
+        "title": "Professional Chauffeurs",
+        "description": "Driven by trained chauffeurs, ensuring discretion and professionalism at all times."
+      },
+      "privateConfidential": {
+        "title": "Private & Confidential",
+        "description": "Your vehicle transforms into a private office, allowing for confidential calls and uninterrupted work."
+      },
+      "stayConnected": {
+        "title": "Stay Connected",
+        "description": "Equipped with Lightning and USB-C chargers to keep your devices powered throughout your journey."
+      },
+      "onboardWifi": {
+        "title": "Onboard Wi-Fi",
+        "description": "High-speed connection ensures you never miss a beat, whether working or streaming entertainment."
+      },
+      "climateMedia": {
+        "title": "Climate & Media",
+        "description": "Full control over the cabin environment. Your chauffeur will adjust climate and music to your preference."
+      },
+      "thoughtfulAmenities": {
+        "title": "Thoughtful Amenities",
+        "description": "Complimentary water, tissues, and sanitizing towelettes to ensure you remain refreshed."
+      }
+    }
+  }
+}

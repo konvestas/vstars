@@ -1,0 +1,9 @@
+{
+  "disclosurePrefix": "I have read the",
+  "disclosureLinkText": "Disclosure Notice",
+  "disclosureSuffix": " and consent to my personal data being processed as described.",
+  "disclosureRequiredError": "You must acknowledge the Disclosure Notice to continue.",
+  "marketingPrefix": "I'd like to receive offers and updates, per the",
+  "marketingLinkText": "Consent Text",
+  "marketingSuffix": ". (Optional)"
+}

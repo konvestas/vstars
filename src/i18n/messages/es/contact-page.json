@@ -1,0 +1,23 @@
+{
+  "title": "Contáctenos",
+  "description": "¿Tiene preguntas sobre su traslado o necesita un presupuesto personalizado? Nuestro equipo está listo para ayudarle 24/7.",
+  "infoTitle": "Información de Contacto",
+  "infoDesc": "Estamos disponibles por teléfono, correo electrónico y WhatsApp para asegurar que su viaje en Estambul sea fluido y cómodo.",
+  "phone": "Teléfono y WhatsApp",
+  "email": "Dirección de Correo Electrónico",
+  "address": "Ubicación",
+  "maps": "Abrir en Google Maps ↗",
+  "form": {
+    "name": "Nombre Completo",
+    "namePlaceholder": "Juan Pérez",
+    "email": "Dirección de Correo Electrónico",
+    "emailPlaceholder": "juan@ejemplo.com",
+    "subject": "Asunto",
+    "subjectPlaceholder": "Consulta de Traslado / Tour Personalizado",
+    "message": "Mensaje",
+    "messagePlaceholder": "¿En qué podemos ayudarle?",
+    "submit": "Enviar Mensaje"
+  },
+  "successMessage": "¡Mensaje enviado con éxito! Nos pondremos en contacto con usted pronto.",
+  "errorMessage": "Algo salió mal. Por favor, inténtelo de nuevo."
+}

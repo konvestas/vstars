@@ -1,0 +1,23 @@
+{
+  "section_title": "Our Services",
+  "section_desc": "Experience the highest standard of luxury travel in Istanbul",
+  "items": {
+    "airportTransfers": {
+      "title": "Airport Transfers",
+      "desc": "Reliable VIP transfer service with flight tracking, meet & greet, and professional chauffeurs."
+    },
+    "hourlyHire": {
+      "title": "Hourly Chauffeur Hire",
+      "desc": "Full-day or hourly rental. Enjoy on-demand luxury transportation tailored to your personal schedule."
+    },
+    "medicalTourism": {
+      "title": "Medical Tourism",
+      "desc": "Private, hygienic, and comfortable transport for medical guests. Direct transfers to hospitals and hotels."
+    },
+    "cityTour": {
+      "title": "City Tour",
+      "desc": "Explore Istanbul with a private driver. Visit historical landmarks and top attractions at your own pace."
+    }
+  },
+  "see_more": "See More"
+}

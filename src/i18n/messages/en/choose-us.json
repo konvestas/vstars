@@ -1,0 +1,22 @@
+{
+  "section_title": "Why Us?",
+  "section_desc": "Reliable, refined, and ready whenever you are.",
+  "highlights": [
+    {
+      "title": "Safety First",
+      "desc": "Licensed drivers, insured vehicles, and strict hygiene standards for your peace of mind."
+    },
+    {
+      "title": "Always On Time",
+      "desc": "Flight tracking and smart routing ensure you never miss a pickup or drop-off."
+    },
+    {
+      "title": "Premium Comfort",
+      "desc": "Executive vehicles with spacious seating, climate control, and a smooth ride."
+    },
+    {
+      "title": "24/7 Support",
+      "desc": "Dedicated agents available anytime to assist with changes or special requests."
+    }
+  ]
+}

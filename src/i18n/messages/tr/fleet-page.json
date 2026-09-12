@@ -1,0 +1,50 @@
+{
+  "title": "Filomuzu Keşfedin",
+  "description": "",
+  "secondTitle": "Mercedes-Benz Vito Maybach",
+  "secondDescription": "Titizlikle bakımı yapılan her araç, özel ofisinize ve tercih ettiğiniz araca dönüşür. Kendi rotanızı belirleyin ve profesyonel şoförünüz beklemedeyken kendi hızınızda hareket edin.",
+  "servicesTitle": "Hizmet Standartları",
+  "servicesDesc": "Sadece bir yolculuktan daha fazlası. Her seyahat, üretkenlik ve rahatlama için en üst düzey ortamı sağlamak üzere özenle tasarlanmıştır.",
+  "items": {
+    "details": {
+      "capacityTitle": "Kapasite",
+      "capacityDesc": "5+2 yolcuya kadar",
+      "luggageTitle": "Bagaj",
+      "luggageDesc": "6 adet bagaj",
+      "AmbianceTitle": "Ambiyans",
+      "AmbianceDesc": "Ambiyans aydınlatması",
+      "ConnectivityTitle": "Bağlantı",
+      "ConnectivityDesc": "Wi-Fi & Akıllı TV",
+      "RefreshmentsTitle": "İkramlar",
+      "RefreshmentsDesc": "Minibar",
+      "PowerTitle": "Güç",
+      "PowerDesc": "USB-C & kablosuz şarj"
+    },
+    "services": {
+      "professionalChauffeurs": {
+        "title": "Profesyonel Şoförler",
+        "description": "Her zaman takdir yetkisi ve profesyonelliği garanti eden eğitimli şoförler tarafından sürülür."
+      },
+      "privateConfidential": {
+        "title": "Özel ve Gizli",
+        "description": "Aracınız özel bir ofise dönüşerek gizli görüşmelere ve kesintisiz çalışmaya olanak tanır."
+      },
+      "stayConnected": {
+        "title": "Bağlantıda Kalın",
+        "description": "Yolculuğunuz boyunca cihazlarınızı şarjlı tutmak için Lightning ve USB-C şarj cihazlarıyla donatılmıştır."
+      },
+      "onboardWifi": {
+        "title": "Araç İçi Wi-Fi",
+        "description": "Yüksek hızlı bağlantı, ister çalışırken ister eğlence yayınlarını izlerken hiçbir ritmi kaçırmamanızı sağlar."
+      },
+      "climateMedia": {
+        "title": "Klima ve Medya",
+        "description": "Kabin ortamı üzerinde tam kontrol. Şoförünüz klimayı ve müziği tercihinize göre ayarlayacaktır."
+      },
+      "thoughtfulAmenities": {
+        "title": "Düşünceli Olanaklar",
+        "description": "Her zaman tazelenmiş kalmanızı sağlamak için ücretsiz su, mendil ve sterilize edici ıslak mendiller."
+      }
+    }
+  }
+}

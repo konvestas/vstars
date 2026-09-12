@@ -1,0 +1,23 @@
+{
+  "section_title": "Hizmetlerimiz",
+  "section_desc": "İstanbul'da lüks seyahatin en yüksek standardını deneyimleyin",
+  "items": {
+    "airportTransfers": {
+      "title": "Havalimanı Transferleri",
+      "desc": "Uçuş takibi, karşılama hizmeti ve profesyonel şoförler ile güvenilir VIP transfer hizmeti."
+    },
+    "hourlyHire": {
+      "title": "Saatlik Şoför Kiralama",
+      "desc": "Tam günlük veya saatlik kiralama. Kişisel programınıza göre uyarlanmış, isteğe bağlı lüks ulaşımın keyfini çıkarın."
+    },
+    "medicalTourism": {
+      "title": "Sağlık Turizmi",
+      "desc": "Sağlık misafirleri için özel, hijyenik ve konforlu ulaşım. Hastanelere ve otellere doğrudan transferler."
+    },
+    "cityTour": {
+      "title": "Şehir Turu",
+      "desc": "İstanbul'u özel bir şoförle keşfedin. Tarihi simge yapıları ve en iyi turistik yerleri kendi hızınızda gezin."
+    }
+  },
+  "see_more": "Daha Fazla Gör"
+}

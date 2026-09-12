@@ -1,0 +1,62 @@
+{
+  "title": "POLÍTICA DE PRIVACIDAD Y SEGURIDAD DE DATOS",
+
+  "desc1": "Can Duman Travel Agency considera que garantizar la privacidad y la seguridad de los datos personales de los usuarios (\"Visitantes\") que visitan el sitio web (“www.vstarstransfer.com”) es una de sus principales prioridades.",
+  "desc2": "Esta Política de Privacidad ha sido preparada en cumplimiento de la Ley de Protección de Datos Personales N° 6698 (\"KVKK\"), el Reglamento General de Protección de Datos (\"RGPD\") y la legislación legal pertinente, con el fin de explicar de manera transparente con qué fines se recopilan sus datos personales, cómo se procesan, con quién se comparten y sus derechos.",
+
+  "1": "1. SUS DATOS PERSONALES RECOPILADOS",
+  "1Desc": "Nuestra Empresa puede recopilar las siguientes categorías de datos durante su uso de nuestro sitio web:",
+  "1sub1": "Información de Identidad: Nombre, apellido, Número de Identidad de la República Turca (en caso de obligación legal).",
+  "1sub2": "Información de Contacto: Dirección de correo electrónico, número de teléfono.",
+  "1sub3": "Información de Seguridad de Transacciones: Dirección IP, información de puerto, información de inicio y cierre de sesión en el sitio web, información de contraseña y código de acceso.\n",
+  "1sub4": "Información de Gestión de Solicitudes/Quejas: Mensajes y solicitudes que envía a través de nuestro sitio web.",
+
+  "2": "2. MÉTODOS DE RECOPILACIÓN DE DATOS PERSONALES",
+  "2Desc": "Sus datos personales se recopilan automáticamente a través de cookies y registros del servidor durante su visita a nuestro sitio web, y al ser enviados por usted a través de formularios de contacto.",
+
+  "3": "3. FINES DEL PROCESAMIENTO DE DATOS PERSONALES",
+  "3Desc": "Sus datos personales recopilados se procesan para los siguientes fines:",
+  "3sub1": "Cumplimiento de las obligaciones derivadas de la legislación (por ejemplo, mantener registros según lo exige la Ley N° 5651).",
+  "3sub2": "Realización de actividades dirigidas a la satisfacción del cliente.",
+  "3sub3": "Seguimiento y conclusión de solicitudes y quejas.",
+  "3sub4": "Proporcionar información a personas, instituciones y organizaciones autorizadas.",
+  "3sub5": "Ejecución de procesos de seguridad de la información.",
+
+  "4": "4. TRANSFERENCIA DE DATOS PERSONALES",
+  "4Desc": "Sus datos personales pueden ser transferidos a instituciones y organizaciones públicas autorizadas (por ejemplo, Tribunales, BTK) con el fin de cumplir con obligaciones legales, y a nuestros socios comerciales (por ejemplo, proveedores de servicios de alojamiento y software) para la ejecución de nuestras actividades comerciales, dentro del marco de las condiciones especificadas en los Artículos 8 y 9 de la KVKK.",
+
+  "5": "USO DE COOKIES Y SERVICIOS DE TERCEROS",
+  "5Desc": "Se utilizan cookies en nuestro sitio web para mejorar la experiencia del usuario y analizar el tráfico del sitio. Puede bloquear las cookies en cualquier momento desde la configuración de su navegador.\nLos servicios de terceros utilizados en nuestro sitio son los siguientes:",
+  "5sub1": "Google Analytics: Recopila datos estadísticos anónimos a través de cookies para analizar el uso de nuestro sitio web.",
+  "5sub2": "Google Maps (mapa integrado): Es un mapa integrado en la página; se carga desde los servidores de Google para mostrar la ubicación de la empresa y puede dejar cookies de preferencias.",
+  "5sub3": "Google reCAPTCHA: Es un servicio de seguridad que protege los formularios de envíos automatizados (bots).",
+
+  "6": "6. DERECHOS DEL TITULAR DE LOS DATOS (ARTÍCULO 11 DE LA KVKK)",
+  "6Desc": "En virtud de la KVKK, como titular de los datos, tiene los siguientes derechos:",
+  "6sub1": "Saber si sus datos personales son procesados o no,",
+  "6sub2": "Solicitar información si sus datos personales han sido procesados,",
+  "6sub3": "Conocer el propósito del procesamiento de los datos personales y si se utilizan adecuadamente para su propósito,",
+  "6sub4": "Conocer a los terceros a quienes se transfieren los datos personales a nivel nacional o en el extranjero,",
+  "6sub5": "Solicitar la corrección de los datos personales en caso de procesamiento incompleto o incorrecto,",
+  "6sub6": "Solicitar la eliminación o destrucción de los datos personales dentro del marco de las condiciones estipuladas en el Artículo 7 de la KVKK,",
+  "6sub7": "Oponerse a la aparición de un resultado en su contra mediante el análisis de los datos procesados exclusivamente a través de sistemas automatizados,",
+  "6sub8": "Solicitar compensación por daños en caso de que sufra daños debido al procesamiento ilegal de datos personales.",
+
+  "7": "7. MEDIDAS DE SEGURIDAD DE DATOS",
+  "7Desc": "Nuestra Empresa toma todas las medidas técnicas y administrativas necesarias para garantizar la seguridad de sus datos personales. Nuestro sitio está protegido por un certificado SSL (Capa de Sockets Seguros) y sus datos se almacenan cifrados contra el acceso no autorizado.",
+
+  "8": "8. PERÍODO DE RETENCIÓN DE DATOS PERSONALES",
+  "8Desc": "Sus datos personales se conservan durante el período requerido por los fines del procesamiento y teniendo en cuenta los períodos de retención/prescripción estipulados en la legislación pertinente; al final de estos períodos, se eliminan, destruyen o anonimizan.",
+
+  "9": "9. CONTACTO Y SOLICITUD",
+  "9Desc": "Para ejercer sus derechos mencionados anteriormente o para sus preguntas sobre nuestra política de privacidad, puede contactarnos a través de los canales de comunicación a continuación.",
+  "9sub1": "Título de la Empresa: Agencia de Viajes Can Duman",
+  "9sub2": "Dirección: Cevizli Mah, Zuhal Cad. Ritim Istanbul A5 Blok No:46E Estambul, Turquía",
+  "9sub3": "Teléfono: 0535 847 01 76",
+  "9sub4": "vstarstransfer34@gmail.com",
+
+  "10": "10. ACERCA DEL AVISO DE PRIVACIDAD",
+  "10Desc": "La Empresa se reserva el derecho de actualizar este Aviso de Privacidad sobre la Protección de Datos Personales en cualquier momento dentro del marco de los cambios que puedan realizarse a la legislación vigente.",
+
+  "lastUpdate": "Última Actualización: 09.09.2026"
+}

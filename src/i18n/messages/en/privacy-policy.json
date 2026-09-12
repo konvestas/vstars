@@ -1,0 +1,62 @@
+{
+  "title": "PRIVACY AND DATA SECURITY POLICY",
+
+  "desc1": "Can Duman Travel Agency considers ensuring the privacy and security of the personal data of users (\"Visitors\") visiting the (“www.vstarstransfer.com”) website as one of its top priorities.",
+  "desc2": "This Privacy Policy has been prepared in compliance with the Personal Data Protection Law No. 6698 (\"KVKK\"), the General Data Protection Regulation (\"GDPR\"), and relevant legal legislation, in order to transparently explain for what purposes your personal data is collected, how it is processed, with whom it is shared, and your rights.",
+
+  "1": "1. YOUR COLLECTED PERSONAL DATA",
+  "1Desc": "Our Company may collect the following data categories during your use of our website:",
+  "1sub1": "Identity Information: Name, surname, Turkish Republic Identity Number (in case of legal obligation).",
+  "1sub2": "Contact Information: Email address, phone number.",
+  "1sub3": "Transaction Security Information: IP address, port information, website login-logout information, password and passcode information.\n",
+  "1sub4": "Request/Complaint Management Information: Messages and requests you submit through our website.",
+
+  "2": "2. METHODS OF COLLECTING PERSONAL DATA",
+  "2Desc": "Your personal data is collected automatically through cookies and server logs during your visit to our website, and by being submitted by you through contact forms.",
+
+  "3": "3. PURPOSES OF PROCESSING PERSONAL DATA",
+  "3Desc": "Your collected personal data is processed for the following purposes:",
+  "3sub1": "Fulfilling obligations arising from legislation (e.g., keeping log records as required by Law No. 5651).",
+  "3sub2": "Conducting activities aimed at customer satisfaction.",
+  "3sub3": "Tracking and concluding requests and complaints.",
+  "3sub4": "Providing information to authorized persons, institutions, and organizations.",
+  "3sub5": "Executing information security processes.",
+
+  "4": "4. TRANSFER OF PERSONAL DATA",
+  "4Desc": "Your personal data may be transferred to authorized public institutions and organizations (e.g., Courts, BTK) for the purpose of fulfilling legal obligations, and to our business partners (e.g., Hosting and software service providers) for the execution of our commercial activities, within the framework of the conditions specified in Articles 8 and 9 of the KVKK.",
+
+  "5": "USE OF COOKIES AND THIRD-PARTY SERVICES",
+  "5Desc": "Cookies are used on our website to improve the user experience and analyze site traffic. You can block cookies at any time from your browser settings.\nThe third-party services used on our site are as follows:",
+  "5sub1": "Google Analytics: Collects anonymized statistical data via cookies to analyze the use of our website.",
+  "5sub2": "Google Maps (embedded map): It is an embedded map on the page; it is loaded from Google servers for the company's location display and may leave preference cookies.",
+  "5sub3": "Google reCAPTCHA: It is a security service that protects forms from automated submissions (bots).",
+
+  "6": "6. RIGHTS OF THE DATA SUBJECT (KVKK ARTICLE 11)",
+  "6Desc": "Under the KVKK, as the data subject, you have the following rights:",
+  "6sub1": "To learn whether your personal data is processed or not,",
+  "6sub2": "To request information if your personal data has been processed,",
+  "6sub3": "To learn the purpose of processing personal data and whether they are used appropriately for their purpose,",
+  "6sub4": "To know the third parties to whom personal data is transferred domestically or abroad,",
+  "6sub5": "To request correction of personal data in case of incomplete or incorrect processing,",
+  "6sub6": "To request the deletion or destruction of personal data within the framework of the conditions stipulated in Article 7 of the KVKK,",
+  "6sub7": "To object to the occurrence of a result against you by analyzing the processed data exclusively through automated systems,",
+  "6sub8": "To request compensation for damages in case you suffer damage due to the unlawful processing of personal data.",
+
+  "7": "7. DATA SECURITY MEASURES",
+  "7Desc": "Our Company takes all necessary technical and administrative measures to ensure the security of your personal data. Our site is protected by an SSL (Secure Socket Layer) certificate, and your data is stored encrypted against unauthorized access.",
+
+  "8": "8. RETENTION PERIOD OF PERSONAL DATA",
+  "8Desc": "Your personal data is retained for the period required by the processing purposes and taking into account the retention/statute of limitations periods stipulated in the relevant legislation; at the end of these periods, it is deleted, destroyed, or anonymized.",
+
+  "9": "9. CONTACT AND APPLICATION",
+  "9Desc": "To exercise your rights stated above or for your questions regarding our privacy policy, you can contact us through the communication channels below.",
+  "9sub1": "Company Title: Can Duman Travel Agency",
+  "9sub2": "Address: Cevizli Mah, Zuhal Cad. Ritim Istanbul A5 Blok No:46E Istanbul, Türkiye",
+  "9sub3": "Phone: 0535 847 01 76",
+  "9sub4": "vstarstransfer34@gmail.com",
+
+  "10": "10. ABOUT THE PRIVACY NOTICE",
+  "10Desc": "The Company reserves the right to update this Privacy Notice on the Protection of Personal Data at any time within the framework of changes that may be made to the current legislation.",
+
+  "lastUpdate": "Last Update: 09.09.2026"
+}

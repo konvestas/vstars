@@ -1,0 +1,23 @@
+{
+  "section_title": "Nuestros Servicios",
+  "section_desc": "Experimente el más alto estándar de viajes de lujo en Estambul",
+  "items": {
+    "airportTransfers": {
+      "title": "Traslados al Aeropuerto",
+      "desc": "Servicio de traslado VIP confiable con seguimiento de vuelos, servicio de bienvenida (Meet & Greet) y chóferes profesionales."
+    },
+    "hourlyHire": {
+      "title": "Alquiler de Chófer por Horas",
+      "desc": "Alquiler por horas o día completo. Disfrute de transporte de lujo a su disposición, adaptado a su horario personal."
+    },
+    "medicalTourism": {
+      "title": "Turismo Médico",
+      "desc": "Transporte privado, higiénico y cómodo para huéspedes médicos. Traslados directos a hospitales y hoteles."
+    },
+    "cityTour": {
+      "title": "Tour por la Ciudad",
+      "desc": "Explore Estambul con un conductor privado. Visite monumentos históricos y las principales atracciones a su propio ritmo."
+    }
+  },
+  "see_more": "Ver Más"
+}
