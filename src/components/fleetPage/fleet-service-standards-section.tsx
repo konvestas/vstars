@@ -4,7 +4,7 @@ import {getServiceStandards} from "@/components/fleetPage/data/fleetPage-service
 import {useTranslations} from "next-intl";
 
 export default function FleetServiceStandardsSection() {
-    const t = useTranslations("FleetPage");
+    const t = useTranslations("fleet-page");
     const data = getServiceStandards(t);
     return (
         <section className="w-full py-16 bg-gray-50 border-t font-sans border-gray-100">

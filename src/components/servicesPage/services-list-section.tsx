@@ -4,7 +4,7 @@ import {getServices} from "@/components/servicesPage/data/services-page-data";
 import {useTranslations} from "next-intl";
 
 export default function ServicesListSection() {
-    const t = useTranslations("ServicesPage");
+    const t = useTranslations("services-page");
     const services = getServices(t);
     return (
         <section id="services-list" className="w-full py-16 md:py-24 bg-white  font-sans transition-colors">

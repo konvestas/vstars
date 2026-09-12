@@ -2,10 +2,10 @@
 
 import React from "react";
 import { useTranslations } from "next-intl";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 
 export default function ReadyToBook() {
-    const t = useTranslations("ReadyToBook");
+    const t = useTranslations("ready-to-book");
     return (
         <div id="ready-to-book"  className="max-w-4xl mx-auto mt-15 mb-24 text-center font-sans ">
             <div className="rounded-2xl border border-gray-200  bg-white

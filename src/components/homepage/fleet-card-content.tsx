@@ -5,7 +5,7 @@ import { FleetCard } from "./fleet-card";
 import { getHomeFleetData } from "@/components/homepage/data/home-fleet-data";
 
 export default function FleetSection() {
-    const t = useTranslations("Fleet");
+    const t = useTranslations("fleet");
     const data = getHomeFleetData(t);
 
     return (

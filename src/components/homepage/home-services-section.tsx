@@ -13,7 +13,7 @@ import {
 import { getHomeServicesData } from "@/components/homepage/data/homePage-services-section-data";
 
 export default function HomeServicesSection() {
-    const t = useTranslations("OurServices");
+    const t = useTranslations("our-services");
     const services = getHomeServicesData(t);
 
     // Carousel State (Mobile)

@@ -12,14 +12,14 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     const { locale } = await params;
     return createPageMetadata({
         locale,
-        namespace: "ServicesMetadata",
+        namespace: "services-meta-data",
         path: "services",
         image: "/vstars/vstars-fleet.webp",
     });
 }
 
 export default function ServicesPage() {
-    const t = useTranslations("ServicesPage");
+    const t = useTranslations("services-page");
 
     return (
         <main className="min-h-screen bg-white font-sans transition-colors">

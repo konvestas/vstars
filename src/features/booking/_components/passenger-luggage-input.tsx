@@ -75,7 +75,7 @@ LuggageSelect.displayName = "LuggageSelect";
 export const PassengerLuggageInput = forwardRef<HTMLButtonElement, PassengerLuggageInputProps>(
     ({ value = { passengers: "1", luggage: "0" }, onChange, label, placeholder, error, className, ...props }, ref) => {
 
-        const t = useTranslations('BookingWidget');
+        const t = useTranslations('booking-widget');
 
         const [isOpen, setIsOpen] = useState(false);
         const [tempPassengers, setTempPassengers] = useState(value.passengers);

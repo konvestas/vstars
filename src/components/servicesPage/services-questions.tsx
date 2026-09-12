@@ -12,7 +12,7 @@ interface FAQItem {
 }
 
 export default function ServiceAccordion({ items }: { items: FAQItem[] }) {
-    const t = useTranslations("ServicesPage");
+    const t = useTranslations("services-page");
     const [openIndex, setOpenIndex] = useState<number | null>(null);
 
     const toggleItem = (index: number) => {

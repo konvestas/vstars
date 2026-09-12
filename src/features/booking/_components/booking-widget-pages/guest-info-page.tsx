@@ -3,7 +3,7 @@ import {useTranslations} from "next-intl";
 import {useState} from "react";
 import {motion} from "framer-motion";
 import {Label} from "@/components/ui/label";
-import {Mail, Phone, Plane, UploadCloud, User, X} from "lucide-react";
+import {Info, Mail, Phone, Plane, UploadCloud, User, X} from "lucide-react";
 import {Input} from "@/components/ui/input";
 import {cn} from "@/lib/utils";
 import {Textarea} from "@/components/ui/textarea";
@@ -13,7 +13,7 @@ import {StepGuestInfoProps} from "@/features/booking/_components/booking-widget-
 
 export const StepGuestInfo = ({ price }: StepGuestInfoProps) => {
     const { register, formState: { errors }, setValue } = useFormContext();
-    const t = useTranslations('BookingWidget');
+    const t = useTranslations('booking-widget');
     const [previewUrl, setPreviewUrl] = useState<string | null>(null);
     const [fileName, setFileName] = useState<string | null>(null);
 
@@ -91,6 +91,12 @@ export const StepGuestInfo = ({ price }: StepGuestInfoProps) => {
                     <span className="text-sm text-white/80">{t("GuestInfo.summaryEstimated")}</span>
                     <span className="text-xl font-bold text-green-400">{price} TL</span>
                 </div>
+
+                <div className="flex items-start gap-2 px-4 py-3 ">
+                    <Info className="h-4 w-4 text-white/40 mt-0.5 shrink-0" />
+                    <span className="text-xs leading-relaxed text-white/50">{t("GuestInfo.disclose")}</span>
+                </div>
+
             </div>
         </motion.div>
     );

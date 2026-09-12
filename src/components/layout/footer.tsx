@@ -1,13 +1,12 @@
 "use client";
 
-import Link from "next/link";
-import { Download } from "lucide-react";
+import { Link } from "@/i18n/routing";
 import { Separator } from "@/components/ui/separator";
 import { useTranslations } from "next-intl";
 import { cn } from "@/lib/utils";
 
 export default function Footer() {
-    const t = useTranslations("Footer");
+    const t = useTranslations("footer");
 
     const linkStyle = cn(
         "block w-fit text-base md:text-lg font-light text-muted-foreground",

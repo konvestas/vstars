@@ -13,14 +13,14 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     const { locale } = await params;
     return createPageMetadata({
         locale,
-        namespace: "FleetMetadata",
+        namespace: "fleet-meta-data",
         path: "fleet",
         image: "/vstars/vstars-fleet.webp",
     });
 }
 
 export default function FleetPage() {
-    const t = useTranslations('FleetPage');
+    const t = useTranslations('fleet-page');
     return (
         <main className="min-h-screen pt-25 bg-white ">
                 <script

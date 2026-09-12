@@ -8,7 +8,7 @@ import { tr as trDateFns, de as deDateFns, ru as ruDateFns, enUS as enUSDateFns 
 
 
 export const StepVehicle = ({ displayLocations, date, time }: StepVehicleProps) => {
-    const t = useTranslations('BookingWidget');
+    const t = useTranslations('booking-widget');
     const locale = useLocale();
     const dateFnsLocaleMap: Record<string, Locale> = {
         tr: trDateFns,

@@ -15,7 +15,7 @@ import {StepSearchProps} from "@/features/booking/_components/booking-widget-pag
 
 export const StepSearch = ({ handlePickupSelect, handleDropoffSelect }: StepSearchProps) => {
     const { control, watch, setValue, formState: { errors } } = useFormContext();
-    const t = useTranslations('BookingWidget');
+    const t = useTranslations('booking-widget');
 
     const [serviceType, direction, date, time, passengers, luggage] = watch([
         "serviceType", "direction", "date", "time", "passengers", "luggage"

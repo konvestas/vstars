@@ -1,15 +1,17 @@
 'use client'
 import { useState } from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
+import { usePathname } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
-import { ChevronDown, Globe, Menu, User } from "lucide-react";
+import { ChevronDown, Globe, Menu } from "lucide-react";
 import {NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuList, NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
 
 export default function NavigationBar() {
-    const t = useTranslations("Navbar");
-    const tServices = useTranslations("OurServices");
+    const t = useTranslations("navbar");
+    const tServices = useTranslations("our-services");
+    const pathname = usePathname();
 
     const [isServicesOpen, setIsServicesOpen] = useState(false);
     const [isLanguageOpen, setIsLanguageOpen] = useState(false);
@@ -117,11 +119,11 @@ export default function NavigationBar() {
 
                                             {isLanguageOpen && (
                                                 <div className="pl-2 mt-1 space-y-1 border-l-2 ml-3 border-zinc-200">
-                                                    <Link href="/en" className={menuLinkStyle}>{t("languagesOption.en")}</Link>
-                                                    <Link href="/de" className={menuLinkStyle}>{t("languagesOption.de")}</Link>
-                                                    <Link href="/es" className={menuLinkStyle}>{t("languagesOption.es")}</Link>
-                                                    <Link href="/tr" className={menuLinkStyle}>{t("languagesOption.tr")}</Link>
-                                                    <Link href="/ru" className={menuLinkStyle}>{t("languagesOption.ru")}</Link>
+                                                    <Link href={pathname} locale="en" className={menuLinkStyle}>{t("languagesOption.en")}</Link>
+                                                    <Link href={pathname} locale="de" className={menuLinkStyle}>{t("languagesOption.de")}</Link>
+                                                    <Link href={pathname} locale="es" className={menuLinkStyle}>{t("languagesOption.es")}</Link>
+                                                    <Link href={pathname} locale="tr" className={menuLinkStyle}>{t("languagesOption.tr")}</Link>
+                                                    <Link href={pathname} locale="ru" className={menuLinkStyle}>{t("languagesOption.ru")}</Link>
                                                 </div>
                                             )}
                                         </div>

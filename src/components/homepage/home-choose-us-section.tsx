@@ -3,7 +3,7 @@ import { useTranslations } from "next-intl";
 import { getHomeChooseUsData } from "@/components/homepage/data/homePage-chooseUs-section-data";
 
 export default function HomeChooseUsSection() {
-    const t = useTranslations("ChooseUs");
+    const t = useTranslations("choose-us");
     const data = getHomeChooseUsData(t);
 
     const containerVariants = {

@@ -16,7 +16,7 @@ export function DurationInput({
                                   className,
                                   error,
                               }: DurationInputProps) {
-    const t = useTranslations('BookingWidget');
+    const t = useTranslations('booking-widget');
     return (
         <div className="relative group w-full">
             {/* Icon */}

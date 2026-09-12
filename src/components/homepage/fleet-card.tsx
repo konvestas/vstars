@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
@@ -13,7 +13,7 @@ import { Button } from "@/components/ui/button";
 import { FleetCardProps } from "@/components/homepage/data/home-fleet-data";
 
 export function FleetCard({ title, description, images, index, className }: FleetCardProps) {
-    const t = useTranslations("Fleet");
+    const t = useTranslations("fleet");
     const [api, setApi] = useState<CarouselApi>();
     const [current, setCurrent] = useState(0);
 

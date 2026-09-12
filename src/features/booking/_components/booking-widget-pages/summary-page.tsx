@@ -4,12 +4,12 @@ import {motion} from "framer-motion";
 import {format} from "date-fns";
 import {StepSummaryProps} from "@/features/booking/_components/booking-widget-pages/data/summary-page-data";
 import type { Locale } from "react-day-picker";
-// Import date-fns locales for formatting
 import { tr as trDateFns, de as deDateFns, ru as ruDateFns, enUS as enUSDateFns } from "date-fns/locale";
+import {Info} from "lucide-react";
 
 export const StepSummary = ({ price, displayLocations }: StepSummaryProps) => {
     const { watch } = useFormContext();
-    const t = useTranslations('BookingWidget');
+    const t = useTranslations('booking-widget');
     const [serviceType, fullName, phone, date, time, passengers, luggage] = watch(["serviceType", "fullName", "phone", "date", "time", "passengers", "luggage"]);
     const locale = useLocale();
     // Locale mapping for date-fns
@@ -50,6 +50,10 @@ export const StepSummary = ({ price, displayLocations }: StepSummaryProps) => {
                         <span className="text-white/80">{t("Summary.total")}</span>
                         <span className="text-xl font-bold text-green-400">{price} TL</span>
                     </div>
+                </div>
+                <div className="flex items-start gap-2 px-4 py-3">
+                    <Info className="h-4 w-4 text-white/40 mt-0.5 shrink-0" />
+                    <span className="text-xs leading-relaxed text-white/50">{t("GuestInfo.disclose")}</span>
                 </div>
             </div>
         </motion.div>

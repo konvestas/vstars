@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 import {getFleetSectionData, getFleetImages,} from "@/components/homepage/data/homePage-fleet-section-data";
 
 export default function FleetDetailsSection() {
-    const t = useTranslations("FleetPage");
+    const t = useTranslations("fleet-page");
     const specs = getFleetSectionData(t);
 
     const [api, setApi] = useState<CarouselApi>();

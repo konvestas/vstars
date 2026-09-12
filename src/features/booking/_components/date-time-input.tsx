@@ -72,7 +72,7 @@ export default function DateTimeInput({
     const [tempDate, setTempDate] = useState<Date | undefined>(date);
     const [tempTime, setTempTime] = useState<string | undefined>(time);
 
-    const t = useTranslations('BookingWidget');
+    const t = useTranslations('booking-widget');
     const locale = useLocale();
 
     // Get the correct locale objects based on current language
@@ -93,8 +93,7 @@ export default function DateTimeInput({
         }
     }, [tempDate, tempTime, onConfirm]);
 
-    // Fix: removed startTransition so the state update is synchronous and
-    // the button re-renders immediately with the correct selected background.
+
     const handleTimeSelect = useCallback((slot: string) => {
         setTempTime(slot);
     }, []);
@@ -102,10 +101,10 @@ export default function DateTimeInput({
     const displayValue = useMemo(() => {
         if (!date || !time) return null;
         return (
-            <div className="flex items-center gap-2 text-white/80">
-                <span className="font-semibold">{format(date, "dd MMM", { locale: dateFnsLocale })}</span>
+            <div className="flex items-center gap-1 text-sm text-white/80">
+                <span className="font-normal">{format(date, "dd MMM", { locale: dateFnsLocale })}</span>
                 <span>•</span>
-                <span className="font-semibold">{time}</span>
+                <span className="font-normal">{time}</span>
             </div>
         );
     }, [date, time, dateFnsLocale]);

@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
@@ -11,7 +11,7 @@ import { ServiceCardProps } from "@/components/homepage/data/homePage-services-s
 import {Separator} from "@/components/ui/separator";
 
 export function HomeServiceCard({ title, description, image, toServicesId, index, className }: ServiceCardProps) {
-    const t = useTranslations("OurServices");
+    const t = useTranslations("our-services");
 
     return (
         <motion.div
