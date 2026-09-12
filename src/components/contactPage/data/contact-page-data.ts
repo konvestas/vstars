@@ -16,7 +16,7 @@ export const getContactPageSchema = {
             "email": "info@candumandanismanlik.com",
             "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "Kordonboyu Mh Ankara cad İSTMARİNA S2 kule B blok kat:24 no 147/B-300",
+                "streetAddress": "Cevizli Mah,Zuhal Cad.Ritim İstanbul A5 Blok No:46E Istanbul, Turkey",
                 "addressLocality": "Istanbul",
                 "addressCountry": "TR",
                 "postalCode": "34860"
