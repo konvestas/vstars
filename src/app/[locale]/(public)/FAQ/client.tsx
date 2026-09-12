@@ -5,7 +5,6 @@ import { useTranslations, useMessages } from 'next-intl';
 import NavigationBar from "@/components/layout/navigation-bar";
 import Footer from "@/components/layout/footer";
 import ReadyToBook from "@/components/layout/ready-to-book";
-import {Separator} from "@/components/ui/separator";
 
 // --- Types ---
 type QuestionItem = {
@@ -42,10 +41,10 @@ const FAQItem = ({ question, answer }: { question: string; answer: string }) => 
 };
 
 export default function FAQClientPage() {
-    const t = useTranslations('FAQPage');
+    const t = useTranslations('FAQ-page');
 
-    const messages = useMessages() as { FAQPage?: { items: FAQMessages } };
-    const faqData = messages.FAQPage?.items as FAQMessages;
+    const messages = useMessages() as { 'FAQ-page'?: { items: FAQMessages } };
+    const faqData = messages['FAQ-page']?.items as FAQMessages;
 
     const [searchQuery, setSearchQuery] = useState('');
     const [activeCategory, setActiveCategory] = useState<string>('general');

@@ -14,7 +14,7 @@ import { StepSummary } from "@/features/booking/_components/booking-widget-pages
 import { BookingWidgetStyles } from "@/features/booking/_components/booking-widget-pages/styles";
 
 export default function BookingWidget() {
-    const t = useTranslations('BookingWidget');
+    const t = useTranslations('booking-widget');
     const {
         form,
         step,

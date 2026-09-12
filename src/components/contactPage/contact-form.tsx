@@ -15,7 +15,7 @@ import { toast } from "sonner";
 import { cn } from "@/lib/utils";
 
 export default function ContactForm() {
-    const t = useTranslations("ContactPage");
+    const t = useTranslations("contact-page");
     const [isSubmitting, setIsSubmitting] = useState(false);
 
     const form = useForm<ContactFormValues>({

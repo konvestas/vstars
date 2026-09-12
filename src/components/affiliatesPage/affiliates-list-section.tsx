@@ -5,7 +5,7 @@ import Image from "next/image";
 
 
 export default function AffiliatesListSection() {
-    const t = useTranslations('AffiliatesPage');
+    const t = useTranslations('affiliates-page');
     const data = getAffiliatesInfo(t);
 
     return (
