@@ -8,7 +8,7 @@ export default function middleware(request: NextRequest) {
     const targetHost = "www.vstarstransfer.com";
     const host = request.headers.get('host');
 
-    const isDev = host?.includes('localhost');
+    const isDev = host?.includes('localhost') || host?.includes('.run.app');
     if (!isDev && host && host !== targetHost) {
         const url = new URL(request.url);
         url.host = targetHost;
