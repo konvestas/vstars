@@ -12,6 +12,7 @@ import { StepVehicle } from "@/features/booking/_components/booking-widget-pages
 import { StepGuestInfo } from "@/features/booking/_components/booking-widget-pages/guest-info-page";
 import { StepSummary } from "@/features/booking/_components/booking-widget-pages/summary-page";
 import { BookingWidgetStyles } from "@/features/booking/_components/booking-widget-pages/styles";
+import RecaptchaDisclosure from "@/features/recaptcha/recaptcha-disclosure";
 
 export default function BookingWidget() {
     const t = useTranslations('booking-widget');
@@ -140,6 +141,7 @@ export default function BookingWidget() {
                                 </Button>
                             </div>
                         )}
+                        {step === 4 && <div className="mt-3"><RecaptchaDisclosure /></div>}
                     </div>
                 </FormProvider>
             </Card>

@@ -13,6 +13,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { toast } from "sonner";
 import { cn } from "@/lib/utils";
+import { getRecaptchaToken } from "@/lib/recaptcha";
+import RecaptchaDisclosure from "@/features/recaptcha/recaptcha-disclosure";
 
 export default function ContactForm() {
     const t = useTranslations("contact-page");
@@ -31,10 +33,12 @@ export default function ContactForm() {
     async function onSubmit(data: ContactFormValues) {
         setIsSubmitting(true);
         try {
+            const recaptchaToken = await getRecaptchaToken("contact_submit");
+
             const response = await fetch("/api/contact", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(data),
+                body: JSON.stringify({ ...data, recaptchaToken }),
             });
 
             if (!response.ok) throw new Error("Failed to send");
@@ -138,6 +142,7 @@ export default function ContactForm() {
                             </span>
                         )}
                     </Button>
+                    <RecaptchaDisclosure />
                 </form>
             </Form>
         </div>
