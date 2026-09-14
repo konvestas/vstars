@@ -14,8 +14,8 @@ env:
     availability:
       - RUNTIME
 
-  - variable: PASS
-    secret: PASS
+  - variable: EMAILPASS
+    secret: EMAILPASS
     availability:
       - RUNTIME
 
