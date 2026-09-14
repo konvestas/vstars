@@ -52,8 +52,8 @@ export const StepSummary = ({ price, displayLocations }: StepSummaryProps) => {
                     </div>
                 </div>
                 <div className="flex items-start gap-2 px-4 py-3">
-                    <Info className="h-4 w-4 text-white/40 mt-0.5 shrink-0" />
-                    <span className="text-xs leading-relaxed text-white/50">{t("GuestInfo.disclose")}</span>
+                    <Info className="h-4 w-4 text-gray-400 mt-0.5 shrink-0" />
+                    <span className="text-xs leading-relaxed text-gray-400">{t("GuestInfo.disclose")}</span>
                 </div>
             </div>
         </motion.div>
