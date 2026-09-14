@@ -146,7 +146,17 @@ export default function Footer() {
                 {/* --- BOTTOM SECTION --- */}
                 <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
                     <span>© {new Date().getFullYear()} Vstars Transfer. All rights reserved.</span>
-                    <span>{t("premium")}</span>
+
+                    <div className="flex items-center gap-4">
+                        <Link href="/privacy" className="hover:text-zinc-900 hover:underline transition-colors duration-200 cursor-pointer">
+                            {t("privacyPolicy")}
+                        </Link>
+
+                        <Link href="/cookies" className="hover:text-zinc-900 hover:underline transition-colors duration-200 cursor-pointer">
+                            {t("cookiePolicy")}
+                        </Link>
+                    </div>
+
                 </div>
             </div>
         </footer>
