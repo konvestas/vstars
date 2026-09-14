@@ -6,6 +6,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { bookingSchema, type BookingFormValues, SERVICE_TYPES } from "../schemas";
 import { calculateTripPrice } from "@/features/booking/lib/utils";
 import { toast } from "sonner";
+import { getRecaptchaToken } from "@/lib/recaptcha";
 
 const fileToBase64 = (file: File): Promise<string> => {
     return new Promise((resolve, reject) => {
@@ -136,6 +137,15 @@ export function useBookingForm() {
                 };
             }
 
+            let recaptchaToken: string;
+            try {
+                recaptchaToken = await getRecaptchaToken("booking_submit");
+            } catch {
+                toast.error("Verification failed. Please refresh and try again.");
+                setIsSubmitting(false);
+                return;
+            }
+
             const payload = {
                 ...formValues,
                 bookingType: formValues.serviceType,
@@ -150,7 +160,8 @@ export function useBookingForm() {
                     time: formValues.time
                 },
                 passportPhoto,
-                calculatedPrice: price
+                calculatedPrice: price,
+                recaptchaToken
             };
 
             const res = await fetch("/api/booking", {
