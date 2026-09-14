@@ -9,6 +9,7 @@ import { routing } from "@/i18n/routing";
 import { Toaster } from "@/components/ui/sonner";
 import {CookieConsentProvider} from "@/features/cookie-consent/cookie-consent-context";
 import CookieConsentBanner from "@/features/cookie-consent/cookie-consent-banner";
+import FirebaseAnalytics from "@/components/layout/FirebaseAnalytics";
 
 const geistSans = Geist({
     variable: "--font-sans",
@@ -340,6 +341,7 @@ export default async function RootLayout({
         <NextIntlClientProvider messages={messages}>
             {children}
             <CookieConsentBanner />
+            <FirebaseAnalytics />
         </NextIntlClientProvider>
         </CookieConsentProvider>
 
