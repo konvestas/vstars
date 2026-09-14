@@ -10,6 +10,7 @@ import { Toaster } from "@/components/ui/sonner";
 import {CookieConsentProvider} from "@/features/cookie-consent/cookie-consent-context";
 import CookieConsentBanner from "@/features/cookie-consent/cookie-consent-banner";
 import FirebaseAnalytics from "@/components/layout/FirebaseAnalytics";
+import Script from "next/script";
 
 const geistSans = Geist({
     variable: "--font-sans",
@@ -333,6 +334,10 @@ export default async function RootLayout({
             <link rel="preconnect" href="https://maps.googleapis.com" />
         </head>
         <body className={`${geistSans.variable} ${geistMono.variable} ${lexendPeta.variable} antialiased`}>
+        <Script
+            src={`https://www.google.com/recaptcha/api.js?render=${process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}`}
+            strategy="afterInteractive"
+        />
         <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
