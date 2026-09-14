@@ -4,10 +4,26 @@ import nodemailer from "nodemailer";
 export async function POST(req: Request) {
     try {
         const body = await req.json();
-        const { name, email, subject, message } = body;
+        const { name, email, subject, message, recaptchaToken } = body;
 
         if (!name || !email || !message) {
             return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
+        }
+
+        if (!recaptchaToken) {
+            return NextResponse.json({ error: "Missing verification token" }, { status: 400 });
+        }
+
+        const recaptchaRes = await fetch("https://www.google.com/recaptcha/api/siteverify", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: `secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${recaptchaToken}`,
+        });
+        const recaptchaData = await recaptchaRes.json();
+
+        if (!recaptchaData.success || recaptchaData.score < 0.5) {
+            console.warn("reCAPTCHA rejected:", recaptchaData);
+            return NextResponse.json({ error: "Verification failed. Please try again." }, { status: 400 });
         }
 
         const transporter = nodemailer.createTransport({
