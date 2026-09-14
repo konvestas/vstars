@@ -56,7 +56,21 @@ export function CookieConsentProvider({ children }: { children: ReactNode }) {
         persist({ status: "accepted", analytics: true, timestamp: new Date().toISOString() });
     };
 
+    const deleteGaCookies = () => {
+        if (typeof document === "undefined") return;
+        const names = document.cookie
+            .split(";")
+            .map(c => c.trim().split("=")[0])
+            .filter(name => name === "_ga" || name.startsWith("_ga_") || name === "_gid" || name === "_gat");
+
+        names.forEach(name => {
+            document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
+            document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=${window.location.hostname};`;
+        });
+    };
+
     const rejectNonEssential = () => {
+        deleteGaCookies();
         persist({ status: "rejected", analytics: false, timestamp: new Date().toISOString() });
     };
 
