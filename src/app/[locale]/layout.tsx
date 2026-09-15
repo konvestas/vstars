@@ -11,6 +11,7 @@ import {CookieConsentProvider} from "@/features/cookie-consent/cookie-consent-co
 import CookieConsentBanner from "@/features/cookie-consent/cookie-consent-banner";
 import FirebaseAnalytics from "@/components/layout/FirebaseAnalytics";
 import Script from "next/script";
+import path from "path";
 
 const geistSans = Geist({
     variable: "--font-sans",
@@ -37,21 +38,21 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     const t = await getTranslations({ locale, namespace: 'meta-data' });
 
     return {
-        metadataBase: new URL('https://www.vstarstransfer.com'),
+        metadataBase: new URL('https://www.vstars.com.tr'),
         title: t('title'),
         description: t('description'),
         applicationName: "Vstars Transfer",
-        authors: [{ name: "Vstars Transfer & Onur Akgülay", url: "https://www.vstarstransfer.com/" }],
+        authors: [{ name: "Vstars Transfer & Onur Akgülay", url: "https://www.vstars.com.tr/" }],
         keywords: t('keywords'),
         robots: "index, follow",
         alternates: {
-            canonical: `/${locale}`,
+            canonical: path ? `/${locale}/${path}` : `/${locale}`,
             languages: {
-                "en-US": "/en",
-                "de-DE": "/de",
-                "ru-RU": "/ru",
-                "tr-TR": "/tr",
-            }
+                "en-US": `/en/${path}`,
+                "de-DE": `/de/${path}`,
+                "ru-RU": `/ru/${path}`,
+                "tr-TR": `/tr/${path}`,
+            },
         },
         icons: {
             icon: [
@@ -78,8 +79,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
         manifest: "/manifest.webmanifest",
         openGraph: {
             type: "website",
-            url: `https://www.vstarstransfer.com/${locale}`,
-            emails: "info@candumandanismanlik.com",
+            url: `https://www.vstars.com.tr/${locale}`,
+            emails: "vstarstransfer34@gmail.com",
             phoneNumbers: "+90 5326432234",
             locale: locale,
             countryName: "Türkiye",
@@ -88,77 +89,77 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
             siteName: "Vstars Transfer",
             images: [
                 {
-                    url: "https://www.vstarstransfer.com/images/istanbul-15-Temmuz-bridge-view-scenery.webp",
+                    url: "https://www.vstars.com.tr/images/istanbul-15-Temmuz-bridge-view-scenery.webp",
                     width: 1500,
                     height: 1500,
                     alt: "Scenery view from the 15 Temmuz bridge of Istanbul",
                     type: "image/webp"
                 },
                 {
-                    url: "https://www.vstarstransfer.com/images/istanbul-airport-private-chauffeur-transfer.webp",
+                    url: "https://www.vstars.com.tr/images/istanbul-airport-private-chauffeur-transfer.webp",
                     width: 1500,
                     height: 1500,
                     alt: "Airport private chauffeur transfer with Mercedes-Benz Maybach van",
                     type: "image/webp"
                 },
                 {
-                    url: "https://www.vstarstransfer.com/images/istanbul-airport-vip-transfer-mercedes-vito.webp",
+                    url: "https://www.vstars.com.tr/images/istanbul-airport-vip-transfer-mercedes-vito.webp",
                     width: 1500,
                     height: 1500,
                     alt: "Airport vip transfer with Mercedes-Benz Maybach van",
                     type: "image/webp"
                 },
                 {
-                    url: "https://www.vstarstransfer.com/images/istanbul-city-tour-private-driver-galata-tower.webp",
+                    url: "https://www.vstars.com.tr/images/istanbul-city-tour-private-driver-galata-tower.webp",
                     width: 1200,
                     height: 800,
                     alt: "City tour with private driver in Istanbul with a view to galata tower",
                     type: "image/webp"
                 },
                 {
-                    url: "https://www.vstarstransfer.com/images/istanbul-hourly-hire-private-driver.webp",
+                    url: "https://www.vstars.com.tr/images/istanbul-hourly-hire-private-driver.webp",
                     width: 1500,
                     height: 1500,
                     alt: "Hourly hire for Vstars transfers in Istanbul",
                     type: "image/webp"
                 },
                 {
-                    url: "https://www.vstarstransfer.com/affiliates/can-duman-medical-tourism.webp",
+                    url: "https://www.vstars.com.tr/affiliates/can-duman-medical-tourism.webp",
                     width: 800,
                     height: 600,
                     alt: "One of the affiliates of Vstars Transfer for medical tourism in Istanbul",
                     type: "image/webp"
                 },
                 {
-                    url: "https://www.vstarstransfer.com/images/private-chauffeur-hire-istanbul-transfer-mercedes-vito.webp",
+                    url: "https://www.vstars.com.tr/images/private-chauffeur-hire-istanbul-transfer-mercedes-vito.webp",
                     width: 1500,
                     height: 1500,
                     alt: "Private chauffeur hire for Vstars transfers in Istanbul",
                     type: "image/webp"
                 },
                 {
-                    url: "https://www.vstarstransfer.com/vstars/vstars-fleet.webp",
+                    url: "https://www.vstars.com.tr/vstars/vstars-fleet.webp",
                     width: 1920,
                     height: 1059,
                     alt: "Vstars transfers fleet with a view to the Bosporus",
                     type: "image/webp"
                 },
                 {
-                    url: "https://www.vstarstransfer.com/vstars/vstars-transfer-vehicle-vip-interior.webp",
+                    url: "https://www.vstars.com.tr/vstars/vstars-transfer-vehicle-vip-interior.webp",
                     width: 800,
                     height: 450,
                     alt: "Inside view for the Mercedes-Benz Maybach van",
                     type: "image/webp"
                 },
                 {
-                    url: "https://www.vstarstransfer.com/vstars/vstars-transfer-vehicle-inside-reverse-view.webp",
+                    url: "https://www.vstars.com.tr/vstars/vstars-transfer-vehicle-inside-reverse-view.webp",
                     width: 800,
                     height: 450,
                     alt: "Inside view for the Mercedes-Benz Maybach van",
                     type: "image/webp"
                 },
                 {
-                    url: "https://www.vstarstransfer.com/vstars/vstars-transfer-vehicle-outside-view.webp",
+                    url: "https://www.vstars.com.tr/vstars/vstars-transfer-vehicle-outside-view.webp",
                     width: 600,
                     height: 600,
                     alt: "Mercedes-Benz Maybach van outside view",
@@ -167,13 +168,13 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
             ]
         },
         twitter: {
-            site: `https://www.vstarstransfer.com/${locale}/services`,
+            site: `https://www.vstars.com.tr/${locale}/services`,
             creator: "Vstars Transfer & Onur Akgülay",
             card: "summary_large_image",
             title: t("title"),
             description: t("description"),
             images: {
-                url: "https://www.vstarstransfer.com/vstars/vstars-fleet.webp",
+                url: "https://www.vstars.com.tr/vstars/vstars-fleet.webp",
                 width: 1920,
                 height: 1059,
                 alt: "Vstars transfers fleet with a view to the Bosporus",
@@ -181,9 +182,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
             },
         },
         assets: [
-            "https://www.vstarstransfer.com/vstars",
-            "https://www.vstarstransfer.com/affiliates",
-            "https://www.vstarstransfer.com/images",
+            "https://www.vstars.com.tr/vstars",
+            "https://www.vstars.com.tr/affiliates",
+            "https://www.vstars.com.tr/images",
         ]
     };
 }
@@ -206,12 +207,12 @@ export default async function RootLayout({
     const jsonLd = {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
-        "@id": "https://www.vstarstransfer.com/#localbusiness",
+        "@id": "https://www.vstars.com.tr/#localbusiness",
         "name": "Vstars Transfer",
-        "image": "https://www.vstarstransfer.com/vstars/vstars-fleet.webp",
-        "url": "https://www.vstarstransfer.com",
+        "image": "https://www.vstars.com.tr/vstars/vstars-fleet.webp",
+        "url": "https://www.vstars.com.tr",
         "telephone": "+905326432234",
-        "email": "info@candumandanismanlik.com",
+        "email": "vstarstransfer34@gmail.com",
         "address": {
             "@type": "PostalAddress",
             "streetAddress": "Cevizli Mah,Zuhal Cad.Ritim İstanbul A5 Blok No:46E Istanbul, Turkey",
@@ -220,8 +221,8 @@ export default async function RootLayout({
         },
         "geo": {
             "@type": "GeoCoordinates",
-            "latitude": "40.88461295159555",
-            "longitude": "29.205337482484815"
+            "latitude": "40.921630",
+            "longitude": "29.157446"
         },
         "priceRange": "$$$",
         "currenciesAccepted": "TRY, USD, EUR",
@@ -271,7 +272,7 @@ export default async function RootLayout({
                         "name": "Hourly and full day hire services",
                         "description": "Choose hourly or full-day service and enjoy comfortable, on-demand transportation tailored to your schedule.",
                         "provider": {
-                            "@id": "https://www.vstarstransfer.com/#localbusiness"
+                            "@id": "https://www.vstars.com.tr/#localbusiness"
                         }
                     }
                 },
@@ -282,7 +283,7 @@ export default async function RootLayout({
                         "name": "Airport transfer services",
                         "description": "Reliable transfer service with on-time pick-ups, flight-tracking, and professional driver.",
                         "provider": {
-                            "@id": "https://www.vstarstransfer.com/#localbusiness"
+                            "@id": "https://www.vstars.com.tr/#localbusiness"
                         },
                         "areaServed": [
                             {
@@ -305,7 +306,7 @@ export default async function RootLayout({
                         "name": "Medical tourism services",
                         "description": "Private, safe, and comfortable transport for medical tourism. Hospital visits and hotel transfers.",
                         "provider": {
-                            "@id": "https://www.vstarstransfer.com/#localbusiness"
+                            "@id": "https://www.vstars.com.tr/#localbusiness"
                         }
                     }
                 },
@@ -316,7 +317,7 @@ export default async function RootLayout({
                         "name": "City tour services",
                         "description": "Explore the city with a guide and customize your tour. Visit top attractions and historic landmarks.",
                         "provider": {
-                            "@id": "https://www.vstarstransfer.com/#localbusiness"
+                            "@id": "https://www.vstars.com.tr/#localbusiness"
                         }
                     }
                 }

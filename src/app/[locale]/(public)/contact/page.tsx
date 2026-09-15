@@ -87,16 +87,16 @@ export default function ContactPage() {
                                     </div>
                                     <div>
                                         <h4 className="text-sm font-semibold uppercase tracking-wider text-gray-500 mb-1">{t("email")}</h4>
-                                        <a href="mailto:info@candumandanismanlik.com"
+                                        <a href="mailto:vstarstransfer34@gmail.com"
                                            className="text-xl font-light text-zinc-900  hover:underline decoration-1 underline-offset-4 break-all">
-                                            info@candumandanismanlik.com
+                                            vstarstransfer34@gmail.com
                                         </a>
                                     </div>
                                 </div>
 
                                 {/* Address Item */}
                                 <div className="flex items-start gap-5 group">
-                                    <a href={`https://www.google.com/maps/search/?api=1&query=40.884600538194476,29.20526621261032`}
+                                    <a href={`https://www.google.com/maps/search/?api=1&query=40.921630,29.157446`}
                                        className="shrink-0 mr-4 md:mr-0 md:mb-6
                                        inline-flex items-center justify-center w-12 h-12 md:w-16 md:h-16 rounded-full
                                        bg-linear-to-br from-orange-400 to-purple-700 text-white shadow-xl
