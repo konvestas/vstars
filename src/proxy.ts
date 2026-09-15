@@ -4,8 +4,8 @@ import {NextRequest, NextResponse} from "next/server";
 
 const handleI18nRouting = createMiddleware(routing);
 
-export default function middleware(request: NextRequest) {
-    const targetHost = "www.vstarstransfer.com";
+export default function proxy(request: NextRequest) {
+    const targetHost = "www.vstars.com.tr";
     const host = request.headers.get('host');
 
     const isDev = host?.includes('localhost') || host?.includes('.run.app');
