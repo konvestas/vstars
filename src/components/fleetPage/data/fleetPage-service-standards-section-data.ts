@@ -43,7 +43,7 @@ export const getVehicleSchemas = [
         "@type": "Product",
         "name": "Mercedes-Benz Vito Maybach",
         "description": "Luxury sedan for executive transfers and VIP transportation",
-        "image": "https://www.vstarstransfer.com/vstars/vstars-fleet.webp",
+        "image": "https://www.vstars.com.tr/vstars/vstars-fleet.webp",
         "brand": {
             "@type": "Brand",
             "name": "Mercedes-Benz"
@@ -51,7 +51,7 @@ export const getVehicleSchemas = [
         "offers": {
             "@type": "Offer",
             "availability": "https://schema.org/InStock",
-            "priceCurrency": "TL"
+            "priceCurrency": "TL EUR US"
         }
     },
 ];

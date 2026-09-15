@@ -3,17 +3,17 @@ export const getContactPageSchema = {
     "@graph": [
         {
             "@type": "LocalBusiness",
-            "@id": "https://www.vstarstransfer.com/",
+            "@id": "https://www.vstars.com.tr",
             "name": "Vstars Transfer",
-            "url": "https://www.vstarstransfer.com",
+            "url": "https://www.vstars.com.tr",
             "logo": {
                 "@type": "ImageObject",
-                "url": "https://www.vstarstransfer.com/favicon.ico"
+                "url": "https://www.vstars.com.tr/favicon.ico"
             },
-            "image": "https://www.vstarstransfer.com/vstars/vstars-fleet.webp",
+            "image": "https://www.vstars.com.tr/vstars/vstars-fleet.webp",
             "description": "Premium chauffeur and transfer services in Istanbul. Professional airport transfers, hourly hire, and city tours.",
             "telephone": "+905326432234",
-            "email": "info@candumandanismanlik.com",
+            "email": "vstarstransfer34@gmail.com",
             "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "Cevizli Mah,Zuhal Cad.Ritim İstanbul A5 Blok No:46E Istanbul, Turkey",
@@ -23,8 +23,8 @@ export const getContactPageSchema = {
             },
             "geo": {
                 "@type": "GeoCoordinates",
-                "latitude": "40.884600538194476",
-                "longitude": "29.20526621261032"
+                "latitude": "40.921630",
+                "longitude": "29.157446"
             },
             "openingHoursSpecification": {
                 "@type": "OpeningHoursSpecification",
@@ -68,7 +68,7 @@ export const getContactPageSchema = {
                     "@type": "ContactPoint",
                     "contactType": "Customer Service",
                     "telephone": "+905326432234",
-                    "email": "info@candumandanismanlik.com",
+                    "email": "vstarstransfer34@gmail.com",
                     "availableLanguage": ["en", "tr"],
                     "areaServed": "TR"
                 },
@@ -76,7 +76,7 @@ export const getContactPageSchema = {
                     "@type": "ContactPoint",
                     "contactType": "Reservations",
                     "telephone": "+905326432234",
-                    "email": "info@candumandanismanlik.com",
+                    "email": "vstarstransfer34@gmail.com",
                     "availableLanguage": ["en", "tr"],
                     "areaServed": "TR"
                 }
@@ -84,24 +84,25 @@ export const getContactPageSchema = {
         },
         {
             "@type": "ContactPage",
-            "@id": "https://www.vstarstransfer.com/contact",
+            "@id": "https://www.vstars.com.tr/contact",
             "name": "Contact Vstars Transfer",
             "description": "Get in touch with Vstars Transfer for premium chauffeur and transfer services in Istanbul. Available 24/7 for bookings and inquiries.",
-            "url": "https://www.vstarstransfer.com/contact",
+            "url": "https://www.vstars.com.tr/contact",
             "mainEntity": {
-                "@id": "https://www.vstarstransfer.com/#localbusiness"
+                "@id": "https://www.vstars.com.tr/#localbusiness"
             }
         },
         {
             "@type": "WebPage",
-            "@id": "https://www.vstarstransfer.com/contact#webpage",
-            "url": "https://www.vstarstransfer.com/contact",
+            "@id": "https://www.vstars.com.tr/contact#webpage",
+            "url": "https://www.vstars.com.tr/contact",
             "name": "Contact Us - Vstars Transfer",
-            "description": "Contact Vstars Transfer for premium transfer services in Istanbul. Phone: +90 532 643 22 34, Email: info@candumandanismanlik.com",
+            "email": "vstarstransfer34@gmail.com",
+            "description": "Contact Vstars Transfer for premium transfer services in Istanbul. Phone: +90 532 643 22 34, Email: vstarstransfer34@gmail.com",
             "inLanguage": "en",
             "isPartOf": {
                 "@type": "WebSite",
-                "@id": "https://www.vstarstransfer.com/#website"
+                "@id": "https://www.vstars.com.tr/#website"
             },
             "breadcrumb": {
                 "@type": "BreadcrumbList",
@@ -110,13 +111,13 @@ export const getContactPageSchema = {
                         "@type": "ListItem",
                         "position": 1,
                         "name": "Home",
-                        "item": "https://www.vstarstransfer.com"
+                        "item": "https://www.vstars.com.tr"
                     },
                     {
                         "@type": "ListItem",
                         "position": 2,
                         "name": "Contact",
-                        "item": "https://www.vstarstransfer.com/contact"
+                        "item": "https://www.vstars.com.tr/contact"
                     }
                 ]
             }

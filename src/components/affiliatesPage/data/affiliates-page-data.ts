@@ -66,33 +66,35 @@ export const getAffiliatesInfoSchema = {
     "@graph": [
         {
             "@type": "Organization",
-            "@id": "https://www.vstarstransfer.com/#organization",
+            "@id": "https://www.vstars.com.tr/#organization",
             "name": "Vstars Transfer",
-            "url": "https://www.vstarstransfer.com",
+            "url": "https://www.vstars.com.tr",
             "logo": {
                 "@type": "ImageObject",
-                "url": "https://www.vstarstransfer.com/favicon.ico"
+                "url": "https://www.vstars.com.tr/favicon.ico"
             },
             "description": "Vstars Transfer's partnerships and affiliated organizations providing comprehensive services in Istanbul and Turkey.",
             "contactPoint": {
                 "@type": "ContactPoint",
                 "contactType": "Partnership Inquiries",
-                "email": "info@candumandanismanlik.com",
+                "email": "vstarstransfer34@gmail.com",
                 "telephone": "+905326432234"
             },
             "address": {
                 "@type": "PostalAddress",
+                "streetAddress": "Cevizli Mah,Zuhal Cad.Ritim İstanbul A5 Blok No:46E Istanbul, Turkey",
                 "addressLocality": "Istanbul",
-                "addressCountry": "TR"
+                "addressCountry": "TR",
+                "postalCode": "34860"
             },
             "partner": [
                 {
                     "@type": "Organization",
-                    "@id": "https://www.vstarstransfer.com/affiliates#can-duman-medical-tourism",
+                    "@id": "https://www.vstars.com.tr/affiliates#can-duman-medical-tourism",
                     "name": "Can Duman Medical Tourism",
                     "image": {
                         "@type": "ImageObject",
-                        "url": "https://www.vstarstransfer.com/affiliates/can-duman-medical-tourism.webp",
+                        "url": "https://www.vstars.com.tr/affiliates/can-duman-medical-tourism.webp",
                         "width": 800,
                         "height": 600
                     },
@@ -105,11 +107,11 @@ export const getAffiliatesInfoSchema = {
                 },
                 {
                     "@type": "Organization",
-                    "@id": "https://www.vstarstransfer.com/affiliates#can-duman-travel-agency",
+                    "@id": "https://www.vstars.com.tr/affiliates#can-duman-travel-agency",
                     "name": "Can Duman Travel Agency",
                     "image": {
                         "@type": "ImageObject",
-                        "url": "https://www.vstarstransfer.com/affiliates/can-duman-travel-agency.webp",
+                        "url": "https://www.vstars.com.tr/affiliates/can-duman-travel-agency.webp",
                         "width": 800,
                         "height": 600
                     },
@@ -122,11 +124,11 @@ export const getAffiliatesInfoSchema = {
                 },
                 {
                     "@type": "Organization",
-                    "@id": "https://www.vstarstransfer.com/affiliates#visitoria-sigorta",
+                    "@id": "https://www.vstars.com.tr/affiliates#visitoria-sigorta",
                     "name": "Visitoria Sigorta",
                     "image": {
                         "@type": "ImageObject",
-                        "url": "https://www.vstarstransfer.com/affiliates/visitoria-sigorta.webp",
+                        "url": "https://www.vstars.com.tr/affiliates/visitoria-sigorta.webp",
                         "width": 800,
                         "height": 600
                     },
@@ -139,11 +141,11 @@ export const getAffiliatesInfoSchema = {
                 },
                 {
                     "@type": "Organization",
-                    "@id": "https://www.vstarstransfer.com/affiliates#can-duman-danismanlik",
+                    "@id": "https://www.vstars.com.tr/affiliates#can-duman-danismanlik",
                     "name": "Can Duman Danışmanlık",
                     "image": {
                         "@type": "ImageObject",
-                        "url": "https://www.vstarstransfer.com/affiliates/can-duman-danismanlik.webp",
+                        "url": "https://www.vstars.com.tr/affiliates/can-duman-danismanlik.webp",
                         "width": 800,
                         "height": 600
                     },
@@ -156,11 +158,11 @@ export const getAffiliatesInfoSchema = {
                 },
                 {
                     "@type": "Organization",
-                    "@id": "https://www.vstarstransfer.com/affiliates#agon",
+                    "@id": "https://www.vstars.com.tr/affiliates#agon",
                     "name": "Agon",
                     "image": {
                         "@type": "ImageObject",
-                        "url": "https://www.vstarstransfer.com/affiliates/agon.webp",
+                        "url": "https://www.vstars.com.tr/affiliates/agon.webp",
                         "width": 800,
                         "height": 600
                     },
@@ -169,11 +171,11 @@ export const getAffiliatesInfoSchema = {
                 },
                 {
                     "@type": "Organization",
-                    "@id": "https://www.vstarstransfer.com/affiliates#can-duman-akademi",
+                    "@id": "https://www.vstars.com.tr/affiliates#can-duman-akademi",
                     "name": "Can Duman Akademi",
                     "image": {
                         "@type": "ImageObject",
-                        "url": "https://www.vstarstransfer.com/affiliates/can-duman-akademi.webp",
+                        "url": "https://www.vstars.com.tr/affiliates/can-duman-akademi.webp",
                         "width": 800,
                         "height": 600
                     },
@@ -184,7 +186,7 @@ export const getAffiliatesInfoSchema = {
         },
         {
             "@type": "CollectionPage",
-            "@id": "https://www.vstarstransfer.com/affiliates",
+            "@id": "https://www.vstars.com.tr/affiliates",
             "name": "Vstars Transfer Affiliates",
             "description": "Our network of trusted partner organizations providing comprehensive services in Turkey.",
             "mainEntity": {
@@ -195,42 +197,42 @@ export const getAffiliatesInfoSchema = {
                         "@type": "ListItem",
                         "position": 1,
                         "item": {
-                            "@id": "https://www.vstarstransfer.com/affiliates#can-duman-medical-tourism"
+                            "@id": "https://www.vstars.com.tr/affiliates#can-duman-medical-tourism"
                         }
                     },
                     {
                         "@type": "ListItem",
                         "position": 2,
                         "item": {
-                            "@id": "https://www.vstarstransfer.com/affiliates#can-duman-travel-agency"
+                            "@id": "https://www.vstars.com.tr/affiliates#can-duman-travel-agency"
                         }
                     },
                     {
                         "@type": "ListItem",
                         "position": 3,
                         "item": {
-                            "@id": "https://www.vstarstransfer.com/affiliates#visitoria-sigorta"
+                            "@id": "https://www.vstars.com.tr/affiliates#visitoria-sigorta"
                         }
                     },
                     {
                         "@type": "ListItem",
                         "position": 4,
                         "item": {
-                            "@id": "https://www.vstarstransfer.com/affiliates#can-duman-danismanlik"
+                            "@id": "https://www.vstars.com.tr/affiliates#can-duman-danismanlik"
                         }
                     },
                     {
                         "@type": "ListItem",
                         "position": 5,
                         "item": {
-                            "@id": "https://www.vstarstransfer.com/affiliates#agon"
+                            "@id": "https://www.vstars.com.tr/affiliates#agon"
                         }
                     },
                     {
                         "@type": "ListItem",
                         "position": 6,
                         "item": {
-                            "@id": "https://www.vstarstransfer.com/affiliates#can-duman-akademi"
+                            "@id": "https://www.vstars.com.tr/affiliates#can-duman-akademi"
                         }
                     }
                 ]
