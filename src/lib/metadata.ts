@@ -15,7 +15,7 @@ export async function createPageMetadata({
     imageAlt?: string;
 }): Promise<Metadata> {
     const t = await getTranslations({ locale, namespace });
-    const baseUrl = "https://www.vstarstransfer.com";
+    const baseUrl = "https://www.vstars.com.tr";
 
     return {
         title: t("title"),

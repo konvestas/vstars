@@ -1,6 +1,6 @@
 import { MetadataRoute } from 'next';
 
-const BASE_URL = 'https://www.vstarstransfer.com';
+const BASE_URL = 'https://www.vstars.com.tr';
 const locales = ['en', 'tr', 'de', 'ru'];
 
 const paths = [
@@ -11,7 +11,7 @@ const paths = [
     '/contact',
     '/FAQ',
 ];
-// TAMAMLA
+
 const imagesByPath: Record<string, string[]> = {
     '': [
         '/vstars/vstars-fleet.webp',

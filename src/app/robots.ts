@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 
 export default function robots(): MetadataRoute.Robots {
-    const baseUrl = 'https://www.vstarstransfer.com';
+    const baseUrl = 'https://www.vstars.com.tr';
     return {
         rules: {
             userAgent: '*',

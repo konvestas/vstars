@@ -69,26 +69,28 @@ export const getServicesSchema = {
     "@graph": [
         {
             "@type": "Organization",
-            "@id": "https://www.vstarstransfer.com/#organization",
+            "@id": "https://www.vstars.com.tr/#organization",
             "name": "Vstars Transfer",
-            "url": "https://www.vstarstransfer.com",
+            "url": "https://www.vstars.com.tr",
             "logo": {
                 "@type": "ImageObject",
-                "url": "https://www.vstarstransfer.com/favicon.ico"
+                "url": "https://www.vstars.com.tr/favicon.ico"
             },
-            "image": "https://www.vstarstransfer.com/vstars/vstars-fleet.webp",
+            "image": "https://www.vstars.com.tr/vstars/vstars-fleet.webp",
             "description": "Premium chauffeur and transfer services in Istanbul, offering airport transfers, hourly hire, city tours, and medical tourism coordination.",
             "contactPoint": {
                 "@type": "ContactPoint",
                 "contactType": "Customer Service",
-                "email": "info@candumandanismanlik.com",
+                "email": "vstarstransfer34@gmail.com",
                 "telephone": "+905326432234",
                 "availableLanguage": ["en", "tr"]
             },
             "address": {
                 "@type": "PostalAddress",
+                "streetAddress": "Cevizli Mah,Zuhal Cad.Ritim İstanbul A5 Blok No:46E Istanbul, Turkey",
                 "addressLocality": "Istanbul",
-                "addressCountry": "TR"
+                "addressCountry": "TR",
+                "postalCode": "34860"
             },
             "areaServed": {
                 "@type": "City",
@@ -102,11 +104,11 @@ export const getServicesSchema = {
                         "@type": "Offer",
                         "itemOffered": {
                             "@type": "Service",
-                            "@id": "https://www.vstarstransfer.com/services#airport-transfers",
+                            "@id": "https://www.vstars.com.tr/services#airport-transfers",
                             "name": "Airport Transfers",
                             "description": "Professional airport transfer service between Istanbul Airport (IST), Sabiha Gökçen Airport (SAW), and your destination. Flight tracking, luxury vehicles, and door-to-door service.",
                             "provider": {
-                                "@id": "https://www.vstarstransfer.com/#organization"
+                                "@id": "https://www.vstars.com.tr/#organization"
                             },
                             "areaServed": [
                                 {
@@ -127,11 +129,11 @@ export const getServicesSchema = {
                         "@type": "Offer",
                         "itemOffered": {
                             "@type": "Service",
-                            "@id": "https://www.vstarstransfer.com/services#hourly-hire",
+                            "@id": "https://www.vstars.com.tr/services#hourly-hire",
                             "name": "Hourly Chauffeur Hire",
                             "description": "Flexible hourly chauffeur service for multi-stop travel within Istanbul. Professional driver, premium vehicle, and transparent pricing with no hidden fees.",
                             "provider": {
-                                "@id": "https://www.vstarstransfer.com/#organization"
+                                "@id": "https://www.vstars.com.tr/#organization"
                             },
                             "serviceType": "Chauffeur Service"
                         }
@@ -140,11 +142,11 @@ export const getServicesSchema = {
                         "@type": "Offer",
                         "itemOffered": {
                             "@type": "Service",
-                            "@id": "https://www.vstarstransfer.com/services#city-tour",
+                            "@id": "https://www.vstars.com.tr/services#city-tour",
                             "name": "City Tour",
                             "description": "Private city tours of Istanbul with professional driver. Explore iconic landmarks and hidden gems at your own pace with door-to-door service.",
                             "provider": {
-                                "@id": "https://www.vstarstransfer.com/#organization"
+                                "@id": "https://www.vstars.com.tr/#organization"
                             },
                             "serviceType": "City Tour"
                         }
@@ -153,11 +155,11 @@ export const getServicesSchema = {
                         "@type": "Offer",
                         "itemOffered": {
                             "@type": "Service",
-                            "@id": "https://www.vstarstransfer.com/services#medical-tourism",
+                            "@id": "https://www.vstars.com.tr/services#medical-tourism",
                             "name": "Medical Tourism Coordination",
                             "description": "Coordination of medical and wellness services through our affiliate Can Duman Medical Tourism, including aesthetic surgery, dental care, and hair transplants.",
                             "provider": {
-                                "@id": "https://www.vstarstransfer.com/#organization"
+                                "@id": "https://www.vstars.com.tr/#organization"
                             },
                             "serviceType": "Medical Tourism"
                         }
