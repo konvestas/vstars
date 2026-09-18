@@ -62,7 +62,7 @@ export default function Footer() {
                     {/* Column 2: Affiliates */}
                     <div>
                         <h3 className={headerStyle}>{t("Affiliates")}</h3>
-                        <ul className="space-y-3">
+                        <ul className="space-y-3 handle notranslate" translate="no">
                             <li><Link href="/affiliates#affiliates-information-can-duman-medical-tourism" className={linkStyle}>Can Duman Medical Turizm</Link></li>
                             <li><Link href="/affiliates#affiliates-information-can-duamn-Travel-Agency" className={linkStyle}>Can Duman Travel Agency</Link></li>
                             <li><Link href="/affiliates#affiliates-information-visitoria" className={linkStyle}>Visitoria Grup Sigorta</Link></li>

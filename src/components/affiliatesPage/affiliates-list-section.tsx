@@ -36,7 +36,7 @@ export default function AffiliatesListSection() {
 
                                 {/* Text Side */}
                                 <div className={`flex flex-col justify-center ${isEven ? "lg:order-2" : "lg:order-1"}`}>
-                                    <h2 className="text-3xl font-light text-zinc-900 dark:text-white mb-6">
+                                    <h2 className="text-3xl font-light text-zinc-900 dark:text-white mb-6 handle notranslate" translate="no">
                                         {item.title}
                                     </h2>
                                     <p className="text-lg font-light text-gray-600 dark:text-gray-300 leading-relaxed">
